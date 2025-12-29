@@ -392,49 +392,6 @@ In your MDX file:
 
 ---
 
-## 🚀 Deployment
-
-### Supported Platforms
-
-This site can be deployed to any static hosting service:
-
-- **Vercel** (recommended)
-- **Netlify**
-- **Cloudflare Pages**
-- **GitHub Pages**
-- **Azure Static Web Apps**
-- **AWS S3 + CloudFront**
-
-### Deploy to Vercel (Recommended)
-
-1. Push this repository to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Click **"New Project"**
-4. Import your GitHub repository
-5. Vercel will auto-detect Astro and build
-6. Done! Your site is live.
-
-### Deploy to Netlify
-
-1. Push this repository to GitHub
-2. Go to [netlify.com](https://www.netlify.com)
-3. Click **"New site from Git"**
-4. Connect your GitHub repository
-5. Build command: `npm run build`
-6. Publish directory: `dist`
-7. Deploy!
-
-### Manual Build & Deploy
-
-```bash
-# Build the site
-npm run build
-
-# Upload the `dist/` folder to your hosting provider
-```
-
----
-
 ## ⚖️ Legal & Scope Disclaimer
 
 ### What This Guide Covers
@@ -449,14 +406,6 @@ This documentation explains:
 - ✅ **Safety risks** of illegal add-ons (educational, harm-reduction focus)
 - ✅ How to **troubleshoot** common problems
 
-### What This Guide Does NOT Cover
-
-This documentation does **NOT** provide:
-- ❌ Step-by-step instructions for **piracy-focused add-ons**
-- ❌ Configuration guides for **accessing copyrighted content without authorization**
-- ❌ How to set up **debrid services for piracy**
-- ❌ Lists or links to **illegal streaming sources**
-- ❌ Workarounds to **evade copyright enforcement**
 
 ### Policy Rationale
 
