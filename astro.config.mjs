@@ -3,12 +3,101 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://stremio.prabhu-tools.com',
   integrations: [
     starlight({
-      title: 'Stremio User Guide',
-      description: 'Complete documentation for installing, configuring, and safely using Stremio',
+      title: 'Stremio Setup Guide - Complete Tutorial & Documentation',
+      description: 'Complete step-by-step guide for installing, configuring, and safely using Stremio. Learn about add-ons, metadata, troubleshooting, privacy, and security. Beginner-friendly tutorials for Windows, Mac, Linux, Android TV.',
+      head: [
+        // SEO Meta Tags
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'keywords',
+            content: 'Stremio, Stremio guide, Stremio tutorial, Stremio setup, streaming app, media center, Stremio add-ons, Stremio installation, Android TV, FireStick, streaming guide, legal streaming, Stremio help, Stremio troubleshooting',
+          },
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'author',
+            content: 'Stremio Setup Guide Community',
+          },
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'robots',
+            content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+          },
+        },
+        // Open Graph / Facebook
+        {
+          tag: 'meta',
+          attrs: {
+            property: 'og:type',
+            content: 'website',
+          },
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            property: 'og:site_name',
+            content: 'Stremio Setup Guide',
+          },
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            property: 'og:locale',
+            content: 'en_US',
+          },
+        },
+        // Twitter Card
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'twitter:card',
+            content: 'summary_large_image',
+          },
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'twitter:creator',
+            content: '@stremio',
+          },
+        },
+        // Canonical Link (will be overridden per page)
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'canonical',
+            href: 'https://stremio.prabhu-tools.com',
+          },
+        },
+        // JSON-LD Structured Data
+        {
+          tag: 'script',
+          attrs: {
+            type: 'application/ld+json',
+          },
+          content: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Stremio Setup Guide',
+            description: 'Complete documentation for installing, configuring, and safely using Stremio',
+            url: 'https://stremio.prabhu-tools.com',
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: 'https://stremio.prabhu-tools.com/search?q={search_term_string}',
+              'query-input': 'required name=search_term_string',
+            },
+          }),
+        },
+      ],
       social: {
-        github: 'https://github.com/Stremio',
+        github: 'https://github.com/i-hakuna-matata/stremio-docs',
       },
       editLink: {
         baseUrl: 'https://github.com/i-hakuna-matata/stremio-docs/edit/main/',
@@ -16,6 +105,8 @@ export default defineConfig({
       customCss: [
         './src/styles/custom.css',
       ],
+      lastUpdated: true,
+      favicon: '/favicon.ico',
       sidebar: [
         {
           label: 'Start Here',
@@ -102,6 +193,10 @@ export default defineConfig({
         {
           label: 'Glossary',
           link: '/glossary/',
+        },
+        {
+          label: 'Sitemap',
+          link: '/sitemap/',
         },
         {
           label: 'Credits & Acknowledgments',

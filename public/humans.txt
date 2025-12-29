@@ -1,0 +1,32 @@
+# Stremio User Guide - humans.txt
+
+/* TEAM */
+Project Maintainer: i-hakuna-matata
+GitHub: https://github.com/i-hakuna-matata
+Repository: https://github.com/i-hakuna-matata/stremio-docs
+
+Documentation Author: AI Assistant (GitHub Copilot)
+Method: Vibecoding (AI-assisted development)
+
+/* THANKS */
+Viren070 - Creator of AIOStreams and the GOAT Stremio Guide
+GitHub: https://github.com/Viren070
+Guide: https://guides.viren070.me/stremio
+
+Stremio Development Team
+Website: https://www.stremio.com
+GitHub: https://github.com/Stremio
+
+/* SITE */
+Last Update: 2025/12/28
+Standards: HTML5, CSS3, TypeScript
+Components: Astro, Starlight, MDX
+Software: VS Code, GitHub Copilot
+Hosting: Vercel
+Language: English
+
+/* SPECIAL THANKS */
+The Stremio Community
+Open Source Contributors
+Add-on Developers
+Astro & Starlight Teams

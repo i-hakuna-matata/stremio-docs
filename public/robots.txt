@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://stremio.prabhu-tools.com/sitemap-index.xml
+
+# Crawl-delay
+Crawl-delay: 0
+
+# Disallow indexing of search results
+Disallow: /search?
+
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10

@@ -2,7 +2,27 @@
   "name": "stremio-docs",
   "type": "module",
   "version": "1.0.0",
-  "description": "Comprehensive documentation website for Stremio users",
+  "description": "Comprehensive SEO-optimized documentation website for Stremio users - Complete guide to installing, configuring, and safely using Stremio",
+  "keywords": [
+    "stremio",
+    "stremio-guide",
+    "stremio-tutorial",
+    "streaming",
+    "media-center",
+    "documentation",
+    "astro",
+    "starlight"
+  ],
+  "author": "i-hakuna-matata",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i-hakuna-matata/stremio-docs"
+  },
+  "homepage": "https://stremio.prabhu-tools.com",
+  "bugs": {
+    "url": "https://github.com/i-hakuna-matata/stremio-docs/issues"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
