@@ -86,6 +86,41 @@ Alternative metadata sources using The Movie Database API.
 - Multiple language support
 - Up-to-date content data
 
+---
+
+## Example: Install the AIOMetadata Add-on
+
+Although the steps above work for any metadata source, here's how a typical **AIOMetadata-style** add-on installation looks in practice:
+
+<Steps>
+
+1. **Find the add-on**
+   - Open **Add-ons → Community**
+   - Search for **"AIOMetadata"**, **"AIO Meta"**, or the specific URL provided by a trusted developer such as Viren070
+   - If it's hosted externally, click **"Install via link"** and paste the add-on URL
+
+2. **Review permissions**
+   - Confirm it only lists **catalog** and **meta** capabilities
+   - Legitimate metadata add-ons never request stream/torrent permissions or your Stremio password
+
+3. **Install**
+   - Click **Install**
+   - A confirmation toast should appear within a few seconds
+
+4. **Set priority**
+   - Go to **Add-ons → Installed**
+   - Temporarily uninstall/reinstall metadata add-ons so the AIOMetadata entry becomes the most recently installed (and therefore primary) source
+
+5. **Test**
+   - Search for a newly released title or anime
+   - Confirm that posters, cast, and rating badges match what the add-on claims to provide
+
+</Steps>
+
+<Callout type="warning">
+If an add-on named "AIOMetadata" also advertises premium streams or asks for login credentials, uninstall it immediately and report it via [Reporting Issues & Scams](/privacy-security/reporting-issues-and-scams/).
+</Callout>
+
 ## Configuring Metadata Priority
 
 Stremio uses metadata from installed add-ons in a specific order:
@@ -97,6 +132,10 @@ Stremio uses metadata from installed add-ons in a specific order:
 <Callout type="tip">
 To change priority, uninstall and reinstall add-ons in your preferred order. The most recently installed add-on will have the highest priority.
 </Callout>
+
+### View Raw Responses (Advanced)
+
+Need to know exactly which add-on is providing a field? Open **Developer Tools** (Ctrl+Shift+I on desktop), go to the **Network** tab, and filter requests containing `/metainfo`. Each response lists the add-on identifier, making it easier to debug mismatched posters or ratings.
 
 ## Language & Regional Settings
 
@@ -150,6 +189,20 @@ Configure metadata language preferences:
 - Remove Cinemeta unless you have a reliable alternative
 - Share your Trakt API keys or credentials
 - Install add-ons from suspicious sources
+
+---
+
+## Metadata Maintenance Checklist
+
+Run this quick audit every few weeks (or whenever artwork looks wrong):
+
+1. **Refresh catalogs:** Reload the Discover page (Ctrl/Cmd + R on desktop) to force new posters to download.
+2. **Check a new release:** Search for a movie/show released this month. Missing artwork usually means your primary metadata source is down.
+3. **Clear cache if thumbnails stay blurry:** Settings → Advanced → Clear Cache, then sign back in.
+4. **Remove stale add-ons:** Fewer metadata providers = fewer conflicts.
+5. **Update API tokens:** If RPDB/Trakt revoke keys, re-authenticate from the add-on settings screen.
+
+Keep short notes/screenshots when you notice issues—developers appreciate detailed bug reports.
 
 ## Advanced: Custom Metadata Add-ons
 

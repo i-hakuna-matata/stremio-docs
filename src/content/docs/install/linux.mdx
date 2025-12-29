@@ -17,6 +17,25 @@ Install Stremio using your preferred method: AppImage (universal), Flatpak, or d
 
 ---
 
+## Before You Begin
+
+- **Confirm architecture:** Official builds target 64-bit x86 (amd64). For ARM boards such as Raspberry Pi, use the web version or community builds.
+- **Update your distro:** Run your package manager's update command (`sudo apt update && sudo apt upgrade`, `sudo dnf upgrade`, etc.) to avoid dependency conflicts.
+- **Check GPU drivers:** Hardware acceleration depends on up-to-date Mesa (Intel/AMD) or NVIDIA drivers. If videos tear or lag, install proper drivers first.
+- **Pick an install location:** Many users keep AppImages in `~/Applications` so they survive distro upgrades.
+
+---
+
+## Which Method Should I Use?
+
+| Method | Best for | Updates | Highlights |
+|--------|----------|---------|------------|
+| **AppImage** | Users who want a portable binary | Manual (download new file) | Works everywhere, no root needed, easy to carry on USB drive. |
+| **Flatpak** | Fedora/Silverblue, immutable distros, sandboxing fans | `flatpak update` | Runs in a sandbox, integrates with GNOME Software/KDE Discover. |
+| **Distribution package** | Debian/Ubuntu, RPM, Arch users who prefer native packages | Managed by system package manager | Integrates with system menu/services, but requires replacing versioned URLs manually. |
+
+---
+
 ## Method 1: AppImage (Recommended for Most Users)
 
 **Pros:** Universal, no installation, works on any distro  
@@ -28,6 +47,7 @@ Install Stremio using your preferred method: AppImage (universal), Flatpak, or d
    ```bash
    wget https://www.stremio.com/download/linux/appimage -O Stremio.AppImage
    ```
+   Optional: Verify the SHA-256 checksum published on [stremio.com/downloads](https://www.stremio.com/downloads) before running the file.
 
 2. **Make it executable**
    ```bash
@@ -42,6 +62,10 @@ Install Stremio using your preferred method: AppImage (universal), Flatpak, or d
 4. **Optional: Add to menu** (varies by desktop environment)
 
 </Steps>
+
+<Callout type="tip">
+Install <code>appimagelauncher</code> (available in most repositories) if you want automatic menu entries and desktop integration for AppImages.
+</Callout>
 
 ---
 
@@ -75,6 +99,10 @@ Install Stremio using your preferred method: AppImage (universal), Flatpak, or d
 
 </Steps>
 
+<Callout type="note">
+On Steam Deck, ChimeraOS, or other immutable distros, Flatpak is the most reliable option—just enable Developer Mode or Desktop Mode to run the commands above.
+</Callout>
+
 ---
 
 ## Method 3: Distribution Packages
@@ -107,6 +135,43 @@ Version numbers in URLs will change. Check stremio.com for the latest version.
 
 ---
 
+## Keep Stremio Updated
+
+- **AppImage:** Download the newest AppImage, mark as executable, then delete the old file so you don't launch the wrong version.
+- **Flatpak:** `flatpak update com.stremio.Stremio` (or click "Update" in GNOME Software/KDE Discover).
+- **Deb/RPM:** Re-run the `wget` + install commands with the latest version number. Pinning the old file will leave you without bug fixes.
+- **AUR:** Use your helper (`yay -Syu`, `paru -Syu`) so the package rebuilds when the maintainer bumps the version.
+
+<Callout type="warning">
+Stremio does not auto-update on Linux outside of Flatpak. Running outdated builds can break login/authentication once the API changes upstream.
+</Callout>
+
+---
+
+## Uninstalling
+
+- **AppImage:** Delete the `.AppImage` file. If you used AppImageLauncher, also remove `~/.local/share/applications/stremio.desktop`.
+- **Flatpak:** `flatpak uninstall com.stremio.Stremio`.
+- **Debian/Ubuntu:** `sudo apt remove stremio && sudo apt autoremove`.
+- **Fedora/RHEL:** `sudo dnf remove stremio`.
+- **AUR:** `yay -Rns stremio` (or the helper you used).
+
+**Reset user data:** remove `~/.config/Stremio` (AppImage/native) or `~/.var/app/com.stremio.Stremio` (Flatpak) to wipe cache, add-ons, and settings.
+
+---
+
+## Where Stremio Stores Files
+
+| What | Path |
+|------|------|
+| Config, cache, add-ons (AppImage/native) | `~/.config/Stremio` |
+| Flatpak sandbox data | `~/.var/app/com.stremio.Stremio` |
+| Desktop entries | `~/.local/share/applications/stremio.desktop` |
+
+Knowing these paths makes it easy to back up your library or migrate to another device.
+
+---
+
 ## Troubleshooting
 
 ### Missing dependencies
@@ -129,6 +194,23 @@ stremio
 # or for AppImage
 ./Stremio.AppImage
 ```
+
+If you see **Qt platform errors** on Wayland desktops, force X11 fallback:
+```bash
+QT_QPA_PLATFORM=xcb ./Stremio.AppImage
+```
+
+For blurry fonts on HiDPI displays, export `QT_SCALE_FACTOR=1.5` (adjust value) before launching.
+
+### Video artifacts or black screen
+
+- Install `mesa-va-drivers mesa-vdpau-drivers` (Intel/AMD) or proprietary NVIDIA drivers.
+- Toggle **Settings → Player → Hardware Acceleration** off/on.
+- For Flatpak builds, allow GPU access: `flatpak override --user --filesystem=home --device=dri com.stremio.Stremio`.
+
+### Can't write cache
+
+If you moved the AppImage to a read-only location, Stremio may fail to write into `~/.config/Stremio`. Ensure you have permission to that folder or set the `STREMIO_RUNTIME_DIR` environment variable to a writable path.
 
 ---
 

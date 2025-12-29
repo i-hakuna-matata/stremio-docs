@@ -11,6 +11,19 @@ import Steps from '../../../components/Steps.astro';
   <span class="badge badge-difficulty">Easy</span>
 </div>
 
+## Before You Begin
+
+- Supported devices: Android 5.0+ phones and tablets, Fire OS tablets (via APK), and most custom ROMs with Google Play Services.
+- Make sure you have **at least 500 MB free** so Stremio can store cache.
+- Connect to **Wi-Fi** if possible—installing via mobile data may be slow or limited.
+- Sign in with a Google account if you plan to use the Play Store.
+
+<Callout type="warning">
+Never download "modded" or "premium" APKs from unofficial mirrors. They frequently contain spyware or cryptocurrency miners.
+</Callout>
+
+---
+
 ## Method 1: Google Play Store (Recommended)
 
 <Steps>
@@ -26,6 +39,10 @@ import Steps from '../../../components/Steps.astro';
 5. **Tap "Open"** to launch Stremio
 
 </Steps>
+
+<Callout type="note">
+Double-check that the publisher listed under the install button is **"Stremio"** (Smart Code OOD). Imitation entries sometimes appear in search results.
+</Callout>
 
 ---
 
@@ -58,6 +75,10 @@ Only install APKs from official sources. Use this method only if Google Play is 
 
 </Steps>
 
+<Callout type="tip">
+On Fire OS tablets, open the Silk browser, visit <code>stremio.com</code>, and follow the same APK installation steps. For Huawei devices without Google services, use the APK method and allow "Install unknown apps" for your browser.
+</Callout>
+
 ---
 
 ## System Requirements
@@ -65,6 +86,59 @@ Only install APKs from official sources. Use this method only if Google Play is 
 - Android 5.0 Lollipop or newer
 - 2 GB RAM minimum (4 GB recommended)
 - 200 MB free storage
+
+---
+
+## Verify the Download
+
+1. After downloading the APK, compare its SHA-256 checksum with the value posted on [stremio.com/downloads](https://www.stremio.com/downloads).  
+2. Use an app like **Hash Droid** or run `sha256sum Stremio.apk` via Termux to calculate the hash.  
+3. If the values don't match, delete the file immediately and download again—do **not** install it.
+
+---
+
+## Manage Permissions on First Launch
+
+During the first run, Android may prompt you for:
+
+- **Notifications:** Optional. Enable if you want release alerts or binge-watching reminders.
+- **Storage (Android 5/6):** Needed only for caching streams locally. On Android 11+, scoped storage is used automatically.
+- **Battery optimization exclusions:** Decline unless you notice background sync being interrupted.
+
+You can revisit permissions under **Settings → Apps → Stremio → Permissions** anytime.
+
+---
+
+## Keep the App Updated
+
+- **Play Store version:** Updates automatically when Wi-Fi + charging (default behavior). You can force update via Play Store → Manage apps → Updates.
+- **APK side-load:** Check [stremio.com](https://www.stremio.com) monthly for new releases. Download the new APK and install it over the old one (no need to uninstall).
+- **Fire OS Appstore clones:** If you sideloaded via APKPure/Aurora, disable auto-update services from unknown sources to avoid mismatched variants.
+
+<Callout type="warning">
+Mixing Play Store and side-loaded builds on the same device can cause signature mismatches. Stick to one distribution method per device.
+</Callout>
+
+---
+
+## Troubleshooting Installation Errors
+
+### "Play Protect blocked this app"
+- Tap **Details** → **Install anyway** only if you downloaded from the official Play listing.
+- If side-loading, Play Protect may flag unsigned APKs. Temporarily disable real-time scanning, install, then re-enable protection.
+
+### "App not installed" when side-loading
+- Delete any previously downloaded APK with a different signature.
+- Clear the installer cache: **Settings → Apps → Package installer → Storage → Clear cache**.
+- Ensure "Install unknown apps" permission is granted to both your browser and file manager.
+
+### "Can't open file" in Downloads
+- Use a dedicated file manager (Files by Google).  
+- Move the APK to internal storage (not SD card) before installing. Some OEMs block installations from external SD cards.
+
+### Stremio crashes on launch
+- Restart the device, then clear the app cache via **Settings → Apps → Stremio → Storage → Clear cache**.
+- Older devices (Android 5/6) may need WebView updates from the Play Store to render the UI.
 
 ---
 
