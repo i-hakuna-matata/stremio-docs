@@ -1,6 +1,34 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+// Get Google Analytics ID from environment variable
+const GA_ID = process.env.PUBLIC_GA_MEASUREMENT_ID || '';
+
+// Build Google Analytics tags if ID is provided
+const buildGoogleAnalyticsTags = (gaId) => {
+  if (!gaId) return [];
+  
+  return [
+    {
+      tag: 'script',
+      attrs: {
+        async: true,
+        src: `https://www.googletagmanager.com/gtag/js?id=${gaId}`,
+      },
+    },
+    {
+      tag: 'script',
+      attrs: {},
+      content: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${gaId}');
+      `,
+    },
+  ];
+};
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://stremio.prabhu-tools.com',
@@ -9,6 +37,8 @@ export default defineConfig({
       title: 'Stremio Setup Guide - Complete Tutorial & Documentation',
       description: 'Complete step-by-step guide for installing, configuring, and safely using Stremio. Learn about add-ons, metadata, troubleshooting, privacy, and security. Beginner-friendly tutorials for Windows, Mac, Linux, Android TV.',
       head: [
+        // Google Analytics (if configured)
+        ...buildGoogleAnalyticsTags(GA_ID),
         // SEO Meta Tags
         {
           tag: 'meta',

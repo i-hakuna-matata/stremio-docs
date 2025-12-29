@@ -33,7 +33,59 @@ Analytics help you:
 
 ### Step 3: Add to Astro Project
 
-**Option 1: Using Starlight's built-in support**
+**Recommended: Using Environment Variable (Already Configured)**
+
+This project is pre-configured to use environment variables for Google Analytics.
+
+1. Copy the example environment file:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Edit `.env` and add your Measurement ID:
+   ```env
+   PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+   ```
+
+3. That's it! The analytics will automatically be included when you build/deploy.
+
+**How it works:**
+
+The `astro.config.mjs` file already includes this code:
+
+```javascript
+// Get Google Analytics ID from environment variable
+const GA_ID = process.env.PUBLIC_GA_MEASUREMENT_ID || '';
+
+// Build Google Analytics tags if ID is provided
+const buildGoogleAnalyticsTags = (gaId) => {
+  if (!gaId) return [];
+  
+  return [
+    {
+      tag: 'script',
+      attrs: {
+        async: true,
+        src: `https://www.googletagmanager.com/gtag/js?id=${gaId}`,
+      },
+    },
+    {
+      tag: 'script',
+      attrs: {},
+      content: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${gaId}');
+      `,
+    },
+  ];
+};
+```
+
+**Alternative Option: Hardcode in Config (Not Recommended)**
+
+If you prefer to hardcode the ID (not recommended for security):
 
 Add to `astro.config.mjs` in the `starlight()` configuration:
 
@@ -63,40 +115,23 @@ starlight({
 }),
 ```
 
-**Option 2: Create a component**
+### Step 4: Deploy Configuration
 
-Create `src/components/GoogleAnalytics.astro`:
+**Important:** When deploying to production (Vercel, Netlify, etc.), add the environment variable in your hosting platform:
 
-```astro
----
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Replace with your ID
----
+**Vercel:**
+1. Go to Project Settings → Environment Variables
+2. Add: `PUBLIC_GA_MEASUREMENT_ID` = `G-XXXXXXXXXX`
+3. Redeploy
 
-<!-- Google tag (gtag.js) -->
-<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
-```
+**Netlify:**
+1. Go to Site Settings → Build & Deploy → Environment
+2. Add: `PUBLIC_GA_MEASUREMENT_ID` = `G-XXXXXXXXXX`
+3. Redeploy
 
-### Step 4: Environment Variables (Recommended)
-
-For security, use environment variables:
-
-1. Create `.env` file:
-   ```
-   PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
-   ```
-
-2. Add to `.gitignore` (already done)
-
-3. Use in component:
-   ```javascript
-   const GA_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
-   ```
+**Other Platforms:**
+- Add the environment variable in your platform's settings
+- The variable name must be exactly: `PUBLIC_GA_MEASUREMENT_ID`
 
 ### Step 5: Privacy Compliance
 

@@ -109,11 +109,27 @@ cd stremio-docs
 # 2. Install dependencies
 npm install
 
-# 3. Start the development server
+# 3. (Optional) Set up Google Analytics
+# Copy .env.example to .env and add your Google Analytics ID
+cp .env.example .env
+# Edit .env and add: PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+
+# 4. Start the development server
 npm run dev
 ```
 
 The site will be available at **http://localhost:4321**
+
+### Environment Variables
+
+Create a `.env` file in the project root (already in .gitignore):
+
+```env
+# Google Analytics 4 Measurement ID (optional)
+PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+**Note:** If you don't set `PUBLIC_GA_MEASUREMENT_ID`, the site will work without analytics.
 
 ### Build for Production
 
