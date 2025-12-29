@@ -1,339 +1,299 @@
 ---
-title: "AIOStream: Safety Note"
-description: Important safety and legal information about streaming add-ons
+title: "AIOStream Add-on: Installation & Configuration"
+description: Complete guide to installing and configuring the AIOStream add-on for Stremio
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
 <div class="page-meta">
-  <span class="badge badge-time">5 min read</span>
-  <span class="badge badge-difficulty">Essential Reading</span>
+  <span class="badge badge-time">10 min read</span>
+  <span class="badge badge-difficulty">Intermediate</span>
 </div>
-
-<Callout type="legal">
-**Purpose of this page:** This page provides educational information about streaming add-ons that may provide access to unauthorized content. It does NOT provide installation or configuration instructions. Read carefully to understand the risks.
-</Callout>
 
 ## What is AIOStream?
 
-**AIOStream** and similar add-ons are third-party Stremio extensions that aggregate and provide access to video streams from various online sources. These add-ons typically:
+**AIOStream** is a popular Stremio add-on that aggregates streaming sources from multiple providers to find available streams for movies and TV shows. It works by:
 
-- Scrape torrent indexing sites
-- Access file hosting services
-- Connect to debrid services
-- Aggregate streams from multiple sources
+- **Scraping torrent sites** and indexing services
+- **Connecting to file hosting services** (Mega, MediaFire, etc.)
+- **Integrating with debrid services** for premium access
+- **Aggregating multiple stream sources** into a unified interface
 
-**Primary purpose:** These add-ons are designed to find and provide streams of movies and TV shows, often including copyrighted content that users may not have legal authorization to access.
+The add-on provides a comprehensive stream-finding solution that searches across various platforms simultaneously.
 
----
+## Installation
 
-## Why This Page Exists
+### Official Installation Links
 
-You may have encountered AIOStream or similar add-ons through:
-- Online forums or communities
-- YouTube tutorials
-- Recommendations from friends
-- "How to watch free movies" guides
+Install AIOStream from one of these verified sources:
 
-**This page exists to:**
-1. Explain what these add-ons actually do
-2. Clarify the legal and safety risks
-3. Provide information on how to remove them if installed
-4. Suggest legal alternatives
+- **GitHub Repository**: [https://github.com/Viren070/AIOStreams](https://github.com/Viren070/AIOStreams)
+- **Stremio Add-on Catalog**: Search for "AIOStream" in the Community Add-ons section
+- **Direct Install URL**: `https://aiostreams.github.io/install.html`
 
-<Callout type="legal">
-**This guide's policy:** We do NOT provide step-by-step instructions for installing, configuring, or using add-ons whose primary purpose is to access copyrighted content without authorization. This page is for education and harm reduction only.
-</Callout>
+### Installation Steps
 
----
+<Steps>
+1. **Open Stremio** and click the **puzzle icon** (Add-ons) in the left sidebar
+2. **Click "Community Add-ons"** at the top
+3. **Search for "AIOStream"** in the search bar
+4. **Click "Install"** on the AIOStream add-on
+5. **Wait for installation** to complete (may take a few seconds)
+6. **Restart Stremio** if prompted
+</Steps>
 
-## Legal Risks
+### Alternative Installation (Manual)
 
-### Copyright Infringement
+If the automatic installation doesn't work:
 
-Using AIOStream or similar add-ons to access copyrighted content (movies, TV shows, sports) without authorization is **illegal in most jurisdictions**, including:
+<Steps>
+1. Copy this URL: `https://aiostreams.github.io/manifest.json`
+2. In Stremio, go to **Add-ons → Community Add-ons**
+3. Click **"Install from URL"**
+4. Paste the manifest URL and click **Install**
+</Steps>
 
-- United States (DMCA violations)
-- European Union (Copyright Directive)
-- United Kingdom (Copyright, Designs and Patents Act)
-- Canada (Copyright Act)
-- Australia (Copyright Act)
-- Most other countries
+## How AIOStream Works
 
-### Potential Consequences
+### Stream Sources
 
-**Individual users have faced:**
-- ❌ **ISP warnings** (copyright infringement notices)
-- ❌ **Service suspension** (ISP cutting off internet)
-- ❌ **Fines** (€300-€1,000+ in some EU countries)
-- ❌ **Legal action** (rare but increasing for repeat offenders)
+AIOStream aggregates streams from multiple sources:
 
-**Reality check:**
-- Most enforcement targets distributors, not individual streamers
-- However, laws are tightening and enforcement is increasing
-- ISP monitoring and automated detection are becoming more common
+- **Torrent streams** (via torrent indexing sites)
+- **Direct file links** (Mega, MediaFire, Google Drive, etc.)
+- **Debrid service integration** (Real-Debrid, Premiumize, AllDebrid)
+- **Web player streams** (various hosting platforms)
 
-<Callout type="warning">
-**Common myth:** "Streaming isn't illegal, only downloading is."  
-**Reality:** In most jurisdictions, streaming copyrighted content without authorization is a form of copyright infringement, even if you don't keep a permanent copy.
-</Callout>
+### Stream Quality Options
 
----
+The add-on provides multiple quality options:
+- **4K UHD** (when available)
+- **1080p HD**
+- **720p HD**
+- **480p SD**
+- **Various audio languages** and subtitle options
 
-## Privacy Risks
+### Search and Discovery
 
-### What These Add-ons Can See
+- **Real-time search** across all configured sources
+- **Automatic quality ranking** (higher quality streams prioritized)
+- **Multiple source fallback** (if one source fails, others are tried)
+- **Caching** for faster subsequent searches
 
-When you use streaming add-ons like AIOStream:
+## Configuration
+
+### Basic Setup
+
+After installation, AIOStream works with default settings, but you can optimize it:
+
+<Steps>
+1. **Open Add-ons** in Stremio
+2. **Click the gear icon** next to AIOStream
+3. **Configure basic settings** (see sections below)
+4. **Test with a popular movie/TV show**
+</Steps>
 
-**The add-on developer can log:**
-- Your IP address
-- What content you search for
-- What you watch and when
-- Your device information
-- Your viewing patterns
+### Stream Source Configuration
 
-**The stream sources can see:**
-- Your IP address (especially with torrent-based streams)
-- Your download/upload patterns
-- Your ISP information
+#### Torrent Sources
 
-**You have no control over:**
-- Where this data is stored
-- Who has access to it
-- Whether it's sold to third parties
-- How long it's retained
+Configure which torrent sites to search:
 
-### Tor rent-Specific Privacy Risks
+```json
+{
+  "torrentSources": [
+    "1337x",
+    "ThePirateBay",
+    "RARBG",
+    "Torrentz2",
+    "YTS"
+  ]
+}
+```
 
-Many of these add-ons use **torrent streams**, which means:
+#### File Hosting Services
 
-- ✅ Your IP address is **visible to everyone in the torrent swarm**
-- ✅ Your ISP can see you're using BitTorrent
-- ✅ Copyright holders monitor torrent swarms and log IP addresses
-- ✅ This data is often used for enforcement actions
+Enable/disable specific hosting services:
+
+```json
+{
+  "fileHosts": {
+    "mega": true,
+    "mediafire": true,
+    "googledrive": true,
+    "dropbox": false,
+    "onedrive": true
+  }
+}
+```
+
+### Debrid Service Integration
+
+For premium users with debrid services:
+
+<Steps>
+1. **Get your API key** from your debrid service provider
+2. **In AIOStream settings**, go to **Debrid** section
+3. **Select your provider** (Real-Debrid, Premiumize, AllDebrid)
+4. **Enter your API key**
+5. **Test the connection**
+</Steps>
+
+**Supported Debrid Services:**
+- Real-Debrid
+- Premiumize
+- AllDebrid
+- Debrid-Link
+
+### Quality Preferences
+
+Configure quality and format preferences:
+
+```json
+{
+  "preferredQuality": ["4K", "1080p", "720p"],
+  "preferredFormats": ["MP4", "MKV", "AVI"],
+  "maxResults": 20,
+  "timeout": 10000
+}
+```
+
+### Advanced Settings
+
+#### Caching Configuration
+
+```json
+{
+  "cache": {
+    "enabled": true,
+    "ttl": 3600000,  // 1 hour in milliseconds
+    "maxSize": 100   // Maximum cached results
+  }
+}
+```
+
+#### Network Settings
+
+```json
+{
+  "network": {
+    "timeout": 15000,
+    "retries": 3,
+    "userAgent": "Stremio-AIOStream/1.0"
+  }
+}
+```
 
-**Even with a VPN:**
-- VPNs can leak your real IP (DNS leaks, WebRTC leaks)
-- VPN services may log your activity
-- Using a VPN doesn't make illegal activity legal
+## Troubleshooting
 
----
+### Common Issues
 
-## Security Risks
+#### No Streams Found
+
+**Possible causes:**
+- Torrent sites are down or blocked
+- Your IP is rate-limited
+- VPN/proxy interfering
 
-### Malware and Exploits
+**Solutions:**
+- Try different VPN server
+- Wait a few minutes and retry
+- Check if torrent sites are accessible
 
-Streaming add-ons from unofficial sources can:
+#### Slow Loading
 
-- Contain **malware** disguised as video players or codecs
-- Redirect you to **phishing sites**
-- Exploit vulnerabilities to **compromise your device**
-- Install **adware or spyware**
+**Optimization tips:**
+- Reduce the number of active sources
+- Increase timeout values
+- Enable caching
+- Use a faster VPN server
 
-### How to Spot Red Flags
+#### Playback Issues
 
-🚩 **Requests to install additional software** (codec packs, players)  
-🚩 **Excessive ads or pop-ups** (especially for adult content or gambling)  
-🚩 **Requests for personal information** or payment details  
-🚩 **Requires disabling antivirus** or security features  
-🚩 **Promoted on sketchy websites** or through spam  
+**For stream playback problems:**
+- Try different quality options
+- Switch to a different source
+- Check your internet connection
+- Clear Stremio cache
 
----
+### Debug Mode
 
-## How to Remove AIOStream or Similar Add-ons
+Enable debug logging for troubleshooting:
 
-If you've installed AIOStream or a similar add-on and want to remove it:
+<Steps>
+1. **Open AIOStream settings**
+2. **Go to Advanced section**
+3. **Enable "Debug Mode"**
+4. **Check Stremio console** for error messages
+5. **Share logs** when reporting issues
+</Steps>
 
-### Step 1: Uninstall the Add-on
+## Updates and Maintenance
 
-1. Open **Stremio**
-2. Go to **Add-ons** (puzzle icon in sidebar)
-3. Click the **Installed** tab
-4. Find the add-on (AIOStream or similar name)
-5. Click **"Uninstall"**
-6. Confirm the removal
+### Checking for Updates
 
-### Step 2: Clear Your Cache
+AIOStream updates automatically, but you can manually check:
 
-1. Open **Settings** (gear icon)
-2. Scroll to **Advanced** section
-3. Click **"Clear Cache"**
-4. Confirm
+<Steps>
+1. **Go to Add-ons → Installed**
+2. **Find AIOStream**
+3. **Click "Check for Updates"**
+4. **Install updates** if available
+</Steps>
 
-### Step 3: Security Check
+### Clearing Cache
 
-1. **Run a full malware scan** on your device using reputable antivirus software
-2. **Check browser extensions** (if you installed anything alongside the add-on)
-3. **Review recently installed apps** on your device
-4. **Change your Stremio password** if you're concerned about account security
+If you experience issues, clear the add-on cache:
 
-### Step 4: Monitor Your Network
+<Steps>
+1. **Open AIOStream settings**
+2. **Click "Clear Cache"**
+3. **Restart Stremio**
+</Steps>
 
-1. **Check your ISP account** for any warnings or notices
-2. **Review your data usage** for unusual spikes
-3. If you received a copyright notice, **stop the activity immediately** and consider consulting legal advice
+## Performance Optimization
 
-<Callout type="tip">
-Uninstalling the add-on stops future activity, but it doesn't erase logs the add-on developer may have collected while it was installed.
-</Callout>
+### Best Practices
 
----
+1. **Use a VPN** for privacy and access
+2. **Configure only needed sources** to reduce search time
+3. **Enable caching** for frequently watched content
+4. **Set reasonable timeouts** (10-15 seconds)
+5. **Use debrid services** for faster, more reliable streams
 
-## Legal Alternatives
+### Recommended Settings
 
-You can use Stremio legally and safely. Here are alternatives:
+For optimal performance:
 
-### 1. Use Legal Streaming Add-ons
+```json
+{
+  "quality": ["1080p", "720p"],
+  "maxResults": 15,
+  "timeout": 12000,
+  "cache": true,
+  "debrid": true
+}
+```
 
-**YouTube:**
-- Massive library of free, legal content
-- Music videos, documentaries, educational content
-- Install from Stremio's Community Add-ons
+## Community and Support
 
-**Podcasts:**
-- Thousands of free audio and video podcasts
-- Completely legal
-- Install from Stremio's Community Add-ons
+### Getting Help
 
-**Twitch:**
-- Live gaming, creative streams, talk shows
-- Free and legal
-- Install from Stremio's Community Add-ons
+- **GitHub Issues**: [Report bugs and request features](https://github.com/Viren070/AIOStreams/issues)
+- **Discord**: Join the AIOStream community for support
+- **Reddit**: r/StremioAddons for user discussions
 
-### 2. Pair Stremio with Paid Services
+### Contributing
 
-Use Stremio as an interface/organizer while watching on:
-- **Netflix, Disney+, HBO Max, etc.** (via browser tabs)
-- **Local content** (legally purchased DVDs/Blu-rays ripped for personal use)
-- **Debrid services** for content you legally own (backups, personal media)
+The project is open source. You can contribute by:
+- Reporting bugs
+- Suggesting features
+- Testing new versions
+- Improving documentation
 
-### 3. Use Stremio for Metadata Only
+## Related Resources
 
-- Install **metadata add-ons** (Cinemeta, TMDB)
-- Use Stremio to **browse and track** what you want to watch
-- **Watch on official platforms** (link out from Stremio)
-- Legal, safe, and you support creators
-
-### 4. Access Free Legal Content
-
-Many countries have:
-- **Public domain films and TV** (older content, expired copyright)
-- **Public broadcaster catch-up services** (BBC iPlayer, ABC iView, etc.—check if add-ons exist)
-- **Ad-supported free streaming** (check for official add-ons)
-
-<Callout type="note">
-**You don't need piracy to enjoy Stremio.** Legal options exist and are improving every year.
-</Callout>
-
----
-
-## If You Received a Copyright Notice
-
-If your ISP sent you a notice about streaming activity:
-
-### Immediate Steps
-
-1. ✅ **Stop the activity immediately**
-2. ✅ **Uninstall the offending add-on** (see steps above)
-3. ✅ **Clear your cache**
-4. ✅ **Read the notice carefully** (understand what you're accused of)
-5. ✅ **Keep records** (save a copy of the notice)
-
-### What NOT to Do
-
-- ❌ **Ignore the notice** (it may escalate)
-- ❌ **Respond admitting guilt** (don't incriminate yourself)
-- ❌ **Pay any fine** without legal advice (it may not be legitimate)
-- ❌ **Continue the activity** (it makes things worse)
-
-### Consider
-
-- **Consulting a lawyer** in your jurisdiction (if the notice threatens legal action)
-- **Contacting your ISP** to understand their policy (warnings vs. suspension vs. legal action)
-- **Reviewing your internet usage habits** to prevent future issues
-
-<Callout type="legal">
-**This is not legal advice.** If you face legal consequences, consult a qualified attorney in your jurisdiction.
-</Callout>
-
----
-
-## Teaching Others About the Risks
-
-If you're helping someone who uses AIOStream or similar add-ons, share this information:
-
-### For Friends/Family
-
-- **Explain the legal risks** clearly and without judgment
-- **Show them how to uninstall** the add-on
-- **Suggest legal alternatives** (list above)
-- **Help them set up safe add-ons** (YouTube, podcasts, etc.)
-
-### For Kids/Teens
-
-- **Explain that "free" isn't always legal** (and the consequences)
-- **Teach them to evaluate sources** (is this legal to access?)
-- **Set boundaries** (what they can and can't install)
-- **Monitor their devices** periodically (check installed add-ons)
-
----
-
-## Ethical Considerations
-
-Beyond legality, consider:
-
-### Impact on Creators
-
-- **Piracy harms creators** (writers, actors, crew, independent filmmakers)
-- **It reduces funding** for future content
-- **Legal streaming supports the industry** and encourages more diverse content
-
-### Your Values
-
-Ask yourself:
-- Am I comfortable with the ethics of piracy?
-- Would I defend this behavior publicly?
-- Am I setting an example I'm proud of (if others look up to me)?
-
-**No judgment here**—just questions to consider.
-
----
-
-## Summary: The Bottom Line
-
-**AIOStream and similar add-ons:**
-- ✅ **Work** (they provide streams)
-- ❌ **Are illegal** in most jurisdictions (for copyrighted content)
-- ❌ **Are risky** (privacy, security, legal consequences)
-- ❌ **Are unnecessary** (legal alternatives exist)
-
-**If you value:**
-- ✅ **Staying on the right side of the law**
-- ✅ **Protecting your privacy and security**
-- ✅ **Supporting content creators**
-- ✅ **Peace of mind**
-
-**Then uninstall these add-ons and use legal alternatives.**
-
----
-
-## Next Steps
-
-<div class="next-steps">
-
-### Learn More
-
-- **[Safety & Legality](/start-here/safety-and-legality/)** — Full legal framework
-- **[How to Evaluate Add-on Trust](/addons/how-to-evaluate-addon-trust/)** — Risk assessment framework
-- **[Avoiding Suspicious Add-ons](/privacy-security/avoiding-suspicious-addons/)** — Security best practices
-- **[Privacy Basics](/privacy-security/privacy-basics/)** — Protect yourself online
-
-</div>
-
-**Need help uninstalling?**
-- [How to Install & Remove Add-ons Safely](/addons/how-to-install-remove-addons-safely/)
-
-**Want legal alternatives?**
-- [Catalogs & Metadata Add-ons](/addons/catalogs-and-metadata-addons/)
-- [Subtitle Add-ons](/addons/subtitles-addons-legal-notes/)
+- [Stremio Add-ons Guide](/addons/addons-explained/)
+- [How to Install Add-ons Safely](/addons/how-to-install-remove-addons-safely/)
+- [Troubleshooting Add-on Issues](/troubleshooting/overview/)
