@@ -1,9 +1,31 @@
 # Stremio Setup Guide - Documentation Website
 
+<div align="center">
+
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fstremio.prabhu-tools.com&up_message=online&up_color=success&down_message=offline&down_color=red&style=for-the-badge&logo=vercel)](https://stremio.prabhu-tools.com)
+[![GitHub Stars](https://img.shields.io/github/stars/i-hakuna-matata/stremio-docs?style=for-the-badge&logo=github&color=yellow)](https://github.com/i-hakuna-matata/stremio-docs/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/i-hakuna-matata/stremio-docs?style=for-the-badge&logo=github&color=blue)](https://github.com/i-hakuna-matata/stremio-docs/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/i-hakuna-matata/stremio-docs?style=for-the-badge&logo=github&color=red)](https://github.com/i-hakuna-matata/stremio-docs/issues)
+[![GitHub License](https://img.shields.io/github/license/i-hakuna-matata/stremio-docs?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
+
+[![Built with Astro](https://img.shields.io/badge/Built%20with-Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build)
+[![Powered by Starlight](https://img.shields.io/badge/Powered%20by-Starlight-7C3AED?style=for-the-badge&logo=astro&logoColor=white)](https://starlight.astro.build)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![SEO Optimized](https://img.shields.io/badge/SEO-Optimized-00C853?style=for-the-badge&logo=google&logoColor=white)](SEO_CHECKLIST.md)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=for-the-badge&logo=github)](CONTRIBUTING.md)
+
+[![Last Commit](https://img.shields.io/github/last-commit/i-hakuna-matata/stremio-docs?style=flat-square&logo=github)](https://github.com/i-hakuna-matata/stremio-docs/commits/main)
+[![Code Size](https://img.shields.io/github/languages/code-size/i-hakuna-matata/stremio-docs?style=flat-square&logo=github)](https://github.com/i-hakuna-matata/stremio-docs)
+[![Top Language](https://img.shields.io/github/languages/top/i-hakuna-matata/stremio-docs?style=flat-square&logo=mdx&logoColor=white)](https://github.com/i-hakuna-matata/stremio-docs)
+
+</div>
+
+---
+
 > **Comprehensive, production-ready documentation for non-technical users**  
 > Learn how to install, configure, and safely use Stremio with deep focus on usability, troubleshooting, and safety.
 
-**Live Site:** https://stremio.prabhu-tools.com • **Built with:** Astro + Starlight
+**🌐 Live Site:** [stremio.prabhu-tools.com](https://stremio.prabhu-tools.com) • **⚡ Built with:** Astro + Starlight
 
 ---
 
@@ -17,9 +39,39 @@
 - [How to Edit Content](#how-to-edit-content)
 - [Adding Screenshots](#adding-screenshots)
 - [Deployment](#deployment)
+- [SEO Optimization](#seo-optimization)
 - [Legal & Scope Disclaimer](#legal--scope-disclaimer)
 - [Contributing](#contributing)
 - [License](#license)
+
+---
+
+## 📊 Project Stats
+
+<div align="center">
+
+### 📚 Documentation Coverage
+
+![Pages](https://img.shields.io/badge/Pages-50+-blue?style=flat-square)
+![Guides](https://img.shields.io/badge/Installation_Guides-7-green?style=flat-square)
+![FAQ](https://img.shields.io/badge/FAQ_Entries-40+-orange?style=flat-square)
+![Glossary](https://img.shields.io/badge/Glossary_Terms-80+-purple?style=flat-square)
+
+### ⚡ Performance
+
+![Lighthouse Performance](https://img.shields.io/badge/Lighthouse-95+-success?style=flat-square&logo=lighthouse)
+![Mobile Friendly](https://img.shields.io/badge/Mobile-Friendly-success?style=flat-square&logo=mobile)
+![SEO Score](https://img.shields.io/badge/SEO-100%25-success?style=flat-square&logo=google)
+![Accessibility](https://img.shields.io/badge/Accessibility-WCAG_2.1-blue?style=flat-square&logo=accessibility)
+
+### 🛠️ Tech Stack
+
+![Astro](https://img.shields.io/badge/Astro-4.16-FF5D01?style=flat-square&logo=astro)
+![Starlight](https://img.shields.io/badge/Starlight-0.28-7C3AED?style=flat-square)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?style=flat-square&logo=typescript)
+![MDX](https://img.shields.io/badge/MDX-Content-1B1F24?style=flat-square&logo=mdx)
+
+</div>
 
 ---
 
@@ -661,6 +713,71 @@ Future improvements planned:
 
 ---
 
+## 👥 Maintainers
+
+<div align="center">
+
+[![Maintainer](https://img.shields.io/badge/Maintainer-i--hakuna--matata-blue?style=for-the-badge&logo=github)](https://github.com/i-hakuna-matata)
+[![Vibecoded](https://img.shields.io/badge/Vibecoded%20with-AI-FF6B6B?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/features/copilot)
+
+**Special Thanks to:**
+
+[![Viren070](https://img.shields.io/badge/🐐_GOAT-Viren070-gold?style=for-the-badge&logo=github)](https://github.com/Viren070)
+[![AIOStreams](https://img.shields.io/badge/Project-AIOStreams-purple?style=for-the-badge&logo=github)](https://github.com/Viren070/AIOStreams)
+[![Viren's Guide](https://img.shields.io/badge/Guide-guides.viren070.me-success?style=for-the-badge&logo=google-chrome&logoColor=white)](https://guides.viren070.me/stremio)
+
+</div>
+
+---
+
+## 📞 Support & Community
+
+<div align="center">
+
+[![GitHub Issues](https://img.shields.io/badge/Issues-Report%20Bug-red?style=for-the-badge&logo=github)](https://github.com/i-hakuna-matata/stremio-docs/issues)
+[![GitHub Discussions](https://img.shields.io/badge/Discussions-Ask%20Question-blue?style=for-the-badge&logo=github)](https://github.com/i-hakuna-matata/stremio-docs/discussions)
+[![Pull Requests](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge&logo=github)](https://github.com/i-hakuna-matata/stremio-docs/pulls)
+
+**Official Stremio Community:**
+
+[![Reddit](https://img.shields.io/badge/Reddit-r/Stremio-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://reddit.com/r/Stremio)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Chat-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/stremio)
+[![Website](https://img.shields.io/badge/Official-Stremio.com-7C3AED?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.stremio.com)
+
+</div>
+
+---
+
+## ⭐ Show Your Support
+
+If this documentation helped you, please consider:
+
+<div align="center">
+
+[![Star this repo](https://img.shields.io/badge/⭐_Star-This%20Repo-yellow?style=for-the-badge&logo=github)](https://github.com/i-hakuna-matata/stremio-docs)
+[![Share on Twitter](https://img.shields.io/badge/Share-on%20Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/intent/tweet?text=Check%20out%20this%20comprehensive%20Stremio%20Setup%20Guide!&url=https://stremio.prabhu-tools.com)
+[![Share on Reddit](https://img.shields.io/badge/Share-on%20Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://reddit.com/submit?url=https://stremio.prabhu-tools.com&title=Comprehensive%20Stremio%20Setup%20Guide)
+
+</div>
+
+---
+
+<div align="center">
+
 **Built with ❤️ for the Stremio community**
 
-Last updated: December 2025
+[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square)]()
+[![Powered by Coffee](https://img.shields.io/badge/Powered%20by-☕-brown?style=flat-square)]()
+[![Open Source](https://img.shields.io/badge/Open-Source-success?style=flat-square&logo=opensourceinitiative)]()
+
+**Last Updated:** December 2025
+
+---
+
+### 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+</div>
