@@ -1,0 +1,333 @@
+---
+title: Troubleshooting Overview
+description: Quick diagnostic guide to solve common Stremio problems
+---
+
+import Callout from '../../../components/Callout.astro';
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<div class="page-meta">
+  <span class="badge badge-time">10 min read</span>
+  <span class="badge badge-difficulty">All Levels</span>
+</div>
+
+## Start Here
+
+Having problems with Stremio? This page will help you:
+1. **Identify** what kind of problem you have
+2. **Find** the right troubleshooting guide
+3. **Fix** the issue quickly
+
+<Callout type="tip">
+**Pro tip:** Use the [Troubleshooting Decision Tree](/troubleshooting/troubleshooting-tree/) for a guided step-by-step flow.
+</Callout>
+
+---
+
+## Quick Problem Identifier
+
+**Click the category that best describes your issue:**
+
+<CardGrid>
+  <Card title="🎬 Video Won't Play or Buffers" icon="warning">
+    Playback issues, buffering, stuttering, or "No streams available"
+    
+    **[Fix Playback Issues →](/troubleshooting/playback-buffering/)**
+  </Card>
+
+  <Card title="💬 Subtitles Not Working" icon="document">
+    Subtitles missing, out of sync, or wrong language
+    
+    **[Fix Subtitles →](/troubleshooting/subtitles-not-working/)**
+  </Card>
+
+  <Card title="🔊 Audio Problems" icon="information">
+    No audio, audio out of sync with video, or wrong language
+    
+    **[Fix Audio/Video Sync →](/troubleshooting/audio-video-sync/)**
+  </Card>
+
+  <Card title="💥 App Crashes or Freezes" icon="error">
+    Stremio won't open, crashes on startup, or freezes during use
+    
+    **[Fix Crashes →](/troubleshooting/app-crashes-and-freezes/)**
+  </Card>
+
+  <Card title="🔑 Can't Log In or Sync" icon="lock-closed">
+    Login failures, sync not working, or account issues
+    
+    **[Fix Login/Sync →](/troubleshooting/login-sync-issues/)**
+  </Card>
+
+  <Card title="📺 Android TV Performance" icon="tv">
+    Slow interface, lag, or crashes on Android TV/Fire TV
+    
+    **[Fix TV Performance →](/troubleshooting/android-tv-performance/)**
+  </Card>
+
+  <Card title="🌐 Network Problems" icon="cloud">
+    Connection errors, "Network timeout," or general connectivity issues
+    
+    **[Check Network →](/troubleshooting/network-checklist/)**
+  </Card>
+
+  <Card title="❓ Something Else" icon="question-mark">
+    None of the above? Try the decision tree or FAQ
+    
+    **[Decision Tree →](/troubleshooting/troubleshooting-tree/)** • **[FAQ →](/faq/faq/)**
+  </Card>
+</CardGrid>
+
+---
+
+## General Troubleshooting Steps
+
+Before diving into specific guides, try these universal fixes:
+
+### 1. Restart Stremio
+
+- **Close** Stremio completely (don't just minimize)
+- **Wait** 10 seconds
+- **Reopen** Stremio
+
+**Fixes:** Many transient issues, memory leaks, temporary glitches.
+
+### 2. Check Your Internet
+
+- **Test speed:** Go to [fast.com](https://fast.com) or [speedtest.net](https://www.speedtest.net)
+- **Required:** 5 Mbps for SD, 25 Mbps for HD, 50+ Mbps for 4K
+- **Restart your router** if speed is slow
+
+**Fixes:** Buffering, "No connection" errors, slow loading.
+
+### 3. Clear Cache
+
+- Go to **Settings** → **Advanced**
+- Click **"Clear Cache"**
+- Restart Stremio
+
+**Fixes:** Playback errors, corrupted data, interface glitches.
+
+### 4. Update Stremio
+
+- Check if an update is available (Stremio notifies you)
+- **Download** the latest version from [stremio.com](https://www.stremio.com)
+- **Install** over your existing version
+
+**Fixes:** Bugs fixed in newer versions, compatibility issues.
+
+### 5. Check Firewall/Antivirus
+
+- Ensure Stremio is **allowed** through your firewall
+- **Temporarily disable** antivirus and test (if safe to do so)
+- **Add Stremio to exceptions** if it was being blocked
+
+**Fixes:** "Connection refused," streaming failures.
+
+---
+
+## Problem Categories Explained
+
+### Playback Issues
+
+**Symptoms:**
+- Video won't start
+- "No streams available"
+- Infinite buffering
+- Stuttering or freezing during playback
+
+**Common causes:**
+- Slow or unstable internet
+- Add-on issues (broken or offline)
+- Firewall blocking Stremio
+- Insufficient bandwidth
+
+**Guide:** [Playback & Buffering](/troubleshooting/playback-buffering/)
+
+---
+
+### Subtitle Issues
+
+**Symptoms:**
+- Subtitles don't appear
+- Wrong language
+- Out of sync with audio
+- Subtitle add-on not working
+
+**Common causes:**
+- No subtitle add-on installed
+- Subtitles not available for that title
+- Language mismatch
+- Timing issues
+
+**Guide:** [Subtitles Not Working](/troubleshooting/subtitles-not-working/)
+
+---
+
+### Audio/Video Sync Issues
+
+**Symptoms:**
+- Audio plays before or after video
+- Audio track missing
+- Wrong language audio
+
+**Common causes:**
+- Stream quality issues
+- Device performance problems
+- Player settings
+
+**Guide:** [Audio/Video Sync](/troubleshooting/audio-video-sync/)
+
+---
+
+### App Stability Issues
+
+**Symptoms:**
+- Stremio won't launch
+- Crashes on startup
+- Freezes during use
+- "Not responding" errors
+
+**Common causes:**
+- Corrupted installation
+- Insufficient device resources
+- Conflicting software
+- OS compatibility issues
+
+**Guide:** [App Crashes & Freezes](/troubleshooting/app-crashes-and-freezes/)
+
+---
+
+### Login/Sync Issues
+
+**Symptoms:**
+- Can't log in
+- "Invalid credentials" error
+- Library not syncing across devices
+- Account settings not saving
+
+**Common causes:**
+- Wrong email/password
+- Network issues
+- Server problems (Stremio's side)
+- Cache corruption
+
+**Guide:** [Login & Sync Issues](/troubleshooting/login-sync-issues/)
+
+---
+
+### Android TV Performance
+
+**Symptoms:**
+- Slow, laggy interface
+- App crashes frequently on TV
+- Remote control unresponsive
+- Video stutters on TV but works on phone
+
+**Common causes:**
+- Underpowered TV device
+- Too many apps running
+- Insufficient storage
+- Outdated TV OS
+
+**Guide:** [Android TV Performance](/troubleshooting/android-tv-performance/)
+
+---
+
+### Network Problems
+
+**Symptoms:**
+- "Network timeout" errors
+- "Connection refused"
+- Can't connect to add-ons
+- Intermittent connectivity
+
+**Common causes:**
+- Router issues
+- ISP problems
+- DNS issues
+- Firewall/proxy blocking
+
+**Guide:** [Network Checklist](/troubleshooting/network-checklist/)
+
+---
+
+## When to Reinstall
+
+Reinstalling should be a **last resort**, but it's necessary if:
+
+- Stremio won't launch at all after trying everything
+- Corruption is suspected (frequent crashes, data loss)
+- You've exhausted all other troubleshooting steps
+
+### How to Reinstall Cleanly
+
+1. **Uninstall Stremio** (see your device-specific install guide)
+2. **Delete user data folder:**
+   - **Windows:** `%APPDATA%\Stremio`
+   - **macOS:** `~/Library/Application Support/Stremio`
+   - **Linux:** `~/.config/Stremio`
+   - **Android:** Clear app data in Settings → Apps → Stremio
+3. **Restart your device**
+4. **Download fresh installer** from [stremio.com](https://www.stremio.com)
+5. **Install** and set up from scratch
+
+<Callout type="warning">
+**Warning:** Deleting user data erases local settings and cache. Your library is safe if you have a Stremio account (cloud-synced).
+</Callout>
+
+---
+
+## Getting Help
+
+If you can't solve your problem:
+
+### 1. Use the Decision Tree
+
+The [Troubleshooting Decision Tree](/troubleshooting/troubleshooting-tree/) guides you through a step-by-step diagnostic flow.
+
+### 2. Check the FAQ
+
+The [FAQ](/faq/faq/) has quick answers to 40+ common questions.
+
+### 3. Search This Site
+
+Use the search bar at the top to find relevant guides and tips.
+
+### 4. Ask the Community
+
+See [Reporting Issues & Scams](/privacy-security/reporting-issues-and-scams/) for how to get help from the official Stremio community.
+
+---
+
+## Prevention Tips
+
+Avoid future issues with these best practices:
+
+### ✅ DO:
+
+- **Keep Stremio updated** (install updates when notified)
+- **Use a stable internet connection** (wired Ethernet is best)
+- **Audit add-ons regularly** (remove broken or unused ones)
+- **Clear cache periodically** (once a month if you use Stremio daily)
+- **Restart Stremio occasionally** (don't leave it running 24/7)
+
+### ❌ DON'T:
+
+- **Install too many add-ons** (more add-ons = more complexity)
+- **Ignore error messages** (they often tell you what's wrong)
+- **Modify advanced settings** without understanding them
+- **Use Stremio on an overloaded/underpowered device**
+
+---
+
+<div class="next-steps">
+
+### Choose Your Next Step
+
+- **[Troubleshooting Decision Tree](/troubleshooting/troubleshooting-tree/)** — Guided diagnostic flow
+- **[Playback & Buffering](/troubleshooting/playback-buffering/)** — Most common issue
+- **[FAQ](/faq/faq/)** — Quick answers
+- **[Network Checklist](/troubleshooting/network-checklist/)** — Start with basics
+
+</div>

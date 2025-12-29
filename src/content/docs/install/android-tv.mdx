@@ -1,0 +1,82 @@
+---
+title: Install Stremio on Android TV
+description: Install Stremio on Android TV, Fire TV, and TV boxes
+---
+
+import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
+
+<div class="page-meta">
+  <span class="badge badge-time">10-15 min</span>
+  <span class="badge badge-difficulty">Moderate</span>
+</div>
+
+## Method 1: Google Play Store (Easiest)
+
+If your device has Google Play Store:
+
+<Steps>
+
+1. **Open Google Play Store** on your Android TV
+
+2. **Search for "Stremio"** using the TV remote
+
+3. **Select the Stremio app** by Stremio
+
+4. **Click "Install"**
+
+5. **Wait for installation**, then click "Open"
+
+</Steps>
+
+---
+
+## Method 2: Sideload APK (Fire TV, non-Google devices)
+
+<Callout type="warning">
+Sideloading requires enabling Developer Options. Only proceed if you're comfortable with this.
+</Callout>
+
+<Steps>
+
+1. **Enable Developer Options**
+   - Go to **Settings** → **My Fire TV** (or **Device**)
+   - Click **About**
+   - Click **Build Number** 7 times until you see "You are now a developer"
+
+2. **Enable ADB Debugging and Apps from Unknown Sources**
+   - Go to **Settings** → **My Fire TV** → **Developer Options**
+   - Enable **ADB Debugging**
+   - Enable **Apps from Unknown Sources**
+
+3. **Install Downloader app**
+   - Search for **"Downloader"** in the app store
+   - Install it
+
+4. **Download Stremio APK**
+   - Open **Downloader**
+   - Enter URL: `https://www.stremio.com`
+   - Navigate to downloads and get the Android TV APK
+
+5. **Install the APK**
+   - Click **"Install"** when prompted
+   - Wait for installation
+
+6. **Disable Unknown Sources** (recommended)
+
+</Steps>
+
+---
+
+## Important: Use Android TV Version
+
+Make sure you download the **Android TV** version, not the phone/tablet version. The TV version has:
+- TV-optimized interface
+- Remote control support
+- Better performance on TV hardware
+
+---
+
+## Next Steps
+
+Continue to [First 10 Minutes Setup](/start-here/first-10-minutes-setup/).

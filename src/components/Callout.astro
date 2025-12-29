@@ -1,0 +1,94 @@
+---
+interface Props {
+  type?: 'note' | 'tip' | 'warning' | 'legal';
+  title?: string;
+}
+
+const { type = 'note', title } = Astro.props;
+
+const icons = {
+  note: '📘',
+  tip: '💡',
+  warning: '⚠️',
+  legal: '⚖️',
+};
+
+const titles = {
+  note: 'Note',
+  tip: 'Tip',
+  warning: 'Warning',
+  legal: 'Legal & Safety Notice',
+};
+---
+
+<div class={`callout callout-${type}`}>
+  <div class="callout-header">
+    <span class="callout-icon" aria-hidden="true">{icons[type]}</span>
+    <strong class="callout-title">{title || titles[type]}</strong>
+  </div>
+  <div class="callout-content">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .callout {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid;
+  }
+
+  .callout-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .callout-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .callout-title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .callout-content {
+    font-size: 0.95rem;
+  }
+
+  .callout-content :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .callout-note {
+    background-color: var(--sl-color-blue-low);
+    border-left-color: var(--sl-color-blue);
+    color: var(--sl-color-gray-1);
+  }
+
+  .callout-tip {
+    background-color: var(--sl-color-green-low);
+    border-left-color: var(--sl-color-green);
+    color: var(--sl-color-gray-1);
+  }
+
+  .callout-warning {
+    background-color: var(--sl-color-orange-low);
+    border-left-color: var(--sl-color-orange);
+    color: var(--sl-color-gray-1);
+  }
+
+  .callout-legal {
+    background-color: var(--sl-color-red-low);
+    border-left-color: var(--sl-color-red);
+    color: var(--sl-color-gray-1);
+  }
+
+  :global([data-theme='light']) .callout {
+    color: var(--sl-color-black);
+  }
+</style>

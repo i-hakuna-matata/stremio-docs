@@ -1,0 +1,337 @@
+---
+title: Safety & Legality
+description: Understand the legal landscape, risks, and how to use Stremio responsibly
+---
+
+import Callout from '../../../components/Callout.astro';
+
+<div class="page-meta">
+  <span class="badge badge-time">10 min read</span>
+  <span class="badge badge-difficulty">Essential Reading</span>
+</div>
+
+<Callout type="legal">
+**Critical Disclaimer:** This page provides educational information about legal and safety considerations. It is not legal advice. Laws vary by jurisdiction. You are solely responsible for ensuring your use of Stremio complies with applicable laws where you live.
+</Callout>
+
+## What You'll Learn
+
+This page explains:
+
+- What's legal and what isn't when using Stremio
+- How to identify risky add-ons
+- Privacy and security basics
+- How to stay safe and protect yourself
+
+**Why this matters:** Stremio is a powerful tool, but with power comes responsibility. Understanding these principles will help you avoid legal trouble, malware, and privacy violations.
+
+---
+
+## The Legal Landscape
+
+### What IS Legal
+
+✅ **Installing and using Stremio**  
+The software itself is legal everywhere. It's a neutral media player.
+
+✅ **Using add-ons that provide licensed content**  
+Examples: Official network add-ons, YouTube, Twitch, podcasts, public domain content, Creative Commons libraries.
+
+✅ **Using add-ons for content you own**  
+If you legally own or subscribe to content, using an add-on to access it is generally fine (check the service's terms of service).
+
+✅ **Using metadata add-ons**  
+Add-ons that only provide information (posters, descriptions, ratings) without streaming links are legal.
+
+### What IS Illegal (in Most Jurisdictions)
+
+❌ **Streaming copyrighted content without authorization**  
+This includes movies, TV shows, sports, and other content you don't have legal rights to access.
+
+❌ **Using add-ons designed to access pirated content**  
+Even if you're "just streaming" and not downloading, it's still copyright infringement in most countries.
+
+❌ **Redistributing copyrighted streams**  
+Sharing or reselling access to pirated content is illegal and often prosecuted more aggressively.
+
+<Callout type="warning">
+**Common misconception:** "Streaming isn't illegal, only downloading is."  
+
+**Reality:** In most countries (including the US, UK, EU, Canada, Australia), streaming copyrighted content without permission is illegal. The risk of prosecution is lower than for distributors, but the law is clear.
+</Callout>
+
+### The Gray Areas
+
+Some situations are legally ambiguous:
+
+- **Content you pay for but access via third-party add-ons** (e.g., using a debrid service with content from a paid subscription)
+- **Geo-restricted content** (accessing a service available in your country but blocked in your current location)
+- **Content with unclear licensing** (old shows, abandoned projects)
+
+When in doubt, **assume it's not legal** unless you can verify otherwise.
+
+---
+
+## Understanding Add-on Risk Levels
+
+Not all add-ons carry the same risk. Here's how to think about them:
+
+### 🟢 Low Risk: Metadata & Catalogs
+
+These add-ons provide **information only**—no streams.
+
+- **Examples:** Metadata add-ons (AIOMetadata-style), TMDB catalogs, genre filters
+- **What they do:** Show posters, descriptions, ratings, and organize content
+- **Legal status:** Completely legal
+- **Safety:** Generally safe if from trusted sources
+
+### 🟡 Medium Risk: Licensed & Official Sources
+
+These add-ons stream content but from legitimate sources.
+
+- **Examples:** YouTube, Twitch, official network add-ons, podcast directories
+- **What they do:** Stream freely available or licensed content
+- **Legal status:** Legal (as long as you comply with the source's terms of service)
+- **Safety:** Usually safe, but verify the add-on is actually official
+
+### 🔴 High Risk: Unlicensed Streaming
+
+These add-ons provide streams of copyrighted content without authorization.
+
+- **Examples:** We won't name them, but if an add-on promises "free movies and TV," it likely falls here
+- **What they do:** Scrape torrent sites, file hosts, or pirate streaming services
+- **Legal status:** Illegal in most jurisdictions
+- **Safety:** High risk of malware, data harvesting, and legal consequences
+
+<Callout type="legal">
+**This guide's stance:** We explain how add-ons work and how to remove unsafe ones, but we do not provide step-by-step instructions for installing or configuring add-ons designed for unauthorized streaming. For safety/risk information on specific add-ons, see the [Add-ons section](/addons/addons-explained/).
+</Callout>
+
+---
+
+## Real-World Consequences
+
+### What Could Happen If You Use Illegal Add-ons?
+
+The risks vary by country and situation:
+
+#### Legal Risks
+
+- **Copyright notices** from your internet provider (ISP)
+- **ISP throttling or service suspension**
+- **Fines** (in some EU countries, fines can be €300–€1,000 for individual streamers)
+- **Legal action** (rare for individual users, but it happens)
+
+**Reality check:** Most individual users face ISP warnings rather than lawsuits. However, laws are tightening in many countries, and enforcement is increasing.
+
+#### Privacy Risks
+
+- **Your ISP can see what you stream** (unless you use a VPN, which has its own legal/ethical considerations)
+- **Add-ons may log your activity** and sell it to third parties
+- **Your data may be exposed** if the add-on is compromised
+
+#### Security Risks
+
+- **Malware and spyware** disguised as add-ons
+- **Phishing attacks** via fake add-on sites
+- **Device compromise** (especially on Android TV sticks with sideloaded apps)
+
+---
+
+## How to Identify Risky Add-ons
+
+Before installing any add-on, ask yourself:
+
+### Red Flags 🚩
+
+- **Promises "unlimited free movies and TV"**—if it sounds too good to be true, it is
+- **Requires payment or subscription**—legitimate free add-ons don't charge
+- **Asks for excessive permissions** (access to contacts, files, location)
+- **No clear developer or source**—you can't verify who made it
+- **Promoted on shady websites** or through spam
+- **Requires sideloading or disabling security features**
+
+### Green Flags ✅
+
+- **Clear, reputable developer** (e.g., official Stremio community, known open-source project)
+- **Open-source code** you can inspect (if you're technical or trust others who have)
+- **Transparent about what it does** (metadata only, official APIs, etc.)
+- **Available through Stremio's built-in add-on catalog** (some curation, though not perfect)
+- **Positive reputation** in trusted communities
+
+<Callout type="tip">
+**Rule of thumb:** If you have to Google "is [add-on name] safe?", it's probably not worth the risk.
+</Callout>
+
+For a detailed framework, see [How to Evaluate Add-on Trust](/addons/how-to-evaluate-addon-trust/).
+
+---
+
+## Privacy Basics
+
+### What Stremio Itself Collects
+
+Stremio (the official app) collects:
+
+- **Account email** (if you create an account)
+- **Usage analytics** (anonymized, can be disabled in settings)
+- **Add-on preferences and library data** (stored on Stremio's servers if you sync)
+
+Stremio does **not** collect or share what you watch via add-ons. Your streaming activity is between you and the add-on.
+
+### What Add-ons Might Collect
+
+This varies widely:
+
+- **Metadata add-ons:** Usually just your queries (what you search for)
+- **Streaming add-ons:** May log your IP address, viewing history, device info, and more
+- **Malicious add-ons:** Can collect anything your device allows them to access
+
+<Callout type="warning">
+Installing an add-on is like installing a browser extension—you're trusting the developer with access to your data. Choose carefully.
+</Callout>
+
+### How to Protect Your Privacy
+
+1. **Only install add-ons from trusted sources** (see [Avoiding Suspicious Add-ons](/privacy-security/avoiding-suspicious-addons/))
+2. **Review add-on permissions** before installing (when possible)
+3. **Use a VPN** if you're concerned about ISP monitoring (legal considerations apply)
+4. **Regularly audit your installed add-ons** and remove ones you don't use
+5. **Keep Stremio and your OS updated** to patch security vulnerabilities
+
+For a deep dive, see [Privacy Basics](/privacy-security/privacy-basics/).
+
+---
+
+## How to Use Stremio Legally
+
+Here's a framework for staying on the right side of the law:
+
+### Option 1: Use Only Legal Add-ons
+
+Stick to add-ons that provide:
+
+- Licensed content (YouTube, Twitch, official channels)
+- Public domain content
+- Your own media (via DLNA or local streaming)
+- Metadata and organization (no streams)
+
+**Pros:** No legal risk, no ethical concerns  
+**Cons:** Limited content compared to commercial streaming services
+
+### Option 2: Pair Stremio with Paid Services
+
+Use Stremio as an interface for services you already pay for:
+
+- Some users integrate Netflix, Disney+, etc. via browser add-ons or workarounds (check terms of service)
+- Use debrid services **only for content you legally own** (e.g., personal backups)
+
+**Pros:** Legal, supports creators  
+**Cons:** Costs money, may violate service ToS depending on method
+
+### Option 3: Stick to Metadata and Organization
+
+Use Stremio as a **catalog and tracking tool** without streaming:
+
+- Install metadata add-ons to browse and organize
+- Use Stremio to track what you want to watch
+- Watch content on official platforms (link out from Stremio)
+
+**Pros:** Completely legal, great for organizing  
+**Cons:** Not as convenient as streaming directly in Stremio
+
+<Callout type="note">
+**The bottom line:** There are legitimate ways to use Stremio that respect copyright law. It requires more effort, but it's the only way to avoid legal and ethical issues.
+</Callout>
+
+---
+
+## What If I've Already Installed Risky Add-ons?
+
+Don't panic. Here's what to do:
+
+1. **Uninstall the add-ons immediately** (see [How to Install & Remove Add-ons Safely](/addons/how-to-install-remove-addons-safely/))
+2. **Clear your Stremio cache** (Settings → Advanced → Clear Cache)
+3. **Run a malware scan** on your device
+4. **Change your Stremio account password** if you think it might be compromised
+5. **Going forward, only install trusted add-ons**
+
+<Callout type="tip">
+**You're in control.** Stremio makes it easy to remove add-ons. If you realize you've made a mistake, you can fix it in seconds.
+</Callout>
+
+---
+
+## Teaching Others (Parents, Family, Friends)
+
+If you're setting up Stremio for someone else, **have this conversation:**
+
+- Explain that add-ons can be legal or illegal
+- Set clear expectations about what they should and shouldn't install
+- Show them how to check which add-ons are installed
+- Teach them how to uninstall add-ons
+- Make sure they understand the consequences
+
+**For parents:** If you're setting up Stremio for kids, consider:
+
+- Only installing curated, safe add-ons (YouTube Kids, educational content)
+- Regularly checking installed add-ons
+- Using parental controls at the network level (router, ISP)
+
+---
+
+## Common Myths Debunked
+
+### Myth: "Using a VPN makes streaming legal"
+
+**Reality:** A VPN hides your activity from your ISP, but it doesn't change the law. Streaming copyrighted content without authorization is still illegal, whether or not you're detected.
+
+### Myth: "If the add-on is in Stremio's catalog, it must be legal"
+
+**Reality:** Stremio allows third-party add-ons. The presence of an add-on in the catalog doesn't imply endorsement or legality.
+
+### Myth: "I'm not downloading, so I'm safe"
+
+**Reality:** Streaming is a form of temporary downloading. The legal distinction is minimal in most jurisdictions.
+
+### Myth: "No one gets in trouble for streaming"
+
+**Reality:** While prosecution of individual streamers is rare, it's increasing in some countries (especially in the EU). ISP warnings are common.
+
+---
+
+## Summary: The Responsible Use Checklist
+
+Before you move on, commit to these principles:
+
+- ✅ I understand that **Stremio is legal, but my use of it might not be**
+- ✅ I will **only install add-ons I've vetted for legality and safety**
+- ✅ I will **regularly review and remove add-ons I don't trust**
+- ✅ I understand that **I'm responsible for my actions**, not the app developers
+- ✅ I will **respect copyright and support creators** when possible
+
+<Callout type="legal">
+**Final reminder:** This guide provides information, not legal advice. When in doubt, consult a lawyer in your jurisdiction or stick to clearly legal options.
+</Callout>
+
+---
+
+## Next Steps
+
+Now that you understand the legal and safety landscape, you're ready to set up Stremio properly.
+
+<div class="next-steps">
+
+### Continue Your Journey
+
+1. [What is Stremio?](/start-here/what-is-stremio/)
+2. **Safety & Legality** ← You are here
+3. **[First 10 Minutes Setup](/start-here/first-10-minutes-setup/)** ← Read this next
+4. [Install Stremio](/install/overview/)
+
+</div>
+
+**Related reading:**
+- [Privacy Basics](/privacy-security/privacy-basics/)
+- [How to Evaluate Add-on Trust](/addons/how-to-evaluate-addon-trust/)
+- [Avoiding Suspicious Add-ons](/privacy-security/avoiding-suspicious-addons/)

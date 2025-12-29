@@ -1,0 +1,333 @@
+---
+title: Privacy Basics
+description: Protect your privacy while using Stremio—understand what data is collected and how to stay safe
+---
+
+import Callout from '../../../components/Callout.astro';
+
+<div class="page-meta">
+  <span class="badge badge-time">20 min read</span>
+  <span class="badge badge-difficulty">Essential Reading</span>
+</div>
+
+<Callout type="warning">
+**Privacy is your responsibility.** This guide explains privacy risks and protective measures, but you must make informed choices based on your threat model and jurisdiction.
+</Callout>
+
+## What You'll Learn
+
+- What data Stremio collects
+- What add-ons can see
+- How your ISP monitors you
+- Protective measures (VPNs, proxies, etc.)
+- Privacy best practices
+
+---
+
+## What Stremio Itself Collects
+
+### With a Stremio Account
+
+If you create a free Stremio account, Stremio stores:
+
+- ✅ **Your email address**
+- ✅ **Your library** (watchlist, viewing progress)
+- ✅ **Your installed add-ons** (list, not your activity with them)
+- ✅ **Settings** (language, player preferences, etc.)
+
+**Where it's stored:**  
+Stremio's cloud servers (for syncing across devices)
+
+**Who can access it:**  
+Only you (via your login) and Stremio's servers
+
+**What Stremio does NOT collect:**
+- ❌ What you watch via add-ons
+- ❌ Your IP address (beyond login authentication)
+- ❌ Your streaming activity
+- ❌ Payment info (Stremio is free, no payments)
+
+### Without a Stremio Account
+
+If you use Stremio without an account:
+
+- All data stays **local on your device**
+- Nothing is sent to Stremio's servers
+- No cloud sync
+
+---
+
+## What Add-ons Can See
+
+This is the **most important privacy concern**.
+
+### What Add-ons Collect
+
+When you use an add-on, the add-on's server can log:
+
+- ✅ **Your IP address** (reveals your location and ISP)
+- ✅ **What you search for**
+- ✅ **What you click on** (titles, streams)
+- ✅ **When you access content**
+- ✅ **Your device info** (OS, browser, Stremio version)
+- ✅ **Your viewing patterns** (what, when, how often)
+
+**You have no control over:**
+- What data they collect
+- How long they keep it
+- Who they share it with
+- Whether they sell it to third parties
+
+<Callout type="warning">
+**Installing an add-on means trusting the developer with your activity data.** This is why choosing add-ons carefully is critical.
+</Callout>
+
+### Torrent-Based Add-ons (Extra Risk)
+
+If an add-on uses **torrents** (BitTorrent), additional privacy issues arise:
+
+- ✅ **Your IP is visible** to everyone in the torrent swarm (hundreds/thousands of people)
+- ✅ **Copyright holders monitor torrent swarms** and log IPs
+- ✅ **Your ISP can see** you're using BitTorrent (even if not what specifically)
+- ✅ **Your upload activity** is tracked (torrenting requires uploading, which is distribution—more legally risky than just downloading)
+
+**Bottom line:** Torrent-based add-ons are the **highest privacy risk**.
+
+---
+
+## What Your ISP Can See
+
+Your **Internet Service Provider** (Comcast, Verizon, BT, etc.) can see:
+
+- ✅ **That you're using Stremio** (they can see the app's network traffic)
+- ✅ **IP addresses you connect to** (servers for add-ons, streams, etc.)
+- ✅ **Amount of data transferred** (streaming uses lots of bandwidth)
+- ✅ **If you're using torrents** (BitTorrent has a distinctive pattern)
+
+**What they can't see (usually):**
+- ❌ Specific titles you watch (if connections are HTTPS)
+- ❌ Content of encrypted streams
+
+### ISP Actions
+
+If your ISP detects illegal activity (e.g., torrenting copyrighted content):
+
+- **Warning letter** (DMCA notice in the US, equivalent elsewhere)
+- **Throttling** (slowing your connection)
+- **Service suspension** (temporary or permanent)
+- **Legal action** (rare for individuals, common for distributors)
+
+---
+
+## How to Protect Your Privacy
+
+### 1. Choose Add-ons Carefully
+
+**The single most important step.**
+
+- ✅ Only install add-ons from **trusted, reputable sources**
+- ✅ Prefer **open-source add-ons** (code can be audited)
+- ✅ Avoid add-ons with no clear developer or privacy policy
+- ✅ Regularly **audit and remove** add-ons you don't use
+
+See [How to Evaluate Add-on Trust](/addons/how-to-evaluate-addon-trust/) and [Avoiding Suspicious Add-ons](/privacy-security/avoiding-suspicious-addons/).
+
+---
+
+### 2. Use HTTPS Add-ons
+
+**HTTPS** encrypts data between you and the add-on server.
+
+- **Protects from:** Your ISP seeing what specific content you request
+- **Doesn't protect from:** The add-on itself logging your activity
+
+**How to check:**
+- Add-on URLs starting with `https://` are secure
+- URLs starting with `http://` are NOT secure (avoid these)
+
+---
+
+### 3. Consider a VPN
+
+A **Virtual Private Network** (VPN) encrypts all your internet traffic and routes it through a server in another location.
+
+**What a VPN does:**
+- ✅ **Hides your IP address** from add-ons and torrent swarms
+- ✅ **Encrypts all traffic** so your ISP can't see what you're doing
+- ✅ **Bypasses geo-restrictions** (access content blocked in your region)
+
+**What a VPN does NOT do:**
+- ❌ **Make illegal activity legal** (you're still breaking the law, just hiding it)
+- ❌ **Guarantee privacy** (VPN provider can log your activity—choose wisely)
+- ❌ **Prevent malware** (separate issue)
+
+<Callout type="legal">
+**Legal note:** Using a VPN is legal in most countries (exceptions: China, Russia, UAE, etc.). However, using a VPN to evade copyright law is still illegal—you're just less likely to be caught.
+</Callout>
+
+#### Choosing a VPN
+
+**Good VPNs:**
+- **No-logs policy** (doesn't record your activity)
+- **Paid** (free VPNs often log and sell your data)
+- **Reputable** (ProtonVPN, Mullvad, IVPN, etc.—do your research)
+- **Fast** (VPNs can slow your connection—choose one with good speeds)
+
+**Bad VPNs:**
+- **Free** (if you're not paying, you're the product)
+- **Logs activity** (defeats the purpose)
+- **Slow** (makes streaming unusable)
+
+**How to use with Stremio:**
+- Install VPN software on your device
+- Connect to a VPN server
+- Then open Stremio and use normally
+
+---
+
+### 4. Use DNS-over-HTTPS (DoH)
+
+Your ISP can see your DNS queries (what websites you visit) unless you encrypt them.
+
+**DNS-over-HTTPS** encrypts DNS requests.
+
+**How to enable:**
+- **Firefox:** Settings → Privacy → DNS over HTTPS (on by default)
+- **Chrome:** Settings → Privacy → Security → Use secure DNS
+- **System-wide:** Configure your OS or router (varies by device)
+
+**Benefit:** Your ISP can't see what domains you're querying (including add-on servers).
+
+---
+
+### 5. Avoid Torrent-Based Add-ons
+
+The safest approach is to **not use torrent-based add-ons** at all.
+
+- Use **HTTP/HLS-based add-ons** instead (legal ones, ideally)
+- If you must use torrents, **always use a VPN** (still risky, but reduces IP exposure)
+
+---
+
+### 6. Regularly Clear Cache & Data
+
+Stremio stores temporary data (cache) on your device.
+
+**What to clear:**
+- Go to **Settings** → **Advanced** → **Clear Cache**
+
+**When:**
+- Once a month (if you use Stremio frequently)
+- After uninstalling risky add-ons
+- If you're concerned about local data exposure
+
+**What it clears:**
+- Posters, metadata cache
+- Temporary stream data
+- **Does NOT clear:** Your library (if you have an account)
+
+---
+
+### 7. Use Private Browsing (Web Version)
+
+If using Stremio on the web (app.strem.io):
+
+- Use **Incognito/Private mode** in your browser
+- This prevents local cookies and history from being saved
+- **Doesn't hide activity from your ISP** (still need a VPN for that)
+
+---
+
+## Privacy Threat Models
+
+Different users have different privacy needs. Assess your situation:
+
+### Low Threat Model
+
+**Who you are:**
+- Using Stremio for legal content only (YouTube, podcasts, etc.)
+- No concerns about surveillance
+
+**What you need:**
+- Basic hygiene (don't install sketchy add-ons)
+- Use HTTPS add-ons
+- That's it—you're fine
+
+---
+
+### Medium Threat Model
+
+**Who you are:**
+- Using some gray-area add-ons (debrid services for personal content, geo-unlocking, etc.)
+- Want to keep ISP from seeing your activity
+
+**What you need:**
+- All "Low" measures, plus:
+- **VPN** (trusted, no-logs)
+- **DNS-over-HTTPS**
+- **Regularly audit add-ons**
+
+---
+
+### High Threat Model
+
+**Who you are:**
+- Concerned about government surveillance, ISP logging, or legal action
+- Living in a jurisdiction with strict copyright enforcement or internet monitoring
+
+**What you need:**
+- All "Medium" measures, plus:
+- **Use Stremio only with legal add-ons**, or
+- **Don't use Stremio for sensitive activity** (use a separate, airgapped device if needed)
+- **Tor** instead of VPN (advanced, slower, but better anonymity)
+- **Avoid torrents entirely** (too high-risk)
+
+<Callout type="note">
+**Realistic advice:** If you're in a "High" threat model, you probably shouldn't be using streaming apps for unauthorized content at all. The risks are too high.
+</Callout>
+
+---
+
+## Privacy Best Practices Summary
+
+| Practice | Effort | Privacy Benefit |
+|----------|--------|-----------------|
+| Choose add-ons carefully | Low | ⭐⭐⭐⭐⭐ (Highest impact) |
+| Use HTTPS add-ons | Low | ⭐⭐⭐ |
+| Use a VPN | Medium (costs $) | ⭐⭐⭐⭐ |
+| Enable DNS-over-HTTPS | Low | ⭐⭐ |
+| Avoid torrent add-ons | Low | ⭐⭐⭐⭐ |
+| Clear cache regularly | Low | ⭐ (Local protection only) |
+| Use Tor (advanced) | High | ⭐⭐⭐⭐⭐ (Best anonymity) |
+
+---
+
+## What to Do If You're Concerned
+
+If you think your privacy has been compromised:
+
+1. **Stop the activity immediately** (uninstall risky add-ons)
+2. **Clear your cache** (Settings → Advanced → Clear Cache)
+3. **Change your Stremio password** (if you think your account was accessed)
+4. **Review your ISP account** for unusual activity or notices
+5. **Consider consulting a privacy professional** or lawyer (if legal concerns)
+
+---
+
+## Next Steps
+
+<div class="next-steps">
+
+### Learn More About Privacy & Security
+
+1. **Privacy Basics** ← You are here
+2. **[Account Security](/privacy-security/account-security/)** — Protect your Stremio account
+3. **[Device Security (TV Sticks)](/privacy-security/device-security-tv-sticks/)** — Secure your hardware
+4. **[Avoiding Suspicious Add-ons](/privacy-security/avoiding-suspicious-addons/)** — Vet add-ons carefully
+5. **[Reporting Issues & Scams](/privacy-security/reporting-issues-and-scams/)** — Get help
+
+</div>
+
+**Related reading:**
+- [Safety & Legality](/start-here/safety-and-legality/)
+- [How to Evaluate Add-on Trust](/addons/how-to-evaluate-addon-trust/)

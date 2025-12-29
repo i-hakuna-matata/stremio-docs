@@ -1,0 +1,339 @@
+---
+title: "AIOStream: Safety Note"
+description: Important safety and legal information about streaming add-ons
+---
+
+import Callout from '../../../components/Callout.astro';
+
+<div class="page-meta">
+  <span class="badge badge-time">5 min read</span>
+  <span class="badge badge-difficulty">Essential Reading</span>
+</div>
+
+<Callout type="legal">
+**Purpose of this page:** This page provides educational information about streaming add-ons that may provide access to unauthorized content. It does NOT provide installation or configuration instructions. Read carefully to understand the risks.
+</Callout>
+
+## What is AIOStream?
+
+**AIOStream** and similar add-ons are third-party Stremio extensions that aggregate and provide access to video streams from various online sources. These add-ons typically:
+
+- Scrape torrent indexing sites
+- Access file hosting services
+- Connect to debrid services
+- Aggregate streams from multiple sources
+
+**Primary purpose:** These add-ons are designed to find and provide streams of movies and TV shows, often including copyrighted content that users may not have legal authorization to access.
+
+---
+
+## Why This Page Exists
+
+You may have encountered AIOStream or similar add-ons through:
+- Online forums or communities
+- YouTube tutorials
+- Recommendations from friends
+- "How to watch free movies" guides
+
+**This page exists to:**
+1. Explain what these add-ons actually do
+2. Clarify the legal and safety risks
+3. Provide information on how to remove them if installed
+4. Suggest legal alternatives
+
+<Callout type="legal">
+**This guide's policy:** We do NOT provide step-by-step instructions for installing, configuring, or using add-ons whose primary purpose is to access copyrighted content without authorization. This page is for education and harm reduction only.
+</Callout>
+
+---
+
+## Legal Risks
+
+### Copyright Infringement
+
+Using AIOStream or similar add-ons to access copyrighted content (movies, TV shows, sports) without authorization is **illegal in most jurisdictions**, including:
+
+- United States (DMCA violations)
+- European Union (Copyright Directive)
+- United Kingdom (Copyright, Designs and Patents Act)
+- Canada (Copyright Act)
+- Australia (Copyright Act)
+- Most other countries
+
+### Potential Consequences
+
+**Individual users have faced:**
+- ❌ **ISP warnings** (copyright infringement notices)
+- ❌ **Service suspension** (ISP cutting off internet)
+- ❌ **Fines** (€300-€1,000+ in some EU countries)
+- ❌ **Legal action** (rare but increasing for repeat offenders)
+
+**Reality check:**
+- Most enforcement targets distributors, not individual streamers
+- However, laws are tightening and enforcement is increasing
+- ISP monitoring and automated detection are becoming more common
+
+<Callout type="warning">
+**Common myth:** "Streaming isn't illegal, only downloading is."  
+**Reality:** In most jurisdictions, streaming copyrighted content without authorization is a form of copyright infringement, even if you don't keep a permanent copy.
+</Callout>
+
+---
+
+## Privacy Risks
+
+### What These Add-ons Can See
+
+When you use streaming add-ons like AIOStream:
+
+**The add-on developer can log:**
+- Your IP address
+- What content you search for
+- What you watch and when
+- Your device information
+- Your viewing patterns
+
+**The stream sources can see:**
+- Your IP address (especially with torrent-based streams)
+- Your download/upload patterns
+- Your ISP information
+
+**You have no control over:**
+- Where this data is stored
+- Who has access to it
+- Whether it's sold to third parties
+- How long it's retained
+
+### Tor rent-Specific Privacy Risks
+
+Many of these add-ons use **torrent streams**, which means:
+
+- ✅ Your IP address is **visible to everyone in the torrent swarm**
+- ✅ Your ISP can see you're using BitTorrent
+- ✅ Copyright holders monitor torrent swarms and log IP addresses
+- ✅ This data is often used for enforcement actions
+
+**Even with a VPN:**
+- VPNs can leak your real IP (DNS leaks, WebRTC leaks)
+- VPN services may log your activity
+- Using a VPN doesn't make illegal activity legal
+
+---
+
+## Security Risks
+
+### Malware and Exploits
+
+Streaming add-ons from unofficial sources can:
+
+- Contain **malware** disguised as video players or codecs
+- Redirect you to **phishing sites**
+- Exploit vulnerabilities to **compromise your device**
+- Install **adware or spyware**
+
+### How to Spot Red Flags
+
+🚩 **Requests to install additional software** (codec packs, players)  
+🚩 **Excessive ads or pop-ups** (especially for adult content or gambling)  
+🚩 **Requests for personal information** or payment details  
+🚩 **Requires disabling antivirus** or security features  
+🚩 **Promoted on sketchy websites** or through spam  
+
+---
+
+## How to Remove AIOStream or Similar Add-ons
+
+If you've installed AIOStream or a similar add-on and want to remove it:
+
+### Step 1: Uninstall the Add-on
+
+1. Open **Stremio**
+2. Go to **Add-ons** (puzzle icon in sidebar)
+3. Click the **Installed** tab
+4. Find the add-on (AIOStream or similar name)
+5. Click **"Uninstall"**
+6. Confirm the removal
+
+### Step 2: Clear Your Cache
+
+1. Open **Settings** (gear icon)
+2. Scroll to **Advanced** section
+3. Click **"Clear Cache"**
+4. Confirm
+
+### Step 3: Security Check
+
+1. **Run a full malware scan** on your device using reputable antivirus software
+2. **Check browser extensions** (if you installed anything alongside the add-on)
+3. **Review recently installed apps** on your device
+4. **Change your Stremio password** if you're concerned about account security
+
+### Step 4: Monitor Your Network
+
+1. **Check your ISP account** for any warnings or notices
+2. **Review your data usage** for unusual spikes
+3. If you received a copyright notice, **stop the activity immediately** and consider consulting legal advice
+
+<Callout type="tip">
+Uninstalling the add-on stops future activity, but it doesn't erase logs the add-on developer may have collected while it was installed.
+</Callout>
+
+---
+
+## Legal Alternatives
+
+You can use Stremio legally and safely. Here are alternatives:
+
+### 1. Use Legal Streaming Add-ons
+
+**YouTube:**
+- Massive library of free, legal content
+- Music videos, documentaries, educational content
+- Install from Stremio's Community Add-ons
+
+**Podcasts:**
+- Thousands of free audio and video podcasts
+- Completely legal
+- Install from Stremio's Community Add-ons
+
+**Twitch:**
+- Live gaming, creative streams, talk shows
+- Free and legal
+- Install from Stremio's Community Add-ons
+
+### 2. Pair Stremio with Paid Services
+
+Use Stremio as an interface/organizer while watching on:
+- **Netflix, Disney+, HBO Max, etc.** (via browser tabs)
+- **Local content** (legally purchased DVDs/Blu-rays ripped for personal use)
+- **Debrid services** for content you legally own (backups, personal media)
+
+### 3. Use Stremio for Metadata Only
+
+- Install **metadata add-ons** (Cinemeta, TMDB)
+- Use Stremio to **browse and track** what you want to watch
+- **Watch on official platforms** (link out from Stremio)
+- Legal, safe, and you support creators
+
+### 4. Access Free Legal Content
+
+Many countries have:
+- **Public domain films and TV** (older content, expired copyright)
+- **Public broadcaster catch-up services** (BBC iPlayer, ABC iView, etc.—check if add-ons exist)
+- **Ad-supported free streaming** (check for official add-ons)
+
+<Callout type="note">
+**You don't need piracy to enjoy Stremio.** Legal options exist and are improving every year.
+</Callout>
+
+---
+
+## If You Received a Copyright Notice
+
+If your ISP sent you a notice about streaming activity:
+
+### Immediate Steps
+
+1. ✅ **Stop the activity immediately**
+2. ✅ **Uninstall the offending add-on** (see steps above)
+3. ✅ **Clear your cache**
+4. ✅ **Read the notice carefully** (understand what you're accused of)
+5. ✅ **Keep records** (save a copy of the notice)
+
+### What NOT to Do
+
+- ❌ **Ignore the notice** (it may escalate)
+- ❌ **Respond admitting guilt** (don't incriminate yourself)
+- ❌ **Pay any fine** without legal advice (it may not be legitimate)
+- ❌ **Continue the activity** (it makes things worse)
+
+### Consider
+
+- **Consulting a lawyer** in your jurisdiction (if the notice threatens legal action)
+- **Contacting your ISP** to understand their policy (warnings vs. suspension vs. legal action)
+- **Reviewing your internet usage habits** to prevent future issues
+
+<Callout type="legal">
+**This is not legal advice.** If you face legal consequences, consult a qualified attorney in your jurisdiction.
+</Callout>
+
+---
+
+## Teaching Others About the Risks
+
+If you're helping someone who uses AIOStream or similar add-ons, share this information:
+
+### For Friends/Family
+
+- **Explain the legal risks** clearly and without judgment
+- **Show them how to uninstall** the add-on
+- **Suggest legal alternatives** (list above)
+- **Help them set up safe add-ons** (YouTube, podcasts, etc.)
+
+### For Kids/Teens
+
+- **Explain that "free" isn't always legal** (and the consequences)
+- **Teach them to evaluate sources** (is this legal to access?)
+- **Set boundaries** (what they can and can't install)
+- **Monitor their devices** periodically (check installed add-ons)
+
+---
+
+## Ethical Considerations
+
+Beyond legality, consider:
+
+### Impact on Creators
+
+- **Piracy harms creators** (writers, actors, crew, independent filmmakers)
+- **It reduces funding** for future content
+- **Legal streaming supports the industry** and encourages more diverse content
+
+### Your Values
+
+Ask yourself:
+- Am I comfortable with the ethics of piracy?
+- Would I defend this behavior publicly?
+- Am I setting an example I'm proud of (if others look up to me)?
+
+**No judgment here**—just questions to consider.
+
+---
+
+## Summary: The Bottom Line
+
+**AIOStream and similar add-ons:**
+- ✅ **Work** (they provide streams)
+- ❌ **Are illegal** in most jurisdictions (for copyrighted content)
+- ❌ **Are risky** (privacy, security, legal consequences)
+- ❌ **Are unnecessary** (legal alternatives exist)
+
+**If you value:**
+- ✅ **Staying on the right side of the law**
+- ✅ **Protecting your privacy and security**
+- ✅ **Supporting content creators**
+- ✅ **Peace of mind**
+
+**Then uninstall these add-ons and use legal alternatives.**
+
+---
+
+## Next Steps
+
+<div class="next-steps">
+
+### Learn More
+
+- **[Safety & Legality](/start-here/safety-and-legality/)** — Full legal framework
+- **[How to Evaluate Add-on Trust](/addons/how-to-evaluate-addon-trust/)** — Risk assessment framework
+- **[Avoiding Suspicious Add-ons](/privacy-security/avoiding-suspicious-addons/)** — Security best practices
+- **[Privacy Basics](/privacy-security/privacy-basics/)** — Protect yourself online
+
+</div>
+
+**Need help uninstalling?**
+- [How to Install & Remove Add-ons Safely](/addons/how-to-install-remove-addons-safely/)
+
+**Want legal alternatives?**
+- [Catalogs & Metadata Add-ons](/addons/catalogs-and-metadata-addons/)
+- [Subtitle Add-ons](/addons/subtitles-addons-legal-notes/)

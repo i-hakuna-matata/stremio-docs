@@ -1,0 +1,350 @@
+---
+title: Install Stremio on Windows
+description: Complete guide to installing Stremio on Windows 7, 8, 10, and 11
+---
+
+import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
+
+<div class="page-meta">
+  <span class="badge badge-time">10 min</span>
+  <span class="badge badge-difficulty">Easy</span>
+</div>
+
+<a href="/start-here/what-to-do-next/" class="back-link">Back to Start Here</a>
+
+## What You'll Do
+
+Install the Stremio desktop application on your Windows PC following the official, safe installation method.
+
+**Requirements:**
+- Windows 7, 8, 10, or 11 (32-bit or 64-bit)
+- Administrator access
+- Internet connection
+- 200 MB free disk space (plus 1-5 GB for cache recommended)
+
+**Time required:** 10-15 minutes
+
+---
+
+## Before You Start
+
+### System Check
+
+1. **Check your Windows version:**
+   - Press `Win + R`, type `winver`, press Enter
+   - You should see Windows 7 or newer
+
+2. **Check available disk space:**
+   - Open File Explorer
+   - Right-click your C: drive → Properties
+   - Ensure at least 2 GB free space
+
+3. **Ensure you have administrator rights:**
+   - You'll need this to install software
+
+<Callout type="warning">
+**Windows 7/8 users:** Stremio works but these OS versions are no longer supported by Microsoft. Consider upgrading to Windows 10/11 for better security.
+</Callout>
+
+---
+
+## Step-by-Step Installation
+
+<Steps title="Install Stremio">
+
+1. **Download the installer**
+
+   - Go to **[https://www.stremio.com](https://www.stremio.com)** in your web browser
+   - Click **"Download"** or **"Download for Windows"**
+   - Save the file (usually named `Stremio-Setup-X.X.X.exe`) to your Downloads folder
+
+   <Callout type="note">
+   **File size:** The installer is usually 80-120 MB. Download time depends on your internet speed.
+   </Callout>
+
+2. **Run the installer**
+
+   - Go to your Downloads folder
+   - **Double-click** the `Stremio-Setup-X.X.X.exe` file
+   - Windows may show a "Do you want to allow this app to make changes?" prompt
+   - Click **"Yes"**
+
+3. **Choose installation language**
+
+   - Select your preferred language from the dropdown
+   - Click **"OK"**
+
+4. **Accept the license agreement**
+
+   - Read the agreement (or not, but you should)
+   - Check the box **"I accept the agreement"**
+   - Click **"Next"**
+
+5. **Choose installation location**
+
+   - Default is usually `C:\Program Files\Stremio` (recommended)
+   - To change: Click **"Browse"** and select a different folder
+   - Click **"Next"**
+
+   <Callout type="tip">
+   **Stick with the default** unless you have a specific reason to change it (like low C: drive space).
+   </Callout>
+
+6. **Select Start Menu folder**
+
+   - Default is "Stremio" (recommended)
+   - Click **"Next"**
+
+7. **Choose additional tasks**
+
+   - Check **"Create a desktop icon"** if you want a shortcut on your desktop
+   - Check **"Launch Stremio"** to open it automatically after install
+   - Click **"Next"**
+
+8. **Install**
+
+   - Click **"Install"**
+   - Wait for the installation to complete (1-2 minutes)
+
+9. **Finish**
+
+   - Click **"Finish"**
+   - Stremio will launch automatically (if you checked that option)
+
+</Steps>
+
+---
+
+## First Launch
+
+### What to Expect
+
+When Stremio opens for the first time:
+
+1. **Windows Firewall prompt** may appear asking if you want to allow Stremio to access the network
+   - Click **"Allow access"** (required for streaming)
+
+2. **Welcome screen** will appear
+   - You'll see options to Sign In, Sign Up, or Skip
+
+3. **Initial setup**
+   - Follow the [First 10 Minutes Setup guide](/start-here/first-10-minutes-setup/)
+
+<Callout type="warning">
+**Firewall prompt is important:** If you click "Cancel" or "Block," Stremio won't be able to stream. If you made a mistake, go to Windows Firewall settings and manually allow Stremio.
+</Callout>
+
+---
+
+## Verify Installation
+
+Make sure everything is working:
+
+<Steps title="Test Stremio">
+
+1. **Stremio should be running**
+   - You should see the Stremio window open
+
+2. **Check the version**
+   - Click Settings (gear icon in top-right)
+   - Scroll to the bottom of the Settings page
+   - You should see the version number (e.g., "v4.4.168")
+
+3. **Test the interface**
+   - Click around: Discover, Library, Search
+   - Everything should load smoothly
+
+4. **Close and reopen**
+   - Close Stremio
+   - Open it again from the Start Menu or desktop shortcut
+   - Should launch within 5-10 seconds
+
+</Steps>
+
+If anything doesn't work, see [Troubleshooting](#troubleshooting-installation-issues) below.
+
+---
+
+## Common Mistakes
+
+### ❌ Installing from an unofficial source
+
+**Why it's bad:** Risk of malware, viruses, or modified versions.
+
+**How to avoid:** Only download from **stremio.com**. If you Googled "Stremio download" and clicked an ad or third-party site, you might have the wrong file.
+
+### ❌ Skipping the firewall prompt
+
+**Why it's bad:** Stremio won't be able to stream if Windows blocks it.
+
+**How to fix:** 
+1. Go to **Windows Settings** → **Privacy & Security** → **Windows Security** → **Firewall & network protection**
+2. Click **"Allow an app through firewall"**
+3. Find Stremio in the list and check both **Private** and **Public** boxes
+4. Restart Stremio
+
+### ❌ Installing on a full hard drive
+
+**Why it's bad:** Installation will fail or Stremio won't have space for cache.
+
+**How to avoid:** Check free space before installing (see [System Check](#system-check) above).
+
+### ❌ Not updating Windows first
+
+**Why it's bad:** Stremio may not run properly on an outdated Windows install.
+
+**How to avoid:** Run Windows Update before installing Stremio.
+
+---
+
+## How to Uninstall / Rollback
+
+If you need to remove Stremio:
+
+<Steps title="Uninstall Stremio">
+
+1. **Close Stremio** (if it's running)
+
+2. **Open Windows Settings**
+   - Press `Win + I`
+   - Or: Start Menu → Settings
+
+3. **Go to Apps**
+   - Windows 10/11: **Apps** → **Apps & features**
+   - Windows 7/8: **Programs** → **Programs and Features**
+
+4. **Find Stremio**
+   - Scroll or search for "Stremio"
+
+5. **Uninstall**
+   - Click **Stremio** → **Uninstall**
+   - Confirm when prompted
+
+6. **Delete user data (optional)**
+   - Press `Win + R`, type `%appdata%`, press Enter
+   - Delete the **Stremio** folder (this removes your local data—only do this if you want a complete reset)
+
+</Steps>
+
+<Callout type="warning">
+Uninstalling removes the app but may leave settings and cache. To completely reset, delete the data folder as described in step 6.
+</Callout>
+
+---
+
+## Troubleshooting Installation Issues
+
+### Problem: "Windows protected your PC" message
+
+**Cause:** Windows SmartScreen blocking the installer.
+
+**Solution:**
+1. Click **"More info"**
+2. Click **"Run anyway"**
+3. This is safe if you downloaded from stremio.com
+
+---
+
+### Problem: "Installation failed" or error message
+
+**Possible causes and fixes:**
+
+1. **Not enough disk space**
+   - Free up space and try again
+
+2. **Antivirus blocking installation**
+   - Temporarily disable antivirus
+   - Install Stremio
+   - Re-enable antivirus
+   - Add Stremio to antivirus exclusions
+
+3. **Corrupted download**
+   - Delete the installer
+   - Download it again
+   - Try installing again
+
+4. **Permissions issue**
+   - Right-click the installer → **Run as administrator**
+
+---
+
+### Problem: Stremio won't launch after installation
+
+**Possible causes and fixes:**
+
+1. **Missing Visual C++ Redistributables**
+   - Download and install [Microsoft Visual C++ Redistributables](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist)
+   - Restart computer
+   - Try launching Stremio again
+
+2. **Windows Defender blocking execution**
+   - Check Windows Defender quarantine
+   - Restore Stremio if it's there
+   - Add it to exclusions
+
+3. **Firewall blocking**
+   - See [Common Mistakes](#common-mistakes) above
+
+For more help, see [App Crashes & Freezes](/troubleshooting/app-crashes-and-freezes/).
+
+---
+
+## Updating Stremio
+
+Stremio automatically checks for updates. When a new version is available:
+
+1. You'll see a notification in the app
+2. Click **"Update"** or **"Download"**
+3. Stremio will download and install the update
+4. Restart when prompted
+
+**Manual update:**
+1. Download the latest installer from stremio.com
+2. Run it—it'll install over the existing version
+3. Your settings and data will be preserved
+
+---
+
+## Alternative Installation Methods
+
+### Portable Version (Advanced)
+
+Stremio doesn't officially offer a portable version, but you can:
+- Install normally
+- Copy the installed files to a USB drive
+- Run `Stremio.exe` directly (may require manual configuration)
+
+**Not recommended for beginners.**
+
+### Beta/Development Versions
+
+Only for advanced users who want to test new features:
+- Available on GitHub or Stremio's official channels
+- May be unstable
+- Not covered in this guide
+
+---
+
+## Next Steps
+
+Now that Stremio is installed:
+
+<div class="next-steps">
+
+### What to Do Next
+
+1. **[First 10 Minutes Setup](/start-here/first-10-minutes-setup/)** — Configure Stremio safely
+2. **[Navigation Basics](/using-stremio/navigation-basics/)** — Learn the interface
+3. **[Add-ons Explained](/addons/addons-explained/)** — Understand how to add content
+
+</div>
+
+**Need help?**
+- [Troubleshooting Overview](/troubleshooting/overview/)
+- [FAQ](/faq/faq/)
+- [Reporting Issues](/privacy-security/reporting-issues-and-scams/)
+
+<Callout type="tip">
+**Don't skip the setup guide!** Proper configuration now will save you headaches later.
+</Callout>

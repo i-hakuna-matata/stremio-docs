@@ -1,0 +1,294 @@
+---
+title: Installation Overview
+description: Choose your device and get started with Stremio installation
+---
+
+import Callout from '../../../components/Callout.astro';
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<div class="page-meta">
+  <span class="badge badge-time">3 min read</span>
+  <span class="badge badge-difficulty">Beginner</span>
+</div>
+
+## Choose Your Device
+
+Stremio is available on many platforms. Click your device below to jump to the installation guide:
+
+<CardGrid>
+  <Card title="💻 Windows" icon="laptop">
+    Windows 7, 8, 10, and 11 supported  
+    Desktop and laptop PCs
+    
+    **[Install on Windows →](/install/windows/)**
+  </Card>
+
+  <Card title="🍎 macOS" icon="apple">
+    macOS 10.11 El Capitan and newer  
+    Intel and Apple Silicon (M1/M2) Macs
+    
+    **[Install on macOS →](/install/macos/)**
+  </Card>
+
+  <Card title="🐧 Linux" icon="linux">
+    Ubuntu, Debian, Fedora, Arch, and more  
+    AppImage, Flatpak, and distribution packages
+    
+    **[Install on Linux →](/install/linux/)**
+  </Card>
+
+  <Card title="📱 Android Phone/Tablet" icon="mobile">
+    Android 5.0 Lollipop and newer  
+    Google Play Store or APK
+    
+    **[Install on Android →](/install/android-phone-tablet/)**
+  </Card>
+
+  <Card title="📺 Android TV" icon="tv">
+    Android TV, Fire TV, TV boxes  
+    Optimized TV interface
+    
+    **[Install on Android TV →](/install/android-tv/)**
+  </Card>
+
+  <Card title="🌐 Web Browser" icon="external">
+    Chrome, Firefox, Safari, Edge  
+    Limited functionality, no installation
+    
+    **[Use Stremio on Web →](/install/web/)**
+  </Card>
+</CardGrid>
+
+---
+
+## Before You Install
+
+### System Requirements
+
+**Minimum:**
+- **Processor:** Dual-core CPU (2 GHz)
+- **RAM:** 2 GB
+- **Storage:** 200 MB for app, plus cache (1-5 GB recommended)
+- **Internet:** 5 Mbps for SD, 25 Mbps for HD, 50+ Mbps for 4K
+- **OS:** See device-specific guides above
+
+**Recommended:**
+- Quad-core CPU or better
+- 4 GB+ RAM
+- SSD storage for better performance
+- Stable, high-speed internet connection
+
+<Callout type="note">
+Stremio is lightweight compared to many media apps, but performance depends heavily on your internet speed and the add-ons you use.
+</Callout>
+
+### What You'll Need
+
+For all installations:
+
+- ✅ Internet connection
+- ✅ 10-15 minutes of time
+- ✅ Administrator/root access (for desktop OS)
+- ✅ Ability to download files from the internet
+
+For specific platforms:
+
+- **Android (non-Google Play):** Ability to enable "Unknown Sources"
+- **Linux:** Basic terminal knowledge (for some methods)
+- **macOS:** May need to allow apps from "unidentified developers"
+
+---
+
+## Installation Methods Comparison
+
+| Platform | Official App Store | Direct Download | Notes |
+|----------|-------------------|-----------------|-------|
+| **Windows** | ❌ No | ✅ Yes (.exe installer) | Simple wizard-based install |
+| **macOS** | ❌ No | ✅ Yes (.dmg) | Drag and drop to Applications |
+| **Linux** | Varies | ✅ Yes (AppImage, DEB, etc.) | Multiple methods available |
+| **Android** | ✅ Yes (Google Play) | ✅ Yes (APK) | Play Store is easiest |
+| **Android TV** | ✅ Yes (Google Play) | ✅ Yes (APK) | May require sideloading |
+| **Web** | N/A | ✅ Yes (app.strem.io) | No installation needed |
+
+---
+
+## Platforms NOT Supported
+
+<Callout type="warning">
+Stremio does NOT officially support the following platforms. Workarounds may exist but are not covered in this guide.
+</Callout>
+
+### ❌ iOS (iPhone/iPad)
+
+**Why not:** Apple's App Store policies restrict apps like Stremio. There's no official iOS app.
+
+**Workarounds:** 
+- Use the web version (app.strem.io) in Safari—limited functionality
+- Use third-party apps that integrate with Stremio (not officially supported)
+- Install Stremio on a different device and cast to Apple TV
+
+### ❌ Smart TVs (Samsung, LG, Roku, etc.)
+
+**Why not:** These platforms use proprietary operating systems. Stremio doesn't have native apps for them.
+
+**Workarounds:**
+- Use an **Android TV box** or **Fire TV Stick** (see [Android TV guide](/install/android-tv/))
+- Cast from your phone or computer to the TV
+- Use an HDMI cable to mirror your computer screen
+
+### ❌ Game Consoles (PlayStation, Xbox, Nintendo)
+
+**Why not:** Stremio doesn't have console versions.
+
+**Workarounds:**
+- Cast from another device
+- Use the console's web browser (if available) to access app.strem.io—highly limited
+
+### ❌ Older Operating Systems
+
+- **Windows:** XP, Vista (no longer supported)
+- **macOS:** 10.10 Yosemite and earlier
+- **Android:** Below 5.0 Lollipop
+
+If you're on an older OS, you may need to upgrade or use a different device.
+
+---
+
+## Which Version Should I Install?
+
+### Desktop (Windows, macOS, Linux)
+
+**Recommendation:** Install the **latest stable release** from the official Stremio website.
+
+- ✅ Full features
+- ✅ Best performance
+- ✅ Regular updates
+
+**Avoid:**
+- ❌ Beta or development versions (unless you're an advanced user testing features)
+- ❌ Unofficial third-party builds (security risk)
+
+### Mobile (Android)
+
+**Recommendation:** Install from **Google Play Store** if possible.
+
+- ✅ Automatic updates
+- ✅ Verified by Google
+- ✅ Easiest to keep secure
+
+**If Google Play isn't available (e.g., Fire tablets):**
+- Download the official APK from stremio.com
+- Verify the file signature (advanced)
+
+### Android TV
+
+**Recommendation:** Install the **dedicated Android TV version** from Google Play or the official APK.
+
+- ✅ TV-optimized interface
+- ✅ Remote control support
+- ✅ Better performance on TV hardware
+
+**Don't install:**
+- ❌ The phone/tablet version on your TV (it'll work but the UI is not optimized)
+
+---
+
+## Security Best Practices
+
+Before and during installation:
+
+### ✅ DO:
+
+- **Download only from official sources** (stremio.com or official app stores)
+- **Verify file checksums** if you're technically inclined
+- **Keep your OS updated** before installing
+- **Use antivirus/antimalware software** (especially on Windows)
+- **Read permission requests** before granting access
+
+### ❌ DON'T:
+
+- **Download from third-party sites** (risk of malware)
+- **Disable your firewall or antivirus** to install (if required, something is wrong)
+- **Install cracked or "modified" versions** (huge security risk)
+- **Skip reading what the installer asks for** (permissions, install location, etc.)
+
+<Callout type="legal">
+Only install Stremio from official sources. Third-party versions may contain malware, spyware, or unwanted modifications.
+</Callout>
+
+---
+
+## Installation Difficulty by Platform
+
+| Platform | Difficulty | Time Required | Technical Knowledge |
+|----------|-----------|---------------|---------------------|
+| Windows | ⭐ Easy | 5-10 min | None |
+| macOS | ⭐ Easy | 5-10 min | None |
+| Linux | ⭐⭐ Moderate | 10-15 min | Basic terminal (some methods) |
+| Android (Play Store) | ⭐ Easy | 5 min | None |
+| Android (APK) | ⭐⭐ Moderate | 10 min | Enabling unknown sources |
+| Android TV (Play Store) | ⭐ Easy | 5 min | None |
+| Android TV (Sideload) | ⭐⭐⭐ Advanced | 15-20 min | Sideloading apps |
+| Web | ⭐ Easiest | 0 min | Just open a browser |
+
+---
+
+## After Installation
+
+Once you've installed Stremio, continue to:
+
+1. **[First 10 Minutes Setup](/start-here/first-10-minutes-setup/)** — Configure Stremio for safe use
+2. **[Navigation Basics](/using-stremio/navigation-basics/)** — Learn the interface
+3. **[Add-ons Explained](/addons/addons-explained/)** — Understand how to add content sources
+
+---
+
+## Common Installation Questions
+
+### Do I need an account to install?
+
+**No.** You can install and use Stremio without an account. However, creating an account (free) is recommended for syncing across devices.
+
+### How much does it cost?
+
+**Stremio is free.** No purchase, no subscription, no hidden fees. Some add-ons may require paid services, but the app itself is free.
+
+### Can I install on multiple devices?
+
+**Yes!** Install on as many devices as you want. Create a Stremio account to sync your library across them.
+
+### Is it legal to install Stremio?
+
+**Yes.** Installing Stremio is 100% legal worldwide. What you do with it (the add-ons you install and content you access) determines legality. See [Safety & Legality](/start-here/safety-and-legality/).
+
+### Will it slow down my device?
+
+**Unlikely.** Stremio is lightweight. Performance depends more on your internet speed and the add-ons you use than on the app itself.
+
+---
+
+## Need Help?
+
+If you run into issues during installation:
+
+1. Check your device-specific guide (links at the top of this page)
+2. See [Troubleshooting: App Crashes & Freezes](/troubleshooting/app-crashes-and-freezes/)
+3. Check [FAQ](/faq/faq/)
+4. Search this documentation site (search bar at top)
+
+---
+
+<div class="next-steps">
+
+### Ready to Install?
+
+Click your platform to begin:
+
+- **[Windows →](/install/windows/)**
+- **[macOS →](/install/macos/)**
+- **[Linux →](/install/linux/)**
+- **[Android Phone/Tablet →](/install/android-phone-tablet/)**
+- **[Android TV →](/install/android-tv/)**
+- **[Web Browser →](/install/web/)**
+
+</div>

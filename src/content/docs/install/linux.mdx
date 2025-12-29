@@ -1,0 +1,137 @@
+---
+title: Install Stremio on Linux
+description: Install Stremio on Ubuntu, Debian, Fedora, Arch, and other Linux distributions
+---
+
+import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
+
+<div class="page-meta">
+  <span class="badge badge-time">15 min</span>
+  <span class="badge badge-difficulty">Moderate</span>
+</div>
+
+## What You'll Do
+
+Install Stremio using your preferred method: AppImage (universal), Flatpak, or distribution package.
+
+---
+
+## Method 1: AppImage (Recommended for Most Users)
+
+**Pros:** Universal, no installation, works on any distro  
+**Cons:** Requires manual updates, no system integration
+
+<Steps>
+
+1. **Download the AppImage**
+   ```bash
+   wget https://www.stremio.com/download/linux/appimage -O Stremio.AppImage
+   ```
+
+2. **Make it executable**
+   ```bash
+   chmod +x Stremio.AppImage
+   ```
+
+3. **Run Stremio**
+   ```bash
+   ./Stremio.AppImage
+   ```
+
+4. **Optional: Add to menu** (varies by desktop environment)
+
+</Steps>
+
+---
+
+## Method 2: Flatpak
+
+**Pros:** Sandboxed, auto-updates, available on Flathub  
+**Cons:** Requires Flatpak runtime
+
+<Steps>
+
+1. **Install Flatpak** (if not already installed)
+   ```bash
+   sudo apt install flatpak  # Debian/Ubuntu
+   sudo dnf install flatpak   # Fedora
+   ```
+
+2. **Add Flathub repository**
+   ```bash
+   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+   ```
+
+3. **Install Stremio**
+   ```bash
+   flatpak install flathub com.stremio.Stremio
+   ```
+
+4. **Run Stremio**
+   ```bash
+   flatpak run com.stremio.Stremio
+   ```
+
+</Steps>
+
+---
+
+## Method 3: Distribution Packages
+
+### Ubuntu/Debian
+
+```bash
+wget https://dl.strem.io/linux/v4.4.168/stremio_4.4.168-1_amd64.deb
+sudo dpkg -i stremio_*.deb
+sudo apt-get install -f  # Fix dependencies
+```
+
+### Fedora
+
+```bash
+sudo dnf install https://dl.strem.io/linux/v4.4.168/stremio-4.4.168-1.x86_64.rpm
+```
+
+### Arch Linux (AUR)
+
+```bash
+yay -S stremio
+# or
+paru -S stremio
+```
+
+<Callout type="note">
+Version numbers in URLs will change. Check stremio.com for the latest version.
+</Callout>
+
+---
+
+## Troubleshooting
+
+### Missing dependencies
+
+Install required libraries:
+
+```bash
+# Ubuntu/Debian
+sudo apt install libmpv1 libqt5webengine5
+
+# Fedora
+sudo dnf install mpv qt5-qtwebengine
+```
+
+### Won't launch
+
+Try from terminal to see error messages:
+```bash
+stremio
+# or for AppImage
+./Stremio.AppImage
+```
+
+---
+
+## Next Steps
+
+Continue to [First 10 Minutes Setup](/start-here/first-10-minutes-setup/).

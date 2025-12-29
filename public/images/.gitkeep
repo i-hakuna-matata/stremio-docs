@@ -1,0 +1,46 @@
+# Placeholder for Images
+
+Add your screenshots and visual assets here.
+
+## Recommended Structure
+
+```
+images/
+├── install/
+│   ├── windows/
+│   ├── macos/
+│   ├── linux/
+│   ├── android/
+│   └── android-tv/
+├── using-stremio/
+│   ├── discover-page.png
+│   ├── library-tab.png
+│   ├── search-bar.png
+│   └── player-controls.png
+├── troubleshooting/
+│   ├── playback/
+│   ├── subtitles/
+│   └── network/
+└── ui/
+    └── general-screenshots/
+```
+
+## Screenshot Guidelines
+
+- **Format:** PNG for UI, JPG for photos
+- **Size:** Optimize to < 500 KB
+- **Resolution:** 1920x1080 or smaller
+- **Crop:** Show only relevant UI elements
+- **Annotations:** Use red arrows/boxes to highlight important areas
+- **Alt text:** Always include descriptive alt text in MDX files
+
+## Tools
+
+- **macOS:** Command+Shift+4 (crop select)
+- **Windows:** Snipping Tool or Win+Shift+S
+- **Linux:** Screenshot utility (varies by distro)
+- **Optimize:** Use TinyPNG.com or ImageOptim
+
+---
+
+Remove this file when you add real images.

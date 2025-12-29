@@ -1,0 +1,91 @@
+---
+title: Install Stremio on macOS
+description: Complete guide to installing Stremio on Mac computers (Intel and Apple Silicon)
+---
+
+import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
+
+<div class="page-meta">
+  <span class="badge badge-time">10 min</span>
+  <span class="badge badge-difficulty">Easy</span>
+</div>
+
+## What You'll Do
+
+Install Stremio on your Mac using the official DMG installer.
+
+**Requirements:**
+- macOS 10.11 El Capitan or newer
+- Intel or Apple Silicon (M1/M2/M3) processor
+- Administrator access
+- 200 MB free disk space
+
+---
+
+## Installation Steps
+
+<Steps>
+
+1. **Download the DMG file**
+   
+   - Go to [https://www.stremio.com](https://www.stremio.com)
+   - Click "Download for macOS"
+   - Save the `.dmg` file to your Downloads folder
+
+2. **Open the DMG file**
+   
+   - Go to Downloads folder in Finder
+   - Double-click `Stremio-X.X.X.dmg`
+   - A window will open showing the Stremio app icon
+
+3. **Drag Stremio to Applications**
+   
+   - In the DMG window, drag the Stremio icon to the Applications folder
+   - Wait for the copy to complete
+
+4. **Eject the DMG**
+   
+   - Right-click the Stremio disk icon on your desktop
+   - Click "Eject"
+
+5. **Launch Stremio**
+   
+   - Go to Applications folder
+   - Double-click **Stremio**
+   - If macOS shows a security warning, click "Open" (see troubleshooting below)
+
+</Steps>
+
+---
+
+## macOS Security Warning
+
+First time you launch, macOS may say "Stremio cannot be opened because it is from an unidentified developer."
+
+**How to fix:**
+
+1. Go to **System Preferences** → **Security & Privacy**
+2. Click the **General** tab
+3. You'll see a message about Stremio being blocked
+4. Click **"Open Anyway"**
+5. Confirm in the dialog
+6. Stremio will launch
+
+<Callout type="note">
+This is normal for apps downloaded outside the Mac App Store. Stremio is safe when downloaded from stremio.com.
+</Callout>
+
+---
+
+## Apple Silicon (M1/M2/M3) Macs
+
+Stremio has a universal binary that works on both Intel and Apple Silicon Macs. No special steps needed—follow the standard installation above.
+
+Performance is excellent on Apple Silicon Macs.
+
+---
+
+## Next Steps
+
+Continue to [First 10 Minutes Setup](/start-here/first-10-minutes-setup/) to configure Stremio.

@@ -1,0 +1,279 @@
+/* Custom Styling for Stremio Documentation */
+
+/* Theme persistence script */
+:root {
+  --custom-accent: #7b5ee0;
+}
+
+/* Typography improvements */
+.sl-markdown-content {
+  line-height: 1.7;
+}
+
+.sl-markdown-content p {
+  margin-bottom: 1.25rem;
+}
+
+.sl-markdown-content h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--sl-color-gray-5);
+}
+
+.sl-markdown-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.sl-markdown-content ul,
+.sl-markdown-content ol {
+  margin-bottom: 1.25rem;
+}
+
+.sl-markdown-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Page header badges */
+.page-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: var(--sl-color-gray-6);
+  color: var(--sl-color-white);
+}
+
+.badge-time::before {
+  content: '⏱️ ';
+  margin-right: 0.25rem;
+}
+
+.badge-difficulty::before {
+  content: '📊 ';
+  margin-right: 0.25rem;
+}
+
+/* Back to Start Here link */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--sl-color-gray-6);
+  border-radius: 0.375rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.back-link:hover {
+  background: var(--sl-color-gray-5);
+}
+
+.back-link::before {
+  content: '← ';
+}
+
+/* Section cards (for homepage) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.75rem;
+  background: var(--sl-color-gray-6);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: var(--sl-color-accent);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--sl-color-white);
+}
+
+.card p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  color: var(--sl-color-gray-2);
+}
+
+/* Next steps section */
+.next-steps {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: var(--sl-color-blue-low);
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--sl-color-blue);
+}
+
+.next-steps h3 {
+  margin-top: 0;
+  color: var(--sl-color-white);
+}
+
+.next-steps ul {
+  margin-bottom: 0;
+}
+
+/* Common mistakes section */
+.common-mistakes {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--sl-color-orange-low);
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--sl-color-orange);
+}
+
+.common-mistakes h3 {
+  margin-top: 0;
+  color: var(--sl-color-white);
+}
+
+/* Undo/rollback section */
+.rollback-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--sl-color-gray-6);
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--sl-color-gray-3);
+}
+
+.rollback-section h3 {
+  margin-top: 0;
+  color: var(--sl-color-white);
+}
+
+/* Print styles */
+@media print {
+  .sidebar,
+  .site-footer,
+  .back-link {
+    display: none;
+  }
+
+  .sl-markdown-content {
+    max-width: 100%;
+  }
+
+  .callout {
+    break-inside: avoid;
+  }
+}
+
+/* Improved contrast for accessibility */
+:root {
+  --sl-color-accent: var(--custom-accent);
+  --sl-color-accent-high: #9575f0;
+}
+
+/* FAQ accordion styling */
+.faq-item {
+  margin-bottom: 1rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  font-weight: 600;
+  padding: 1rem;
+  background: var(--sl-color-gray-6);
+  cursor: pointer;
+  margin: 0;
+}
+
+.faq-answer {
+  padding: 1rem;
+  border-top: 1px solid var(--sl-color-gray-5);
+}
+
+/* Glossary term styling */
+.glossary-term {
+  margin-bottom: 1.5rem;
+  scroll-margin-top: 4rem;
+}
+
+.glossary-term dt {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--sl-color-white);
+  margin-bottom: 0.25rem;
+}
+
+.glossary-term dd {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--sl-color-accent);
+}
+
+/* Decision tree styling */
+.decision-node {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--sl-color-gray-6);
+  border-radius: 0.5rem;
+  border-left: 4px solid var(--sl-color-accent);
+}
+
+.decision-question {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--sl-color-white);
+}
+
+.decision-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.decision-option {
+  padding: 0.5rem 1rem;
+  background: var(--sl-color-gray-5);
+  border-radius: 0.375rem;
+  text-decoration: none;
+  color: var(--sl-color-white);
+  transition: background 0.2s;
+}
+
+.decision-option:hover {
+  background: var(--sl-color-accent);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

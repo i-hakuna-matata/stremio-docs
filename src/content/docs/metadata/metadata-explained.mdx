@@ -1,0 +1,212 @@
+---
+title: Metadata Explained
+description: Understanding how Stremio organizes and displays content information
+---
+
+import Callout from '../../../components/Callout.astro';
+
+<div class="page-meta">
+  <span class="badge badge-time">15 min read</span>
+  <span class="badge badge-difficulty">Intermediate</span>
+</div>
+
+## What is Metadata?
+
+**Metadata** is *information about* a movie or TV show—everything except the actual video itself.
+
+### What Metadata Includes
+
+- **Posters** (vertical cover art)
+- **Backdrops** (horizontal background images)
+- **Titles** (official name)
+- **Descriptions** (plot summaries)
+- **Cast & Crew** (actors, directors, writers)
+- **Release dates**
+- **Genres** (Action, Comedy, Drama, etc.)
+- **Ratings** (IMDb scores, Rotten Tomatoes, etc.)
+- **Runtime**
+- **Episode lists** (for TV shows)
+- **Season numbers**
+
+<Callout type="note">
+**Key point:** Metadata is separate from streams. A movie can have beautiful metadata but no streams (or vice versa).
+</Callout>
+
+---
+
+## Why Metadata Matters
+
+### 1. Aesthetic Appeal
+
+Good metadata makes Stremio look polished:
+- Professional posters instead of blank squares
+- Accurate titles instead of file names
+- Proper episode organization
+
+### 2. Discoverability
+
+Metadata helps you find content:
+- Search by actor, director, or genre
+- Browse by rating or release year
+- Identify what you want to watch
+
+### 3. Organization
+
+Metadata keeps your library clean:
+- TV shows grouped by season/episode
+- Correct sorting (by title, date, etc.)
+- No duplicates with different names
+
+### 4. Context
+
+Metadata gives you information to decide:
+- Read plot summaries before committing
+- Check ratings and reviews
+- See cast and crew
+
+---
+
+## How Metadata Works in Stremio
+
+### Metadata Add-ons
+
+Stremio gets metadata from **metadata add-ons** (separate from stream add-ons).
+
+**Default metadata add-on:**
+- **Cinemeta** (Stremio's official metadata service)
+- Pre-installed
+- Provides metadata for most movies and TV shows
+
+**Other metadata add-ons:**
+- **TMDB** (The Movie Database)
+- **AIOMetadata-style add-ons** (enhanced metadata with more sources)
+- **Genre-specific add-ons** (anime, documentaries, etc.)
+
+### How It Works
+
+1. You search for or select a title in Stremio
+2. Stremio asks **metadata add-ons**: "What info do you have for this title?"
+3. Metadata add-ons return posters, descriptions, cast, etc.
+4. Stremio displays the combined results
+
+<Callout type="tip">
+You can install multiple metadata add-ons. Stremio will use the first one that returns data for each field.
+</Callout>
+
+---
+
+## Common Metadata Problems
+
+### Problem: Wrong Poster or Backdrop
+
+**Cause:**
+- Metadata add-on pulled incorrect data
+- Title has multiple versions (remakes, regional differences)
+- Add-on's database is outdated
+
+**Fix:** See [Fix Wrong Posters/Titles](/metadata/fix-wrong-posters-titles/)
+
+---
+
+### Problem: Missing Information
+
+**Cause:**
+- Metadata add-on doesn't have data for this title
+- Title is very new or obscure
+- Add-on is broken or offline
+
+**Fix:**
+- Install additional metadata add-ons
+- Wait (data may be added later)
+- Manually search for the title using a different spelling
+
+---
+
+### Problem: Duplicate Entries
+
+**Cause:**
+- Multiple metadata add-ons providing the same title
+- Different spellings or regional variants
+
+**Fix:**
+- Uninstall redundant metadata add-ons
+- Check your Library for duplicates and remove extras
+
+---
+
+### Problem: Wrong Language
+
+**Cause:**
+- Metadata add-on is set to a different language
+- No metadata available in your preferred language
+
+**Fix:** See [Language & Regional Settings](/metadata/language-and-regional-settings/)
+
+---
+
+## Metadata vs. Streams
+
+**Metadata** and **streams** are provided by **different add-ons**.
+
+| Aspect | Metadata Add-on | Stream Add-on |
+|--------|----------------|---------------|
+| **Provides** | Info (posters, descriptions) | Playable video sources |
+| **Examples** | Cinemeta, TMDB | YouTube, OpenSubtitles, etc. |
+| **Legal status** | Always legal (just information) | Varies (depends on source) |
+| **Required?** | Recommended (makes Stremio usable) | Required (to watch anything) |
+
+**You need both types:**
+- **Metadata add-ons** to see what's available and look pretty
+- **Stream add-ons** to actually watch content
+
+---
+
+## Legal Metadata Use
+
+Using metadata add-ons is **100% legal** everywhere. They're just pulling publicly available information from databases like IMDb, TMDB, etc.
+
+**No legal risk** involved in:
+- Installing metadata add-ons
+- Browsing content via metadata
+- Organizing your library with metadata
+
+<Callout type="note">
+Metadata add-ons don't provide streams, so they can't be used to access copyrighted content illegally. They're purely informational.
+</Callout>
+
+---
+
+## Best Practices
+
+### ✅ DO:
+
+- **Install at least one metadata add-on** (Cinemeta is good for most users)
+- **Try multiple metadata add-ons** if you're not satisfied with results
+- **Keep metadata add-ons updated** (uninstall/reinstall if they seem stale)
+- **Use metadata to track content** even if you watch elsewhere
+
+### ❌ DON'T:
+
+- **Install too many metadata add-ons** (can cause conflicts or duplicates)
+- **Expect perfect metadata** for every title (some are obscure or new)
+- **Confuse metadata with streams** (different purposes)
+
+---
+
+## Next Steps
+
+<div class="next-steps">
+
+### Learn More About Metadata
+
+1. **Metadata Explained** ← You are here
+2. **[Metadata Add-on Setup](/metadata/aiometadata-setup/)** — Install and configure
+3. **[Fix Wrong Posters/Titles](/metadata/fix-wrong-posters-titles/)** — Troubleshoot issues
+4. **[Language & Regional Settings](/metadata/language-and-regional-settings/)** — Customize language
+5. **[Best Practices for Clean Library](/metadata/best-practices-for-clean-library/)** — Organize like a pro
+
+</div>
+
+**Related reading:**
+- [Add-ons Explained](/addons/addons-explained/)
+- [Catalogs & Metadata Add-ons](/addons/catalogs-and-metadata-addons/)

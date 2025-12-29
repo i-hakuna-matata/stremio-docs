@@ -1,0 +1,347 @@
+---
+title: Glossary for Beginners
+description: Essential terms you'll encounter while using Stremio—explained simply
+---
+
+import Callout from '../../../components/Callout.astro';
+
+<div class="page-meta">
+  <span class="badge badge-time">5 min read</span>
+  <span class="badge badge-difficulty">Reference</span>
+</div>
+
+## What This Is
+
+This is a **short, beginner-friendly glossary** of the most important terms you'll encounter in your first week with Stremio. Each term includes:
+
+- A simple definition
+- Why it matters
+- A link to more detailed info (when relevant)
+
+For a complete glossary with 80+ terms, see the [Full Glossary](/glossary/).
+
+---
+
+## Core Concepts
+
+### Stremio
+
+**What it is:** The media center app you're using—the software that organizes and plays content.
+
+**Why it matters:** Stremio itself doesn't host content; it's just the interface. Everything you see comes from add-ons.
+
+**Think of it like:** A web browser for video content.
+
+---
+
+### Add-on
+
+**What it is:** A plugin or extension that connects Stremio to a source of content (movies, shows, streams, metadata, etc.).
+
+**Why it matters:** Add-ons are how Stremio gets content. No add-ons = no content.
+
+**Examples:** YouTube (videos), Cinemeta (metadata), OpenSubtitles (subtitles).
+
+**Learn more:** [Add-ons Explained](/addons/addons-explained/)
+
+---
+
+### Catalog
+
+**What it is:** A collection or list of movies, shows, or videos provided by an add-on.
+
+**Why it matters:** When you browse the Discover page, you're seeing catalogs from your installed add-ons.
+
+**Example:** The "Trending on YouTube" row is a catalog from the YouTube add-on.
+
+**Think of it like:** A shelf in a library—each add-on has its own shelves (catalogs).
+
+---
+
+### Metadata
+
+**What it is:** Information *about* a movie or show—like the poster, title, description, cast, release date, and ratings.
+
+**Why it matters:** Metadata makes Stremio look polished and helps you decide what to watch. It's separate from the actual video stream.
+
+**Example:** When you see a nice poster and plot summary for a movie, that's metadata.
+
+**Learn more:** [Metadata Explained](/metadata/metadata-explained/)
+
+---
+
+### Stream
+
+**What it is:** A playable source for a video—the actual file or link that Stremio will use to play content.
+
+**Why it matters:** When you click "Play" on a movie, Stremio asks your add-ons to find streams. You pick which stream to use (or Stremio picks automatically).
+
+**Example:** A stream might be a torrent link, a direct video file, or a YouTube URL.
+
+**Think of it like:** Different TV channels broadcasting the same show—each stream is a different "channel."
+
+---
+
+### Library
+
+**What it is:** Your personal collection in Stremio—the movies and shows you've added to your watchlist or marked as watched.
+
+**Why it matters:** Your library syncs across devices (if you have an account) and helps you keep track of what you're watching.
+
+**How to use it:** Click the "+" or bookmark icon on any title to add it to your library.
+
+**Learn more:** [Library, Watchlist & History](/using-stremio/library-watchlist-history/)
+
+---
+
+## Streaming & Playback
+
+### Buffering
+
+**What it is:** When the video pauses to load more data before continuing playback.
+
+**Why it matters:** Excessive buffering is frustrating. It usually means your internet is too slow, unstable, or the stream source is overloaded.
+
+**How to fix it:** See [Playback & Buffering](/troubleshooting/playback-buffering/)
+
+---
+
+### Torrent
+
+**What it is:** A peer-to-peer file-sharing protocol. Instead of downloading from one server, you download pieces from many users at once.
+
+**Why it matters:** Some add-ons use torrents as stream sources. **Important:** Torrenting copyrighted content without permission is illegal in most countries.
+
+**How it works in Stremio:** Stremio streams torrents directly (you don't download the full file), but your IP is still visible to others in the torrent swarm.
+
+**Safety note:** Using torrent-based add-ons for copyrighted content is a legal and privacy risk.
+
+---
+
+### Debrid Service
+
+**What it is:** A paid service (e.g., Real-Debrid, AllDebrid) that downloads torrents or file-host links to its servers, then streams them to you at high speed.
+
+**Why it matters:** Debrid services can improve speed and reduce buffering, but they're often used to access pirated content.
+
+**Legal note:** Using a debrid service for content you don't have rights to is still illegal.
+
+**This guide's stance:** We explain what debrid is but don't provide setup instructions for piracy use cases.
+
+---
+
+### Subtitles
+
+**What it is:** Text displayed on-screen that transcribes or translates the audio.
+
+**Why it matters:** Essential for accessibility (deaf/hard of hearing) and language learning.
+
+**How to use in Stremio:** Add a subtitle add-on (like OpenSubtitles), then enable subtitles in the player settings.
+
+**Learn more:** [Player, Subtitles & Audio](/using-stremio/player-settings-subtitles-audio/)
+
+---
+
+## Account & Syncing
+
+### Stremio Account
+
+**What it is:** A free account you create with Stremio (using an email and password) that lets you sync your library and settings.
+
+**Why it matters:** Without an account, your data stays local to your device. With an account, you can seamlessly switch between devices.
+
+**How to create:** See [First 10 Minutes Setup](/start-here/first-10-minutes-setup/)
+
+---
+
+### Sync / Syncing
+
+**What it is:** The automatic process of keeping your library, watchlist, and settings the same across all your devices.
+
+**Why it matters:** Start watching on your laptop, finish on your TV—your progress follows you.
+
+**How it works:** When you have a Stremio account, your data is stored in the cloud and syncs automatically.
+
+**Learn more:** [Sync & Multiple Devices](/using-stremio/sync-and-multiple-devices/)
+
+---
+
+## Content Types
+
+### Movie
+
+**What it is:** A standalone film (as opposed to an episodic TV show).
+
+**Why it matters:** Self-explanatory, but Stremio organizes movies and TV shows separately.
+
+---
+
+### TV Show / Series
+
+**What it is:** Episodic content organized into seasons and episodes.
+
+**Why it matters:** Stremio tracks which episodes you've watched and lets you binge-watch easily.
+
+---
+
+### Channel
+
+**What it is:** In the context of YouTube or Twitch add-ons, a "channel" is a creator's collection of videos or streams.
+
+**Why it matters:** You can subscribe to channels within Stremio (via add-ons) and see new uploads.
+
+---
+
+### Live TV
+
+**What it is:** Real-time streaming of television broadcasts (like news or sports).
+
+**Why it matters:** Some add-ons provide live TV channels. Legal availability varies by region.
+
+---
+
+## Technical Terms (Simplified)
+
+### HTTPS / HTTP
+
+**What it is:** Protocols for transferring data over the internet. HTTPS is secure (encrypted), HTTP is not.
+
+**Why it matters:** Secure add-ons and streams use HTTPS. If an add-on uses HTTP, your activity might be visible to others.
+
+---
+
+### IP Address
+
+**What it is:** A unique number that identifies your device on the internet (like a home address).
+
+**Why it matters:** When you stream (especially torrents), other users can see your IP. This is a privacy concern.
+
+**How to protect it:** Use a VPN (though this has legal and ethical considerations—see [Privacy Basics](/privacy-security/privacy-basics/)).
+
+---
+
+### VPN (Virtual Private Network)
+
+**What it is:** A service that encrypts your internet connection and hides your IP address by routing traffic through a server in another location.
+
+**Why it matters:** Some users use VPNs to hide streaming activity from their ISP or to bypass geo-restrictions.
+
+**Legal note:** A VPN doesn't make illegal streaming legal—it just hides it.
+
+**This guide's stance:** We explain what VPNs are but don't promote using them to evade copyright law.
+
+---
+
+### Cache
+
+**What it is:** Temporary data stored on your device to speed up loading times.
+
+**Why it matters:** Stremio caches posters, metadata, and stream data. Clearing the cache can fix some bugs.
+
+**How to clear it:** Settings → Advanced → Clear Cache
+
+---
+
+### Sideloading
+
+**What it is:** Installing an app from outside the official app store (e.g., installing an APK file on Android instead of using Google Play).
+
+**Why it matters:** Some Stremio add-ons or unofficial versions require sideloading. **Be careful**—this can be a security risk.
+
+**Safety note:** Only sideload from trusted sources. Never disable device security to install something.
+
+---
+
+## Safety & Legal Terms
+
+### Copyright
+
+**What it is:** Legal protection for creative works (movies, music, books, etc.). Copyright holders have exclusive rights to distribute and profit from their work.
+
+**Why it matters:** Streaming or sharing copyrighted content without permission is illegal.
+
+---
+
+### Piracy
+
+**What it is:** Unauthorized copying, distribution, or streaming of copyrighted content.
+
+**Why it matters:** Many Stremio add-ons facilitate piracy. Using them is illegal and risky.
+
+**This guide's stance:** We teach you how to *avoid* piracy, not how to do it.
+
+---
+
+### DMCA (Digital Millennium Copyright Act)
+
+**What it is:** A U.S. law that penalizes copyright infringement online.
+
+**Why it matters:** ISPs in the U.S. can send DMCA notices if you're caught streaming or torrenting copyrighted content.
+
+**What to do if you get one:** Stop the activity, delete the content, and review [Safety & Legality](/start-here/safety-and-legality/).
+
+---
+
+### ISP (Internet Service Provider)
+
+**What it is:** The company that provides your internet connection (e.g., Comcast, Verizon, BT, Telstra).
+
+**Why it matters:** Your ISP can see your streaming activity (unless you use a VPN). They can throttle, warn, or even suspend your service if you violate their terms.
+
+---
+
+### Malware
+
+**What it is:** Malicious software designed to harm your device, steal data, or spy on you.
+
+**Why it matters:** Fake or untrustworthy add-ons can contain malware.
+
+**How to avoid it:** Only install add-ons from trusted sources. See [Avoiding Suspicious Add-ons](/privacy-security/avoiding-suspicious-addons/).
+
+---
+
+## Common Abbreviations
+
+- **TV:** Television
+- **VOD:** Video on Demand
+- **P2P:** Peer-to-Peer (like torrents)
+- **IPTV:** Internet Protocol Television (streaming live TV over the internet)
+- **UI:** User Interface (what you see and interact with)
+- **API:** Application Programming Interface (how add-ons talk to services)
+- **OS:** Operating System (Windows, macOS, Android, etc.)
+
+---
+
+## Not Sure About a Term?
+
+If you encounter a term not listed here:
+
+1. Check the [Full Glossary](/glossary/) (80+ terms with cross-links)
+2. Search this documentation site (use the search bar at the top)
+3. Google it with "Stremio" included (e.g., "Stremio catalog meaning")
+
+<Callout type="tip">
+**Bookmark this page.** You'll refer back to it often in your first few weeks with Stremio.
+</Callout>
+
+---
+
+## Next Steps
+
+<div class="next-steps">
+
+### Continue Your Journey
+
+1. [What is Stremio?](/start-here/what-is-stremio/)
+2. [Safety & Legality](/start-here/safety-and-legality/)
+3. [First 10 Minutes Setup](/start-here/first-10-minutes-setup/)
+4. **Glossary for Beginners** ← You are here
+5. **[What to Do Next](/start-here/what-to-do-next/)** ← Choose your learning path
+
+</div>
+
+**Ready to dive deeper?**
+
+- [Full Glossary](/glossary/)—Complete reference
+- [Add-ons Explained](/addons/addons-explained/)—Deep dive into the add-on ecosystem
+- [Metadata Explained](/metadata/metadata-explained/)—Understand how Stremio organizes content

@@ -1,0 +1,427 @@
+---
+title: Add-ons Explained
+description: Deep dive into how Stremio add-ons work and how to use them responsibly
+---
+
+import Callout from '../../../components/Callout.astro';
+
+<div class="page-meta">
+  <span class="badge badge-time">20 min</span>
+  <span class="badge badge-difficulty">Essential Reading</span>
+</div>
+
+<Callout type="legal">
+**Critical:** This page explains what add-ons are and how they work. Understanding this is essential for safe, legal, and effective use of Stremio. Read carefully.
+</Callout>
+
+## What You'll Learn
+
+- What add-ons are and why they matter
+- Types of add-ons (catalogs, streams, metadata, subtitles)
+- How add-ons work technically
+- Risk levels and how to evaluate trust
+- Legal and safety considerations
+
+---
+
+## What is an Add-on?
+
+An **add-on** (also called a plugin or extension) is a small piece of software that extends Stremio's functionality by connecting it to external content sources.
+
+### The Simple Analogy
+
+Think of Stremio as a **smart TV**
+
+, and add-ons as **channel packages**:
+
+- The TV itself doesn't create content—it displays channels
+- Each channel package (add-on) brings different content
+- You choose which packages to subscribe to
+
+**Key principle:** Stremio is neutral. Add-ons determine what you can watch and whether it's legal.
+
+---
+
+## Why Stremio Uses Add-ons
+
+### The Philosophy
+
+Stremio's developers deliberately chose **not** to include content sources in the app itself. Instead:
+
+- **You control** what sources you connect to
+- **You're responsible** for evaluating the legality of each add-on
+- **Stremio remains neutral** and legal worldwide
+
+This design puts power (and responsibility) in your hands.
+
+### The Benefits
+
+✅ **Flexibility** — Choose exactly the sources you want  
+✅ **Privacy** — Stremio doesn't know what you watch via add-ons  
+✅ **Customization** — Build your perfect media center  
+✅ **Legality** — You can use Stremio 100% legally by choosing legal add-ons  
+
+### The Trade-offs
+
+⚠️ **Learning curve** — You need to understand what you're installing  
+⚠️ **Maintenance** — Add-ons can break and need updating  
+⚠️ **Risk** — Bad add-ons can be illegal, unsafe, or malicious  
+
+---
+
+## Types of Add-ons
+
+Add-ons fall into four main categories:
+
+### 1. 📚 Catalog Add-ons
+
+**What they do:** Provide **lists of content** (movies, shows, channels) to browse.
+
+**Examples:**
+- Cinemeta (Stremio's default metadata catalog)
+- YouTube (catalog of YouTube videos)
+- TMDB catalogs
+
+**What they provide:**
+- Organized lists ("Popular Movies," "Top TV Shows," etc.)
+- Metadata (posters, titles, descriptions)
+- **No actual streams** (just information)
+
+**Legal status:** Generally legal—they're just organizing information.
+
+**Safety:** Low risk if from trusted sources.
+
+---
+
+### 2. 🎬 Stream Add-ons
+
+**What they do:** Provide **playable streams** (actual video sources) for content.
+
+**Examples:**
+- YouTube (provides streams of YouTube videos)
+- Official network add-ons (if they exist)
+- **Piracy-focused add-ons** (we don't name them here)
+
+**What they provide:**
+- Links to video files (HTTP, HLS, torrents, etc.)
+- Quality options (480p, 1080p, 4K, etc.)
+
+**Legal status:** **Varies widely**
+- Legal: YouTube, official sources, content you own
+- Illegal: Torrents of copyrighted content, scraped pirate sites
+
+**Safety:** **High risk** if used for illegal content (legal consequences, malware, privacy issues)
+
+<Callout type="legal">
+**This guide's stance:** We explain how stream add-ons work but do NOT provide installation instructions for add-ons designed to access unauthorized copyrighted content.
+</Callout>
+
+---
+
+### 3. 🏷️ Metadata Add-ons
+
+**What they do:** Provide **information about content** (posters, descriptions, cast, ratings, etc.).
+
+**Examples:**
+- Cinemeta (default)
+- TMDB (The Movie Database)
+- Custom metadata add-ons (like AIOMetadata-style add-ons)
+
+**What they provide:**
+- Posters and backdrops
+- Plot summaries
+- Cast and crew info
+- Release dates, ratings, genres
+
+**Legal status:** Completely legal (it's just information).
+
+**Safety:** Very low risk if from reputable sources.
+
+---
+
+### 4. 💬 Subtitle Add-ons
+
+**What they do:** Provide **subtitle files** for movies and shows.
+
+**Examples:**
+- OpenSubtitles (community-driven subtitle database)
+- Subscene
+- Language-specific subtitle sources
+
+**What they provide:**
+- SRT files (subtitle text)
+- Multiple languages
+- Synchronized timing
+
+**Legal status:** Generally legal (subtitles are usually fan-made or licensed separately).
+
+**Safety:** Low risk from reputable sources. Avoid sketchy subtitle sites (malware risk).
+
+---
+
+## How Add-ons Work (Technical Overview)
+
+You don't need to understand this to use Stremio, but it helps:
+
+### The Process
+
+1. **You install an add-on** → Stremio saves its URL/configuration
+2. **You browse or search** → Stremio asks installed add-ons: "Do you have this content?"
+3. **Add-ons respond** → They return catalogs, streams, metadata, or subtitles
+4. **Stremio displays results** → You see the combined results from all add-ons
+5. **You click "Play"** → Stremio uses the selected stream to play the video
+
+### Where Add-ons Run
+
+Most add-ons are **remote web services**:
+- They run on someone else's server
+- Stremio communicates with them via the internet
+- You don't download the add-on code to your device (just a configuration)
+
+**Implication:** The add-on developer can:
+- See your requests (what you search for, what you click)
+- Log your IP address
+- Stop service at any time
+- Change behavior without your knowledge
+
+<Callout type="warning">
+**Privacy risk:** Installing an add-on means trusting the developer with your activity data. Choose wisely.
+</Callout>
+
+---
+
+## Add-on Risk Levels (Detailed)
+
+Not all add-ons are equally risky. Use this framework to evaluate:
+
+### 🟢 Green: Low Risk
+
+**Characteristics:**
+- Provides only metadata or catalogs (no streams)
+- Official or widely trusted source
+- Open-source (can be audited)
+- No payment or personal info required
+- Clear privacy policy
+
+**Examples:**
+- Cinemeta
+- TMDB
+- OpenSubtitles
+
+**What can go wrong:** Almost nothing. Worst case: outdated info or service goes offline.
+
+---
+
+### 🟡 Yellow: Medium Risk
+
+**Characteristics:**
+- Provides streams from legal sources (YouTube, Twitch, official networks)
+- Requires account/API key from a legitimate service
+- Reputable but not open-source
+- Minor privacy concerns
+
+**Examples:**
+- YouTube
+- Twitch
+- Podcasts
+
+**What can go wrong:** 
+- Service changes terms and breaks the add-on
+- Minor privacy leaks (what you watch is shared with the service)
+
+---
+
+### 🟠 Orange: Elevated Risk
+
+**Characteristics:**
+- Provides streams from gray-area sources
+- Debrid services (when used for content you don't own)
+- Requires payment to questionable services
+- Unclear developer identity
+
+**Examples:**
+- Debrid service integrations (when misused)
+- Geo-unlocking add-ons
+
+**What can go wrong:**
+- Legal gray area (depending on jurisdiction and use)
+- Payment to unreliable service
+- Moderate privacy and security risks
+
+---
+
+### 🔴 Red: High Risk
+
+**Characteristics:**
+- Provides streams of copyrighted content without authorization
+- Scrapes torrent sites or pirate file hosts
+- No clear developer or privacy policy
+- Promoted on sketchy websites
+- Requires disabling security features
+
+**Examples:**
+- We don't name them, but if it promises "free movies and TV," it's likely here
+
+**What can go wrong:**
+- **Legal consequences** (ISP warnings, fines, lawsuits)
+- **Privacy violations** (activity logging, data selling)
+- **Security threats** (malware, phishing, device compromise)
+- **Ethical issues** (harms content creators)
+
+<Callout type="legal">
+**Do not install red-level add-ons.** The risks far outweigh any perceived benefits. See [Safety & Legality](/start-here/safety-and-legality/) for alternatives.
+</Callout>
+
+---
+
+## How to Evaluate an Add-on (Checklist)
+
+Before installing ANY add-on, ask yourself:
+
+### ✅ Basic Trust Questions
+
+- [ ] Do I know who developed this add-on?
+- [ ] Is it from a reputable source (official Stremio community, known developer)?
+- [ ] Can I find reviews or discussions about it from trustworthy people?
+- [ ] Is the add-on open-source (or at least transparent about what it does)?
+
+### ✅ Legal Questions
+
+- [ ] Does this add-on provide access to content I have legal rights to access?
+- [ ] If it provides copyrighted content, is it licensed or authorized?
+- [ ] Am I comfortable defending my use of this add-on in court if needed?
+
+### ✅ Privacy Questions
+
+- [ ] What data will this add-on collect about me?
+- [ ] Does it have a privacy policy?
+- [ ] Do I trust the developer with my viewing history and IP address?
+- [ ] Does it require account credentials (red flag unless it's for a service I already use)?
+
+### ✅ Security Questions
+
+- [ ] Does it require suspicious permissions?
+- [ ] Does it ask me to disable security features on my device?
+- [ ] Is it promoted on sketchy websites or through spam?
+- [ ] Have others reported malware or security issues?
+
+**If you answer "No" or "I don't know" to any of these, reconsider installing the add-on.**
+
+For a deeper framework, see [How to Evaluate Add-on Trust](/addons/how-to-evaluate-addon-trust/).
+
+---
+
+## Common Add-on Misconceptions
+
+### Myth: "If it's in Stremio's add-on catalog, it must be safe"
+
+**Reality:** Stremio allows community add-ons with minimal curation. Presence in the catalog doesn't imply endorsement or safety.
+
+### Myth: "I need lots of add-ons to get good content"
+
+**Reality:** More add-ons = more complexity and risk. Install only what you need and trust.
+
+### Myth: "Add-ons are permanent and reliable"
+
+**Reality:** Add-ons can break, go offline, or change overnight. They're maintained by third parties, not Stremio.
+
+### Myth: "Uninstalling an add-on erases all traces"
+
+**Reality:** The add-on developer may have logged your activity while it was installed. Uninstalling stops future data collection but doesn't erase past logs.
+
+---
+
+## Best Practices for Managing Add-ons
+
+### ✅ DO:
+
+- **Start with one or two trusted add-ons** and add more only as needed
+- **Regularly audit your installed add-ons** (monthly)
+- **Uninstall add-ons you don't use** (reduces attack surface)
+- **Read about an add-on before installing** (Google it, check forums)
+- **Prefer open-source add-ons** when possible
+
+### ❌ DON'T:
+
+- **Install every add-on you come across**
+- **Trust add-ons just because they're popular** (popularity ≠ legality or safety)
+- **Share your Stremio setup with others without explaining the risks**
+- **Ignore warnings** from your device or antivirus about an add-on
+
+---
+
+## Legal Add-on Use Cases
+
+Yes, you can use Stremio 100% legally with add-ons! Here's how:
+
+### 1. YouTube and Podcasts
+
+- Install YouTube and podcast add-ons
+- Watch freely available content
+- Completely legal and safe
+
+### 2. Metadata and Organization
+
+- Install metadata add-ons (Cinemeta, TMDB)
+- Use Stremio as a catalog to track what you want to watch
+- Watch content on official platforms (link out from Stremio)
+
+### 3. Subtitle Enhancement
+
+- Install OpenSubtitles or similar
+- Use with content you legally own or access
+- Improves accessibility legally
+
+### 4. Personal Media
+
+- Use add-ons that connect to your own servers (Plex, DLNA, etc.)
+- Stream your own legally acquired files
+
+<Callout type="tip">
+**You don't have to pirate to use Stremio.** Legal use cases are valid and valuable.
+</Callout>
+
+---
+
+## What to Do If You've Installed Risky Add-ons
+
+Don't panic. Here's how to clean up:
+
+1. **Uninstall immediately** — See [How to Install & Remove Add-ons Safely](/addons/how-to-install-remove-addons-safely/)
+2. **Clear your cache** — Settings → Advanced → Clear Cache
+3. **Run a security scan** — Use antivirus/antimalware on your device
+4. **Change your Stremio password** — If you think your account was compromised
+5. **Learn for next time** — Use the evaluation checklist above
+
+---
+
+## Summary: The Responsible Add-on User
+
+Commit to these principles:
+
+- ✅ I understand that **add-ons are the most important decision** I make in Stremio
+- ✅ I will **evaluate every add-on** before installing using the checklist above
+- ✅ I will **only install add-ons I trust** legally, technically, and ethically
+- ✅ I will **regularly audit and remove** add-ons I don't use
+- ✅ I understand that **I'm responsible** for my choices, not Stremio's developers
+
+---
+
+## Next Steps
+
+<div class="next-steps">
+
+### Continue Learning About Add-ons
+
+1. **Add-ons Explained** ← You are here
+2. **[How to Install & Remove Add-ons Safely](/addons/how-to-install-remove-addons-safely/)** ← Practical steps
+3. **[How to Evaluate Add-on Trust](/addons/how-to-evaluate-addon-trust/)** ← Detailed framework
+4. **[Catalogs & Metadata Add-ons](/addons/catalogs-and-metadata-addons/)** ← Legal organizational tools
+5. **[Subtitle Add-ons](/addons/subtitles-addons-legal-notes/)** ← Accessibility options
+
+</div>
+
+**Related reading:**
+- [Safety & Legality](/start-here/safety-and-legality/)
+- [Privacy Basics](/privacy-security/privacy-basics/)
+- [Avoiding Suspicious Add-ons](/privacy-security/avoiding-suspicious-addons/)
