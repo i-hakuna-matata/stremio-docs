@@ -277,3 +277,15 @@
     gap: 0.5rem;
   }
 }
+
+/* Hero title styling - make it smaller */
+.hero h1 {
+  font-size: 2.5rem !important;
+  line-height: 1.2 !important;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem !important;
+  }
+}

@@ -34,11 +34,38 @@ export default defineConfig({
   site: 'https://stremio.prabhu-tools.com',
   integrations: [
     starlight({
-      title: 'Stremio Setup Guide - Complete Tutorial & Documentation',
+      title: 'Stremio Setup Guide',
       description: 'Complete step-by-step guide for installing, configuring, and safely using Stremio. Learn about add-ons, metadata, troubleshooting, privacy, and security. Beginner-friendly tutorials for Windows, Mac, Linux, Android TV.',
       head: [
         // Google Analytics (if configured)
         ...buildGoogleAnalyticsTags(GA_ID),
+
+        // Favicons (ensure /favicon.ico requests succeed)
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'icon',
+            href: '/favicon.ico',
+          },
+        },
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'icon',
+            type: 'image/png',
+            sizes: '32x32',
+            href: '/favicon-32x32.png',
+          },
+        },
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'apple-touch-icon',
+            sizes: '180x180',
+            href: '/apple-touch-icon.png',
+          },
+        },
+
         // SEO Meta Tags
         {
           tag: 'meta',
@@ -136,7 +163,6 @@ export default defineConfig({
         './src/styles/custom.css',
       ],
       lastUpdated: true,
-      favicon: '/favicon.ico',
       sidebar: [
         {
           label: 'Start Here',
