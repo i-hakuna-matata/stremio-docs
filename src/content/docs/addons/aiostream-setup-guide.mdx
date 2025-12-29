@@ -1,0 +1,594 @@
+---
+title: "AIOStream: Your Complete Streaming Setup Guide"
+description: Step-by-step guide to setting up and optimizing AIOStream for the best Stremio streaming experience with all scrapers, quality settings, and performance tips
+---
+
+import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
+
+<div class="page-meta">
+  <span class="badge badge-time">15 min read</span>
+  <span class="badge badge-difficulty">Beginner to Advanced</span>
+</div>
+
+<Callout type="info">
+**Latest Update**: This guide covers AIOStream v3+ with the latest configuration options and private instances as of December 2025.
+</Callout>
+
+## What is AIOStream?
+
+**AIOStream** (All-In-One Streams) is a powerful Stremio add-on that revolutionizes how you find and stream content. Unlike traditional add-ons that only search one or two sources, AIOStream aggregates streams from **multiple scrapers simultaneously**, providing you with the best available streams from various platforms.
+
+### How AIOStream Works
+
+AIOStream acts as a **stream aggregator and manager** that:
+
+- **Scrapes multiple torrent indexing sites** and direct download sources
+- **Combines results** from different scrapers into a unified, ranked list
+- **Applies intelligent filtering** based on your preferences (quality, size, source type)
+- **Integrates with debrid services** for premium access
+- **Provides real-time search** across all configured sources
+- **Uses dynamic strategies** to optimize search speed vs. quality
+
+### What is a Scraper?
+
+A **scraper** in the context of AIOStream is a service that searches and extracts streaming/download links from various sources. Think of scrapers as "search engines" that:
+
+- **Index torrent sites** (1337x, ThePirateBay, RARBG, etc.)
+- **Search file hosting platforms** (Mega, MediaFire, Google Drive)
+- **Aggregate direct streaming links** from various web platforms
+- **Return structured data** about available streams (quality, size, seeders, etc.)
+
+Popular scrapers include:
+- **Torrentio** - Torrent aggregator with Real-Debrid integration
+- **Comet** - Fast torrent scraper
+- **MediaFusion** - Direct streaming links
+- **Orionoid** - Premium torrent indexer
+- **Zilean** - Lightweight torrent scraper
+
+## Installation
+
+### Official Installation Link
+
+The most reliable way to install AIOStream is through the **ElfHosted instance**:
+
+**Direct Install URL**: `https://aiostreams.elfhosted.com/`
+
+<Steps>
+1. **Copy the URL**: `https://aiostreams.elfhosted.com/`
+2. **In Stremio**, click the **puzzle icon** (Add-ons)
+3. **Click "Install Add-on"** (bottom left)
+4. **Paste the URL** and click **Install**
+5. **Wait for installation** to complete
+</Steps>
+
+### Alternative Installation Methods
+
+#### GitHub Repository
+- **Developer**: [https://github.com/Viren070/AIOStreams](https://github.com/Viren070/AIOStreams)
+- **Install URL**: `https://aiostreams.github.io/manifest.json`
+
+#### Popular Private Instances
+
+Based on community feedback, here are the most popular and reliable AIOStream instances:
+
+| Instance | URL | Notes |
+|----------|-----|-------|
+| **ElfHosted** | `https://aiostreams.elfhosted.com/` | Most popular, actively maintained |
+| **Midnight Ignite** | `https://aiostreamsfortheweebs.midnightignite.me/` | Feature-rich with templates |
+| **Nhyira** | `https://aiostreamsfortheweak.nhyira.dev/` | Optimized for TV viewing |
+| **Viren070** | `https://aiostreams.github.io/manifest.json` | Original developer instance |
+
+<Callout type="tip">
+**Recommendation**: Start with the **ElfHosted instance** (`https://aiostreams.elfhosted.com/`) as it's the most popular and actively maintained.
+</Callout>
+
+## Your AIOStream Setup Journey
+
+Let's walk through setting up AIOStream step by step, from installation to optimization. This guide will take you through every section of the configuration to get the best streaming experience.
+
+### Step 1: Installation & First Launch
+
+<Steps>
+1. **Install AIOStream** using one of the URLs above (we recommend the ElfHosted instance)
+2. **Open Stremio** and navigate to the **Add-ons** section
+3. **Find AIOStream** in your installed add-ons list
+4. **Click the gear icon** ⚙️ to open the configuration panel
+5. **Let's configure it section by section** (continue reading)
+</Steps>
+
+### Step 2: API Keys & Authentication
+
+AIOStream needs API keys to unlock its full potential. Let's set these up first:
+
+#### TMDB (The Movie Database) - For Content Information
+TMDB provides posters, descriptions, and accurate content identification.
+
+**How to get your TMDB API Key:**
+1. Visit [https://www.themoviedb.org/settings/api](https://www.themoviedb.org/settings/api)
+2. Create a free account if you don't have one
+3. Request an API key (it's free and instant)
+4. Copy the **"API Read Access Token"** (not the API Key v3)
+5. Paste it in AIOStream's TMDB section
+
+#### Debrid Services - For Premium Streaming
+Debrid services convert torrent links into direct streaming links.
+
+**Real-Debrid (Most Popular):**
+- Visit [https://real-debrid.com/apitoken](https://real-debrid.com/apitoken)
+- Copy your API token
+- Paste it in AIOStream's Real-Debrid section
+
+**Premiumize:**
+- Visit [https://www.premiumize.me/account](https://www.premiumize.me/account)
+- Generate/copy your API key
+- Add it to AIOStream
+
+**AllDebrid:**
+- Visit [https://alldebrid.com/account](https://alldebrid.com/account)
+- Copy your API key
+- Add it to AIOStream
+
+<Callout type="tip">
+**Pro Tip**: Start with just Real-Debrid if you're new to debrid services. You can add others later.
+</Callout>
+
+### Step 3: Choosing Your Scrapers
+
+Scrapers are the search engines that find streams. This is where AIOStream gets its power from multiple sources.
+
+#### Recommended Scraper Setup (Start Here):
+
+**Primary Scrapers (Enable These First):**
+- **Torrentio** - Best for debrid users, excellent quality selection
+- **Comet** - Fast searches, good for quick results
+- **MediaFusion** - Direct streaming links, no torrents needed
+
+**Secondary Scrapers (Add These Next):**
+- **Orionoid** - Premium torrent indexer, great for 4K content
+- **Zilean** - Lightweight and fast backup scraper
+
+**Advanced Scrapers (For Power Users):**
+- **KnightCrawler** - Specialized scraper for specific content types
+
+<Callout type="info">
+**How to configure scrapers:**
+1. In AIOStream settings, find the "Scrapers" section
+2. Check the boxes for the scrapers you want to use
+3. Set priorities (1 = highest priority, search this first)
+4. Start with 3-4 scrapers to avoid overwhelming your system
+</Callout>
+
+### Step 4: Quality Preferences
+
+Tell AIOStream what quality you prefer and what to avoid.
+
+#### Resolution Settings:
+Choose your preferred resolutions in order of preference:
+1. **2160p (4K)** - Highest quality, largest files
+2. **1080p (Full HD)** - Great quality, reasonable file sizes
+3. **720p (HD)** - Good quality, faster downloads
+4. **480p (SD)** - Acceptable for older content or slow connections
+
+#### Quality Tiers (What Sources to Trust):
+AIOStream uses a color-coded system:
+
+**🟢 Green (Best Quality):**
+- REMUX, BluRay, WEB-DL, BluRay REMUX
+- These are your highest quality sources
+
+**🟡 Yellow (Good Quality):**
+- WEBRip, HDRip, BDRip
+- Solid quality for most viewing
+
+**🟠 Orange (Acceptable):**
+- HDTV, PDTV
+- Okay for TV shows, not great for movies
+
+**🔴 Red (Avoid These):**
+- CAM, TS, TC, SCR
+- Very low quality, avoid if possible
+
+#### File Size Limits:
+- **Minimum Size**: Set to avoid tiny files (2GB for movies, 500MB for episodes)
+- **Maximum Size**: Set to avoid massive files (50GB for movies, 10GB for episodes)
+
+### Step 5: Search Strategy & Performance
+
+AIOStream can search smartly to balance speed vs. comprehensive results.
+
+#### Dynamic Search Strategy (Recommended):
+Instead of searching everything slowly, AIOStream stops when it finds good enough results:
+
+**When to stop searching:**
+- Found 5+ high-quality cached streams
+- Have at least 3 streams in your preferred resolution
+- Found streams from trusted sources (BluRay, REMUX, etc.)
+- Search has taken longer than 8 seconds
+
+**Benefits:**
+- Faster results for popular content
+- Comprehensive results for rare content
+- Adapts to what's available
+
+#### Timeout Settings:
+- **Search Timeout**: How long to search total (8-12 seconds recommended)
+- **Scraper Timeout**: How long to wait per scraper (3-5 seconds)
+- **Individual timeouts** prevent slow scrapers from holding up results
+
+### Step 6: Content Filtering
+
+Block unwanted content and focus on what you want to watch.
+
+#### Language Preferences:
+- Choose your preferred audio languages
+- Block foreign language content if desired
+- Set subtitle preferences
+
+#### Block Unwanted Releases:
+Use simple text patterns to block content:
+
+**Block low-quality releases:**
+```
+Block anything containing: CAM, TS, TC, SCR, R5
+```
+
+**Block specific file types:**
+```
+Block files ending with: .avi, .divx, .wmv, .flv
+```
+
+**Block specific uploaders/groups:**
+```
+Block releases from: -GROUPNAME, [UNWANTED]
+```
+
+**Block small files:**
+```
+Block files smaller than: 2GB (for movies), 500MB (for episodes)
+```
+
+### Step 7: Stream Display & Organization
+
+Customize how streams appear in your list.
+
+#### Stream Title Format:
+Choose what information to show in stream titles:
+
+**Recommended format:**
+```
+Quality + Resolution + Source + Size + Seeders
+```
+
+**Example results:**
+- 🟢 1080p BluRay 8.5GB 150S (Great quality, well-seeded)
+- 🟡 720p WEBRip 4.2GB 50S (Good quality, decent seeds)
+- 🔴 480p CAM 1.8GB 5S (Low quality, avoid)
+
+#### Display Options:
+- **Show resolution**: Yes, helps choose quality
+- **Show source type**: Yes, helps identify quality tiers
+- **Show file size**: Yes, helps manage storage/bandwidth
+- **Show seeders**: Yes, indicates stream reliability
+- **Color coding**: Yes, makes quality tiers obvious
+
+### Step 8: Performance & Caching
+
+Speed up your experience with smart caching.
+
+#### Enable Caching:
+- **Cache search results** for 1 hour
+- **Store up to 500 results** to avoid re-searching
+- **Compress cached data** to save space
+
+#### Performance Settings:
+- **Enable background processing** for faster UI
+- **Use multiple threads** if you have a powerful device
+- **Limit concurrent scrapers** to avoid overwhelming your connection
+
+### Step 9: Testing Your Setup
+
+Let's make sure everything works:
+
+<Steps>
+1. **Save your configuration**
+2. **Search for a popular movie** (like "The Matrix" or "Inception")
+3. **Check the results** - you should see multiple streams from different scrapers
+4. **Try different content types** - movies, TV shows, anime
+5. **Test playback** - click a stream and see if it plays
+6. **Adjust settings** if results aren't what you expected
+</Steps>
+
+<Callout type="success">
+**What to look for:**
+- Multiple streams from different sources
+- Color-coded quality indicators
+- Reasonable search times (under 10 seconds)
+- Streams that actually play when clicked
+</Callout>
+
+#### 1. API Keys Setup
+
+AIOStream requires API keys for optimal functionality:
+
+**TMDB (The Movie Database) API Key:**
+- **Why needed**: For metadata, posters, and accurate content identification
+- **How to get**: 
+  1. Go to [https://www.themoviedb.org/settings/api](https://www.themoviedb.org/settings/api)
+  2. Create account if needed
+  3. Request an API key (free)
+  4. Copy the **"API Read Access Token"**
+
+**Debrid Service API Keys:**
+- **Real-Debrid**: Get from [https://real-debrid.com/apitoken](https://real-debrid.com/apitoken)
+- **Premiumize**: Get from [https://www.premiumize.me/account](https://www.premiumize.me/account)
+- **AllDebrid**: Get from [https://alldebrid.com/account](https://alldebrid.com/account)
+
+#### 2. Scraper Configuration
+
+This is where you configure which scrapers AIOStream will use:
+
+```json
+{
+  "scrapers": [
+    {
+      "name": "torrentio",
+      "enabled": true,
+      "priority": 1
+    },
+    {
+      "name": "comet",
+      "enabled": true,
+      "priority": 2
+    },
+    {
+      "name": "mediafusion",
+      "enabled": true,
+      "priority": 3
+    }
+  ]
+}
+```
+
+**Recommended Scrapers to Enable:**
+- **Torrentio** (Primary - best for debrid users)
+- **Comet** (Fast torrent searches)
+- **MediaFusion** (Direct streaming links)
+- **Orionoid** (Premium torrent indexer)
+- **Zilean** (Backup scraper)
+
+### Step 10: Advanced Optimization (Optional)
+
+Once your basic setup works, here are advanced tweaks for power users:
+
+#### Multi-Debrid Setup:
+If you have multiple debrid services, configure them with priorities:
+1. **Real-Debrid** (usually fastest)
+2. **Premiumize** (great for large files)
+3. **AllDebrid** (good backup option)
+
+#### Custom Regex Filtering:
+For very specific filtering needs, use regex patterns:
+
+**Block specific patterns:**
+- `CAM|TS|TC|SCR` - Block camcorder recordings
+- `\.avi$|\.divx$` - Block old file formats
+- `^[0-1]\.[0-9]GB$` - Block files under 2GB
+- `-GROUPNAME|ANOTHERGROUP` - Block specific release groups
+
+#### Network Optimization:
+- **VPN considerations**: Some scrapers work better with certain VPNs
+- **Connection limits**: Reduce concurrent connections if you have slow internet
+- **Retry logic**: Configure how many times to retry failed scrapers
+
+### Step 11: Maintenance & Updates
+
+Keep your AIOStream setup running smoothly:
+
+#### Regular Maintenance:
+- **Check for updates** weekly in the add-on catalog
+- **Clear cache** if searches seem slow (monthly)
+- **Verify API keys** are still active
+- **Test different scrapers** if some stop working
+
+#### When Things Go Wrong:
+- **Try a different instance** if your current one is slow
+- **Switch scrapers** if specific ones aren't working
+- **Check Reddit/Discord** for known issues
+- **Enable debug logging** to troubleshoot problems
+
+<Callout type="info">
+**Remember**: AIOStream is constantly evolving. The community frequently shares new configurations and optimizations on Reddit (r/StremioAddons) and Discord.
+</Callout>
+
+## Recommended Setups for Different Users
+
+Based on community experience, here are optimized setups for different use cases:
+
+### For Beginners (Start Here)
+
+**Scrapers:** Torrentio, Comet, MediaFusion
+**Quality:** 1080p, 720p
+**Debrid:** Real-Debrid (if you have it)
+**Strategy:** Dynamic search with 8-second timeout
+**Filters:** Block CAM/TS/TC releases
+
+**Why this works:** Simple, reliable, good quality without overwhelming options.
+
+### For Quality Seekers (4K & BluRay Fans)
+
+**Scrapers:** Torrentio, Orionoid, MediaFusion
+**Quality:** 2160p, 1080p (4K first)
+**Debrid:** Required for best results
+**Minimum Size:** 8GB for movies
+**Filters:** Only allow REMUX, BluRay, WEB-DL sources
+
+**Why this works:** Focuses on highest quality releases with large file sizes.
+
+### For Speed Demons (Fast Results)
+
+**Scrapers:** Comet, Zilean, MediaFusion
+**Quality:** 1080p, 720p
+**Timeout:** 5 seconds
+**Cache:** Enabled
+**Filters:** Minimal (just block obvious junk)
+
+**Why this works:** Prioritizes speed over comprehensive results.
+
+### For TV Show Enthusiasts
+
+**Scrapers:** Torrentio, Comet, Orionoid
+**Quality:** 1080p, 720p
+**Episode Handling:** Optimized for TV series
+**Filters:** Block movie-only releases
+**Batch Search:** Enabled for season packs
+
+**Why this works:** TV shows have different release patterns than movies.
+
+### For International Users
+
+**Language:** Set your preferred language first
+**Scrapers:** Include region-specific scrapers
+**Subtitles:** Configure subtitle preferences
+**Filters:** Allow international releases from trusted sources
+
+**Why this works:** Many users want content in their native language.
+
+<Callout type="tip">
+**Pro Tip**: Start with the beginner setup and adjust based on what you watch most. You can always change settings later.
+</Callout>
+
+## Troubleshooting
+
+### Common Issues & Solutions
+
+#### "429 Too Many Requests" Error
+
+**Cause**: Rate limiting by scrapers
+**Solutions**:
+- Reduce the number of active scrapers
+- Increase timeout between requests
+- Use a different instance
+- Wait a few minutes before retrying
+
+#### No Streams Found
+
+**Possible causes**:
+- All scrapers are down
+- Your IP is blocked/rate-limited
+- VPN issues
+- Incorrect configuration
+
+**Solutions**:
+- Check scraper status on Reddit/Discord
+- Switch VPN servers
+- Verify API keys are correct
+- Try different instance
+
+#### Slow Search Times
+
+**Optimizations**:
+- Reduce active scrapers to 3-4
+- Enable caching
+- Use dynamic strategy with shorter timeouts
+- Disable P2P if not needed
+
+#### Playback Issues
+
+**For stream problems**:
+- Try different quality options
+- Switch scrapers
+- Check debrid service status
+- Clear Stremio cache
+
+### Debug Mode
+
+Enable detailed logging:
+
+<Steps>
+1. **Open AIOStream settings**
+2. **Go to Advanced → Debug**
+3. **Enable "Debug Logging"**
+4. **Check Stremio logs** for error details
+5. **Share logs** when seeking help
+</Steps>
+
+## Community Resources
+
+### Getting Help
+
+- **Reddit**: r/StremioAddons - Most active community
+- **Discord**: Stremio Addons server
+- **GitHub Issues**: For bug reports and feature requests
+
+### Getting Help & Staying Updated
+
+**Community Support:**
+- **Reddit**: r/StremioAddons - Share your setup and get advice
+- **Discord**: Stremio Addons server - Real-time help and updates
+- **GitHub Issues**: Report bugs and request features
+
+**Where to Find New Setups:**
+- Reddit posts with configuration discussions
+- Discord community channels sharing working setups
+- GitHub repositories with example configurations
+
+**Stay Current:**
+AIOStream updates frequently with new scrapers and features. Follow:
+- r/StremioAddons for announcements
+- Discord for instant updates
+- GitHub releases for technical changes
+
+### Staying Updated
+
+AIOStream evolves rapidly. Stay updated through:
+- r/StremioAddons subreddit
+- Discord announcements
+- GitHub releases
+
+## Performance Tips
+
+### Best Practices
+
+1. **Start Simple**: Begin with 2-3 scrapers, add more as needed
+2. **Use Debrid**: Dramatically improves stream quality and speed
+3. **Configure Quality Filters**: Block unwanted releases early
+4. **Enable Caching**: Faster subsequent searches
+5. **Monitor Performance**: Adjust timeouts based on your connection
+
+## Performance Tips & Best Practices
+
+### General Advice
+
+1. **Start Simple**: Don't enable every scraper at once. Begin with 2-3 and add more as needed.
+2. **Use Debrid Services**: They dramatically improve stream quality and reliability.
+3. **Enable Caching**: Faster searches for content you watch repeatedly.
+4. **Set Quality Filters**: Block junk early to focus on good streams.
+5. **Monitor Performance**: Adjust timeouts based on your internet connection.
+
+### Setup Recommendations by Use Case
+
+#### For 4K Movie Lovers
+- **Scrapers**: Torrentio, Orionoid (great for high-quality releases)
+- **Quality Priority**: 2160p first, then 1080p
+- **Minimum Size**: 8GB to avoid low-quality encodes
+- **Debrid**: Essential for large files
+
+#### For Fast Streaming
+- **Scrapers**: Comet, Zilean (quick results)
+- **Timeout**: 5 seconds maximum
+- **Cache**: Always enabled
+- **Quality**: 1080p, 720p (balance speed vs quality)
+
+#### For Comprehensive Results
+- **Scrapers**: All available (but monitor performance)
+- **Timeout**: 12 seconds for thorough searching
+- **Strategy**: Dynamic (adapts to content availability)
+- **Filters**: Minimal to see all options
+
+## Related Resources
+
+- [Stremio Add-ons Guide](/addons/addons-explained/)
+- [Debrid Services Setup](/addons/catalogs-and-metadata-addons/)
+- [VPN Recommendations](/privacy-security/device-security-tv-sticks/)
+- [Troubleshooting Add-on Issues](/troubleshooting/overview/)
