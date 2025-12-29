@@ -4,17 +4,160 @@ description: Secure your Stremio account and protect your privacy
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Privacy Basics](/privacy-security/privacy-basics/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Protecting your Stremio account is essential for maintaining privacy and preventing unauthorized access. This guide covers security best practices for your Stremio account.
+
+## Why Account Security Matters
+
+Your Stremio account stores:
+- **Watch history**: What you've watched and when
+- **Library data**: Your saved content and watchlist
+- **Add-on configurations**: Installed add-ons and settings
+- **Preferences**: App settings and customizations
+- **Sync data**: Information synced across devices
+
+<Callout type="warning">
+While Stremio itself is secure, using weak passwords or sharing credentials can compromise your privacy and viewing data.
 </Callout>
 
-## Overview
+## Creating a Strong Password
 
-This guide will cover:
-- Strong password practices
-- Two-factor authentication
-- Account privacy settings
-- Security best practices
+### Password Requirements
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+Stremio requires a password, but stronger is always better:
+
+**Recommended:**
+- **12+ characters** minimum
+- **Mix of uppercase and lowercase** letters
+- **Include numbers** and special characters (!@#$%^&*)
+- **Avoid common words** or personal information
+- **Unique password** not used elsewhere
+
+<Callout type="tip">
+Use a **password manager** like Bitwarden, 1Password, or LastPass to generate and store strong passwords securely.
+</Callout>
+
+## Changing Your Password
+
+<Steps>
+
+1. **Log into Stremio** on any device
+2. Go to **Settings** (gear icon)
+3. Select **Account** from the sidebar
+4. Click **Change Password**
+5. **Enter current password**
+6. **Enter new strong password**
+7. **Confirm new password**
+8. Click **Save Changes**
+
+</Steps>
+
+## Email Security
+
+Your email is the recovery method for your Stremio account:
+
+### Best Practices
+
+✅ **Do:**
+- Use a **secure email provider** (Gmail, ProtonMail, Outlook)
+- Enable **two-factor authentication** on your email
+- Use a **strong unique password** for email
+- **Verify** email address with Stremio
+- Keep email **up to date**
+
+❌ **Don't:**
+- Use disposable or temporary email addresses
+- Share email credentials
+- Use same password for email and Stremio
+- Ignore password reset emails you didn't request
+
+## Account Privacy Settings
+
+### What Stremio Tracks
+
+Stremio collects minimal data:
+- **Account email**: For login and recovery
+- **Watch history**: To sync across devices
+- **Add-on list**: To restore on other devices
+- **App settings**: To maintain consistency
+
+**Stremio does NOT:**
+- Monitor what specific content you watch
+- Share your viewing habits with third parties
+- Track your location beyond basic analytics
+- Store payment information (no paid subscriptions)
+
+## Protecting Your Account
+
+### Secure Your Devices
+
+Your Stremio account is only as secure as your devices:
+
+**Device Security Checklist:**
+- Use **device lock screens** (PIN, password, biometric)
+- Keep **operating systems updated**
+- Install **antivirus/anti-malware** on computers
+- Avoid **public or shared devices** for logging in
+- Use **trusted networks** (avoid public Wi-Fi for sensitive operations)
+
+### Add-on Security
+
+Be cautious with add-on permissions:
+
+<Callout type="warning">
+Some add-ons may require personal information or API keys. Only provide credentials to **trusted add-ons** from reputable developers.
+</Callout>
+
+**Safe Practices:**
+- Only install add-ons from the **official catalog** or verified sources
+- Read **reviews and ratings** before installing
+- Check the **developer's reputation**
+- Avoid add-ons requesting **unnecessary permissions**
+- See [Avoiding Suspicious Add-ons](/privacy-security/avoiding-suspicious-addons/)
+
+## What to Do If Compromised
+
+If you suspect your account is compromised:
+
+<Steps>
+
+1. **Change password immediately**
+2. **Check email security**
+3. **Review account activity**
+4. **Logout all devices**
+5. **Contact Stremio Support** at [stremio.com/help](https://www.stremio.com/help)
+
+</Steps>
+
+## Best Practices Summary
+
+✅ **Do:**
+- Use a **strong, unique password**
+- Enable **2FA on your email** account
+- Keep **devices and software updated**
+- Use **password managers** for security
+- Install add-ons from **trusted sources only**
+- Monitor account for **suspicious activity**
+
+❌ **Don't:**
+- Share your **password or credentials**
+- Use **weak or common passwords**
+- Login on **public or shared devices**
+- Install **unverified or suspicious add-ons**
+- Use the **same password** across multiple services
+
+## Related Resources
+
+- [Privacy Basics](/privacy-security/privacy-basics/) - Understanding Stremio privacy
+- [Avoiding Suspicious Add-ons](/privacy-security/avoiding-suspicious-addons/) - Add-on safety
+- [Device Security (TV Sticks)](/privacy-security/device-security-tv-sticks/) - Securing streaming devices
+- [Reporting Issues & Scams](/privacy-security/reporting-issues-and-scams/) - Report security concerns
+
+---
+
+*Sources:*
+- [Stremio Help Center](https://www.stremio.com/help)
+- [Electronic Frontier Foundation (EFF) - Password Security](https://www.eff.org/deeplinks/2016/07/passwords-have-been-around-long-it-time-we-change-how-we-think-about-them)
+- [Google 2-Step Verification](https://www.google.com/landing/2step/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

@@ -4,17 +4,374 @@ description: Security considerations for Android TV sticks and streaming devices
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Privacy Basics](/privacy-security/privacy-basics/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Android TV sticks and streaming devices require special security considerations. This guide helps you secure your streaming devices and protect your privacy.
+
+## Why TV Stick Security Matters
+
+TV sticks and streaming boxes:
+- Are always connected to the internet
+- Often lack security updates
+- May come pre-loaded with malware
+- Can be entry points to your home network
+- Store your account credentials
+
+<Callout type="warning">
+Many cheap Android TV boxes come with pre-installed malware, keyloggers, or backdoors. Always buy from reputable brands and sellers.
 </Callout>
 
-## Overview
+## Choosing a Secure Device
 
-This guide will cover:
-- Securing Android TV devices
-- Safe app installation
-- Network security
-- Physical device security
+### Recommended Devices
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+✅ **Trusted brands:**
+- **Fire TV Stick** (Amazon)
+- **Chromecast with Google TV**
+- **NVIDIA Shield TV**
+- **Apple TV**
+- **Roku** devices
+- **Mi TV Stick** (Xiaomi - official models)
+
+### Devices to Avoid
+
+❌ **Red flags:**
+- Ultra-cheap "fully loaded" boxes
+- Unknown Chinese brands
+- Devices advertising "free premium content"
+- Pre-installed "jailbroken" systems
+- Boxes from unverified sellers
+
+<Callout type="info">
+If buying from Amazon, eBay, or similar platforms, stick to official sellers and check reviews carefully for security concerns.
+</Callout>
+
+## Initial Setup Security
+
+### First-Time Setup
+
+<Steps>
+
+1. **Factory Reset** (even if new)
+   - Settings → Device Preferences → Reset
+   - This removes potential pre-installed malware
+
+2. **Update Immediately**
+   - Settings → System → System Update
+   - Install all available updates
+
+3. **Disable Unknown Sources** (initially)
+   - Settings → Security & Restrictions
+   - Turn off "Unknown Sources"
+   - Enable only when installing trusted apps
+
+4. **Create Strong PIN**
+   - Settings → Security & Restrictions → PIN
+   - Set a 4-6 digit PIN
+   - Required for purchases and settings changes
+
+</Steps>
+
+### Secure Your Google Account
+
+<Steps>
+
+1. **Use a dedicated email** (optional but recommended)
+   - Create a separate Google account for TV
+   - Don't use your primary email
+   - Easier to manage if compromised
+
+2. **Enable 2FA** on your Google account
+   - Visit [google.com/2fa](https://www.google.com/landing/2step/)
+   - Secure the account linked to your TV
+
+3. **Review app permissions**
+   - Google Account → Security → Third-party apps
+   - Remove unused or suspicious apps
+
+</Steps>
+
+## Installing Stremio Safely
+
+### Official Installation
+
+<Steps>
+
+1. **Enable Unknown Sources** temporarily:
+   - Settings → Security & Restrictions → Unknown Sources
+   - Enable for browser or file manager
+
+2. **Download from official source**:
+   - Visit [stremio.com](https://www.stremio.com/downloads) on your TV browser
+   - Download the Android TV APK
+   - Or use **Downloader app** with official URL
+
+3. **Install and Verify**:
+   - Open the downloaded APK
+   - Install Stremio
+   - Launch and verify it's the official app
+
+4. **Disable Unknown Sources** again:
+   - Settings → Security & Restrictions
+   - Turn off Unknown Sources
+
+</Steps>
+
+<Callout type="tip">
+For Fire TV, you can also use the Amazon Appstore if Stremio is available there, or sideload using the Downloader app with the official Stremio URL.
+</Callout>
+
+## Network Security
+
+### Secure Your Wi-Fi
+
+<Steps>
+
+1. **Use strong Wi-Fi password**
+   - WPA3 or WPA2 encryption
+   - Long, complex password
+   - Change default router password
+
+2. **Guest Network** (recommended)
+   - Create a separate guest network for TV devices
+   - Isolates them from main network
+   - Protects computers and phones
+
+3. **Router Updates**
+   - Keep router firmware updated
+   - Check manufacturer website
+   - Enable auto-updates if available
+
+</Steps>
+
+### Using a VPN
+
+VPNs can enhance privacy on TV sticks:
+
+**VPN Benefits:**
+- Encrypts traffic
+- Hides IP address
+- Protects on public networks
+- May bypass regional restrictions
+
+**Recommended VPN Apps for Android TV:**
+- ExpressVPN
+- NordVPN
+- Surfshark
+- ProtonVPN
+- Mullvad
+
+<Callout type="info">
+Configure VPN before opening Stremio for maximum privacy. Some free VPNs may compromise security—use reputable paid services.
+</Callout>
+
+## App Security
+
+### Safe App Installation
+
+<Steps>
+
+1. **Prefer Google Play Store**
+   - Install apps from Play Store when possible
+   - Verified and generally safer
+
+2. **Verify Sources for Sideloaded Apps**
+   - Only download APKs from official websites
+   - Check file integrity if possible
+   - Avoid third-party app stores
+
+3. **Review Permissions**
+   - Check what access apps request
+   - Deny unnecessary permissions
+   - Settings → Apps → Permissions
+
+4. **Keep Apps Updated**
+   - Settings → Apps → See all apps
+   - Update regularly
+   - Enable auto-updates in Play Store
+
+</Steps>
+
+### Avoid Malicious Apps
+
+**Red flags:**
+- Apps asking for excessive permissions
+- Unknown developers
+- Apps that can't be found in official stores
+- Bundled with "free content" promises
+
+## Physical Security
+
+### Protect the Device
+
+- **Secure Location**: Keep TV stick away from public access
+- **HDMI Port Lock**: For public spaces, consider physical locks
+- **Regular Resets**: Factory reset if selling or giving away
+
+### Remote Control Security
+
+- **PIN Protect Purchases**: Require PIN for all purchases
+- **Disable Voice Recording**: Turn off microphone when not needed
+- **Review Alexa/Google History**: Clear voice recordings regularly
+
+## Privacy Settings
+
+### Android TV Privacy
+
+<Steps>
+
+1. **Limit Data Collection**:
+   - Settings → Privacy
+   - Disable usage statistics
+   - Limit ad personalization
+
+2. **Disable Suggestions**:
+   - Settings → Device Preferences → Home Screen
+   - Turn off personalized recommendations
+   - Reduces data tracking
+
+3. **Review Location Access**:
+   - Settings → Location
+   - Turn off unless needed
+   - Deny for apps that don't need it
+
+4. **Microphone Privacy**:
+   - Settings → Privacy → Microphone
+   - Disable for apps that don't need it
+   - Consider physical mic mute if available
+
+</Steps>
+
+## Regular Maintenance
+
+### Weekly Tasks
+
+<Steps>
+
+1. **Check for Updates**
+   - System updates
+   - App updates
+   - Security patches
+
+2. **Review Installed Apps**
+   - Remove unused apps
+   - Check for suspicious apps
+   - Verify all apps are needed
+
+</Steps>
+
+### Monthly Tasks
+
+<Steps>
+
+1. **Clear Cache**
+   - Settings → Apps → Clear Cache
+   - Improves performance
+   - Removes temporary data
+
+2. **Review Permissions**
+   - Check app permissions
+   - Revoke unnecessary access
+
+3. **Check Network Activity**
+   - Monitor unusual network usage
+   - Check router logs if possible
+
+</Steps>
+
+### Quarterly Tasks
+
+<Steps>
+
+1. **Factory Reset** (optional)
+   - Complete fresh start
+   - Removes accumulated junk
+   - Backup important data first
+
+2. **Review Google Account**
+   - Check linked devices
+   - Remove old devices
+   - Update passwords
+
+</Steps>
+
+## Signs of Compromise
+
+### Warning Signs
+
+🚩 **Watch for:**
+- Unexpected ads or pop-ups
+- Apps you didn't install
+- Slow performance
+- Excessive data usage
+- Device heating up unusually
+- Random reboots
+- Unknown network connections
+- Weird behavior in apps
+
+### If Compromised
+
+<Steps>
+
+1. **Disconnect from Internet**
+   - Turn off Wi-Fi immediately
+
+2. **Factory Reset**
+   - Settings → Device Preferences → Reset
+   - Wipe all data
+
+3. **Change Passwords**
+   - Google account password
+   - Stremio account password
+   - Any other linked accounts
+
+4. **Scan Network**
+   - Check other devices
+   - Update router password
+   - Consider router reset
+
+5. **Report Device** (if purchased online)
+   - Contact seller
+   - Leave review warning others
+   - Report to platform (Amazon, eBay, etc.)
+
+</Steps>
+
+## Best Practices Summary
+
+✅ **Do:**
+- Buy from **trusted brands and sellers**
+- **Factory reset** new devices
+- Keep **system and apps updated**
+- Use **strong passwords and PINs**
+- Enable **2FA on Google account**
+- Use **guest network** for TV devices
+- **Review permissions** regularly
+- Install apps from **official sources**
+- Use **VPN** for enhanced privacy
+- **Monitor device behavior**
+
+❌ **Don't:**
+- Buy **ultra-cheap unknown boxes**
+- Leave **Unknown Sources** enabled
+- Use **weak PINs or passwords**
+- Install **unverified APKs**
+- Ignore **security updates**
+- Share **device with untrusted users**
+- Connect to **public Wi-Fi** without VPN
+- Ignore **suspicious behavior**
+
+## Related Resources
+
+- [Privacy Basics](/privacy-security/privacy-basics/) - Understanding Stremio privacy
+- [Account Security](/privacy-security/account-security/) - Secure your account
+- [Avoiding Suspicious Add-ons](/privacy-security/avoiding-suspicious-addons/) - Add-on safety
+- [Android TV Performance](/troubleshooting/android-tv-performance/) - Optimize your device
+
+---
+
+*Sources:*
+- [Android TV Security Best Practices](https://source.android.com/docs/security)
+- [Google 2-Step Verification](https://www.google.com/landing/2step/)
+- [Stremio Downloads](https://www.stremio.com/downloads)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

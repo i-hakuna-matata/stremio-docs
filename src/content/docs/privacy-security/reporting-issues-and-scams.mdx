@@ -4,17 +4,382 @@ description: How to report security issues, scams, and malicious add-ons
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Privacy Basics](/privacy-security/privacy-basics/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+If you encounter security issues, scams, or malicious add-ons in the Stremio ecosystem, reporting them helps protect the entire community. This guide shows you how and where to report problems.
+
+## What to Report
+
+### Security Issues
+
+Report these immediately:
+- **Malicious add-ons** stealing data or credentials
+- **Account compromises** or unauthorized access
+- **Phishing attempts** impersonating Stremio
+- **Malware distribution** through add-ons or links
+- **Security vulnerabilities** in Stremio itself
+
+### Scams and Fraud
+
+Report fraudulent activities:
+- **Fake premium services** asking for payment
+- **Credential harvesting** schemes
+- **Fake support scams** requesting access
+- **Misleading advertising** about Stremio features
+- **Impersonation** of official Stremio accounts
+
+### Problematic Add-ons
+
+Report add-ons that:
+- Display excessive or malicious ads
+- Redirect to suspicious websites
+- Request inappropriate permissions
+- Harvest personal information
+- Violate Stremio's policies
+
+## Where to Report
+
+### Official Stremio Support
+
+For critical security issues and account problems:
+
+**Stremio Help Center:**
+- **Website**: [stremio.com/help](https://www.stremio.com/help)
+- **Purpose**: Official support for account, security, and app issues
+- **Response Time**: Usually within 24-48 hours
+
+**Email Support:**
+- **Contact**: Check the help center for current email
+- **Use for**: Security vulnerabilities, account issues, legal concerns
+- **Include**: Detailed description, screenshots, evidence
+
+<Callout type="warning">
+Never share your password or API keys in support tickets. Official support will never ask for this information.
 </Callout>
 
-## Overview
+### Community Channels
 
-This guide will cover:
-- Where to report issues
-- Documenting security concerns
-- Community reporting
-- Official support channels
+For add-on issues and community warnings:
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+**Reddit - r/StremioAddons:**
+- **URL**: [reddit.com/r/StremioAddons](https://www.reddit.com/r/StremioAddons/)
+- **Purpose**: Report suspicious add-ons, warn community, get help
+- **Audience**: Active community of users and developers
+- **Response**: Often immediate community feedback
+
+**How to post:**
+<Steps>
+
+1. Create a descriptive title (e.g., "WARNING: [Add-on Name] appears malicious")
+2. Include details:
+   - Add-on name and source
+   - What happened
+   - Evidence (screenshots, logs)
+   - Your device/platform
+3. Tag with appropriate flair
+4. Follow community guidelines
+
+</Steps>
+
+**Stremio Discord:**
+- **Join**: Check r/StremioAddons for invite link
+- **Purpose**: Real-time community support
+- **Channels**: Look for #support or #security channels
+
+### Add-on Developers
+
+For issues with specific add-ons:
+
+**GitHub Issues:**
+<Steps>
+
+1. Find the add-on's GitHub repository
+2. Navigate to the "Issues" tab
+3. Check if issue already reported
+4. Create new issue with:
+   - Clear title
+   - Steps to reproduce
+   - Expected vs. actual behavior
+   - Screenshots or logs
+   - Your environment (device, OS, Stremio version)
+
+</Steps>
+
+**Developer Contact:**
+- Check add-on description for contact info
+- Look for developer on Reddit or Discord
+- Use GitHub discussions or issues
+
+<Callout type="tip">
+Be respectful when reporting to developers. Most are volunteers maintaining add-ons in their free time.
+</Callout>
+
+## How to Document Issues
+
+### Information to Collect
+
+**For Add-on Issues:**
+- Add-on name and installation URL
+- Version number (if available)
+- Date/time issue occurred
+- Exact steps to reproduce
+- Screenshots or screen recordings
+- Error messages (if any)
+- Your device and OS
+- Stremio version
+
+**For Security Issues:**
+- Type of issue (malware, phishing, data theft, etc.)
+- How you discovered it
+- Evidence (screenshots, URLs, network logs)
+- Impact (what was affected)
+- Timeline of events
+
+**For Scams:**
+- Source of scam (website, email, message)
+- Claims being made
+- Screenshots of communication
+- URLs or contact information
+- Any money or information provided
+
+### Taking Effective Screenshots
+
+<Steps>
+
+1. **Capture the issue**:
+   - Show the problem clearly
+   - Include relevant UI elements
+   - Capture error messages completely
+
+2. **Annotate if needed**:
+   - Highlight important parts
+   - Add arrows or circles
+   - Include brief explanations
+
+3. **Protect privacy**:
+   - Redact personal information
+   - Hide account names
+   - Remove sensitive data
+
+4. **Save and organize**:
+   - Use descriptive filenames
+   - Keep multiple screenshots if needed
+   - Note timestamp
+
+</Steps>
+
+## Reporting Process
+
+### For Malicious Add-ons
+
+<Steps>
+
+1. **Uninstall immediately**
+   - Settings → Add-ons → Uninstall
+
+2. **Document the issue**
+   - Collect information (see above)
+   - Take screenshots
+
+3. **Report to community**
+   - Post on r/StremioAddons
+   - Include detailed warning
+   - Help others avoid it
+
+4. **Report to Stremio** (if in official catalog)
+   - Contact support
+   - Provide evidence
+   - Request removal
+
+5. **Report to GitHub** (if applicable)
+   - Open issue on repository
+   - Detail the security concern
+   - Warn other users
+
+6. **Change passwords**
+   - If add-on requested credentials
+   - Update Stremio password
+   - Change any related accounts
+
+</Steps>
+
+### For Phishing/Scams
+
+<Steps>
+
+1. **Do not engage**
+   - Don't click links
+   - Don't provide information
+   - Don't send money
+
+2. **Collect evidence**
+   - Screenshots of messages
+   - URLs or contact information
+   - Claims being made
+
+3. **Report to Stremio**
+   - Send to official support
+   - Detail the impersonation
+
+4. **Warn the community**
+   - Post on Reddit
+   - Share on Discord
+   - Help others avoid it
+
+5. **Report to platform**
+   - Report phishing emails to your email provider
+   - Report websites to [Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/)
+   - Report social media accounts to the platform
+
+</Steps>
+
+### For App/Service Issues
+
+<Steps>
+
+1. **Verify it's actually a problem**
+   - Check if others experience it
+   - Test on different devices
+   - Clear cache and retry
+
+2. **Search existing reports**
+   - Check Reddit
+   - Search GitHub issues
+   - Look in Discord
+
+3. **Create detailed report**
+   - Use official support or GitHub
+   - Include all relevant information
+   - Be clear and concise
+
+4. **Follow up**
+   - Check for responses
+   - Provide additional info if requested
+   - Update if issue resolves
+
+</Steps>
+
+## What Happens After Reporting
+
+### Expected Outcomes
+
+**Community Reports:**
+- Immediate discussion and warnings
+- Others confirm or deny issue
+- Workarounds may be shared
+- Awareness spreads quickly
+
+**Official Reports:**
+- Support team reviews
+- Investigation if needed
+- Response within 24-48 hours (usually)
+- Action taken if warranted
+
+**Developer Reports:**
+- Reviewed by maintainer
+- Fixed in next update (if confirmed)
+- Timeline varies by developer
+- May request more information
+
+### Follow-up Actions
+
+<Steps>
+
+1. **Monitor responses**
+   - Check for updates
+   - Answer follow-up questions
+   - Provide additional evidence
+
+2. **Update the community**
+   - Share resolution
+   - Thank those who helped
+   - Document solution for others
+
+3. **Verify fixes**
+   - Test updates when available
+   - Confirm issue is resolved
+   - Report if problem persists
+
+</Steps>
+
+## Protecting Yourself While Reporting
+
+### Privacy Considerations
+
+When reporting issues:
+
+✅ **Do:**
+- Redact personal information
+- Use throwaway accounts if needed (for sensitive reports)
+- Remove identifying details from screenshots
+- Be cautious with network logs
+
+❌ **Don't:**
+- Share your Stremio password
+- Expose API keys or tokens
+- Reveal your full email address publicly
+- Include payment information
+
+### Legal Considerations
+
+<Callout type="warning">
+If you discover a serious security vulnerability, practice **responsible disclosure**:
+1. Report privately to Stremio first
+2. Give them time to fix (typically 90 days)
+3. Don't publicly disclose details until fixed
+4. Coordinate public disclosure if appropriate
+</Callout>
+
+## Reporting Checklist
+
+Before submitting a report, verify:
+
+☑️ **Issue Details:**
+- Clear description of the problem
+- Steps to reproduce
+- Evidence collected (screenshots, etc.)
+- Impact assessment
+
+☑️ **Context Information:**
+- Device and OS version
+- Stremio version
+- Add-on names and versions
+- Timeline of events
+
+☑️ **Privacy:**
+- Personal information redacted
+- No passwords or keys included
+- Screenshots properly sanitized
+
+☑️ **Location:**
+- Appropriate channel selected
+- Previous reports searched
+- Severity matches urgency
+
+## Quick Reference: Where to Report What
+
+| Issue Type | Primary Channel | Secondary Channel |
+|------------|----------------|------------------|
+| Security vulnerability | [Stremio Support](https://www.stremio.com/help) | Private email |
+| Malicious add-on | [r/StremioAddons](https://www.reddit.com/r/StremioAddons/) | Stremio Support |
+| Add-on bug | GitHub Issues | r/StremioAddons |
+| Scam/Phishing | Stremio Support | r/StremioAddons |
+| Account issue | Stremio Support | - |
+| App bug | GitHub Issues | Stremio Support |
+| Feature request | r/StremioAddons | GitHub Discussions |
+| General help | r/StremioAddons | Discord |
+
+## Related Resources
+
+- [Privacy Basics](/privacy-security/privacy-basics/) - Understanding Stremio privacy
+- [Account Security](/privacy-security/account-security/) - Secure your account
+- [Avoiding Suspicious Add-ons](/privacy-security/avoiding-suspicious-addons/) - Identify threats
+- [How to Evaluate Add-on Trust](/addons/how-to-evaluate-addon-trust/) - Verify add-ons
+
+---
+
+*Sources:*
+- [Stremio Help Center](https://www.stremio.com/help)
+- [r/StremioAddons Community](https://www.reddit.com/r/StremioAddons/)
+- [Google Safe Browsing Report](https://safebrowsing.google.com/safebrowsing/report_phish/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

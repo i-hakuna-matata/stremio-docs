@@ -4,17 +4,320 @@ description: Best practices for maintaining a clean and organized Stremio librar
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Metadata Explained](/metadata/metadata-explained/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+A well-organized Stremio library makes it easier to find content, track your viewing progress, and enjoy a better streaming experience. This guide covers best practices for maintaining a clean library.
+
+## Understanding Your Library
+
+Your Stremio library consists of:
+
+- **Library Tab**: Content you've added or started watching
+- **Watchlist**: Content you plan to watch later
+- **Continue Watching**: Partially watched content
+- **History**: All content you've viewed
+
+<Callout type="info">
+Your library syncs across all devices when you're logged into your Stremio account. Changes on one device appear on all devices within minutes.
 </Callout>
 
-## Overview
+## Best Practices
 
-This guide will cover:
-- Organizing your library
-- Removing duplicates
-- Managing watched content
-- Metadata maintenance tips
+### 1. Use the Watchlist Effectively
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+Add content you plan to watch later instead of adding everything to your library:
+
+<Steps>
+
+1. **Hover over content** and click the bookmark icon
+2. **Add to Watchlist** instead of Library
+3. **Move to Library** only when you start watching
+4. **Remove from Watchlist** after watching
+
+</Steps>
+
+**Benefits:**
+- Library stays focused on active content
+- Easier to find what you're currently watching
+- Watchlist acts as a "plan to watch" list
+
+### 2. Remove Finished Content
+
+Keep your library current by removing completed shows and movies:
+
+<Steps>
+
+1. **Open your Library** tab
+2. **Right-click** (or long-press on mobile) on finished content
+3. Select **"Remove from Library"**
+4. Content stays in your history but leaves the main library
+
+</Steps>
+
+<Callout type="tip">
+Removing from library doesn't delete your watch history or progress. You can always find previously watched content in the History section.
+</Callout>
+
+### 3. Manage Continue Watching
+
+The "Continue Watching" section shows partially watched content:
+
+**To keep it clean:**
+- Finish or remove content you won't complete
+- Right-click content and select "Remove from Library" if you're done
+- Completed content automatically moves out after finishing
+
+### 4. Handle Duplicates
+
+Sometimes the same content appears multiple times due to different metadata sources:
+
+**How to identify duplicates:**
+- Same poster but different year
+- Slightly different titles for the same content
+- Multiple language versions
+
+**How to fix:**
+<Steps>
+
+1. **Check IMDb IDs** to verify if they're actually different
+2. **Remove the incorrect version** from your library
+3. **Keep only the correct entry** (usually with the right year and IMDb ID)
+4. See [Fix Wrong Posters/Titles](/metadata/fix-wrong-posters-titles/) for metadata issues
+
+</Steps>
+
+### 5. Organize by Categories
+
+While Stremio doesn't have folders, you can organize using:
+
+**Watchlist as Categories:**
+- Use Trakt lists for different categories
+- Create multiple Trakt lists (e.g., "Action Movies", "Comedies")
+- Access via Trakt add-on integration
+
+**Calendar for TV Shows:**
+- Install calendar add-ons to track upcoming episodes
+- View release schedules for shows in your library
+- Plan your viewing accordingly
+
+## Advanced Organization
+
+### Use Trakt for Enhanced Organization
+
+[Trakt.tv](https://trakt.tv/) provides powerful organization features:
+
+<Steps>
+
+1. **Create a Trakt account** at [trakt.tv](https://trakt.tv/)
+2. **Install the Trakt add-on** in Stremio
+3. **Create custom lists**:
+   - "Currently Watching"
+   - "Plan to Watch"
+   - "Completed"
+   - Custom categories (genres, themes, etc.)
+4. **Sync automatically** with Stremio
+
+</Steps>
+
+**Trakt Benefits:**
+- **Multiple lists**: Organize by genre, mood, priority, etc.
+- **Automatic tracking**: Scrobbles your viewing automatically
+- **Statistics**: See what you've watched and when
+- **Recommendations**: Get personalized suggestions
+- **Calendar**: Track upcoming episodes
+
+### Use External Tools
+
+Complement Stremio with external organization tools:
+
+**Letterboxd** (for movies):
+- Track movies separately
+- Write reviews and ratings
+- Create lists and collections
+- Visit [letterboxd.com](https://letterboxd.com/)
+
+**MyAnimeList** (for anime):
+- Dedicated anime tracking
+- Detailed statistics
+- Community features
+- Visit [myanimelist.net](https://myanimelist.net/)
+
+**Simkl**:
+- Alternative to Trakt
+- Tracks movies, TV, and anime
+- Calendar and recommendations
+- Visit [simkl.com](https://simkl.com/)
+
+## Maintenance Routine
+
+### Weekly Maintenance
+
+<Steps>
+
+1. **Review Continue Watching**
+   - Remove content you won't finish
+   - Finish partially watched content
+
+2. **Update Watchlist**
+   - Add new releases you want to watch
+   - Remove content you're no longer interested in
+
+3. **Check for Duplicates**
+   - Remove any duplicate entries
+   - Verify metadata is correct
+
+</Steps>
+
+### Monthly Deep Clean
+
+<Steps>
+
+1. **Review Entire Library**
+   - Remove finished content
+   - Archive content to external lists (Trakt, Letterboxd)
+
+2. **Check Metadata**
+   - Fix any wrong posters or titles
+   - Update outdated information
+
+3. **Organize Watchlist**
+   - Prioritize what you want to watch next
+   - Remove content you'll never watch
+
+4. **Sync Check**
+   - Verify library syncs correctly across devices
+   - Re-login if sync issues occur
+
+</Steps>
+
+## Tips for Specific Content Types
+
+### TV Series
+
+**Best Practices:**
+- Add to library when you start watching
+- Remove after finishing the series
+- Use Trakt calendar to track new episodes
+- Keep ongoing series in library
+- Archive completed series to Trakt lists
+
+### Movies
+
+**Best Practices:**
+- Use Watchlist for "plan to watch"
+- Add to library only when actively watching
+- Remove immediately after watching
+- Use Letterboxd or Trakt for permanent records
+
+### Anime
+
+**Best Practices:**
+- Use MyAnimeList or AniList for tracking
+- Keep seasonal anime in library
+- Remove completed series
+- Use specialized anime add-ons for better metadata
+
+### Documentaries & Shorts
+
+**Best Practices:**
+- Create separate Trakt lists for different types
+- Tag or categorize using external tools
+- Remove after watching unless reference material
+
+## Common Issues and Solutions
+
+### Issue: Library is Too Cluttered
+
+**Solution:**
+<Steps>
+
+1. Remove all finished content (moves to history)
+2. Move "plan to watch" content to Watchlist
+3. Keep only actively watching content in library
+4. Use Trakt for long-term organization
+
+</Steps>
+
+### Issue: Can't Find Content
+
+**Solution:**
+- Use the search function instead of browsing
+- Check different sections (Library, Watchlist, History)
+- Search by actor, director, or year
+- Check if you removed it from library
+
+### Issue: Duplicate Entries
+
+**Solution:**
+- See [Fix Wrong Posters/Titles](/metadata/fix-wrong-posters-titles/)
+- Remove incorrect versions
+- Keep entry with correct IMDb ID and year
+
+### Issue: Sync Not Working
+
+**Solution:**
+<Steps>
+
+1. Check internet connection
+2. Log out and log back in
+3. Clear cache (Settings → Advanced → Clear Cache)
+4. Wait a few minutes for sync to complete
+5. See [Login & Sync Issues](/troubleshooting/login-sync-issues/)
+
+</Steps>
+
+## Quick Reference Checklist
+
+✅ **Do:**
+- Remove content after watching
+- Use Watchlist for "plan to watch"
+- Keep library focused on active content
+- Regular maintenance (weekly/monthly)
+- Use Trakt or similar for long-term organization
+- Verify metadata is correct
+
+❌ **Don't:**
+- Add everything you might watch to library
+- Keep finished content in library
+- Ignore duplicates
+- Mix "watched" and "plan to watch" content
+- Forget to sync across devices
+
+## Integration with Other Services
+
+### Trakt.tv Integration
+
+<Steps>
+
+1. Create account at [trakt.tv](https://trakt.tv/)
+2. Install Trakt add-on in Stremio
+3. Enable automatic scrobbling
+4. Create custom lists
+5. Access via Stremio sidebar
+
+</Steps>
+
+### Third-Party Apps
+
+Compatible organization tools:
+- **Trakt.tv**: Universal tracking (movies, TV, anime)
+- **Letterboxd**: Movie-specific tracking and social features
+- **MyAnimeList**: Anime tracking and discovery
+- **TVTime**: TV show tracking and calendar
+- **Simkl**: Alternative to Trakt with similar features
+
+## Related Resources
+
+- [Metadata Explained](/metadata/metadata-explained/) - Understanding metadata
+- [Fix Wrong Posters/Titles](/metadata/fix-wrong-posters-titles/) - Correct metadata issues
+- [Sync & Multiple Devices](/using-stremio/sync-and-multiple-devices/) - Device synchronization
+- [Library, Watchlist & History](/using-stremio/library-watchlist-history/) - Using library features
+
+---
+
+*Sources:*
+- [Stremio Help Center](https://www.stremio.com/help)
+- [Trakt.tv](https://trakt.tv/)
+- [Letterboxd](https://letterboxd.com/)
+- [MyAnimeList](https://myanimelist.net/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

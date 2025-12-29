@@ -4,17 +4,298 @@ description: How to fix incorrect posters, titles, and metadata in Stremio
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Metadata Explained](/metadata/metadata-explained/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Incorrect posters, titles, or metadata can occur in Stremio due to mismatched data sources or outdated information. This guide will help you identify and fix these issues.
+
+## Why Metadata Issues Occur
+
+Common causes of incorrect metadata:
+
+1. **Multiple Titles**: Same show/movie has different titles in different regions
+2. **Remakes**: Original vs. remake confusion (e.g., "The Office" US vs. UK)
+3. **Similar Names**: Different content with identical or similar titles
+4. **Year Mismatches**: Wrong year in the source data
+5. **Special Characters**: Titles with special characters may not match correctly
+6. **Outdated Databases**: Metadata sources haven't updated to reflect changes
+
+<Callout type="info">
+Most metadata in Stremio comes from **Cinemeta**, which pulls from The Movie Database (TMDb) and other sources. Issues often originate from these upstream databases.
 </Callout>
 
-## Overview
+## Quick Fixes
 
-This guide will cover:
-- Why metadata issues occur
-- Refreshing metadata
-- Manually correcting information
-- Reporting metadata errors
+### Method 1: Search with More Details
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+<Steps>
+
+1. **Include the year** in your search
+   - Example: "The Office 2005" instead of just "The Office"
+   
+2. **Add country or type**
+   - Example: "The Office US" or "The Office UK"
+
+3. **Use IMDb ID**
+   - Find the IMDb ID from [IMDb.com](https://www.imdb.com/)
+   - Search using format: `tt0386676` (example IMDb ID)
+
+</Steps>
+
+### Method 2: Refresh Metadata
+
+<Steps>
+
+1. **Close Stremio** completely
+2. **Clear cache**:
+   - Go to Settings → Advanced
+   - Click "Clear Cache"
+3. **Reopen Stremio** and search again
+4. **Wait 24-48 hours** for metadata to sync from updated sources
+
+</Steps>
+
+### Method 3: Try Different Add-ons
+
+If Cinemeta shows wrong metadata, try installing alternative metadata add-ons:
+
+<Steps>
+
+1. Go to **Settings → Add-ons**
+2. Install an alternative metadata add-on:
+   - **RPDB** (Rating Poster Database)
+   - **TMDB** add-ons
+   - **Trakt** integration
+3. The new add-on may have correct information
+4. See [Metadata Add-on Setup](/metadata/aiometadata-setup/) for details
+
+</Steps>
+
+## Fixing Specific Issues
+
+### Wrong Poster Image
+
+**Problem**: Movie/show displays with incorrect poster or artwork.
+
+**Solution**:
+
+<Steps>
+
+1. **Install RPDB** (Rating Poster Database):
+   - Visit [ratingposterdb.com](https://ratingposterdb.com/)
+   - Create an account
+   - Get your API key
+   - Install the RPDB add-on in Stremio
+
+2. **Alternative**: Wait for TMDb to update
+   - Check if the poster is correct on [TheMovieDB.org](https://www.themoviedb.org/)
+   - If wrong there, you can submit a correction on TMDb
+   - Changes sync to Stremio within 24-48 hours
+
+</Steps>
+
+### Wrong Title or Description
+
+**Problem**: Content shows wrong title, description, or plot summary.
+
+**Solution**:
+
+<Steps>
+
+1. **Verify the source**:
+   - Check [TheMovieDB.org](https://www.themoviedb.org/) for the correct entry
+   - Search by IMDb ID to ensure you're looking at the right content
+
+2. **Report to TMDb** (if incorrect there):
+   - Create a TMDb account
+   - Navigate to the incorrect entry
+   - Click "Edit" and submit corrections
+   - Changes typically appear in 24-48 hours
+
+3. **In Stremio**:
+   - Clear cache (Settings → Advanced → Clear Cache)
+   - Wait for next metadata sync
+   - Search again using IMDb ID for accuracy
+
+</Steps>
+
+### Wrong Episode Information
+
+**Problem**: Episode titles, numbers, or descriptions are incorrect.
+
+**Solution**:
+
+<Steps>
+
+1. **Check episode numbering**:
+   - Some shows use different numbering schemes (production order vs. air order)
+   - TMDb typically uses air order
+   - Use a different metadata add-on if you prefer production order
+
+2. **Verify on TMDb**:
+   - Check [TheMovieDB.org](https://www.themoviedb.org/) for the series
+   - Navigate to the specific season
+   - Report errors if found
+
+3. **Wait for updates**:
+   - New episodes may take 24-48 hours to appear with correct metadata
+   - Refresh your library after waiting
+
+</Steps>
+
+### Content Not Found
+
+**Problem**: Stremio can't find metadata for your content.
+
+**Solution**:
+
+<Steps>
+
+1. **Search variations**:
+   - Try alternate titles
+   - Include year
+   - Check for special character issues
+
+2. **Use IMDb ID**:
+   - Find the content on [IMDb.com](https://www.imdb.com/)
+   - Copy the IMDb ID (e.g., tt1234567)
+   - Search in Stremio using this ID
+
+3. **Check if it's in TMDb**:
+   - Visit [TheMovieDB.org](https://www.themoviedb.org/)
+   - If not there, you can add it
+   - Wait 24-48 hours for sync to Stremio
+
+</Steps>
+
+## Reporting Metadata Errors
+
+### Report to TMDb (The Movie Database)
+
+TMDb is the primary source for Stremio's metadata:
+
+<Steps>
+
+1. **Create an account** at [TheMovieDB.org](https://www.themoviedb.org/)
+2. **Search for the content** with issues
+3. **Click "Edit"** on the page
+4. **Submit corrections** with proper sources/references
+5. **Wait for approval** (usually within 24-48 hours)
+
+</Steps>
+
+### Report to Add-on Developers
+
+For issues with specific add-ons:
+
+<Steps>
+
+1. **Identify the add-on** causing issues
+2. **Find the developer**:
+   - Check the add-on's page in Stremio
+   - Look for GitHub links or support contacts
+3. **Submit an issue**:
+   - Include the content title and IMDb ID
+   - Describe the problem clearly
+   - Provide screenshots if helpful
+
+</Steps>
+
+### Report to Stremio
+
+For Cinemeta or core Stremio issues:
+
+<Steps>
+
+1. Visit the [Stremio Subreddit](https://www.reddit.com/r/StremioAddons/)
+2. Post with details:
+   - Content title and IMDb ID
+   - What's wrong
+   - Screenshots (if applicable)
+3. Or contact [Stremio Support](https://www.stremio.com/help)
+
+</Steps>
+
+## Prevention Tips
+
+✅ **Best Practices:**
+
+- **Search with year**: Always include the release year when searching
+- **Use IMDb IDs**: Most accurate way to find specific content
+- **Keep add-ons updated**: Regular updates fix metadata issues
+- **Report errors**: Help improve databases for everyone
+- **Be patient**: Metadata updates can take 24-48 hours
+
+❌ **Avoid:**
+
+- Don't install too many metadata add-ons (can cause conflicts)
+- Don't manually edit files (won't persist across updates)
+- Don't assume first result is correct (verify with year/details)
+
+## Advanced: Manual Metadata Sources
+
+For advanced users who want more control:
+
+### Use Trakt Integration
+
+<Steps>
+
+1. Create a [Trakt.tv](https://trakt.tv/) account
+2. Install the Trakt add-on in Stremio
+3. Trakt provides alternative metadata and syncing
+4. See [Metadata Add-on Setup](/metadata/aiometadata-setup/) for details
+
+</Steps>
+
+### Custom Add-ons
+
+Developers can create custom metadata add-ons:
+
+- Use the [Stremio Add-on SDK](https://github.com/Stremio/stremio-addon-sdk)
+- Pull from your preferred metadata source
+- Host locally or publicly
+- See the [official documentation](https://stremio.github.io/stremio-addon-sdk/)
+
+## Common Scenarios
+
+### Scenario 1: Anime with Wrong Posters
+
+**Issue**: Anime shows Western posters instead of Japanese artwork.
+
+**Fix**:
+- Install an anime-specific metadata add-on
+- Use [MyAnimeList](https://myanimelist.net/) or [AniList](https://anilist.co/) based add-ons
+- Search the Stremio add-on catalog for "anime metadata"
+
+### Scenario 2: Regional Variations
+
+**Issue**: Content shows different title/poster for your region.
+
+**Fix**:
+- Check [Language & Regional Settings](/metadata/language-and-regional-settings/)
+- Install region-specific metadata add-ons
+- Use TMDb with your preferred language setting
+
+### Scenario 3: Reboot vs. Original
+
+**Issue**: Stremio confuses a reboot with the original series.
+
+**Fix**:
+- Always include the year in your search
+- Use IMDb ID for exact matches
+- Check both TMDb and IMDb to verify the correct ID
+
+## Related Resources
+
+- [Metadata Explained](/metadata/metadata-explained/) - How metadata works in Stremio
+- [Metadata Add-on Setup](/metadata/aiometadata-setup/) - Install alternative metadata sources
+- [Clean Library Best Practices](/metadata/best-practices-for-clean-library/) - Organize your content
+- [Language & Regional Settings](/metadata/language-and-regional-settings/) - Localization options
+
+---
+
+*Sources:*
+- [The Movie Database (TMDb)](https://www.themoviedb.org/)
+- [IMDb - Internet Movie Database](https://www.imdb.com/)
+- [Stremio Help Center](https://www.stremio.com/help)
+- [Rating Poster Database (RPDB)](https://ratingposterdb.com/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

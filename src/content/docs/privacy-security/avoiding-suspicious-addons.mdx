@@ -4,17 +4,333 @@ description: How to identify and avoid malicious or suspicious add-ons
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Privacy Basics](/privacy-security/privacy-basics/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Not all add-ons are created equal. Some may compromise your privacy, security, or device performance. This guide helps you identify and avoid suspicious or malicious add-ons.
+
+## Why Add-on Security Matters
+
+Add-ons have access to:
+- Your Stremio account data
+- Content you search for and watch
+- Network traffic (in some cases)
+- Device resources
+
+<Callout type="warning">
+Malicious add-ons can steal personal data, inject ads, track your activity, or even compromise your device security.
 </Callout>
 
-## Overview
+## Red Flags for Suspicious Add-ons
 
-This guide will cover:
-- Red flags for suspicious add-ons
-- Verification techniques
-- Community trust signals
-- Safe installation practices
+### 🚩 Warning Signs
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+**Avoid add-ons that:**
+
+1. **Request Excessive Permissions**
+   - Ask for unnecessary access to your account
+   - Request personal information
+   - Want access to unrelated device features
+
+2. **Have Poor or No Documentation**
+   - No description or vague descriptions
+   - Missing developer information
+   - No source code or GitHub repository
+
+3. **Lack Community Trust**
+   - No reviews or ratings
+   - Negative reviews mentioning malware or ads
+   - Recent creation date with no track record
+
+4. **Promise Unrealistic Features**
+   - "Unlimited free premium content"
+   - "100% legal everything"
+   - "Never buffer again guaranteed"
+   - Too good to be true claims
+
+5. **Come from Unverified Sources**
+   - Downloaded from random websites
+   - Shared in spam messages or suspicious forums
+   - Not in official add-on catalog
+   - Promoted via suspicious means
+
+6. **Show Intrusive Behavior**
+   - Excessive ads or pop-ups
+   - Redirect to external websites
+   - Require payment or subscriptions
+   - Ask for credit card information
+
+## Safe Add-on Practices
+
+### Before Installing
+
+<Steps>
+
+1. **Check the Source**
+   - Prefer add-ons from the **official Stremio catalog**
+   - Verify developer's reputation
+   - Look for official GitHub repositories
+
+2. **Read Reviews and Ratings**
+   - Check what other users say
+   - Look for recent reviews (not just old ones)
+   - Note any security concerns mentioned
+
+3. **Research the Developer**
+   - Search for the developer's name
+   - Check their other add-ons
+   - Look for their presence on Reddit, GitHub, or forums
+   - Verify they're part of the Stremio community
+
+4. **Review Permissions**
+   - Understand what access the add-on requests
+   - Question why it needs certain permissions
+   - Don't install if permissions seem excessive
+
+</Steps>
+
+### After Installing
+
+<Steps>
+
+1. **Monitor Behavior**
+   - Watch for unexpected ads or pop-ups
+   - Note any performance issues
+   - Check if it works as advertised
+
+2. **Test Safely**
+   - Try the add-on with non-sensitive content first
+   - Use on a secondary device if possible
+   - Monitor network activity (advanced users)
+
+3. **Uninstall if Suspicious**
+   - Remove immediately if behavior changes
+   - Report to the community
+   - Warn others if you find issues
+
+</Steps>
+
+## Trusted Add-on Sources
+
+### Official Stremio Catalog
+
+The safest source for add-ons:
+
+✅ **Benefits:**
+- Curated by Stremio team and community
+- Reported issues are addressed
+- Easy to install and uninstall
+- Regular updates from developers
+
+**Access:** Open Stremio → Add-ons page (puzzle icon)
+
+### Community-Verified Sources
+
+These communities discuss and verify add-ons:
+
+- **Reddit**: [r/StremioAddons](https://www.reddit.com/r/StremioAddons/)
+- **Stremio Discord**: Official community server
+- **GitHub**: Repositories with active development
+
+### Reputable Developers
+
+Well-known add-on developers with good track records:
+- Check **Viren's Guide** for verified add-ons: [guides.viren070.me/stremio](https://guides.viren070.me/stremio)
+- Look for developers active on Reddit and GitHub
+- Prefer open-source add-ons with visible code
+
+## How to Verify Add-ons
+
+### Check GitHub Repository
+
+<Steps>
+
+1. Find the add-on's **GitHub page**
+2. Look for:
+   - **Recent commits** (active development)
+   - **Issues section** (developer responsiveness)
+   - **Stars and forks** (community interest)
+   - **Open-source code** (transparency)
+3. Read the **README** for documentation
+4. Check for **reported security issues**
+
+</Steps>
+
+### Community Validation
+
+<Steps>
+
+1. Search on **Reddit** ([r/StremioAddons](https://www.reddit.com/r/StremioAddons/))
+2. Look for mentions and discussions
+3. Check if community members vouch for it
+4. Note any warnings or complaints
+5. Ask the community if unsure
+
+</Steps>
+
+### Test Installation URL
+
+Safe add-on URLs typically:
+- Use HTTPS (not HTTP)
+- Come from known domains
+- Have clear manifest files
+- Don't redirect to suspicious sites
+
+## Common Scams and How to Avoid Them
+
+### Scam Type 1: Fake "Premium" Add-ons
+
+**Claim:** "Pay $X/month for premium access"
+
+🚩 **Reality:** Stremio add-ons are free. This is a scam.
+
+**Protection:** Never pay for add-ons or provide payment information.
+
+### Scam Type 2: Credential Harvesting
+
+**Claim:** "Login with your Netflix/Disney+/etc. account for access"
+
+🚩 **Reality:** Legitimate add-ons don't need your streaming service credentials.
+
+**Protection:** Never provide login credentials to add-ons.
+
+### Scam Type 3: Malware Distribution
+
+**Claim:** "Download our special player/codec/add-on installer"
+
+🚩 **Reality:** Add-ons install directly in Stremio; no external downloads needed.
+
+**Protection:** Only install add-ons through Stremio's interface.
+
+### Scam Type 4: Phishing Sites
+
+**Claim:** "Verify your Stremio account at [suspicious link]"
+
+🚩 **Reality:** Stremio doesn't send verification emails with external links.
+
+**Protection:** Only access Stremio through official website or app.
+
+## What to Do If You Installed a Suspicious Add-on
+
+<Steps>
+
+1. **Uninstall Immediately**
+   - Go to Settings → Add-ons
+   - Find the suspicious add-on
+   - Click "Uninstall"
+
+2. **Clear Cache and Data**
+   - Settings → Advanced → Clear Cache
+   - Consider clearing browser cookies if using web version
+
+3. **Change Passwords**
+   - Change your Stremio password
+   - Change email password
+   - Change any credentials you may have entered
+
+4. **Scan for Malware**
+   - Run antivirus/anti-malware on your device
+   - Use Windows Defender, Malwarebytes, or similar
+   - Check for suspicious apps or processes
+
+5. **Monitor Account Activity**
+   - Check for unauthorized access
+   - Review recent login locations
+   - Watch for unusual behavior
+
+6. **Report the Add-on**
+   - See [Reporting Issues & Scams](/privacy-security/reporting-issues-and-scams/)
+   - Warn the community on Reddit
+   - Contact Stremio support if needed
+
+</Steps>
+
+## Safe Add-on Recommendations
+
+### For General Streaming
+
+Widely trusted add-ons (verify current status in community):
+- **Torrentio**: Popular torrent aggregator
+- **OpenSubtitles**: Subtitle provider
+- **RPDB**: Rating and poster database
+- **Trakt**: Watch history and recommendations
+
+**Always verify** these are still safe and legitimate before installing.
+
+### For Specific Content
+
+Check **Viren's Guide** for current recommendations:
+- Visit [guides.viren070.me/stremio](https://guides.viren070.me/stremio)
+- Browse verified add-on lists
+- Follow installation guides
+- Check for updates and warnings
+
+## Best Practices Summary
+
+✅ **Do:**
+- Install from **official catalog** when possible
+- **Research** before installing
+- Read **reviews and ratings**
+- Check **developer reputation**
+- Keep add-ons **updated**
+- **Remove** unused add-ons
+- **Report** suspicious add-ons
+- Ask the **community** when unsure
+
+❌ **Don't:**
+- Install from **unknown sources**
+- Provide **payment information**
+- Share **login credentials**
+- Download **external installers**
+- Ignore **warning signs**
+- Keep **suspicious add-ons** installed
+- Click on **pop-ups or redirects**
+- Trust **too-good-to-be-true** claims
+
+## Advanced: Technical Verification
+
+For technically-savvy users:
+
+### Inspect Manifest File
+
+<Steps>
+
+1. Add-ons are defined by a `manifest.json` file
+2. Check the manifest URL before installing
+3. Look for:
+   - Clear description
+   - Reasonable resource requests
+   - Valid endpoints
+   - Known developer information
+
+</Steps>
+
+### Monitor Network Activity
+
+Advanced users can:
+- Use browser developer tools
+- Monitor outgoing requests
+- Check for suspicious endpoints
+- Verify HTTPS usage
+
+### Review Source Code
+
+If open-source:
+- Clone the repository
+- Review the code for malicious functions
+- Check dependencies
+- Build from source if possible
+
+## Related Resources
+
+- [Privacy Basics](/privacy-security/privacy-basics/) - Understanding privacy in Stremio
+- [Account Security](/privacy-security/account-security/) - Protect your account
+- [How to Evaluate Add-on Trust](/addons/how-to-evaluate-addon-trust/) - Detailed evaluation guide
+- [Reporting Issues & Scams](/privacy-security/reporting-issues-and-scams/) - Report problems
+
+---
+
+*Sources:*
+- [Stremio Add-on Documentation](https://github.com/Stremio/stremio-addon-sdk)
+- [r/StremioAddons Community](https://www.reddit.com/r/StremioAddons/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)
+- [Stremio Help Center](https://www.stremio.com/help)

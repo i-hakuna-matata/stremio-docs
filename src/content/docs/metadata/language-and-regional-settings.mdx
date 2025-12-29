@@ -4,17 +4,380 @@ description: Configure language and regional settings for metadata
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Metadata Explained](/metadata/metadata-explained/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Stremio supports multiple languages and regional variations for metadata, allowing you to enjoy content in your preferred language with localized information.
+
+## Understanding Language Settings
+
+Stremio has two types of language settings:
+
+1. **Interface Language**: The language of the app itself (menus, buttons, settings)
+2. **Metadata Language**: The language of content information (titles, descriptions, posters)
+
+<Callout type="info">
+Metadata language often depends on your installed metadata add-ons and their data sources. Some add-ons provide better multilingual support than others.
 </Callout>
 
-## Overview
+## Changing Interface Language
 
-This guide will cover:
-- Setting preferred languages
-- Regional content variations
-- Localized metadata
-- Multi-language support
+### Desktop (Windows, macOS, Linux)
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+<Steps>
+
+1. Open **Stremio**
+2. Click the **gear icon** (Settings) in the top-right
+3. Select **General** from the sidebar
+4. Under **Interface Language**, choose your preferred language
+5. **Restart Stremio** to apply changes
+
+</Steps>
+
+### Android & Android TV
+
+<Steps>
+
+1. Open **Stremio**
+2. Tap the **menu icon** (three horizontal lines)
+3. Go to **Settings**
+4. Tap **Language**
+5. Select your preferred language
+6. **Restart the app** to apply changes
+
+</Steps>
+
+### iOS & iPadOS
+
+<Steps>
+
+1. Open **Stremio**
+2. Tap **Settings** (gear icon)
+3. Select **Language & Region**
+4. Choose your preferred language
+5. **Restart the app** to apply changes
+
+</Steps>
+
+## Metadata Language Settings
+
+Metadata language is primarily controlled by your metadata add-ons, particularly **Cinemeta** (built-in) and **TMDb-based add-ons**.
+
+### How Cinemeta Handles Languages
+
+Cinemeta pulls metadata from The Movie Database (TMDb) and tries to match:
+
+1. **Your interface language** (if available)
+2. **Original language** (as fallback)
+3. **English** (as secondary fallback)
+
+**Example:**
+- Interface set to Spanish → Attempts to show Spanish titles and descriptions
+- If Spanish not available → Shows original language
+- If original not available → Shows English
+
+### Configuring Metadata Language
+
+<Steps>
+
+1. **Set Interface Language** (as described above)
+2. **Install language-specific metadata add-ons**:
+   - Search the add-on catalog for your language
+   - Examples: "TMDB ES" (Spanish), "TMDB FR" (French), etc.
+3. **Priority**: Newer installed add-ons take priority
+4. **Verify**: Search for content and check metadata language
+
+</Steps>
+
+## Regional Content Variations
+
+Content often has regional variations:
+
+### Title Variations
+
+Different regions may have different titles for the same content:
+
+**Examples:**
+- *Harry Potter and the Philosopher's Stone* (UK) vs. *Harry Potter and the Sorcerer's Stone* (US)
+- *Zootopia* (US) vs. *Zootropolis* (UK)
+- Anime: Japanese vs. English vs. Romanized titles
+
+**How to handle:**
+- Search using the original title + year
+- Use IMDb ID for exact matches
+- Install region-specific metadata add-ons
+
+### Poster & Artwork Variations
+
+Posters can differ by region:
+
+**Solutions:**
+- **RPDB** (Rating Poster Database): Choose preferred poster region
+  - Visit [ratingposterdb.com](https://ratingposterdb.com/)
+  - Configure regional preferences
+  - Install in Stremio
+- **TMDb regional settings**: Some TMDb add-ons support region selection
+
+### Content Availability
+
+Content availability varies by region due to licensing:
+
+<Callout type="warning">
+Stremio shows what metadata is available globally, but actual streaming availability depends on your add-ons and location. Some content may not be accessible in your region through legitimate sources.
+</Callout>
+
+## Language-Specific Add-ons
+
+### Finding Add-ons for Your Language
+
+<Steps>
+
+1. Open **Add-ons** page in Stremio (puzzle piece icon)
+2. **Search** for your language code:
+   - "ES" for Spanish
+   - "FR" for French
+   - "DE" for German
+   - "IT" for Italian
+   - "PT" for Portuguese
+   - "RU" for Russian
+   - "AR" for Arabic
+   - "ZH" for Chinese
+   - "JA" for Japanese
+   - "KO" for Korean
+3. **Install** relevant metadata and streaming add-ons
+4. **Test** with a few titles to verify language
+
+</Steps>
+
+### Popular Multilingual Add-ons
+
+**TMDb Add-ons:**
+- Support multiple languages
+- Based on The Movie Database
+- Usually named "TMDB [Language Code]"
+
+**Regional Catalogs:**
+- Country-specific content catalogs
+- Examples: "French Cinema", "Korean Drama", "Bollywood"
+
+**Subtitle Add-ons:**
+- OpenSubtitles: Massive multilingual subtitle database
+- Subscene: Alternative subtitle source
+- Language-specific add-ons: "Spanish Subtitles", "Arabic Subs", etc.
+
+## Subtitle Language Settings
+
+Subtitles are separate from metadata language:
+
+### Setting Default Subtitle Language
+
+<Steps>
+
+1. Open **Settings** → **Player**
+2. Find **Subtitles** section
+3. Set **Default Subtitle Language** to your preference
+4. Toggle **Auto-select subtitles** if you want them on by default
+
+</Steps>
+
+### Installing Subtitle Add-ons
+
+<Steps>
+
+1. Go to **Add-ons** page
+2. **Search** for subtitle add-ons:
+   - "OpenSubtitles"
+   - "Subscene"
+   - Language-specific subtitle add-ons
+3. **Install** your preferred add-on
+4. Subtitles will appear in the player when available
+
+</Steps>
+
+See [Player Settings: Subtitles & Audio](/using-stremio/player-settings-subtitles-audio/) for detailed subtitle configuration.
+
+## Audio Track Language
+
+For multilingual content with multiple audio tracks:
+
+### Selecting Audio Language
+
+<Steps>
+
+1. **Start playing** content
+2. **Click the audio icon** in the player controls
+3. **Select preferred audio track**:
+   - Original language
+   - Dubbed versions (if available)
+   - Audio descriptions (if available)
+
+</Steps>
+
+### Default Audio Preference
+
+<Steps>
+
+1. Go to **Settings** → **Player**
+2. Find **Audio** section
+3. Set **Preferred Audio Language**
+4. Stremio will auto-select matching audio when available
+
+</Steps>
+
+## Regional Content Discovery
+
+### Browsing Regional Content
+
+Many add-ons provide region-specific catalogs:
+
+**Examples:**
+- "Top Movies in [Country]"
+- "Popular TV Shows in [Region]"
+- "New Releases in [Language]"
+
+### Using Filters
+
+Some add-ons support filtering by:
+- Language
+- Country of origin
+- Genre + Region
+- Year + Region
+
+## Troubleshooting Language Issues
+
+### Wrong Metadata Language
+
+**Problem**: Content shows in wrong language despite settings.
+
+**Solutions:**
+<Steps>
+
+1. Verify interface language is set correctly
+2. Install metadata add-ons for your language
+3. Clear cache (Settings → Advanced → Clear Cache)
+4. Restart Stremio
+5. If persistent, uninstall/reinstall problematic add-ons
+
+</Steps>
+
+### Mixed Languages
+
+**Problem**: Some content in correct language, some in wrong language.
+
+**Solutions:**
+- This is normal—not all content has translations
+- Install more language-specific metadata add-ons
+- Use original language as fallback
+- Report missing translations to TMDb
+
+### Subtitle Language Not Available
+
+**Problem**: Can't find subtitles in your language.
+
+**Solutions:**
+<Steps>
+
+1. Install more subtitle add-ons
+2. Check OpenSubtitles add-on (largest database)
+3. Try alternative subtitle sources
+4. Contribute subtitles to [OpenSubtitles.org](https://www.opensubtitles.org/)
+
+</Steps>
+
+### Content Not Found in Your Language
+
+**Problem**: Searching in your language doesn't find content.
+
+**Solutions:**
+<Steps>
+
+1. Search using the **original title**
+2. Use **IMDb ID** instead of title
+3. Include the **year** in your search
+4. Switch to **English** temporarily for searching, then switch back
+
+</Steps>
+
+## Best Practices
+
+✅ **Do:**
+- Set both interface and metadata languages
+- Install language-specific add-ons
+- Use IMDb ID for accurate content matching
+- Test with multiple titles after changing settings
+- Report missing translations to upstream sources (TMDb)
+
+❌ **Don't:**
+- Install too many metadata add-ons (can cause conflicts)
+- Expect all content to have perfect translations
+- Forget to restart after changing language settings
+- Mix multiple regional add-ons for the same language
+
+## Contributing Translations
+
+Help improve Stremio's multilingual support:
+
+### Contribute to TMDb
+
+<Steps>
+
+1. Create account at [TheMovieDB.org](https://www.themoviedb.org/)
+2. Browse to content needing translations
+3. Click **Edit** → **Translations**
+4. Add translations for your language
+5. Changes sync to Stremio within 24-48 hours
+
+</Steps>
+
+### Contribute to OpenSubtitles
+
+<Steps>
+
+1. Create account at [OpenSubtitles.org](https://www.opensubtitles.org/)
+2. Upload subtitle files for missing content
+3. Make available to all Stremio users
+
+</Steps>
+
+### Translate Stremio Interface
+
+- Stremio welcomes interface translations
+- Contact the Stremio team via [Reddit](https://www.reddit.com/r/StremioAddons/) or official channels
+- Help make Stremio accessible to more users
+
+## Language Codes Reference
+
+Common ISO language codes used in Stremio:
+
+| Language | Code |
+|----------|------|
+| English | EN |
+| Spanish | ES |
+| French | FR |
+| German | DE |
+| Italian | IT |
+| Portuguese | PT |
+| Russian | RU |
+| Arabic | AR |
+| Chinese (Simplified) | ZH |
+| Japanese | JA |
+| Korean | KO |
+| Hindi | HI |
+| Turkish | TR |
+| Dutch | NL |
+| Polish | PL |
+
+## Related Resources
+
+- [Metadata Explained](/metadata/metadata-explained/) - How metadata works
+- [Player Settings: Subtitles & Audio](/using-stremio/player-settings-subtitles-audio/) - Subtitle configuration
+- [Metadata Add-on Setup](/metadata/aiometadata-setup/) - Installing metadata add-ons
+- [Fix Wrong Posters/Titles](/metadata/fix-wrong-posters-titles/) - Correct metadata issues
+
+---
+
+*Sources:*
+- [The Movie Database (TMDb)](https://www.themoviedb.org/)
+- [OpenSubtitles.org](https://www.opensubtitles.org/)
+- [Stremio Help Center](https://www.stremio.com/help)
+- [ISO 639 Language Codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

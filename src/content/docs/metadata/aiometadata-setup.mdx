@@ -4,17 +4,173 @@ description: How to set up and configure metadata add-ons in Stremio
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Metadata Explained](/metadata/metadata-explained/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Metadata add-ons enhance Stremio by providing detailed information about movies, TV shows, and other content. This guide will help you install and configure metadata add-ons to get the best viewing experience.
+
+## What are Metadata Add-ons?
+
+Metadata add-ons provide:
+- **Posters & Artwork**: High-quality images for content
+- **Descriptions**: Plot summaries and synopses
+- **Cast & Crew**: Actor and director information
+- **Ratings**: IMDb, Rotten Tomatoes, and other ratings
+- **Release Dates**: Air dates and premiere information
+- **Episode Information**: Season/episode numbers and titles
+
+<Callout type="info">
+Most users don't need additional metadata add-ons as Stremio comes with Cinemeta built-in, which provides excellent metadata from The Movie Database (TMDb) and other sources.
 </Callout>
 
-## Overview
+## Built-in Metadata: Cinemeta
 
-This guide will cover:
-- Installing metadata add-ons
-- Configuring metadata sources
-- Priority and fallback settings
-- Troubleshooting metadata issues
+Stremio includes **Cinemeta** by default, which provides comprehensive metadata for:
+- Movies
+- TV series
+- Anime
+- Documentaries
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+Cinemeta is maintained by the Stremio team and automatically updates with the latest content information.
+
+## Installing Additional Metadata Add-ons
+
+<Steps>
+
+1. **Open the Add-ons Page**
+   - Click the puzzle piece icon in the top navigation
+   - Or go to Settings → Add-ons
+
+2. **Browse Community Add-ons**
+   - Scroll through the catalog or use the search function
+   - Look for add-ons labeled "Metadata" or "Catalog"
+
+3. **Install a Metadata Add-on**
+   - Click on the add-on you want to install
+   - Click "Install" to add it to your account
+   - The add-on will sync across all your devices
+
+4. **Verify Installation**
+   - Go to Settings → Add-ons
+   - Check that the new add-on appears in your installed list
+
+</Steps>
+
+## Popular Metadata Add-ons
+
+### RPDB (Rating Poster Database)
+Provides alternative posters and ratings from multiple sources.
+
+**Features:**
+- Custom posters and artwork
+- Multiple rating sources
+- Community-driven content
+
+**Installation:** Visit the [RPDB website](https://ratingposterdb.com/) and follow their setup guide.
+
+### Trakt
+Integrates with Trakt.tv for personalized recommendations and watch history.
+
+**Features:**
+- Scrobbling (automatic tracking)
+- Personalized recommendations
+- Watch history sync
+- Watchlist integration
+
+**Installation:** Search for "Trakt" in the Stremio add-on catalog or visit [Trakt.tv](https://trakt.tv/).
+
+### TMDB Add-ons
+Alternative metadata sources using The Movie Database API.
+
+**Features:**
+- Comprehensive movie/TV information
+- Multiple language support
+- Up-to-date content data
+
+## Configuring Metadata Priority
+
+Stremio uses metadata from installed add-ons in a specific order:
+
+1. **Installation Order**: Later installed add-ons take priority
+2. **Built-in Priority**: Cinemeta has baseline priority
+3. **Fallback System**: If one source fails, Stremio tries the next
+
+<Callout type="tip">
+To change priority, uninstall and reinstall add-ons in your preferred order. The most recently installed add-on will have the highest priority.
+</Callout>
+
+## Language & Regional Settings
+
+Configure metadata language preferences:
+
+<Steps>
+
+1. Go to **Settings** → **General**
+2. Select your preferred **Interface Language**
+3. Some metadata add-ons will automatically match this language
+4. For content-specific languages, check individual add-on settings
+
+</Steps>
+
+## Troubleshooting Metadata Issues
+
+### Missing Posters or Information
+
+**Solutions:**
+- Wait a few minutes and refresh the page
+- Try searching for the content again
+- Check if your metadata add-ons are working
+- Verify your internet connection
+
+### Wrong Metadata
+
+**Solutions:**
+- The content might be incorrectly matched
+- Try using a different metadata add-on
+- Report issues to the add-on developer
+- See [Fix Wrong Posters/Titles](/metadata/fix-wrong-posters-titles/) for detailed steps
+
+### Metadata Not Loading
+
+**Solutions:**
+- Check your internet connection
+- Disable and re-enable the metadata add-on
+- Clear Stremio's cache (Settings → Advanced → Clear Cache)
+- Reinstall the problematic add-on
+
+## Best Practices
+
+✅ **Do:**
+- Keep Cinemeta enabled as your primary source
+- Install metadata add-ons from trusted sources
+- Test add-ons with a few titles before relying on them
+- Report issues to add-on developers
+
+❌ **Don't:**
+- Install too many metadata add-ons (can cause conflicts)
+- Remove Cinemeta unless you have a reliable alternative
+- Share your Trakt API keys or credentials
+- Install add-ons from suspicious sources
+
+## Advanced: Custom Metadata Add-ons
+
+For developers or advanced users, you can create custom metadata add-ons:
+
+1. **Use the Stremio Add-on SDK**: [github.com/Stremio/stremio-addon-sdk](https://github.com/Stremio/stremio-addon-sdk)
+2. **Follow the documentation**: [stremio.github.io/stremio-addon-sdk](https://stremio.github.io/stremio-addon-sdk/)
+3. **Test locally** before publishing
+4. **Share with the community** on the Stremio subreddit or Discord
+
+## Related Resources
+
+- [Metadata Explained](/metadata/metadata-explained/) - Understanding how metadata works
+- [Fix Wrong Posters/Titles](/metadata/fix-wrong-posters-titles/) - Correct metadata issues
+- [Language & Regional Settings](/metadata/language-and-regional-settings/) - Localization options
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio) - Community documentation
+
+---
+
+*Sources:*
+- [Stremio Add-on SDK Documentation](https://github.com/Stremio/stremio-addon-sdk)
+- [Stremio Official Help Center](https://www.stremio.com/help)
+- [RPDB (Rating Poster Database)](https://ratingposterdb.com/)
+- [Trakt.tv Integration Guide](https://trakt.tv/)
