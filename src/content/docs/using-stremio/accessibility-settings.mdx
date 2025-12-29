@@ -4,17 +4,484 @@ description: Configure Stremio for better accessibility
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out the [Navigation Basics](/using-stremio/navigation-basics/) guide or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Stremio supports various accessibility features to make the app usable for people with disabilities. This guide covers accessibility settings and features available in Stremio.
+
+## Understanding Accessibility in Stremio
+
+### Supported Accessibility Features
+
+Stremio includes:
+- **Screen Reader Support**: Compatible with popular screen readers
+- **Keyboard Navigation**: Full keyboard control
+- **High Contrast Options**: Better visibility for low vision users
+- **Text Scaling**: Adjustable text sizes
+- **Subtitle Support**: Closed captions and audio descriptions
+- **Color Customization**: Adjustable color schemes
+
+<Callout type="info">
+Accessibility features vary by platform. Desktop versions have more options than mobile apps. Check your specific platform for available features.
 </Callout>
 
-## Overview
+## Text and Display Settings
 
-This guide will cover:
-- Text size and display options
-- High contrast modes
-- Keyboard navigation
+### Font Size Adjustment
+
+<Steps>
+
+1. **Desktop Version**
+   - Go to Settings → General
+   - Look for "Interface Scale" or "Zoom"
+   - Adjust slider to increase text size
+   - Changes apply immediately
+
+2. **Web Version**
+   - Use browser zoom (Ctrl/Cmd + +)
+   - Adjust browser font settings
+   - Some extensions can force larger fonts
+
+3. **Mobile Apps**
+   - Use device accessibility settings
+   - iOS: Settings → Accessibility → Larger Text
+   - Android: Settings → Accessibility → Font size
+
+</Steps>
+
+### High Contrast Mode
+
+<Steps>
+
+1. **Enable System High Contrast**
+   - Windows: Settings → Ease of Access → High contrast
+   - macOS: System Preferences → Accessibility → Display → Increase contrast
+   - Linux: Varies by desktop environment
+
+2. **Stremio Theme Selection**
+   - Settings → General → Theme
+   - Choose darker themes for better contrast
+   - Some themes offer higher contrast options
+
+3. **Custom Styling (Advanced)**
+   - For web version, use browser extensions
+   - CSS customizations for specific elements
+
+</Steps>
+
+## Keyboard Navigation
+
+### Desktop Keyboard Shortcuts
+
+**Navigation:**
+- **Tab**: Move between interactive elements
+- **Arrow Keys**: Navigate menus and lists
+- **Enter/Space**: Activate buttons and links
+- **Escape**: Close menus or dialogs
+
+**Playback Controls:**
+- **Space**: Play/pause
+- **F**: Fullscreen toggle
+- **M**: Mute/unmute
+- **Arrow Keys**: Seek (when focused on player)
+
+**Search and Discovery:**
+- **Ctrl/Cmd + K**: Focus search bar
+- **Ctrl/Cmd + F**: Find in current page
+- **Ctrl/Cmd + L**: Focus address bar (web)
+
+### Mobile Keyboard Support
+
+**iOS:**
+- External keyboard support
+- VoiceOver gestures with keyboard
+- Customizable keyboard shortcuts
+
+**Android:**
+- Physical keyboard support
+- TalkBack with keyboard navigation
+- Accessibility shortcuts
+
+## Screen Reader Compatibility
+
+### Supported Screen Readers
+
+**Desktop:**
+- **NVDA** (Windows) - Fully supported
+- **JAWS** (Windows) - Compatible
+- **VoiceOver** (macOS) - Native support
+- **Orca** (Linux) - Compatible
+
+**Mobile:**
+- **VoiceOver** (iOS) - Native support
+- **TalkBack** (Android) - Native support
+
+### Optimizing for Screen Readers
+
+<Steps>
+
+1. **Enable Screen Reader**
+   - Windows: Settings → Ease of Access → Narrator
+   - macOS: System Preferences → Accessibility → VoiceOver
+   - iOS: Settings → Accessibility → VoiceOver
+   - Android: Settings → Accessibility → TalkBack
+
+2. **Configure Stremio**
+   - Ensure high contrast is enabled
+   - Use larger text sizes
+   - Enable subtitles for video content
+
+3. **Navigation Tips**
+   - Use Tab to navigate through interface
+   - Listen for element descriptions
+   - Use screen reader shortcuts for faster navigation
+
+</Steps>
+
+## Subtitle and Audio Accessibility
+
+### Closed Captions
+
+<Steps>
+
+1. **Enable Subtitles**
+   - Settings → Player → Subtitles
+   - Set "Default Subtitle Language"
+   - Enable "Auto-select subtitles"
+
+2. **Subtitle Appearance**
+   - Adjust font size and color
+   - Choose high contrast subtitle styles
+   - Position subtitles for better readability
+
+3. **SDH Subtitles**
+   - Look for "SDH" or "Descriptive" subtitles
+   - Include sound effects and speaker identification
+   - Available through OpenSubtitles and similar add-ons
+
+</Steps>
+
+### Audio Descriptions
+
+<Steps>
+
+1. **Check Content Availability**
+   - Look for "Audio Described" or "AD" versions
+   - Some streaming services provide descriptive audio
+   - Third-party add-ons may offer descriptive tracks
+
+2. **Enable Audio Description**
+   - In player, select audio track
+   - Choose descriptive audio if available
+   - Adjust volume balance if needed
+
+</Steps>
+
+## Color and Visual Settings
+
+### Color Customization
+
+<Steps>
+
+1. **Theme Selection**
+   - Settings → General → Theme
+   - Choose from available themes
+   - Dark themes often better for accessibility
+
+2. **Color Adjustments**
+   - Use system color filters if available
+   - Browser extensions for color correction
+   - Third-party accessibility tools
+
+</Steps>
+
+### Reducing Motion
+
+<Steps>
+
+1. **System Settings**
+   - Windows: Settings → Ease of Access → Display → Show animations
+   - macOS: System Preferences → Accessibility → Display → Reduce motion
+   - iOS/Android: Accessibility settings for motion reduction
+
+2. **Stremio Options**
+   - Some themes reduce animations
+   - Use static backgrounds
+   - Disable auto-playing previews
+
+</Steps>
+
+## Motor Accessibility
+
+### Alternative Input Methods
+
+**Eye Tracking:**
+- Compatible with system eye tracking software
+- Works with Windows Eye Control
+- Some third-party accessibility tools
+
+**Switch Control:**
+- iOS Switch Control compatible
+- Android Switch Access support
+- External switch devices
+
+**Voice Control:**
+- Windows Voice Access
+- macOS Voice Control
+- Mobile voice assistants
+
+### Large Click Targets
+
+<Steps>
+
+1. **Adjust Interface Scale**
+   - Increase overall zoom level
+   - Larger buttons and touch targets
+   - Better spacing between elements
+
+2. **Use Touch-Friendly Themes**
+   - Themes with larger interactive areas
+   - Reduced clutter for easier navigation
+
+</Steps>
+
+## Cognitive Accessibility
+
+### Simplified Interface
+
+<Steps>
+
+1. **Minimize Distractions**
+   - Use clean, minimal themes
+   - Hide unnecessary UI elements
+   - Focus on essential features
+
+2. **Consistent Navigation**
+   - Learn keyboard shortcuts
+   - Use bookmarks for favorite content
+   - Create organized libraries
+
+</Steps>
+
+### Memory Aids
+
+<Steps>
+
+1. **Use Watchlist Effectively**
+   - Save content for later viewing
+   - Organize by priority or category
+   - Set reminders for new episodes
+
+2. **Library Organization**
+   - Create logical groupings
+   - Use consistent naming
+   - Regular cleanup of watched content
+
+</Steps>
+
+## Platform-Specific Accessibility
+
+### Windows
+
+**Built-in Features:**
+- Narrator screen reader
+- Magnifier for zoom
+- High contrast themes
+- Sticky keys and filter keys
+
+**Stremio Integration:**
+- Full keyboard navigation
 - Screen reader compatibility
+- High contrast support
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+### macOS
+
+**Built-in Features:**
+- VoiceOver screen reader
+- Zoom magnification
+- Display accommodations
+- Accessibility keyboard
+
+**Stremio Integration:**
+- Native VoiceOver support
+- Full keyboard shortcuts
+- System accessibility integration
+
+### Linux
+
+**Built-in Features:**
+- Orca screen reader
+- Compiz zoom
+- High contrast themes
+- On-screen keyboard
+
+**Stremio Integration:**
+- Screen reader compatible
+- Keyboard navigation
+- System accessibility support
+
+### iOS
+
+**Built-in Features:**
+- VoiceOver screen reader
+- Zoom magnification
+- Larger text
+- AssistiveTouch
+
+**Stremio Integration:**
+- VoiceOver compatible
+- Touch accessibility
+- Dynamic type support
+
+### Android
+
+**Built-in Features:**
+- TalkBack screen reader
+- Magnification gestures
+- Select to speak
+- Accessibility menu
+
+**Stremio Integration:**
+- TalkBack compatible
+- Touch target scaling
+- Accessibility shortcuts
+
+### Web Version
+
+**Browser Features:**
+- Built-in zoom and scaling
+- Screen reader compatibility
+- High contrast support
+- Keyboard navigation
+
+**Extensions:**
+- Accessibility browser extensions
+- Screen reader add-ons
+- Color and contrast modifiers
+
+## Testing Accessibility
+
+### Self-Testing Checklist
+
+☑️ **Visual:**
+- Can you see all text clearly?
+- Are colors distinguishable?
+- Is the contrast sufficient?
+
+☑️ **Motor:**
+- Can you navigate without mouse?
+- Are buttons large enough to click?
+- Do you need assistive devices?
+
+☑️ **Auditory:**
+- Are subtitles available when needed?
+- Is audio description available?
+- Are sound cues clear?
+
+☑️ **Cognitive:**
+- Is the interface intuitive?
+- Are instructions clear?
+- Can you remember navigation patterns?
+
+### Professional Testing
+
+**Accessibility Auditors:**
+- Use automated tools like WAVE or axe
+- Manual testing with accessibility experts
+- User testing with people with disabilities
+
+## Troubleshooting Accessibility Issues
+
+### Common Problems
+
+**Screen Reader Issues:**
+- Ensure screen reader is properly configured
+- Check Stremio compatibility with your screen reader
+- Update both screen reader and Stremio
+
+**Keyboard Navigation:**
+- Verify keyboard focus indicators are visible
+- Check for conflicting keyboard shortcuts
+- Ensure all interactive elements are keyboard accessible
+
+**Display Issues:**
+- Adjust system DPI settings
+- Update graphics drivers
+- Check for theme compatibility
+
+### Getting Help
+
+<Steps>
+
+1. **Check Documentation**
+   - Review platform accessibility guides
+   - Check Stremio's accessibility documentation
+
+2. **Community Support**
+   - Post on r/StremioAddons
+   - Ask in accessibility communities
+   - Share solutions with others
+
+3. **Official Support**
+   - Contact Stremio support for specific issues
+   - Report accessibility bugs
+   - Request feature improvements
+
+</Steps>
+
+## Contributing to Accessibility
+
+### Feedback and Suggestions
+
+<Steps>
+
+1. **Provide Feedback**
+   - Use Stremio's feedback channels
+   - Report accessibility issues
+   - Suggest improvements
+
+2. **Test Beta Versions**
+   - Participate in beta testing
+   - Test new accessibility features
+   - Provide detailed feedback
+
+3. **Community Advocacy**
+   - Share accessibility tips
+   - Help other users
+   - Promote inclusive design
+
+</Steps>
+
+## Legal and Standards Compliance
+
+<Callout type="info">
+Stremio aims to comply with accessibility standards like WCAG (Web Content Accessibility Guidelines) and platform-specific accessibility requirements.
+</Callout>
+
+### Standards Reference
+
+**WCAG Guidelines:**
+- **Perceivable**: Information presented accessibly
+- **Operable**: Interface elements usable
+- **Understandable**: Clear and consistent
+- **Robust**: Works with assistive technologies
+
+**Platform Standards:**
+- **Section 508** (US government)
+- **EN 301 549** (European accessibility)
+- **Platform-specific guidelines** (Apple, Google, Microsoft)
+
+## Related Resources
+
+- [Navigation Basics](/using-stremio/navigation-basics/) - Basic Stremio usage
+- [Player Settings: Subtitles & Audio](/using-stremio/player-settings-subtitles-audio/) - Audio/video settings
+- [Settings Overview](/start-here/settings-overview/) - General settings
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio) - Community documentation
+
+---
+
+*Sources:*
+- [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/WCAG21/quickref/)
+- [Apple Accessibility Guidelines](https://developer.apple.com/accessibility/)
+- [Google Accessibility Guidelines](https://developer.android.com/guide/topics/ui/accessibility)
+- [Microsoft Accessibility Guidelines](https://www.microsoft.com/en-us/accessibility)
+- [Stremio Help Center](https://www.stremio.com/help)

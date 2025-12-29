@@ -4,17 +4,349 @@ description: Understanding catalog and metadata add-ons in Stremio
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Add-ons Explained](/addons/addons-explained/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Catalog and metadata add-ons enhance Stremio by providing additional content sources and detailed information. This guide explains how these add-ons work and how to use them effectively.
+
+## What are Catalog Add-ons?
+
+Catalog add-ons provide **content sources** - they give Stremio access to different libraries of movies, TV shows, and other media.
+
+### How Catalogs Work
+
+**Catalogs provide:**
+- **Content Discovery**: New movies, TV shows, and series
+- **Alternative Sources**: Content not available in official catalogs
+- **Specialized Collections**: Anime, documentaries, international content
+- **Streaming Sources**: Direct links to watch content
+
+<Callout type="info">
+Catalog add-ons don't host content themselves - they provide links to where content can be found. The actual streaming depends on the add-on's sources.
 </Callout>
 
-## Overview
+### Built-in Catalogs
 
-This guide will cover:
-- What are catalog add-ons
-- Metadata add-ons explained
-- Popular catalog add-ons
-- How to organize your catalogs
+Stremio comes with several built-in catalogs:
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+**Cinemeta** (Default):
+- Movies and TV shows from The Movie Database (TMDb)
+- Comprehensive metadata
+- Official Stremio catalog
+
+**WatchHub**:
+- Alternative catalog with different content selection
+- May include different titles or versions
+
+## What are Metadata Add-ons?
+
+Metadata add-ons provide **information about content** - posters, descriptions, cast, ratings, etc.
+
+### How Metadata Works
+
+**Metadata add-ons provide:**
+- **Posters & Artwork**: High-quality images
+- **Descriptions**: Plot summaries and synopses
+- **Cast & Crew**: Actor and director information
+- **Ratings**: IMDb, Rotten Tomatoes, user ratings
+- **Release Information**: Air dates, seasons, episodes
+- **Genres & Categories**: Content classification
+
+<Callout type="tip">
+Metadata add-ons work alongside catalogs. A catalog tells Stremio what content exists, while metadata add-ons tell Stremio about that content.
+</Callout>
+
+## Popular Catalog Add-ons
+
+### Torrentio
+
+**Description**: Popular torrent aggregator that searches multiple torrent sources.
+
+**Features:**
+- Searches across multiple torrent sites
+- Provides debrid service integration
+- Supports multiple languages
+- Real-time availability checking
+
+**Installation**: Search for "Torrentio" in the add-on catalog.
+
+**Source**: [Torrentio GitHub](https://github.com/IceLord/torrentio)
+
+### Jackett
+
+**Description**: Meta-search engine for torrent trackers.
+
+**Features:**
+- Searches 100+ torrent sites
+- Supports private trackers
+- Advanced filtering options
+- API integration
+
+**Installation**: Requires Jackett server setup first.
+
+**Source**: [Jackett Website](https://github.com/Jackett/Jackett)
+
+### Streaming Catalogs
+
+**Pornhub Add-on**:
+- Adult content catalog
+- Requires age verification
+- Multiple categories
+
+**YouTube Add-on**:
+- YouTube videos as content
+- Channel subscriptions
+- Search integration
+
+**Twitch Add-on**:
+- Live streaming
+- Gaming content
+- VOD archives
+
+## Popular Metadata Add-ons
+
+### RPDB (Rating Poster Database)
+
+**Description**: Alternative posters and ratings database.
+
+**Features:**
+- Custom poster selection
+- Multiple rating sources
+- Community-driven content
+- Regional poster support
+
+**Installation**: Visit [ratingposterdb.com](https://ratingposterdb.com/)
+
+### Trakt
+
+**Description**: Social tracking and recommendations.
+
+**Features:**
+- Watch history sync
+- Personalized recommendations
+- Watchlist management
+- Statistics and analytics
+
+**Installation**: Search for "Trakt" in add-on catalog.
+
+**Source**: [Trakt.tv](https://trakt.tv/)
+
+### TMDb Add-ons
+
+**Description**: Alternative metadata from The Movie Database.
+
+**Features:**
+- Comprehensive movie/TV data
+- Multiple language support
+- High-quality posters
+- Cast and crew information
+
+**Installation**: Search for "TMDb" in add-on catalog.
+
+## Installing Catalog & Metadata Add-ons
+
+<Steps>
+
+1. **Open Add-ons Page**
+   - Click the puzzle piece icon
+   - Or go to Settings → Add-ons
+
+2. **Browse or Search**
+   - Scroll through available add-ons
+   - Use search to find specific add-ons
+   - Check ratings and reviews
+
+3. **Install Add-on**
+   - Click on the add-on you want
+   - Click "Install"
+   - Add-on will sync across devices
+
+4. **Configure (if needed)**
+   - Some add-ons require API keys
+   - Follow setup instructions
+   - Test with sample content
+
+</Steps>
+
+## Organizing Your Catalogs
+
+### Catalog Priority
+
+Stremio displays catalogs in order of installation:
+
+<Steps>
+
+1. **Install preferred catalogs first**
+   - Most used catalogs get highest priority
+   - Appears first in browse sections
+
+2. **Uninstall unused catalogs**
+   - Reduces clutter
+   - Improves performance
+
+3. **Reinstall to change order**
+   - Uninstall and reinstall in desired order
+   - Newest installed appears first
+
+</Steps>
+
+### Content Filtering
+
+**Filter by:**
+- **Genre**: Action, Comedy, Drama, etc.
+- **Type**: Movies, TV Shows, Anime
+- **Year**: Release year ranges
+- **Rating**: IMDb or other ratings
+- **Language**: Content language
+
+### Custom Collections
+
+Some add-ons provide specialized catalogs:
+
+- **Anime Catalogs**: Dedicated anime content
+- **Documentary Collections**: Educational content
+- **International Content**: Region-specific media
+- **Classic Movies**: Older film collections
+- **Indie Content**: Independent productions
+
+## Metadata Add-on Configuration
+
+### Language Settings
+
+<Steps>
+
+1. **Set Interface Language**
+   - Settings → General → Interface Language
+   - Affects metadata language preference
+
+2. **Install Language-Specific Add-ons**
+   - Search for your language code (ES, FR, DE, etc.)
+   - Install localized metadata sources
+
+3. **Test Language Support**
+   - Search for content in your language
+   - Check if descriptions appear correctly
+
+</Steps>
+
+### Poster Preferences
+
+**RPDB Configuration:**
+<Steps>
+
+1. **Create RPDB Account**
+   - Visit [ratingposterdb.com](https://ratingposterdb.com/)
+
+2. **Configure Preferences**
+   - Set preferred poster regions
+   - Choose rating sources
+   - Customize display options
+
+3. **Install RPDB Add-on**
+   - Use your API key
+   - Test with sample content
+
+</Steps>
+
+## Troubleshooting Catalog Issues
+
+### Content Not Appearing
+
+**Solutions:**
+- Check internet connection
+- Verify add-on is installed and enabled
+- Clear cache (Settings → Advanced → Clear Cache)
+- Restart Stremio
+- Check add-on status on developer's site
+
+### Metadata Not Loading
+
+**Solutions:**
+- Wait 24-48 hours for sync
+- Check metadata add-on configuration
+- Verify API keys are valid
+- Try alternative metadata add-ons
+
+### Slow Loading
+
+**Solutions:**
+- Reduce number of installed catalogs
+- Use faster internet connection
+- Clear cache regularly
+- Disable unused add-ons
+
+## Legal Considerations
+
+<Callout type="warning">
+**Important Legal Note:** Some catalog add-ons may provide access to copyrighted content. Users are responsible for complying with local copyright laws. Stremio itself is legal, but the content accessed through add-ons may not be.
+</Callout>
+
+**Legal Add-ons:**
+- Official streaming service catalogs
+- Public domain content
+- Creative Commons licensed material
+- User-generated content platforms
+
+**Gray Area Add-ons:**
+- Torrent aggregators
+- Unofficial streaming sources
+- Region-locked content unlockers
+
+## Best Practices
+
+✅ **Do:**
+- Install add-ons from trusted sources
+- Keep add-ons updated
+- Use reputable metadata sources
+- Organize catalogs by priority
+- Test add-ons before relying on them
+- Respect copyright laws
+
+❌ **Don't:**
+- Install add-ons from unknown developers
+- Share API keys or credentials
+- Use add-ons for illegal content
+- Install too many catalogs (causes clutter)
+- Ignore add-on warnings or errors
+
+## Advanced: Creating Custom Catalogs
+
+For developers interested in creating add-ons:
+
+<Steps>
+
+1. **Learn the Stremio Add-on SDK**
+   - Visit [github.com/Stremio/stremio-addon-sdk](https://github.com/Stremio/stremio-addon-sdk)
+
+2. **Choose Content Source**
+   - API access to content database
+   - Web scraping (with permission)
+   - User-generated content
+
+3. **Implement Manifest**
+   - Define catalog structure
+   - Set metadata endpoints
+   - Configure streaming sources
+
+4. **Test and Deploy**
+   - Test locally first
+   - Deploy to hosting service
+   - Share with community
+
+</Steps>
+
+## Related Resources
+
+- [Add-ons Explained](/addons/addons-explained/) - Understanding add-ons
+- [How to Install/Remove Add-ons Safely](/addons/how-to-install-remove-addons-safely/) - Installation guide
+- [How to Evaluate Add-on Trust](/addons/how-to-evaluate-addon-trust/) - Safety guide
+- [Metadata Add-on Setup](/metadata/aiometadata-setup/) - Metadata configuration
+
+---
+
+*Sources:*
+- [Stremio Add-on SDK Documentation](https://github.com/Stremio/stremio-addon-sdk)
+- [Torrentio GitHub](https://github.com/IceLord/torrentio)
+- [Jackett Documentation](https://github.com/Jackett/Jackett)
+- [Rating Poster Database](https://ratingposterdb.com/)
+- [Trakt.tv](https://trakt.tv/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

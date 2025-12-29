@@ -4,17 +4,409 @@ description: Guide to subtitle add-ons and legal considerations
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Add-ons Explained](/addons/addons-explained/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Subtitles enhance the viewing experience by providing captions and translations. This guide covers subtitle add-ons, their usage, and important legal considerations.
+
+## Understanding Subtitle Add-ons
+
+### What Subtitle Add-ons Do
+
+Subtitle add-ons provide:
+- **Caption Files**: Text versions of dialogue
+- **Multiple Languages**: Translations and foreign language support
+- **Hearing Support**: Accessibility for the deaf and hard of hearing
+- **Learning Aid**: Language learning assistance
+
+<Callout type="info">
+Most subtitle add-ons source from community-contributed databases. Quality and availability vary by language and content popularity.
 </Callout>
 
-## Overview
+### Built-in Subtitle Support
 
-This guide will cover:
-- Popular subtitle add-ons
-- OpenSubtitles integration
-- Subtitle synchronization
-- Legal considerations for subtitles
+Stremio includes basic subtitle support:
+- **Automatic Detection**: Finds subtitles for some content
+- **Manual Upload**: Upload your own subtitle files
+- **Basic Synchronization**: Adjust timing
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+## Popular Subtitle Add-ons
+
+### OpenSubtitles
+
+**Description**: World's largest subtitle database with millions of subtitle files.
+
+**Features:**
+- 90+ languages supported
+- Community-contributed subtitles
+- Quality ratings and user feedback
+- Automatic subtitle matching
+
+**Installation:**
+- Search for "OpenSubtitles" in add-on catalog
+- No additional configuration needed
+
+**Source**: [opensubtitles.org](https://www.opensubtitles.org/)
+
+### Subscene Add-on
+
+**Description**: Alternative subtitle source with focus on quality.
+
+**Features:**
+- High-quality subtitle files
+- Multiple language support
+- User ratings and comments
+- Regular updates
+
+**Installation:** Search for "Subscene" in add-on catalog.
+
+### Language-Specific Add-ons
+
+**Spanish Subtitles:**
+- Dedicated Spanish subtitle database
+- Latin American and European Spanish variants
+
+**Arabic Subtitles:**
+- RTL (right-to-left) language support
+- Multiple Arabic dialects
+
+**Asian Languages:**
+- Chinese, Japanese, Korean subtitle support
+- Specialized character encoding
+
+## Installing Subtitle Add-ons
+
+<Steps>
+
+1. **Open Add-ons Page**
+   - Click puzzle piece icon
+   - Go to Settings → Add-ons
+
+2. **Search for Subtitles**
+   - Search "subtitle" or specific language
+   - Check ratings and reviews
+
+3. **Install Add-on**
+   - Click on desired add-on
+   - Click "Install"
+   - Add-on syncs across devices
+
+4. **Test Installation**
+   - Play content with known subtitles
+   - Check if subtitles appear in player
+
+</Steps>
+
+## Using Subtitles in Stremio
+
+### Enabling Subtitles
+
+<Steps>
+
+1. **Start Playback**
+   - Play any video content
+   - Subtitles appear automatically if available
+
+2. **Manual Selection**
+   - Click subtitle icon in player controls
+   - Choose from available subtitle tracks
+   - Select language and quality
+
+3. **Upload Custom Subtitles**
+   - Click subtitle icon
+   - Select "Upload Subtitle"
+   - Choose .srt or .vtt file from device
+
+</Steps>
+
+### Subtitle Settings
+
+<Steps>
+
+1. **Access Settings**
+   - Go to Settings → Player
+   - Find Subtitles section
+
+2. **Configure Preferences**
+   - **Default Language**: Set preferred subtitle language
+   - **Auto-enable**: Turn subtitles on automatically
+   - **Font Size**: Adjust text size
+   - **Style**: Change colors and fonts
+
+3. **Advanced Options**
+   - Subtitle delay adjustment
+   - Position on screen
+   - Background opacity
+
+</Steps>
+
+## Subtitle Synchronization
+
+### Timing Issues
+
+**Common Problems:**
+- Subtitles appear too early or late
+- Not synchronized with audio
+- Different frame rates causing sync issues
+
+### Fixing Synchronization
+
+<Steps>
+
+1. **During Playback**
+   - Press subtitle delay buttons (+/-)
+   - Usually found in player controls
+   - Adjust in small increments
+
+2. **Manual Adjustment**
+   - Settings → Player → Subtitle Delay
+   - Set custom delay in milliseconds
+   - Save for consistent playback
+
+3. **Frame Rate Sync**
+   - Some content has different frame rates
+   - May require subtitle file editing
+   - Use subtitle editing software
+
+</Steps>
+
+### Advanced Synchronization
+
+For persistent issues:
+
+<Steps>
+
+1. **Download Subtitle File**
+   - Find correct subtitle file
+   - Edit timing with subtitle editor
+
+2. **Use Subtitle Software**
+   - Aegisub (free, open source)
+   - Subtitle Edit (free)
+   - Adjust timing manually
+
+3. **Re-upload Modified File**
+   - Upload corrected subtitle file
+   - Save as default for that content
+
+</Steps>
+
+## Subtitle Quality and Sources
+
+### Quality Indicators
+
+**Good Subtitle Signs:**
+- ✅ **Proper Timing**: Syncs with dialogue
+- ✅ **Accurate Translation**: Correct language translation
+- ✅ **Complete Text**: No missing dialogue
+- ✅ **Proper Formatting**: Correct line breaks and formatting
+
+**Poor Quality Signs:**
+- ❌ **Wrong Timing**: Off by seconds
+- ❌ **Poor Translation**: Inaccurate or awkward language
+- ❌ **Missing Parts**: Incomplete subtitle coverage
+- ❌ **Formatting Issues**: Overlapping text or poor readability
+
+### Finding Better Subtitles
+
+<Steps>
+
+1. **Check Multiple Sources**
+   - Try different subtitle add-ons
+   - Compare quality ratings
+
+2. **User Ratings**
+   - Look for highly rated subtitles
+   - Read user comments for quality feedback
+
+3. **Language Variants**
+   - Choose appropriate regional variant
+   - UK vs US English, Latin vs European Spanish
+
+4. **Manual Download**
+   - Download from OpenSubtitles.org directly
+   - Upload custom subtitle files
+
+</Steps>
+
+## Legal Considerations for Subtitles
+
+<Callout type="warning">
+**Important Legal Note:** Subtitle copyright laws vary by country. While subtitles themselves are often not copyrighted, their distribution and use may be subject to legal restrictions.
+</Callout>
+
+### Copyright Considerations
+
+**Generally Legal:**
+- Subtitles for public domain content
+- Fair use educational purposes
+- Personal use of downloaded subtitles
+- Subtitles created by users themselves
+
+**Potentially Restricted:**
+- Commercial subtitle distribution
+- Subtitles for copyrighted content (in some jurisdictions)
+- Automated subtitle generation from copyrighted audio
+
+### OpenSubtitles Legal Position
+
+OpenSubtitles.org states:
+- Subtitles are user-generated contributions
+- Users retain copyright of their subtitle files
+- Platform facilitates sharing, not ownership
+- Users responsible for legal compliance
+
+<Callout type="info">
+Always check local laws regarding subtitle usage. In most countries, downloading and using subtitles for personal viewing is legal, but commercial distribution may not be.
+</Callout>
+
+### DMCA and Copyright Claims
+
+**What Happens:**
+- Copyright holders can file DMCA takedown requests
+- Subtitle files may be removed from databases
+- Users may receive warnings or account suspensions
+
+**Protection:**
+- Use reputable subtitle sources
+- Avoid uploading copyrighted subtitle files
+- Respect content creator rights
+
+## Creating and Contributing Subtitles
+
+### Contributing to OpenSubtitles
+
+<Steps>
+
+1. **Create Account**
+   - Register at [opensubtitles.org](https://www.opensubtitles.org/)
+
+2. **Upload Subtitles**
+   - Find content without subtitles
+   - Create or obtain subtitle file
+   - Upload with proper metadata
+
+3. **Quality Standards**
+   - Ensure accurate timing
+   - Provide correct translation
+   - Follow formatting guidelines
+
+4. **Community Rating**
+   - Other users rate your submissions
+   - High ratings improve visibility
+   - Feedback helps improve quality
+
+</Steps>
+
+### Subtitle Creation Tools
+
+**Free Tools:**
+- **Aegisub**: Professional subtitle editor
+- **Subtitle Edit**: User-friendly editor
+- **Gaupol**: GNOME subtitle editor
+
+**Online Tools:**
+- **Veed.io**: Online subtitle editor
+- **Kapwing**: Web-based subtitle creation
+- **YouTube Studio**: For YouTube content
+
+## Troubleshooting Subtitle Issues
+
+### Subtitles Not Appearing
+
+**Solutions:**
+- Check if subtitle add-on is installed and enabled
+- Verify content has available subtitles
+- Try different subtitle sources
+- Check language settings
+
+### Poor Subtitle Quality
+
+**Solutions:**
+- Try alternative subtitle files
+- Check user ratings on subtitle sites
+- Download and edit subtitle files manually
+- Look for professionally created subtitles
+
+### Sync Issues
+
+**Solutions:**
+- Use player timing controls
+- Download subtitle file and edit timing
+- Check if content frame rate matches subtitle timing
+- Try subtitles from different sources
+
+### Language Not Available
+
+**Solutions:**
+- Install additional subtitle add-ons
+- Check OpenSubtitles.org directly
+- Look for user-created subtitles
+- Consider creating subtitles yourself
+
+## Best Practices
+
+✅ **Do:**
+- Install reputable subtitle add-ons
+- Check subtitle quality ratings
+- Adjust timing for better sync
+- Respect copyright laws
+- Contribute high-quality subtitles
+
+❌ **Don't:**
+- Download subtitles from suspicious sources
+- Upload copyrighted subtitle files
+- Ignore subtitle quality issues
+- Use subtitles for commercial purposes without permission
+- Distribute subtitles without proper attribution
+
+## Advanced Subtitle Features
+
+### Multi-Language Support
+
+<Steps>
+
+1. **Install Multiple Add-ons**
+   - Different add-ons for different languages
+   - Compare quality between sources
+
+2. **Language Preferences**
+   - Set primary and fallback languages
+   - Configure auto-selection
+
+3. **Custom Language Packs**
+   - Download language-specific subtitle packs
+   - Create personal subtitle collections
+
+</Steps>
+
+### Hearing Accessibility
+
+**Features for Accessibility:**
+- **Descriptive Subtitles**: Include sound descriptions
+- **SDH Subtitles**: For deaf and hard of hearing
+- **Large Text**: Increased font size options
+- **High Contrast**: Better visibility settings
+
+### Learning and Education
+
+**Language Learning:**
+- Bilingual subtitles (original + translation)
+- Vocabulary highlighting
+- Pronunciation guides
+- Grammar annotations
+
+## Related Resources
+
+- [Player Settings: Subtitles & Audio](/using-stremio/player-settings-subtitles-audio/) - Subtitle configuration
+- [Add-ons Explained](/addons/addons-explained/) - Understanding add-ons
+- [Install & Remove Add-ons Safely](/addons/how-to-install-remove-addons-safely/) - Installation guide
+- [Language & Regional Settings](/metadata/language-and-regional-settings/) - Language configuration
+
+---
+
+*Sources:*
+- [OpenSubtitles.org](https://www.opensubtitles.org/)
+- [Aegisub Documentation](https://aegisub.org/)
+- [Subtitle Edit](https://www.nikse.dk/subtitleedit)
+- [EFF - Fair Use Guidelines](https://www.eff.org/issues/fair-use)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

@@ -4,17 +4,523 @@ description: Fix subtitle issues in Stremio
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Troubleshooting Overview](/troubleshooting/overview/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Subtitle problems can make content unwatchable. This guide covers all common subtitle issues and provides step-by-step solutions to get your subtitles working properly.
+
+## Understanding Subtitle Types
+
+### Built-in Subtitles
+
+**Embedded Subtitles:**
+- **Included in Stream**: Subtitles built into video file
+- **Automatic Detection**: Player finds them automatically
+- **No Extra Setup**: Work immediately
+- **Language Selection**: Choose from available tracks
+
+**External Subtitles:**
+- **Separate Files**: Downloaded separately
+- **Manual Loading**: Must be added to player
+- **File Formats**: .srt, .vtt, .ass, .ssa
+- **Sync Issues**: May need timing adjustment
+
+### Add-on Subtitles
+
+**Subtitle Add-ons:**
+- **OpenSubtitles**: Largest subtitle database
+- **Subscene**: User-uploaded subtitles
+- **Addic7ed**: TV-focused subtitles
+- **Podnapisi**: Multi-language support
+
+**How They Work:**
+- Search subtitle databases automatically
+- Download matching subtitles
+- Apply to current video
+- Update regularly for new content
+
+## Basic Subtitle Setup
+
+### Enabling Subtitles
+
+<Steps>
+
+1. **Check Subtitle Button**
+   - Look for CC icon in player controls
+   - Click to open subtitle menu
+   - See available subtitle options
+   - Select desired language
+
+2. **Player Controls**
+   - Press 'S' key to toggle subtitles
+   - Use mouse to click subtitle button
+   - Check on-screen display options
+   - Verify subtitle visibility
+
+3. **Default Settings**
+   - Settings → Player → Subtitles
+   - Set default language
+   - Enable auto-load subtitles
+   - Configure subtitle appearance
+
+</Steps>
+
+### Language Selection
+
+<Steps>
+
+1. **Available Languages**
+   - Click subtitle button during playback
+   - See list of available languages
+   - Select preferred language
+   - Check if language is supported
+
+2. **Language Priority**
+   - Set primary language in settings
+   - Configure fallback languages
+   - Enable multiple subtitle tracks
+   - Test language switching
+
+</Steps>
+
+<Callout type="info">
+Not all content has subtitles in every language. Popular content usually has more subtitle options.
 </Callout>
 
-## Overview
+## Subtitle Add-on Issues
 
-This guide will cover:
-- Subtitle add-on troubleshooting
-- Subtitle sync issues
-- Language selection problems
-- Manual subtitle loading
+### Installing Subtitle Add-ons
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+<Steps>
+
+1. **Access Add-on Catalog**
+   - Click add-ons button in Stremio
+   - Search for "subtitle" or specific add-on name
+   - Look for official or highly-rated add-ons
+   - Click install for chosen add-on
+
+2. **Popular Subtitle Add-ons**
+   - **OpenSubtitles.com**: Most comprehensive
+   - **Subscene.com**: High-quality user subtitles
+   - **Addic7ed.com**: TV series focused
+   - **Podnapisi.net**: European languages
+
+3. **Add-on Configuration**
+   - Open add-on settings
+   - Configure language preferences
+   - Set download options
+   - Test with sample content
+
+</Steps>
+
+### Add-on Troubleshooting
+
+**Common Add-on Problems:**
+- **Not Loading**: Add-on failed to install
+- **No Results**: No subtitles found for content
+- **Wrong Language**: Incorrect language selection
+- **Outdated Add-on**: Needs update
+
+<Steps>
+
+1. **Update Add-ons**
+   - Check for add-on updates
+   - Install latest versions
+   - Restart Stremio after updates
+   - Test subtitle functionality
+
+2. **Reinstall Add-ons**
+   - Uninstall problematic add-on
+   - Restart Stremio
+   - Reinstall from catalog
+   - Configure settings again
+
+3. **Test Different Add-ons**
+   - Try alternative subtitle add-ons
+   - Compare results across add-ons
+   - Use multiple add-ons for better coverage
+   - Report issues to add-on developers
+
+</Steps>
+
+## Manual Subtitle Loading
+
+### Loading External Subtitles
+
+<Steps>
+
+1. **Prepare Subtitle File**
+   - Download .srt or compatible format
+   - Name file to match video file
+   - Place in same folder as video (local files)
+   - Ensure correct encoding (UTF-8 preferred)
+
+2. **Load in Stremio**
+   - Start playing video
+   - Click subtitle button
+   - Select "Add Subtitle File"
+   - Browse and select subtitle file
+   - Subtitles should appear
+
+3. **URL Subtitles**
+   - Click subtitle button
+   - Select "Add Subtitle URL"
+   - Paste direct link to subtitle file
+   - Subtitles load from web link
+
+</Steps>
+
+### Subtitle File Formats
+
+**Supported Formats:**
+- **SRT**: Most common, plain text timing
+- **VTT**: Web video text tracks
+- **ASS/SSA**: Advanced subtitle format
+- **SUB**: MicroDVD subtitle format
+- **IDX/SUB**: VobSub image-based subtitles
+
+**Format Conversion:**
+- Use online converters if needed
+- Tools like Subtitle Edit
+- VLC media player conversion
+- Ensure UTF-8 encoding
+
+## Subtitle Sync Issues
+
+### Timing Problems
+
+**Sync Issues:**
+- **Too Early**: Subtitles appear before speech
+- **Too Late**: Subtitles lag behind dialogue
+- **Inconsistent**: Timing drifts during video
+- **Wrong Frame Rate**: 24fps vs 30fps mismatch
+
+<Steps>
+
+1. **Manual Sync Adjustment**
+   - Use J/K keys to adjust timing
+   - J: Delay subtitles (+0.1s)
+   - K: Reset to default
+   - L: Advance subtitles (-0.1s)
+   - Fine-tune in small increments
+
+2. **Automatic Sync**
+   - Some add-ons offer auto-sync
+   - Use reference points in video
+   - Match subtitle to specific dialogue
+   - Save sync settings per video
+
+</Steps>
+
+### Frame Rate Sync
+
+<Steps>
+
+1. **Check Video Frame Rate**
+   - Use media info tools
+   - Check original video properties
+   - Compare with subtitle timing
+   - Adjust for frame rate differences
+
+2. **Player Frame Rate**
+   - Settings → Player → Frame Rate
+   - Set to match video content
+   - Enable frame rate conversion
+   - Test sync after changes
+
+</Steps>
+
+## Appearance and Display Issues
+
+### Subtitle Styling
+
+<Steps>
+
+1. **Access Style Settings**
+   - Click subtitle button → Subtitle Settings
+   - Or Settings → Player → Subtitles
+   - Customize font, size, color
+   - Adjust position and background
+
+2. **Common Adjustments**
+   - **Font Size**: Increase for visibility
+   - **Color**: White or yellow text
+   - **Background**: Black box or outline
+   - **Position**: Bottom 10-20% of screen
+
+</Steps>
+
+### Visibility Problems
+
+**Can't See Subtitles:**
+- **Wrong Track**: Check active subtitle track
+- **Transparency**: Adjust opacity settings
+- **Position**: Move off-screen subtitles
+- **Format Issues**: Unsupported subtitle format
+
+<Steps>
+
+1. **Check Track Selection**
+   - Click subtitle button
+   - Verify correct track is selected
+   - Try different subtitle tracks
+   - Check if subtitles are enabled
+
+2. **Display Settings**
+   - Adjust subtitle opacity
+   - Change background settings
+   - Modify outline/border
+   - Test different positions
+
+</Steps>
+
+## Content-Specific Issues
+
+### Streaming vs Local Content
+
+**Streaming Content:**
+- Depends on available subtitle tracks
+- Add-on compatibility required
+- May have limited language options
+- Quality varies by source
+
+**Local Content:**
+- Full control over subtitle files
+- Can use any compatible format
+- Better sync control
+- Multiple subtitle tracks possible
+
+### Language Availability
+
+**Limited Subtitles:**
+- **Older Content**: Fewer subtitle options
+- **Niche Content**: Limited translations
+- **Regional Content**: Language-specific availability
+- **Live Content**: Real-time subtitle limitations
+
+**Solutions:**
+- Check multiple subtitle sources
+- Use community subtitle sites
+- Request subtitles from creators
+- Use automatic translation tools
+
+## Advanced Troubleshooting
+
+### Codec and Format Issues
+
+**Subtitle Codec Problems:**
+- **Encoding Issues**: Wrong text encoding
+- **Format Corruption**: Damaged subtitle files
+- **Codec Mismatch**: Player can't decode format
+- **Font Problems**: Missing required fonts
+
+<Steps>
+
+1. **Check File Encoding**
+   - Open subtitle file in text editor
+   - Verify UTF-8 encoding
+   - Convert encoding if needed
+   - Save with correct encoding
+
+2. **Font Issues**
+   - Install missing fonts
+   - Use system default fonts
+   - Convert to image-based subtitles
+   - Use web-safe fonts
+
+</Steps>
+
+### Network and Download Issues
+
+**Download Problems:**
+- **Slow Connection**: Subtitle downloads fail
+- **Blocked Sites**: Firewall blocking subtitle sites
+- **Server Issues**: Subtitle server down
+- **Rate Limiting**: Too many download requests
+
+<Steps>
+
+1. **Network Troubleshooting**
+   - Check internet connection
+   - Disable VPN temporarily
+   - Clear browser cache
+   - Try different DNS servers
+
+2. **Alternative Sources**
+   - Use different subtitle add-ons
+   - Download manually from websites
+   - Use offline subtitle files
+   - Check subtitle server status
+
+</Steps>
+
+## Third-Party Tools
+
+### Subtitle Creation and Editing
+
+**Useful Tools:**
+- **Subtitle Edit**: Free subtitle editor
+- **Aegisub**: Advanced subtitle creation
+- **Subtitle Workshop**: Multi-format support
+- **VLC**: Basic subtitle sync
+
+<Steps>
+
+1. **Create Custom Subtitles**
+   - Use automatic transcription tools
+   - Manual timing with video playback
+   - Adjust sync with reference points
+   - Export in compatible formats
+
+2. **Edit Existing Subtitles**
+   - Fix timing issues
+   - Correct text errors
+   - Add missing translations
+   - Improve formatting
+
+</Steps>
+
+### Automatic Subtitle Tools
+
+**AI Tools:**
+- **YouTube Automatic Captions**: Basic transcription
+- **Otter.ai**: AI transcription service
+- **Google Recorder**: Voice to text
+- **Microsoft Azure**: Professional transcription
+
+**Usage Tips:**
+- Review and correct AI transcripts
+- Adjust timing for video sync
+- Use as starting point for manual editing
+- Combine with existing subtitle tracks
+
+## Platform-Specific Issues
+
+### Android Issues
+
+<Steps>
+
+1. **Permission Checks**
+   - Grant storage permissions
+   - Allow file access for subtitle files
+   - Check app permissions in settings
+
+2. **File Access**
+   - Use file manager to locate subtitles
+   - Ensure correct file paths
+   - Check file format compatibility
+   - Test with different file locations
+
+</Steps>
+
+### Desktop Issues
+
+<Steps>
+
+1. **File Path Issues**
+   - Ensure subtitle file in same folder
+   - Check file naming conventions
+   - Verify read permissions
+   - Use absolute paths if needed
+
+2. **Player Integration**
+   - Update video player components
+   - Check codec installations
+   - Verify subtitle engine
+   - Test with different video files
+
+</Steps>
+
+### Web Version Issues
+
+<Steps>
+
+1. **Browser Compatibility**
+   - Use modern browsers (Chrome, Firefox, Edge)
+   - Enable JavaScript and cookies
+   - Allow pop-ups for subtitle downloads
+   - Check browser extension interference
+
+2. **Web Limitations**
+   - Limited local file access
+   - Browser security restrictions
+   - CORS policy limitations
+   - Web player format support
+
+</Steps>
+
+## Getting Help
+
+### Community Resources
+
+**Help Sources:**
+- **Stremio Forums**: Subtitle-specific discussions
+- **Subtitle Communities**: Reddit r/subtitles, forums
+- **Add-on Developers**: Contact subtitle add-on creators
+- **Video Player Communities**: VLC, MPC-HC forums
+
+### Professional Help
+
+**When to Seek Help:**
+- Subtitles not working on any content
+- Persistent sync issues across all videos
+- Add-on installation failures
+- Platform-specific subtitle problems
+
+## Prevention and Best Practices
+
+### Subtitle Maintenance
+
+✅ **Do:**
+- Keep subtitle add-ons updated
+- Test subtitles on new content
+- Backup working subtitle configurations
+- Use reliable subtitle sources
+- Check subtitle encoding
+- Maintain consistent naming conventions
+- Use UTF-8 encoding for files
+- Test sync on different devices
+- Report subtitle issues to add-ons
+- Use multiple subtitle sources
+
+❌ **Don't:**
+- Use outdated subtitle add-ons
+- Ignore subtitle encoding issues
+- Rely on single subtitle source
+- Skip testing subtitle sync
+- Use corrupted subtitle files
+- Ignore subtitle format compatibility
+- Mix different subtitle formats
+- Use very old subtitle files
+- Disable subtitle add-ons completely
+- Ignore subtitle quality differences
+
+### Quality Assurance
+
+**Subtitle Quality Checks:**
+- **Accuracy**: Check translation quality
+- **Timing**: Verify sync with dialogue
+- **Formatting**: Ensure proper line breaks
+- **Completeness**: Check for missing sections
+
+**Regular Testing:**
+- Test subtitles monthly
+- Check popular new releases
+- Verify different languages
+- Update add-ons proactively
+
+## Related Resources
+
+- [Player Settings](/using-stremio/player-settings-subtitles-audio/) - Subtitle configuration
+- [Add-on Installation](/addons/how-to-install-remove-addons-safely/) - Installing subtitle add-ons
+- [Audio/Video Sync](/troubleshooting/audio-video-sync/) - Timing-related issues
+- [Add-on Evaluation](/addons/how-to-evaluate-addon-trust/) - Choosing subtitle add-ons
+
+---
+
+*Sources:*
+- [OpenSubtitles](https://www.opensubtitles.com/)
+- [Subscene](https://subscene.com/)
+- [Addic7ed](https://www.addic7ed.com/)
+- [Subtitle Edit](https://www.nikse.dk/subtitleedit)
+- [Stremio Community Forums](https://forum.stremio.com/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

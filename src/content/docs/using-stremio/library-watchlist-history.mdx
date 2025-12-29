@@ -4,17 +4,429 @@ description: Manage your library, watchlist, and viewing history in Stremio
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out the [Navigation Basics](/using-stremio/navigation-basics/) guide or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Stremio provides powerful tools to organize and track your viewing habits. This guide covers how to use your Library, Watchlist, and History effectively.
+
+## Understanding the Three Systems
+
+### Library
+
+**What it is:**
+- Your personal collection of content
+- Content you've explicitly added
+- Syncs across all your devices
+- Shows progress for partially watched content
+
+**When to use:**
+- Content you're actively watching
+- Shows you want to track
+- Movies you plan to watch soon
+- Content you want to keep organized
+
+### Watchlist
+
+**What it is:**
+- Content you want to watch later
+- Separate from your active library
+- Good for "save for later" functionality
+- Doesn't clutter your main library
+
+**When to use:**
+- Interesting content you find while browsing
+- Recommendations you want to remember
+- Content for specific moods or occasions
+- Building a queue for future viewing
+
+### History
+
+**What it is:**
+- Record of everything you've watched
+- Automatically tracked by Stremio
+- Includes watch dates and progress
+- Private to your account
+
+**When to use:**
+- Finding content you watched before
+- Tracking your viewing habits
+- Resuming interrupted viewing sessions
+- Discovering patterns in your preferences
+
+<Callout type="info">
+Library and Watchlist sync across devices when logged in. History is also synced for continuity.
 </Callout>
 
-## Overview
+## Managing Your Library
 
-This guide will cover:
-- Adding content to your library
-- Managing your watchlist
-- Viewing and clearing watch history
-- Organizing your content collections
+### Adding Content to Library
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+<Steps>
+
+1. **From Browse/Discover**
+   - Find content you want to add
+   - Hover over the poster
+   - Click the bookmark icon (+) or "Add to Library"
+
+2. **From Search Results**
+   - Search for specific content
+   - Click on the result
+   - Click "Add to Library" button
+
+3. **From Content Details**
+   - Open any movie/show page
+   - Click "Add to Library" in the top section
+   - Content appears in your Library tab
+
+4. **Bulk Adding**
+   - Some add-ons allow adding entire collections
+   - Use Trakt integration for bulk imports
+
+</Steps>
+
+### Organizing Your Library
+
+**Sort Options:**
+- **Recently Added**: Newest additions first
+- **Recently Watched**: Based on last viewing
+- **Alphabetical**: A-Z by title
+- **Year**: By release year
+- **Rating**: By IMDb/TMDb rating
+
+**Filter Options:**
+- **Type**: Movies, TV Shows, or both
+- **Genre**: Action, Comedy, Drama, etc.
+- **Status**: Watching, Completed, On Hold
+
+### Library Maintenance
+
+<Steps>
+
+1. **Remove Completed Content**
+   - Right-click (or long-press) on finished items
+   - Select "Remove from Library"
+   - Content moves to History but stays out of Library
+
+2. **Update Progress**
+   - Stremio automatically tracks progress
+   - Manual updates possible in some cases
+   - Resume playback from where you left off
+
+3. **Clean Up Duplicates**
+   - Check for multiple entries of same content
+   - Remove incorrect versions
+   - Keep the entry with best metadata
+
+</Steps>
+
+## Using the Watchlist
+
+### Adding to Watchlist
+
+<Steps>
+
+1. **Quick Add**
+   - Hover over content poster
+   - Click the watchlist icon (clock) or "Add to Watchlist"
+
+2. **From Content Page**
+   - Open content details
+   - Click "Add to Watchlist" button
+   - Appears in separate Watchlist tab
+
+3. **Bulk Operations**
+   - Select multiple items
+   - Add entire categories or recommendations
+
+</Steps>
+
+### Managing Watchlist
+
+<Steps>
+
+1. **View Watchlist**
+   - Click "Watchlist" tab in main navigation
+   - See all saved content
+   - Sort by date added or alphabetically
+
+2. **Move to Library**
+   - When ready to watch
+   - Click "Add to Library" from Watchlist
+   - Or start watching (auto-adds to Library)
+
+3. **Remove from Watchlist**
+   - Right-click or long-press
+   - Select "Remove from Watchlist"
+   - Content disappears from Watchlist
+
+</Steps>
+
+### Watchlist Strategies
+
+**Organization Tips:**
+- **Thematic Lists**: Create lists for different moods (Action, Comedy, etc.)
+- **Seasonal**: Holiday movies, summer blockbusters
+- **Priority**: High-priority vs. "maybe later"
+- **Shared**: Content to watch with others
+
+## Viewing History
+
+### Accessing History
+
+<Steps>
+
+1. **Open History Tab**
+   - Click "History" in main navigation
+   - Shows chronological viewing history
+   - Includes dates and times
+
+2. **Search History**
+   - Use search bar within History
+   - Find specific content quickly
+   - Filter by date range
+
+3. **Resume Watching**
+   - Click on any item to resume
+   - Continues from last position
+   - Works across devices
+
+</Steps>
+
+### History Features
+
+**What History Tracks:**
+- **Content Watched**: Movies, episodes, clips
+- **Watch Dates**: When you watched each item
+- **Progress**: How much you watched
+- **Device Info**: Which device you used
+- **Time Spent**: Duration of viewing sessions
+
+### Managing History
+
+<Steps>
+
+1. **Clear Specific Items**
+   - Right-click on history item
+   - Select "Remove from History"
+   - Item disappears from history
+
+2. **Clear All History**
+   - Settings → Privacy
+   - "Clear History" option
+   - Permanently removes all history
+
+3. **Export History**
+   - Some integrations (Trakt, Letterboxd)
+   - Export for backup or analysis
+   - Third-party tools available
+
+</Steps>
+
+<Callout type="warning">
+Clearing history is permanent and cannot be undone. Consider exporting first if you want to keep records.
+</Callout>
+
+## Continue Watching
+
+### How It Works
+
+**Continue Watching shows:**
+- Content you've started but not finished
+- Appears prominently in Library
+- Sorted by most recent activity
+- Helps you pick up where you left off
+
+### Managing Continue Watching
+
+<Steps>
+
+1. **Resume Playback**
+   - Click on any item in Continue Watching
+   - Automatically starts from last position
+   - Works across all devices
+
+2. **Remove Items**
+   - Right-click or long-press
+   - Select "Remove from Continue Watching"
+   - Content stays in Library but not in Continue section
+
+3. **Mark as Finished**
+   - Complete the content
+   - Automatically removes from Continue Watching
+   - Moves to completed status
+
+</Steps>
+
+## Sync Across Devices
+
+### How Sync Works
+
+<Steps>
+
+1. **Account Required**
+   - Must be logged into Stremio account
+   - Free account syncs basic data
+   - Premium features may require subscription
+
+2. **What Syncs**
+   - Library and Watchlist
+   - Viewing progress and history
+   - Add-on installations
+   - Some settings and preferences
+
+3. **Sync Timing**
+   - Changes sync within minutes
+   - Works over Wi-Fi and mobile data
+   - Offline changes sync when connected
+
+</Steps>
+
+### Troubleshooting Sync
+
+**Common Issues:**
+- **Not syncing**: Check internet connection, restart app
+- **Missing content**: Wait a few minutes, check other devices
+- **Progress lost**: Ensure you're logged in, check account status
+
+## Advanced Organization
+
+### Using Trakt Integration
+
+<Steps>
+
+1. **Install Trakt Add-on**
+   - Search for "Trakt" in add-on catalog
+   - Install and configure with your Trakt account
+
+2. **Enhanced Features**
+   - Multiple custom lists
+   - Ratings and reviews
+   - Watch statistics
+   - Social features
+
+3. **List Management**
+   - Create custom lists (Watching, Completed, etc.)
+   - Import from other services
+   - Share lists with others
+
+</Steps>
+
+### Third-Party Tools
+
+**Integration Options:**
+- **Letterboxd**: Movie tracking and reviews
+- **MyAnimeList**: Anime and manga tracking
+- **TVTime**: TV show tracking
+- **Simkl**: Alternative to Trakt
+
+### Custom Categories
+
+**Organization Methods:**
+- **Prefix System**: Use prefixes like "[Action]" in titles
+- **Separate Accounts**: Different accounts for different content types
+- **External Tools**: Use spreadsheet or database for complex organization
+
+## Privacy Considerations
+
+### Data Privacy
+
+**What Stremio Stores:**
+- Your viewing history (private to you)
+- Library and Watchlist contents
+- Progress information
+- Anonymous usage analytics
+
+**What Stremio Doesn't Share:**
+- Specific content you watch (only aggregated analytics)
+- Your personal information with third parties
+- Viewing habits for advertising
+
+### Privacy Settings
+
+<Steps>
+
+1. **Access Privacy Settings**
+   - Settings → Privacy
+   - Review available options
+
+2. **Analytics Control**
+   - Enable/disable usage analytics
+   - Help improve Stremio (optional)
+
+3. **Data Management**
+   - Clear history if desired
+   - Export data for backup
+   - Delete account to remove all data
+
+</Steps>
+
+## Best Practices
+
+✅ **Do:**
+- Regularly clean your Library
+- Use Watchlist for "save for later"
+- Keep History for reference
+- Sync across devices
+- Use Trakt for advanced organization
+- Respect privacy settings
+
+❌ **Don't:**
+- Add everything to Library
+- Ignore Continue Watching section
+- Clear history without backup
+- Share account credentials
+- Use Library as permanent storage
+
+## Troubleshooting
+
+### Library Issues
+
+**Content Not Appearing:**
+- Check if logged in
+- Wait for sync
+- Restart Stremio
+- Check add-on status
+
+**Progress Not Saving:**
+- Ensure account is active
+- Check internet connection
+- Restart app
+- Clear cache
+
+### Watchlist Problems
+
+**Items Disappearing:**
+- Check if accidentally removed
+- Verify account sync
+- Look in History section
+
+**Not Syncing:**
+- Check login status
+- Restart devices
+- Clear app cache
+
+### History Issues
+
+**Missing Entries:**
+- Check if history was cleared
+- Verify account settings
+- Check device sync
+
+**Wrong Dates:**
+- Time zone differences
+- Device time settings
+- Sync delays
+
+## Related Resources
+
+- [Navigation Basics](/using-stremio/navigation-basics/) - Basic Stremio usage
+- [Sync & Multiple Devices](/using-stremio/sync-and-multiple-devices/) - Device synchronization
+- [Clean Library Best Practices](/metadata/best-practices-for-clean-library/) - Library organization
+- [Trakt Integration Guide](https://trakt.tv/) - Advanced tracking
+
+---
+
+*Sources:*
+- [Stremio Help Center](https://www.stremio.com/help)
+- [Trakt.tv Documentation](https://trakt.tv/)
+- [Letterboxd](https://letterboxd.com/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

@@ -4,17 +4,521 @@ description: Troubleshoot playback problems and buffering in Stremio
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Troubleshooting Overview](/troubleshooting/overview/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Buffering and playback issues can ruin the streaming experience. This guide covers the most common causes of buffering and provides step-by-step solutions to optimize your streaming performance.
+
+## Understanding Buffering
+
+### What Causes Buffering
+
+**Network-Related:**
+- **Slow Internet**: Insufficient bandwidth
+- **Network Congestion**: Too many devices using bandwidth
+- **Unstable Connection**: Dropping or inconsistent speeds
+- **ISP Throttling**: Internet provider limiting speeds
+
+**Device-Related:**
+- **CPU Overload**: Device struggling to decode video
+- **Memory Issues**: Insufficient RAM for buffering
+- **Storage Problems**: Slow or full storage
+- **Outdated Hardware**: Device too old for modern streaming
+
+**Content-Related:**
+- **High Quality Sources**: 4K or high-bitrate streams
+- **Poor Encoding**: Badly compressed source files
+- **Server Issues**: Streaming server problems
+- **Geographic Distance**: Content hosted far away
+
+### Buffer Types
+
+**Types of Buffering:**
+- **Initial Buffer**: Loading at start of playback
+- **Re-buffer**: Stopping during playback to load more
+- **Quality Buffer**: Switching quality causes buffering
+- **Seek Buffer**: Buffering when jumping in video
+
+## Immediate Fixes
+
+### Quick Solutions
+
+<Steps>
+
+1. **Lower Quality**
+   - Click gear icon during playback
+   - Select lower resolution (1080p → 720p → 480p)
+   - Choose "Auto" for automatic adjustment
+   - Test if buffering stops
+
+2. **Pause and Wait**
+   - Let video buffer completely before playing
+   - Build up buffer ahead of playback
+   - Resume once buffer reaches comfortable level
+   - Use this for initial buffering issues
+
+3. **Restart Stream**
+   - Stop current video
+   - Start playback again
+   - May connect to different server
+   - Clears temporary buffering issues
+
+</Steps>
+
+### Network Quick Fixes
+
+<Steps>
+
+1. **Check Speed**
+   - Run speed test (fast.com or speedtest.net)
+   - Ensure minimum required speeds
+   - Test during different times of day
+   - Compare with ISP advertised speeds
+
+2. **Reduce Network Load**
+   - Pause other downloads/uploads
+   - Close bandwidth-heavy applications
+   - Disconnect unnecessary devices
+   - Use wired connection if possible
+
+3. **Router Restart**
+   - Unplug router for 30 seconds
+   - Plug back in and wait for reconnection
+   - Test streaming after restart
+   - May resolve temporary network issues
+
+</Steps>
+
+## Network Optimization
+
+### Internet Speed Requirements
+
+**Minimum Speeds by Quality:**
+- **480p SD**: 3 Mbps
+- **720p HD**: 5 Mbps
+- **1080p Full HD**: 10 Mbps
+- **4K UHD**: 25 Mbps
+
+<Callout type="info">
+For best experience, use speeds 1.5-2x the minimum requirements to account for network variability.
 </Callout>
 
-## Overview
+### Connection Optimization
 
-This guide will cover:
-- Common buffering causes
-- Network optimization
-- Cache clearing
-- Quality settings adjustment
+<Steps>
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+1. **Use Ethernet**
+   - Connect device directly to router with Ethernet cable
+   - Eliminates Wi-Fi interference
+   - Provides stable, fast connection
+   - Best for high-quality streaming
+
+2. **Wi-Fi Optimization**
+   - Move closer to router
+   - Reduce interference (microwaves, cordless phones)
+   - Use 5GHz band instead of 2.4GHz
+   - Update router firmware
+
+3. **VPN Considerations**
+   - Test without VPN first
+   - Choose nearby VPN servers
+   - Use WireGuard protocol (faster than OpenVPN)
+   - Enable split tunneling for local traffic
+
+</Steps>
+
+### ISP and Network Issues
+
+**Common ISP Problems:**
+- **Speed Throttling**: Deliberate speed reduction
+- **Data Caps**: Usage limits causing slowdowns
+- **Peak Hour Congestion**: Network overload during busy times
+- **Equipment Issues**: Modem/router problems
+
+<Steps>
+
+1. **Test ISP Performance**
+   - Run speed tests at different times
+   - Compare speeds with and without VPN
+   - Check ISP status page for outages
+   - Contact ISP about throttling
+
+2. **Bypass ISP Issues**
+   - Use VPN to encrypt traffic
+   - Change DNS servers (8.8.8.8 or 1.1.1.1)
+   - Try different streaming protocols
+   - Use proxy servers if needed
+
+</Steps>
+
+## Device Optimization
+
+### Hardware Performance
+
+<Steps>
+
+1. **Close Background Apps**
+   - Android: Check recent apps and close unnecessary ones
+   - iOS: Double-click home, swipe up on apps
+   - Desktop: Close browser tabs and applications
+   - TV: Exit unused apps
+
+2. **Free Up Memory**
+   - Clear app cache regularly
+   - Restart device weekly
+   - Close memory-intensive apps
+   - Monitor RAM usage
+
+3. **Storage Cleanup**
+   - Delete unnecessary files
+   - Clear download cache
+   - Move files to external storage
+   - Defragment storage (HDD only)
+
+</Steps>
+
+### Platform-Specific Fixes
+
+**Android Devices:**
+- Enable "Don't keep activities" in developer options
+- Clear Google Play Services cache
+- Update Android System WebView
+- Use lightweight launcher
+
+**iOS Devices:**
+- Close background apps completely
+- Clear Safari cache if using web version
+- Update to latest iOS
+- Reset network settings if needed
+
+**Desktop Computers:**
+- Update graphics drivers
+- Close unnecessary browser tabs
+- Disable browser extensions
+- Use hardware acceleration
+
+**TV/Stick Devices:**
+- Clear device cache
+- Update device firmware
+- Use wired connection
+- Close background apps
+
+## Stremio Settings Optimization
+
+### Player Settings
+
+<Steps>
+
+1. **Buffer Configuration**
+   - Settings → Player → Buffer Size
+   - Increase initial buffer (10-30 seconds)
+   - Adjust max buffer size
+   - Enable preload settings
+
+2. **Quality Settings**
+   - Set default quality to Auto
+   - Enable hardware acceleration
+   - Adjust frame rate settings
+   - Configure aspect ratio
+
+3. **Network Settings**
+   - Increase connection timeout
+   - Adjust retry attempts
+   - Configure proxy settings
+   - Enable background buffering
+
+</Steps>
+
+### Add-on Optimization
+
+<Steps>
+
+1. **Add-on Management**
+   - Limit to 10-15 essential add-ons
+   - Disable unused catalogs
+   - Update add-ons regularly
+   - Check add-on performance
+
+2. **Source Selection**
+   - Try different streaming sources
+   - Test various add-ons for same content
+   - Choose reliable, fast sources
+   - Avoid overloaded servers
+
+</Steps>
+
+## Advanced Troubleshooting
+
+### Codec and Format Issues
+
+**Video Codec Problems:**
+- **H.264/AVC**: Most compatible, widely supported
+- **H.265/HEVC**: Better compression, limited device support
+- **VP9**: Web-optimized, good performance
+- **AV1**: Newest, limited support
+
+<Steps>
+
+1. **Check Codec Support**
+   - Test different video formats
+   - Use software decoding if hardware fails
+   - Update device firmware for codec support
+   - Check manufacturer codec list
+
+2. **Format Conversion**
+   - Use different streaming sources
+   - Try alternative add-ons
+   - Convert files if using local content
+   - Use universal formats (MP4)
+
+</Steps>
+
+### Server and Source Issues
+
+**Content Source Problems:**
+- **Server Overload**: Too many users on same server
+- **Geographic Restrictions**: Content not available in region
+- **CDN Issues**: Content delivery network problems
+- **Source Quality**: Poorly encoded or corrupted files
+
+<Steps>
+
+1. **Try Alternative Sources**
+   - Use different add-ons for same content
+   - Switch streaming servers
+   - Try lower quality versions
+   - Check content availability
+
+2. **Server Testing**
+   - Test multiple sources quickly
+   - Note which sources buffer less
+   - Report problematic sources
+   - Use community-recommended add-ons
+
+</Steps>
+
+## Cache and Storage Issues
+
+### Cache Management
+
+<Steps>
+
+1. **Clear Stremio Cache**
+   - Settings → Storage → Clear Cache
+   - Don't clear all data (preserves settings)
+   - Restart app after clearing
+   - Monitor for improvement
+
+2. **System Cache Clearing**
+   - Android: Settings → Storage → Cached data
+   - iOS: Settings → General → iPhone Storage
+   - Desktop: Use built-in cleanup tools
+   - Clear browser cache for web version
+
+3. **Cache Optimization**
+   - Adjust cache size in settings
+   - Enable cache compression
+   - Set cache location to fast storage
+   - Regular cache maintenance
+
+</Steps>
+
+### Storage Performance
+
+**Storage Issues:**
+- **Slow Storage**: HDD instead of SSD
+- **Fragmented Files**: Need defragmentation
+- **Full Storage**: Insufficient free space
+- **Corrupt Files**: Damaged storage areas
+
+<Steps>
+
+1. **Storage Cleanup**
+   - Delete temporary files
+   - Clear download folders
+   - Remove unused applications
+   - Use storage analyzer tools
+
+2. **Storage Optimization**
+   - Defragment mechanical drives
+   - Use faster storage when possible
+   - Enable storage optimization
+   - Monitor storage health
+
+</Steps>
+
+## Monitoring and Diagnostics
+
+### Performance Monitoring
+
+<Steps>
+
+1. **Built-in Tools**
+   - Check Stremio performance indicators
+   - Monitor buffer levels
+   - Watch CPU/memory usage
+   - Track network activity
+
+2. **System Monitoring**
+   - Use device performance monitors
+   - Check network usage
+   - Monitor temperature
+   - Track battery usage (mobile)
+
+</Steps>
+
+### Diagnostic Tools
+
+**Useful Tools:**
+- **Network Speed Tests**: fast.com, speedtest.net
+- **System Monitors**: Task Manager, Activity Monitor
+- **Codec Checkers**: MediaInfo, FFprobe
+- **Network Analyzers**: Wireshark (advanced)
+
+<Steps>
+
+1. **Log Analysis**
+   - Enable debug logging in Stremio
+   - Check log files for error messages
+   - Look for buffering-related errors
+   - Share logs with support if needed
+
+2. **Performance Testing**
+   - Test different content types
+   - Compare performance across devices
+   - Document improvement after changes
+   - Create baseline performance metrics
+
+</Steps>
+
+## Content-Specific Issues
+
+### Live Streaming
+
+**Live Stream Challenges:**
+- **Real-time Requirements**: No buffering tolerance
+- **Variable Quality**: Quality fluctuates with network
+- **Server Load**: High demand on live servers
+- **Latency**: Inherent delay in live streams
+
+**Live Stream Solutions:**
+- Use stable, fast internet
+- Choose reliable streaming sources
+- Accept some buffering as normal
+- Use lower quality for stability
+
+### High-Quality Content
+
+**4K and HDR Issues:**
+- **Bandwidth Intensive**: Requires very fast internet
+- **Device Support**: Not all devices support 4K/HDR
+- **Codec Requirements**: Advanced codecs needed
+- **Storage Demands**: Large cache requirements
+
+<Steps>
+
+1. **4K Optimization**
+   - Ensure 25+ Mbps internet speed
+   - Use wired Ethernet connection
+   - Enable hardware decoding
+   - Update device firmware
+
+2. **HDR Support**
+   - Check device HDR capabilities
+   - Ensure proper display settings
+   - Use HDR-compatible cables
+   - Test with known HDR content
+
+</Steps>
+
+## Getting Help
+
+### Community Support
+
+**Help Resources:**
+- **Stremio Forums**: User experiences and solutions
+- **Reddit r/Stremio**: Real-time troubleshooting
+- **Discord Communities**: Live help and discussions
+- **GitHub Issues**: Report bugs and get developer input
+
+### Professional Support
+
+**When to Contact Support:**
+- Buffering on all content and sources
+- Issues after all troubleshooting steps
+- Hardware-specific buffering problems
+- Persistent performance issues
+
+## Prevention Strategies
+
+### Regular Maintenance
+
+✅ **Do:**
+- Keep Stremio and add-ons updated
+- Clear cache weekly
+- Monitor internet speeds regularly
+- Restart devices periodically
+- Update device firmware
+- Use wired connections when possible
+- Test streaming performance monthly
+- Keep storage optimized
+- Monitor device temperature
+- Backup important settings
+
+❌ **Don't:**
+- Overload network with multiple streams
+- Use outdated add-ons
+- Ignore storage full warnings
+- Run too many background apps
+- Use unstable Wi-Fi connections
+- Skip device updates
+- Ignore buffering warnings
+- Use very old devices for high-quality content
+- Chain multiple network devices
+- Use consumer internet for 4K streaming
+
+## Best Practices
+
+### Optimal Streaming Setup
+
+**Network:**
+- Use 50+ Mbps internet for 4K
+- Ethernet over Wi-Fi when possible
+- Position router centrally
+- Update router firmware regularly
+
+**Device:**
+- Keep devices updated
+- Close unnecessary apps
+- Use hardware acceleration
+- Monitor device performance
+
+**Stremio:**
+- Limit add-ons to essentials
+- Use Auto quality setting
+- Enable background buffering
+- Clear cache regularly
+
+### Quality of Life Improvements
+
+**User Experience:**
+- Pre-buffer content before watching
+- Choose content during off-peak hours
+- Use reliable add-ons
+- Test new sources before committing
+- Have backup streaming options
+
+## Related Resources
+
+- [Network Checklist](/troubleshooting/network-checklist/) - Network troubleshooting
+- [Player Settings](/using-stremio/player-settings-subtitles-audio/) - Video player configuration
+- [Android TV Performance](/troubleshooting/android-tv-performance/) - Device-specific issues
+- [Add-on Evaluation](/addons/how-to-evaluate-addon-trust/) - Choosing good add-ons
+
+---
+
+*Sources:*
+- [Stremio Help Center](https://www.stremio.com/help)
+- [Netflix Playback Specifications](https://help.netflix.com/en/node/306)
+- [YouTube Recommended Requirements](https://support.google.com/youtube/answer/78358)
+- [Stremio Community Forums](https://forum.stremio.com/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

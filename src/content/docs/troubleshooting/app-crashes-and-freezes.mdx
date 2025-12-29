@@ -4,17 +4,435 @@ description: Troubleshoot Stremio crashes and freezing issues
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Troubleshooting Overview](/troubleshooting/overview/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+App crashes and freezes can be frustrating but are usually fixable. This guide covers the most common causes and solutions for Stremio crashes and freezing issues.
+
+## Common Crash Causes
+
+### Memory Issues
+
+**Out of Memory:**
+- **Large Library**: Too many items in library
+- **Many Add-ons**: Excessive installed add-ons
+- **Background Apps**: Other apps consuming RAM
+- **System Resources**: Insufficient device RAM
+
+**Memory Solutions:**
+- Close unnecessary background apps
+- Reduce number of active add-ons
+- Clear app cache regularly
+- Restart device to free memory
+
+### Corrupt Data
+
+**Cache Corruption:**
+- **Damaged Cache**: Corrupt temporary files
+- **Incomplete Downloads**: Interrupted file transfers
+- **Storage Issues**: Bad sectors on storage
+- **Sync Conflicts**: Conflicting data from multiple devices
+
+**Data Solutions:**
+- Clear all cache and temporary data
+- Reset app data (backup first)
+- Check storage health
+- Re-sync account data
+
+### Add-on Conflicts
+
+**Incompatible Add-ons:**
+- **Outdated Add-ons**: Old versions causing conflicts
+- **Malicious Add-ons**: Harmful or poorly coded add-ons
+- **API Changes**: Add-ons not updated for new APIs
+- **Resource Heavy**: Add-ons consuming too many resources
+
+**Add-on Solutions:**
+- Update all add-ons to latest versions
+- Disable recently installed add-ons
+- Test with minimal add-ons enabled
+- Check add-on compatibility
+
+## Immediate Fixes
+
+### Force Stop and Restart
+
+<Steps>
+
+1. **Force Stop App**
+   - Android: Settings → Apps → Stremio → Force Stop
+   - iOS: Double-click home button, swipe up on Stremio
+   - Desktop: Task Manager → End Task
+   - Web: Close browser tab/window
+
+2. **Restart Device**
+   - Full power cycle (turn off completely)
+   - Wait 30 seconds before turning back on
+   - Launch Stremio fresh
+
+3. **Clear Recent Apps**
+   - Close all other running applications
+   - Free up system resources
+   - Launch Stremio in clean environment
+
+</Steps>
+
+### Clear Cache and Data
+
+<Steps>
+
+1. **Clear Cache Only**
+   - Settings → Apps → Stremio → Storage → Clear Cache
+   - Or Settings → Storage → Apps → Stremio → Clear Cache
+   - Safe operation, preserves settings
+
+2. **Clear All Data**
+   - ⚠️ Backup important data first
+   - Settings → Apps → Stremio → Storage → Clear Storage
+   - Resets app to fresh install state
+   - Requires re-login and add-on reinstallation
+
+3. **Selective Clearing**
+   - Clear specific add-on caches
+   - Remove temporary streaming data
+   - Keep user preferences intact
+
+</Steps>
+
+<Callout type="warning">
+Clearing all data will remove your library, watchlist, and settings. Backup important data first.
 </Callout>
 
-## Overview
+## Advanced Troubleshooting
 
-This guide will cover:
-- Common crash causes
-- Clearing cache and data
-- Reinstalling the app
-- System compatibility checks
+### Safe Mode Testing
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+<Steps>
+
+1. **Launch in Safe Mode**
+   - Press and hold app icon
+   - Select "Safe Mode" or similar option
+   - Or temporarily disable all add-ons
+
+2. **Test Basic Functions**
+   - Check if app launches without crashing
+   - Test basic playback without add-ons
+   - Verify core functionality works
+
+3. **Identify Problem Add-ons**
+   - Enable add-ons one by one
+   - Test after each addition
+   - Note which add-on causes crashes
+
+</Steps>
+
+### Log Analysis
+
+<Steps>
+
+1. **Enable Debug Logging**
+   - Settings → Advanced → Enable Debug Logs
+   - Reproduce the crash
+   - Check log files for error messages
+
+2. **Log Locations**
+   - Android: `/sdcard/Android/data/com.stremio.stremio/files/logs`
+   - Desktop: `%APPDATA%/stremio/logs` (Windows) or `~/Library/Logs/stremio` (macOS)
+   - Web: Browser developer console
+
+3. **Common Error Patterns**
+   - Memory allocation errors
+   - Null pointer exceptions
+   - Network timeout errors
+   - Codec initialization failures
+
+</Steps>
+
+### System Compatibility
+
+**Check Requirements:**
+- **OS Version**: Minimum supported version
+- **RAM**: Adequate memory for app
+- **Storage**: Sufficient free space
+- **Architecture**: 32-bit vs 64-bit compatibility
+
+**Update System:**
+- Install latest OS updates
+- Update graphics drivers (desktop)
+- Install system security patches
+- Check for firmware updates
+
+## Platform-Specific Fixes
+
+### Android Fixes
+
+<Steps>
+
+1. **App Optimization**
+   - Battery Settings → Don't optimize Stremio
+   - Data Usage → Allow background data
+   - Memory → Clear app from recent apps
+
+2. **System Settings**
+   - Developer Options → Force GPU rendering
+   - Apps → Stremio → Set as not optimized
+   - Storage → Free up space
+
+3. **Reinstallation**
+   - Uninstall Stremio completely
+   - Restart device
+   - Reinstall from Play Store
+
+</Steps>
+
+### iOS Fixes
+
+<Steps>
+
+1. **App Refresh**
+   - Force close and reopen app
+   - Restart iOS device
+   - Check available storage space
+
+2. **Background App Management**
+   - Close all background apps
+   - Reset location & privacy if needed
+   - Check iOS version compatibility
+
+3. **Reinstallation**
+   - Delete app and reinstall
+   - Sign in again
+   - Restore purchases if applicable
+
+</Steps>
+
+### Desktop Fixes
+
+<Steps>
+
+1. **System Resources**
+   - Close unnecessary programs
+   - Check RAM and CPU usage
+   - Update graphics drivers
+   - Run antivirus scan
+
+2. **App Data Reset**
+   - Backup `%APPDATA%/stremio` folder
+   - Delete Stremio data folder
+   - Reinstall application
+   - Restore backup selectively
+
+3. **Compatibility Mode**
+   - Run as administrator (Windows)
+   - Compatibility mode for older OS
+   - Disable antivirus temporarily
+
+</Steps>
+
+### Web Version Fixes
+
+<Steps>
+
+1. **Browser Issues**
+   - Clear browser cache and cookies
+   - Disable browser extensions
+   - Try different browser
+   - Update browser to latest version
+
+2. **Web-Specific**
+   - Check internet connection stability
+   - Disable VPN/proxy temporarily
+   - Allow camera/microphone if prompted
+   - Check browser security settings
+
+</Steps>
+
+## Add-on Related Crashes
+
+### Identifying Problem Add-ons
+
+<Steps>
+
+1. **Systematic Testing**
+   - Disable all add-ons
+   - Enable one add-on at a time
+   - Test for stability after each
+
+2. **Add-on Updates**
+   - Check for add-on updates
+   - Update to latest versions
+   - Check add-on repository for issues
+
+3. **Alternative Add-ons**
+   - Find alternative add-ons for same content
+   - Check community reviews
+   - Report problematic add-ons
+
+</Steps>
+
+### Common Problem Add-ons
+
+**Types to Watch:**
+- **Beta Add-ons**: Unstable development versions
+- **Unofficial Add-ons**: Not from trusted sources
+- **Resource Intensive**: Add-ons using too much memory
+- **Outdated Add-ons**: No longer maintained
+
+## Network Related Crashes
+
+### Connection Issues
+
+**Network Problems:**
+- **Unstable Connection**: Dropping internet
+- **VPN Issues**: VPN causing timeouts
+- **Firewall Blocking**: Security software interference
+- **DNS Problems**: Domain resolution failures
+
+**Network Solutions:**
+- Test connection stability
+- Try without VPN
+- Check firewall settings
+- Change DNS servers
+
+### Streaming Timeouts
+
+**Timeout Issues:**
+- **Slow Servers**: Streaming source too slow
+- **Network Congestion**: Peak hour slowdowns
+- **Geographic Distance**: Server location issues
+- **ISP Throttling**: Internet provider limiting speed
+
+## Performance Optimization
+
+### Memory Management
+
+<Steps>
+
+1. **Reduce Memory Usage**
+   - Limit concurrent streams
+   - Close unused tabs/windows
+   - Disable high-quality settings
+   - Use lower resolution playback
+
+2. **System Optimization**
+   - Close background applications
+   - Disable unnecessary services
+   - Increase virtual memory (desktop)
+   - Upgrade RAM if possible
+
+</Steps>
+
+### Storage Optimization
+
+**Storage Issues:**
+- **Low Disk Space**: Insufficient storage
+- **Fragmented Storage**: File system fragmentation
+- **Slow Storage**: HDD instead of SSD
+- **Corrupt Files**: Damaged system files
+
+**Storage Solutions:**
+- Free up disk space
+- Defragment storage (HDD)
+- Run disk cleanup utilities
+- Check storage health
+
+## When to Reinstall
+
+### Reinstallation Checklist
+
+**When to Reinstall:**
+- ✅ All troubleshooting steps failed
+- ✅ Corrupt installation suspected
+- ✅ Major version update available
+- ✅ System changes (OS upgrade)
+- ✅ Persistent crashes after updates
+
+**Before Reinstalling:**
+- Backup important data
+- Note installed add-ons
+- Save custom settings
+- Export library if possible
+
+### Clean Reinstallation
+
+<Steps>
+
+1. **Complete Removal**
+   - Uninstall Stremio
+   - Delete all app data folders
+   - Remove from startup programs
+   - Clear registry entries (Windows)
+
+2. **Clean Installation**
+   - Download latest version from official source
+   - Install in default location
+   - Don't restore from backup initially
+   - Test with minimal configuration
+
+3. **Gradual Restoration**
+   - Add back essential add-ons one by one
+   - Restore settings gradually
+   - Test stability at each step
+
+</Steps>
+
+## Prevention Strategies
+
+### Regular Maintenance
+
+**Preventive Measures:**
+- **Regular Updates**: Keep app and add-ons updated
+- **Cache Management**: Clear cache weekly
+- **System Updates**: Install OS updates promptly
+- **Storage Monitoring**: Maintain adequate free space
+
+### Best Practices
+
+✅ **Do:**
+- Keep app and system updated
+- Monitor system resources
+- Use official add-ons when possible
+- Backup important data regularly
+- Test updates on secondary device first
+- Close app properly (don't force close habitually)
+
+❌ **Don't:**
+- Install add-ons from untrusted sources
+- Ignore system update notifications
+- Overload device with too many apps
+- Use cracked or modified app versions
+- Run Stremio on unsupported systems
+- Ignore crash warning signs
+
+## Getting Help
+
+### Community Support
+
+**Help Resources:**
+- **Stremio Forums**: Official community support
+- **Reddit r/Stremio**: User experiences and solutions
+- **Discord Communities**: Real-time troubleshooting
+- **GitHub Issues**: Report bugs and get developer help
+
+### Professional Support
+
+**When to Contact Support:**
+- Crashes on brand new installation
+- Hardware-specific crashes
+- Crashes affecting all users
+- Security-related crashes
+
+## Related Resources
+
+- [Troubleshooting Overview](/troubleshooting/overview/) - General troubleshooting guide
+- [Network Checklist](/troubleshooting/network-checklist/) - Network-related issues
+- [Android TV Performance](/troubleshooting/android-tv-performance/) - Device-specific issues
+- [Playback Buffering](/troubleshooting/playback-buffering/) - Streaming problems
+
+---
+
+*Sources:*
+- [Stremio Help Center](https://www.stremio.com/help)
+- [Android Developer Documentation](https://developer.android.com/)
+- [Apple Developer Documentation](https://developer.apple.com/)
+- [Stremio Community Forums](https://forum.stremio.com/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

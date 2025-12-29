@@ -4,17 +4,385 @@ description: Configure video player settings, subtitles, and audio options
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out the [Navigation Basics](/using-stremio/navigation-basics/) guide or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Stremio's video player offers extensive customization options for playback, subtitles, and audio. This guide covers all the settings and features available to optimize your viewing experience.
+
+## Player Controls & Interface
+
+### Basic Playback Controls
+
+**Standard Controls:**
+- **Play/Pause**: Spacebar or click center of video
+- **Seek**: Click timeline or use arrow keys
+- **Volume**: Mouse wheel or volume slider
+- **Fullscreen**: Double-click or F key
+- **Exit Fullscreen**: Escape key
+
+**Advanced Controls:**
+- **Speed Control**: 0.25x to 4x playback speed
+- **Frame-by-Frame**: Pause and use left/right arrows
+- **Skip Intro/Outro**: Custom skip buttons (addon-dependent)
+- **Next Episode**: Auto-play next episode
+
+### Player Interface
+
+**Overlay Elements:**
+- **Progress Bar**: Shows current position and buffer
+- **Time Display**: Current time / total duration
+- **Quality Indicator**: Current video quality
+- **Audio/Subtitles**: Active track indicators
+- **Cast Button**: Chromecast and other casting options
+
+<Callout type="tip">
+Press the `?` key during playback to see all available keyboard shortcuts.
 </Callout>
 
-## Overview
+## Video Quality & Playback
 
-This guide will cover:
-- Video player controls and settings
-- Subtitle configuration and customization
-- Audio track selection
-- Playback quality adjustments
+### Quality Settings
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+<Steps>
+
+1. **Access Quality Menu**
+   - Click the gear icon (⚙️) during playback
+   - Or right-click on video area
+   - Select "Quality" from menu
+
+2. **Available Options**
+   - **Auto**: Automatic quality selection
+   - **1080p, 720p, 480p, 360p**: Fixed resolutions
+   - **4K**: Ultra HD (if available)
+   - **Source**: Original quality (may be very high)
+
+3. **Quality Behavior**
+   - Auto adjusts based on connection speed
+   - Manual selection overrides auto mode
+   - Changes apply to current video only
+
+</Steps>
+
+### Playback Settings
+
+**Video Options:**
+- **Hardware Acceleration**: GPU decoding (recommended)
+- **Software Decoding**: CPU fallback
+- **Frame Rate**: Match source or force 24/30/60fps
+- **Aspect Ratio**: Auto, 16:9, 4:3, custom
+
+**Performance Settings:**
+- **Buffer Size**: Pre-load amount (higher = smoother)
+- **Connection Timeout**: How long to wait for streams
+- **Retry Attempts**: Auto-retry failed streams
+
+## Subtitles Configuration
+
+### Adding Subtitles
+
+<Steps>
+
+1. **Built-in Subtitles**
+   - Many streams include embedded subtitles
+   - Automatically detected and displayed
+   - No additional setup required
+
+2. **External Subtitle Files**
+   - Click subtitle button (CC icon)
+   - Select "Add Subtitle File"
+   - Choose .srt, .vtt, or .ass files
+   - Upload from device or URL
+
+3. **Subtitle Add-ons**
+   - Install subtitle add-ons from catalog
+   - OpenSubtitles, Subscene, Addic7ed
+   - Automatic subtitle downloads
+
+</Steps>
+
+### Subtitle Appearance
+
+<Steps>
+
+1. **Access Subtitle Settings**
+   - Click subtitle button during playback
+   - Select "Subtitle Settings" or gear icon
+   - Customize appearance options
+
+2. **Text Customization**
+   - **Font**: Size, family, color
+   - **Background**: Box color, opacity
+   - **Outline**: Border color, thickness
+   - **Shadow**: Drop shadow effects
+
+3. **Position & Timing**
+   - **Vertical Position**: Top, middle, bottom
+   - **Horizontal Alignment**: Left, center, right
+   - **Timing Offset**: Sync adjustment (+/- seconds)
+
+</Steps>
+
+### Subtitle Sources
+
+**Popular Subtitle Add-ons:**
+- **OpenSubtitles**: Largest subtitle database
+- **Subscene**: High-quality user submissions
+- **Addic7ed**: TV show focused
+- **Podnapisi**: Multi-language support
+
+<Callout type="info">
+Subtitle add-ons automatically search for and download subtitles based on content metadata.
+</Callout>
+
+## Audio Settings
+
+### Audio Track Selection
+
+<Steps>
+
+1. **Multiple Audio Tracks**
+   - Click audio button (speaker icon)
+   - See available language tracks
+   - Select preferred language
+
+2. **Audio Formats**
+   - **AAC, AC3, DTS**: Common formats
+   - **Multi-channel**: 5.1, 7.1 surround
+   - **Stereo**: Standard 2-channel
+
+3. **Audio Switching**
+   - Change tracks during playback
+   - Settings persist per video
+   - Auto-select based on language preference
+
+</Steps>
+
+### Audio Enhancement
+
+**Equalizer Settings:**
+- **Bass/Treble**: Frequency adjustments
+- **Balance**: Left/right channel balance
+- **Volume Boost**: Normalize quiet content
+- **Night Mode**: Reduce dynamic range
+
+**Advanced Audio:**
+- **Downmixing**: Convert surround to stereo
+- **Sample Rate**: Audio quality settings
+- **Bit Depth**: 16-bit, 24-bit, 32-bit
+
+## Global Player Settings
+
+### Accessing Settings
+
+<Steps>
+
+1. **Open Stremio Settings**
+   - Click profile icon (top right)
+   - Select "Settings"
+   - Navigate to "Player" section
+
+2. **General Settings**
+   - **Default Quality**: Starting quality for new videos
+   - **Auto-play**: Start playing automatically
+   - **Continue Watching**: Resume from last position
+
+3. **Interface Settings**
+   - **Controls Timeout**: How long controls stay visible
+   - **Seek Steps**: Skip forward/backward amount
+   - **Volume Steps**: Volume adjustment increments
+
+</Steps>
+
+### Language Preferences
+
+<Steps>
+
+1. **Default Languages**
+   - Set preferred audio language
+   - Set preferred subtitle language
+   - Auto-select based on system language
+
+2. **Language Fallback**
+   - Primary language → Secondary → English
+   - Subtitle fallback chain
+   - Audio track preferences
+
+</Steps>
+
+## Casting & External Playback
+
+### Chromecast Support
+
+<Steps>
+
+1. **Enable Casting**
+   - Click cast button during playback
+   - Select available Chromecast device
+   - Video plays on TV/external device
+
+2. **Cast Controls**
+   - Control playback from phone/tablet
+   - Volume control through TV
+   - Subtitle/audio selection
+
+3. **Cast Requirements**
+   - Same Wi-Fi network
+   - Chromecast device connected
+   - Stremio app on controlling device
+
+</Steps>
+
+### Other Casting Options
+
+**Supported Devices:**
+- **Roku**: Through Roku app
+- **Fire TV**: Amazon Fire TV devices
+- **Apple TV**: AirPlay support
+- **Smart TVs**: DLNA/UPnP compatible
+
+## Keyboard Shortcuts
+
+### Playback Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| Space | Play/Pause |
+| ← → | Seek backward/forward 10s |
+| ↑ ↓ | Volume up/down |
+| F | Fullscreen toggle |
+| M | Mute toggle |
+| 1-9 | Seek to 10%-90% |
+| 0 | Seek to beginning |
+
+### Subtitle Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| S | Toggle subtitles |
+| G | Increase subtitle size |
+| F | Decrease subtitle size |
+| H | Cycle subtitle tracks |
+| J | Subtitle delay +0.1s |
+| K | Subtitle delay -0.1s |
+
+### Audio Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| A | Cycle audio tracks |
+| B | Toggle audio boost |
+| N | Normalize audio |
+
+## Troubleshooting
+
+### Video Playback Issues
+
+**Buffering Problems:**
+- Check internet connection speed
+- Lower video quality
+- Increase buffer size in settings
+- Close other bandwidth-heavy apps
+
+**Quality Issues:**
+- Enable hardware acceleration
+- Update graphics drivers
+- Check codec support
+- Try software decoding
+
+### Subtitle Problems
+
+**Subtitles Not Loading:**
+- Check subtitle add-on installation
+- Verify internet connection
+- Try different subtitle source
+- Check file format compatibility
+
+**Sync Issues:**
+- Use timing offset controls
+- Download different subtitle file
+- Check frame rate matching
+- Manual sync with J/K keys
+
+### Audio Issues
+
+**No Sound:**
+- Check volume levels
+- Verify audio track selection
+- Test different audio formats
+- Check device audio settings
+
+**Poor Quality:**
+- Select higher quality audio track
+- Enable audio enhancements
+- Check original source quality
+- Update audio drivers
+
+## Advanced Configuration
+
+### Custom Player Options
+
+**For Power Users:**
+- **Custom User Agent**: Spoof different devices
+- **Proxy Settings**: Route through proxy servers
+- **Custom Headers**: Advanced streaming options
+- **Debug Logging**: Enable player logs
+
+### Add-on Specific Settings
+
+**Player Enhancements:**
+- **Torrentio**: Custom quality preferences
+- **Real-Debrid**: Premium link settings
+- **Plex**: Server-specific options
+- **Emby/Jellyfin**: Integration settings
+
+## Best Practices
+
+✅ **Do:**
+- Set preferred languages in settings
+- Use hardware acceleration when available
+- Keep subtitle add-ons updated
+- Test audio before long viewing sessions
+- Use keyboard shortcuts for efficiency
+
+❌ **Don't:**
+- Force highest quality on slow connections
+- Ignore subtitle sync issues
+- Use outdated subtitle add-ons
+- Overuse audio enhancement features
+- Skip player updates
+
+## Performance Optimization
+
+### For Different Devices
+
+**Desktop Computers:**
+- Enable hardware acceleration
+- Use highest quality settings
+- Multiple monitor support
+- Keyboard shortcut mastery
+
+**Mobile Devices:**
+- Auto quality for data saving
+- Touch-optimized controls
+- Battery optimization
+- Background playback
+
+**TV/Stick Devices:**
+- 4K support when available
+- Remote control optimization
+- Casting capabilities
+- Large interface elements
+
+## Related Resources
+
+- [Navigation Basics](/using-stremio/navigation-basics/) - Basic Stremio usage
+- [Add-on Installation](/addons/how-to-install-remove-addons-safely/) - Installing subtitle add-ons
+- [Search & Discover](/using-stremio/search-discover/) - Finding content
+- [Troubleshooting Player Issues](/troubleshooting/player-issues/) - Common problems
+
+---
+
+*Sources:*
+- [Stremio Help Center](https://www.stremio.com/help)
+- [OpenSubtitles](https://www.opensubtitles.com/)
+- [Subscene](https://subscene.com/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

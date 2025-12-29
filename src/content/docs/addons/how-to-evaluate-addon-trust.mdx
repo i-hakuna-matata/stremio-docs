@@ -4,17 +4,428 @@ description: Learn how to evaluate whether an add-on is trustworthy and safe
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Add-ons Explained](/addons/addons-explained/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Evaluating add-on trustworthiness is crucial for maintaining a safe and secure Stremio experience. This guide provides a comprehensive framework for assessing add-on safety.
+
+## Why Trust Evaluation Matters
+
+Add-ons have access to:
+- Your search queries and viewing habits
+- Device information and network data
+- Potentially sensitive account information
+- Content streaming and playback
+
+<Callout type="warning">
+Malicious add-ons can steal data, inject malware, track your activity, or compromise your device's security. Always evaluate add-ons before installation.
 </Callout>
 
-## Overview
+## Trust Evaluation Framework
 
-This guide will cover:
-- Signs of a trustworthy add-on
-- Red flags to watch for
-- Community reputation checks
-- Open-source verification
+### Step 1: Source Verification
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+**Official Catalog Add-ons:**
+- ✅ **Safe**: Curated by Stremio team
+- ✅ **Verified**: Regular security reviews
+- ✅ **Supported**: Official maintenance and updates
+
+**Community Add-ons:**
+- ⚠️ **Variable Risk**: Requires individual evaluation
+- ⚠️ **Community Verified**: Check reputation carefully
+- ⚠️ **Self-Maintained**: Developer responsibility
+
+### Step 2: Developer Assessment
+
+<Steps>
+
+1. **Check Developer Identity**
+   - Is the developer publicly known?
+   - Do they have a consistent online presence?
+   - Are they active in Stremio communities?
+
+2. **Review Developer History**
+   - How long have they been developing add-ons?
+   - Do they have other successful projects?
+   - What's their track record?
+
+3. **Verify Contact Information**
+   - Do they provide contact methods?
+   - Are they responsive to user questions?
+   - Do they have a professional online presence?
+
+</Steps>
+
+### Step 3: Community Reputation
+
+<Steps>
+
+1. **Reddit Research**
+   - Search [r/StremioAddons](https://www.reddit.com/r/StremioAddons/)
+   - Look for developer mentions
+   - Check user experiences and warnings
+
+2. **GitHub Analysis**
+   - Review repository activity
+   - Check issue reports and responses
+   - Look at contributor activity
+
+3. **Community Forums**
+   - Check Stremio Discord
+   - Look for developer discussions
+   - Note any community concerns
+
+</Steps>
+
+## Technical Trust Indicators
+
+### Code Quality Assessment
+
+**Open Source Add-ons:**
+<Steps>
+
+1. **Review Source Code**
+   - Is the code publicly available?
+   - Does it follow security best practices?
+   - Are dependencies reputable?
+
+2. **Check Dependencies**
+   - Are third-party libraries trustworthy?
+   - Are they regularly updated?
+   - Any known security vulnerabilities?
+
+3. **Code Review**
+   - Does the code handle data securely?
+   - Are there proper error handling?
+   - Is the architecture sound?
+
+</Steps>
+
+### Manifest Analysis
+
+**Manifest File Review:**
+- **HTTPS URLs**: Secure communication
+- **Clear Description**: Honest feature description
+- **Reasonable Permissions**: Only necessary access
+- **Valid Endpoints**: Working API endpoints
+
+### Update Frequency
+
+**Maintenance Indicators:**
+- ✅ **Regular Updates**: Active development
+- ✅ **Bug Fixes**: Responsive to issues
+- ✅ **Security Patches**: Addresses vulnerabilities
+- ❌ **Outdated**: No recent commits
+- ❌ **Abandoned**: No developer activity
+
+## User Experience Indicators
+
+### Installation and Setup
+
+**Trust Signals:**
+- ✅ **Clear Instructions**: Easy to understand setup
+- ✅ **Optional Configuration**: No forced settings
+- ✅ **Working Examples**: Demonstrates functionality
+
+**Red Flags:**
+- ❌ **Complex Setup**: Requires extensive configuration
+- ❌ **External Downloads**: Requires downloading files
+- ❌ **Payment Required**: Asks for money upfront
+
+### Runtime Behavior
+
+**Positive Signs:**
+- ✅ **Stable Performance**: No crashes or slowdowns
+- ✅ **Expected Features**: Works as described
+- ✅ **Clean Interface**: No unwanted ads or pop-ups
+
+**Warning Signs:**
+- ❌ **Unexpected Ads**: Shows advertisements
+- ❌ **Redirects**: Opens external websites
+- ❌ **Data Requests**: Asks for unnecessary information
+
+## Security Assessment Checklist
+
+### Pre-Installation Checklist
+
+☑️ **Source Verification:**
+- Is it from official catalog or verified community source?
+- Does the developer have good reputation?
+- Are there positive community reviews?
+
+☑️ **Technical Review:**
+- Is the manifest URL HTTPS?
+- Does it request reasonable permissions?
+- Is the add-on actively maintained?
+
+☑️ **Community Feedback:**
+- What do users say on Reddit?
+- Any security warnings or concerns?
+- Recent activity and updates?
+
+☑️ **Legal Compliance:**
+- Does it respect copyright laws?
+- Is the content source legitimate?
+- Any known legal issues?
+
+### Post-Installation Monitoring
+
+<Steps>
+
+1. **Initial Testing**
+   - Test with sample content
+   - Monitor for unusual behavior
+   - Check network activity
+
+2. **Ongoing Monitoring**
+   - Watch for performance issues
+   - Monitor data usage
+   - Check for unexpected features
+
+3. **Regular Reviews**
+   - Re-evaluate periodically
+   - Check for updates
+   - Verify continued trustworthiness
+
+</Steps>
+
+## Common Trust Evaluation Scenarios
+
+### Scenario 1: New Add-on from Unknown Developer
+
+**Evaluation Steps:**
+<Steps>
+
+1. **Research Developer**
+   - Check online presence
+   - Look for other projects
+   - Verify community reputation
+
+2. **Review Code (if available)**
+   - Check GitHub repository
+   - Look at code quality
+   - Verify dependencies
+
+3. **Community Check**
+   - Search Reddit for mentions
+   - Check for early user reports
+   - Wait for community feedback
+
+4. **Decision**
+   - If promising: Test in isolated environment
+   - If suspicious: Avoid installation
+   - Monitor community feedback
+
+</Steps>
+
+### Scenario 2: Popular Add-on with Mixed Reviews
+
+**Evaluation Steps:**
+<Steps>
+
+1. **Analyze Reviews**
+   - Separate legitimate concerns from trolls
+   - Look for patterns in complaints
+   - Check developer responses
+
+2. **Technical Investigation**
+   - Review recent updates
+   - Check for security fixes
+   - Verify current status
+
+3. **Risk Assessment**
+   - Weigh benefits vs. risks
+   - Consider alternatives
+   - Make informed decision
+
+</Steps>
+
+### Scenario 3: Official-Looking Add-on
+
+**Evaluation Steps:**
+<Steps>
+
+1. **Verify Authenticity**
+   - Check official Stremio sources
+   - Compare with known official add-ons
+   - Look for impersonation attempts
+
+2. **Contact Verification**
+   - Reach out to official support
+   - Confirm legitimacy
+   - Report suspicious add-ons
+
+3. **Community Confirmation**
+   - Check if community recognizes it
+   - Look for official endorsements
+   - Verify through multiple sources
+
+</Steps>
+
+## Trust Levels and Recommendations
+
+### High Trust (Safe to Install)
+
+**Characteristics:**
+- Official Stremio add-ons
+- Well-established community developers
+- Open source with good security practices
+- Positive community feedback
+- Regular updates and maintenance
+
+**Examples:**
+- Cinemeta (official)
+- Trakt integration
+- OpenSubtitles
+- Well-maintained community add-ons
+
+### Medium Trust (Use with Caution)
+
+**Characteristics:**
+- New but promising developers
+- Mixed but generally positive reviews
+- Some community verification
+- Reasonable technical practices
+
+**Recommendations:**
+- Test in controlled environment
+- Monitor behavior closely
+- Have removal plan ready
+- Consider alternatives
+
+### Low Trust (Avoid)
+
+**Characteristics:**
+- Unknown developers
+- No community presence
+- Poor reviews or warnings
+- Suspicious permissions or behavior
+- No source code or transparency
+
+**Action:**
+- Do not install
+- Report to community if suspicious
+- Warn others about risks
+
+## Advanced Evaluation Techniques
+
+### Technical Analysis
+
+For technically-savvy users:
+
+**Network Monitoring:**
+- Use browser dev tools to monitor requests
+- Check for suspicious endpoints
+- Verify data transmission security
+
+**Code Analysis:**
+- Review source code for security issues
+- Check for hardcoded credentials
+- Verify proper data handling
+
+**Manifest Inspection:**
+- Examine manifest.json file
+- Verify all URLs are legitimate
+- Check resource requirements
+
+### Community Intelligence
+
+**Advanced Research:**
+- Check multiple community sources
+- Look for developer interviews or posts
+- Verify claims through independent testing
+- Monitor long-term reputation
+
+## Reporting Untrustworthy Add-ons
+
+### Community Reporting
+
+<Steps>
+
+1. **Document Evidence**
+   - Collect screenshots and logs
+   - Note specific behaviors
+   - Gather user reports
+
+2. **Report on Reddit**
+   - Post detailed warning on r/StremioAddons
+   - Include evidence and examples
+   - Tag appropriately
+
+3. **Contact Developer**
+   - Give them chance to respond
+   - Note their reaction
+   - Update community
+
+4. **Follow Up**
+   - Monitor situation
+   - Update warnings as needed
+   - Help community stay informed
+
+</Steps>
+
+### Official Reporting
+
+<Steps>
+
+1. **Contact Stremio Support**
+   - Use official help channels
+   - Provide detailed evidence
+   - Request add-on review
+
+2. **Provide Complete Information**
+   - Add-on name and URL
+   - Specific security concerns
+   - Evidence of malicious behavior
+   - Impact on users
+
+3. **Follow Official Process**
+   - Cooperate with investigation
+   - Provide additional information
+   - Respect official decisions
+
+</Steps>
+
+## Building Trust as a Developer
+
+For add-on developers:
+
+### Transparency Practices
+
+<Steps>
+
+1. **Open Source Code**
+   - Make source code publicly available
+   - Use GitHub for hosting
+   - Allow community review
+
+2. **Clear Communication**
+   - Provide detailed descriptions
+   - Explain permission requirements
+   - Be responsive to user questions
+
+3. **Security Focus**
+   - Follow security best practices
+   - Regular security audits
+   - Prompt vulnerability fixes
+
+4. **Community Engagement**
+   - Participate in community discussions
+   - Respond to user feedback
+   - Build reputation through service
+
+</Steps>
+
+## Related Resources
+
+- [Add-ons Explained](/addons/addons-explained/) - Understanding add-ons
+- [Install & Remove Add-ons Safely](/addons/how-to-install-remove-addons-safely/) - Installation guide
+- [Avoiding Suspicious Add-ons](/privacy-security/avoiding-suspicious-addons/) - Security guide
+- [Reporting Issues & Scams](/privacy-security/reporting-issues-and-scams/) - Reporting problems
+
+---
+
+*Sources:*
+- [Stremio Add-on SDK Documentation](https://github.com/Stremio/stremio-addon-sdk)
+- [r/StremioAddons Community](https://www.reddit.com/r/StremioAddons/)
+- [OWASP Security Guidelines](https://owasp.org/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

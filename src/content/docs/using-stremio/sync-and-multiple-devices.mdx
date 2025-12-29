@@ -4,17 +4,406 @@ description: Sync your Stremio data across multiple devices
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out the [Navigation Basics](/using-stremio/navigation-basics/) guide or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Stremio's sync feature allows you to access your library, watchlist, and viewing progress across all your devices. This guide covers setting up sync and managing multiple devices effectively.
+
+## Setting Up Sync
+
+### Creating a Stremio Account
+
+<Steps>
+
+1. **Sign Up Process**
+   - Open Stremio app
+   - Click profile icon (top right)
+   - Select "Login" or "Create Account"
+   - Enter email and password
+
+2. **Email Verification**
+   - Check email for verification link
+   - Click link to activate account
+   - Return to app and login
+
+3. **Account Benefits**
+   - Sync across unlimited devices
+   - Backup of your data
+   - Access to premium features
+   - Community features
+
+</Steps>
+
+<Callout type="info">
+Stremio accounts are free and don't require payment information. Premium features are optional.
 </Callout>
 
-## Overview
+### Initial Sync Setup
 
-This guide will cover:
-- Setting up Stremio sync
-- Managing multiple devices
-- Syncing watchlist and library
-- Troubleshooting sync issues
+<Steps>
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+1. **Login on First Device**
+   - Enter credentials
+   - Allow data synchronization
+   - Initial sync may take a few minutes
+
+2. **Verify Sync Status**
+   - Check profile icon shows logged in status
+   - Library and watchlist should appear
+   - Settings sync across devices
+
+3. **Add Additional Devices**
+   - Install Stremio on other devices
+   - Login with same account
+   - Data automatically syncs
+
+</Steps>
+
+## What Gets Synced
+
+### Core Data
+
+**Always Synced:**
+- **Library**: Your personal collection
+- **Watchlist**: Saved for later content
+- **History**: Viewing history and progress
+- **Add-ons**: Installed add-ons and settings
+- **User Preferences**: App settings and configurations
+
+**Device-Specific:**
+- **Local Files**: Device-specific media
+- **Cache**: Temporary data (not synced)
+- **Offline Content**: Downloaded content
+
+### Sync Timing
+
+**How Often It Syncs:**
+- **Real-time**: Changes sync within seconds
+- **On App Start**: Full sync when opening app
+- **Manual Sync**: Force sync in settings
+- **Background**: Continuous sync when connected
+
+<Callout type="tip">
+Sync works over Wi-Fi and mobile data. Enable background sync for best experience.
+</Callout>
+
+## Managing Multiple Devices
+
+### Device Types Supported
+
+**Desktop:**
+- Windows, macOS, Linux
+- Multiple monitors supported
+- Keyboard shortcuts optimized
+- Full feature access
+
+**Mobile:**
+- Android and iOS
+- Touch-optimized interface
+- Background playback
+- Casting capabilities
+
+**TV/Stick:**
+- Android TV, Fire TV, Roku
+- Large interface elements
+- Remote control optimized
+- 4K support
+
+### Device Management
+
+<Steps>
+
+1. **View Connected Devices**
+   - Settings → Account
+   - See list of active devices
+   - Last sync time for each device
+
+2. **Device Limits**
+   - Unlimited devices allowed
+   - No restrictions on device types
+   - Simultaneous usage supported
+
+3. **Remove Devices**
+   - Select device from list
+   - Choose "Remove" or "Logout"
+   - Device loses access to account
+
+</Steps>
+
+### Device-Specific Settings
+
+**Customizing Per Device:**
+- **Quality Preferences**: Different quality on mobile vs. home
+- **Add-on Selection**: Different add-ons per device type
+- **Interface Settings**: Touch vs. mouse optimization
+- **Playback Settings**: Device-specific preferences
+
+## Sync Troubleshooting
+
+### Common Sync Issues
+
+**Not Syncing:**
+- Check internet connection
+- Verify login status
+- Restart Stremio app
+- Check account status
+
+**Missing Data:**
+- Wait for sync to complete
+- Check other devices for data
+- Force manual sync
+- Verify account ownership
+
+**Slow Sync:**
+- Large library may take time
+- Check connection speed
+- Close other apps using bandwidth
+- Sync during off-peak hours
+
+### Advanced Troubleshooting
+
+<Steps>
+
+1. **Clear Sync Cache**
+   - Settings → Advanced
+   - Clear sync data
+   - Re-login to account
+
+2. **Reset Sync**
+   - Logout from all devices
+   - Clear app data/cache
+   - Re-login and allow fresh sync
+
+3. **Network Issues**
+   - Check firewall settings
+   - Try different network
+   - Disable VPN temporarily
+   - Contact ISP if needed
+
+</Steps>
+
+## Privacy & Security
+
+### Data Privacy
+
+**What Stremio Stores:**
+- Your library and watchlist
+- Viewing progress and history
+- Add-on preferences
+- Anonymous usage analytics
+
+**What Stremio Doesn't Share:**
+- Specific content you watch (only aggregated)
+- Personal information with third parties
+- Viewing data for advertising
+
+### Account Security
+
+<Steps>
+
+1. **Strong Password**
+   - Use complex, unique password
+   - Enable two-factor authentication (2FA)
+   - Change password regularly
+
+2. **Device Management**
+   - Regularly review connected devices
+   - Remove unknown or unused devices
+   - Logout from public/shared devices
+
+3. **Privacy Settings**
+   - Control analytics sharing
+   - Manage data retention
+   - Export/delete account data
+
+</Steps>
+
+<Callout type="warning">
+Always logout from shared or public devices. Use strong passwords and enable 2FA for security.
+</Callout>
+
+## Advanced Sync Features
+
+### Selective Sync
+
+**Choose What to Sync:**
+- **Library Only**: Skip watchlist/history
+- **Add-ons Only**: Sync installations but not data
+- **Settings Only**: Preferences without content
+
+### Backup & Restore
+
+<Steps>
+
+1. **Manual Backup**
+   - Export library data
+   - Save add-on configurations
+   - Backup custom settings
+
+2. **Account Backup**
+   - All data automatically backed up
+   - Restore by logging into account
+   - Cross-device restoration
+
+3. **Data Export**
+   - Export to CSV/JSON
+   - Compatible with other services
+   - Manual backup option
+
+</Steps>
+
+### Third-Party Integration
+
+**Enhanced Sync:**
+- **Trakt.tv**: Advanced tracking and lists
+- **MyAnimeList**: Anime/manga tracking
+- **Letterboxd**: Movie diary and reviews
+- **TVTime**: TV show progress tracking
+
+## Device-Specific Optimization
+
+### Desktop Setup
+
+**Multi-Monitor:**
+- Extended desktop support
+- Different content on each screen
+- Keyboard shortcuts for efficiency
+
+**Performance:**
+- Hardware acceleration
+- High-quality streaming
+- Multiple tabs/windows
+
+### Mobile Optimization
+
+**Data Management:**
+- Auto quality adjustment
+- Background playback
+- Offline download support
+
+**Touch Interface:**
+- Swipe gestures
+- Large touch targets
+- Gesture navigation
+
+### TV/Stick Devices
+
+**Remote Control:**
+- Directional navigation optimized
+- Voice search support
+- Quick access buttons
+
+**Display:**
+- 4K/HDR support
+- Large text and icons
+- Casting capabilities
+
+## Family & Shared Accounts
+
+### Multiple Users
+
+**Account Sharing:**
+- One account per person recommended
+- Separate libraries and preferences
+- Individual viewing history
+
+**Family Features:**
+- Parental controls (planned)
+- Separate profiles (planned)
+- Content restrictions
+
+### Shared Device Management
+
+<Steps>
+
+1. **User Switching**
+   - Logout current user
+   - Login with different account
+   - Data switches automatically
+
+2. **Shared Libraries**
+   - Create family shared lists
+   - Use Trakt for collaborative lists
+   - External sharing tools
+
+</Steps>
+
+## Performance Optimization
+
+### Sync Performance
+
+**Speed Up Sync:**
+- **Incremental Sync**: Only changes transferred
+- **Compression**: Data compressed for speed
+- **Background Sync**: Continuous updates
+- **Smart Caching**: Local cache reduces server calls
+
+### Storage Management
+
+**Data Optimization:**
+- **Automatic Cleanup**: Old cache removal
+- **Selective Sync**: Choose what to sync
+- **Offline Mode**: Reduce sync frequency
+- **Storage Limits**: Monitor device storage
+
+## Best Practices
+
+✅ **Do:**
+- Use strong, unique passwords
+- Enable 2FA for security
+- Regularly review connected devices
+- Keep apps updated for sync improvements
+- Backup important data manually
+- Use same account across personal devices
+- Logout from shared/public devices
+
+❌ **Don't:**
+- Share account credentials
+- Use sync on untrusted networks without VPN
+- Ignore sync error messages
+- Clear data without backup
+- Use multiple accounts unnecessarily
+- Disable sync for convenience
+
+## Troubleshooting Guide
+
+### Sync Not Working
+
+**Step-by-Step:**
+1. Check internet connection
+2. Verify login status
+3. Restart Stremio
+4. Clear cache and retry
+5. Check server status
+6. Contact support if persistent
+
+### Data Loss Issues
+
+**Recovery Steps:**
+1. Check other devices for data
+2. Wait for automatic sync
+3. Force manual sync
+4. Restore from backup
+5. Contact support for account recovery
+
+### Performance Issues
+
+**Optimization:**
+1. Reduce synced data size
+2. Use faster internet connection
+3. Close bandwidth-heavy apps
+4. Update to latest app version
+5. Clear old cache data
+
+## Related Resources
+
+- [Account Security](/privacy-security/account-security/) - Securing your Stremio account
+- [Library Management](/using-stremio/library-watchlist-history/) - Managing synced content
+- [Device Security](/privacy-security/device-security-tv-sticks/) - Securing streaming devices
+- [Navigation Basics](/using-stremio/navigation-basics/) - Basic Stremio usage
+
+---
+
+*Sources:*
+- [Stremio Help Center](https://www.stremio.com/help)
+- [Trakt.tv Documentation](https://trakt.tv/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

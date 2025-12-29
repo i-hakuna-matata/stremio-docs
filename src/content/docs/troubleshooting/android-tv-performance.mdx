@@ -4,17 +4,348 @@ description: Optimize Stremio performance on Android TV devices
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Troubleshooting Overview](/troubleshooting/overview/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Android TV devices can run Stremio smoothly with proper optimization. This guide covers performance issues specific to Android TV and how to resolve them.
+
+## Hardware Requirements
+
+### Minimum Requirements
+
+**Basic Functionality:**
+- **CPU**: Quad-core 1.5GHz or better
+- **RAM**: 2GB minimum, 4GB recommended
+- **Storage**: 8GB free space
+- **Android Version**: 5.0 or higher
+
+**Smooth Performance:**
+- **CPU**: Octa-core 2.0GHz or better
+- **RAM**: 4GB or more
+- **Storage**: 16GB free space
+- **Android Version**: 8.0 or higher
+
+### Recommended Devices
+
+**Best Performance:**
+- **NVIDIA Shield TV**: Excellent performance
+- **Xiaomi Mi Box**: Good value option
+- **Fire TV (4K)**: Amazon's Android TV device
+- **TCL/Google TV**: Modern Android TV sets
+
+<Callout type="warning">
+Older Android TV devices may struggle with 4K content or complex add-ons.
 </Callout>
 
-## Overview
+## Performance Optimization
 
-This guide will cover:
-- Performance optimization tips
-- Cache management
-- Reducing lag and stuttering
-- Hardware compatibility
+### App Settings Optimization
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+<Steps>
+
+1. **Quality Settings**
+   - Open Stremio → Settings → Player
+   - Set "Default Quality" to Auto
+   - Enable "Hardware Acceleration"
+   - Disable "High Quality Subtitles" if lagging
+
+2. **Cache Management**
+   - Settings → Storage
+   - Clear cache regularly (weekly)
+   - Set cache size to 2-4GB
+   - Enable "Clear Cache on Exit"
+
+3. **Add-on Optimization**
+   - Limit to 10-15 essential add-ons
+   - Disable unused catalogs
+   - Update add-ons regularly
+   - Avoid resource-heavy add-ons
+
+</Steps>
+
+### Android TV System Settings
+
+<Steps>
+
+1. **Developer Options**
+   - Settings → Device Preferences → About
+   - Tap "Build" 7 times to enable Developer Options
+   - Return to Settings → Developer Options
+
+2. **Performance Settings**
+   - **Force GPU Rendering**: Enable
+   - **Disable HW Overlays**: Try both settings
+   - **Background Process Limit**: Set to "Standard limit"
+   - **Window Animation Scale**: Set to 0.5x
+
+3. **Memory Optimization**
+   - **Background App Management**: Enable
+   - **Adaptive Battery**: Disable for Stremio
+   - **App Standby**: Disable for Stremio
+
+</Steps>
+
+## Common Performance Issues
+
+### Lag and Stuttering
+
+**During Playback:**
+- **Lower Quality**: Switch to 720p or lower
+- **Disable Subtitles**: Temporarily turn off
+- **Close Background Apps**: Free up RAM
+- **Restart Device**: Clear temporary issues
+
+**Navigation Lag:**
+- **Clear App Cache**: Settings → Apps → Stremio → Storage
+- **Uninstall Unused Apps**: Free up system resources
+- **Factory Reset**: Last resort for persistent issues
+
+### Buffering Problems
+
+**Network Issues:**
+- **Check Connection**: Stable 25+ Mbps recommended
+- **Wi-Fi Channel**: Change to less crowded channel
+- **Ethernet**: Use wired connection if possible
+- **VPN**: Disable or change server
+
+**App-Specific:**
+- **Buffer Size**: Increase in player settings
+- **Preload Settings**: Enable in advanced options
+- **Add-on Timeout**: Increase timeout values
+
+### App Crashes
+
+**Crash Causes:**
+- **Out of Memory**: Close other apps, clear cache
+- **Corrupt Cache**: Clear all cache and data
+- **Incompatible Add-on**: Disable recently added add-ons
+- **System Updates**: Check for Android TV updates
+
+**Recovery Steps:**
+1. Force stop Stremio
+2. Clear cache and data
+3. Restart device
+4. Reinstall if crashes persist
+
+## Storage Management
+
+### Storage Issues
+
+<Steps>
+
+1. **Check Storage Usage**
+   - Settings → Device Preferences → Storage
+   - See Stremio's storage usage
+   - Identify large cache files
+
+2. **Clear Unnecessary Data**
+   - Clear app cache weekly
+   - Delete unused add-ons
+   - Remove old downloads
+   - Move apps to external storage
+
+3. **Storage Optimization**
+   - Use external USB storage
+   - Enable storage manager
+   - Regular cleanup schedule
+
+</Steps>
+
+### External Storage
+
+**USB Drive Setup:**
+- **Format**: Use exFAT or NTFS
+- **Speed**: USB 3.0 recommended
+- **Size**: 64GB minimum for cache
+- **Backup**: Regular backups recommended
+
+## Network Optimization
+
+### Wi-Fi Performance
+
+<Steps>
+
+1. **Router Settings**
+   - Use 5GHz band for better speed
+   - Position router closer to TV
+   - Reduce interference from other devices
+   - Update router firmware
+
+2. **Android TV Network**
+   - Forget and reconnect to Wi-Fi
+   - Check signal strength
+   - Use static IP for stability
+   - Disable power saving mode
+
+3. **Network Testing**
+   - Test speed with fast.com
+   - Check latency to streaming servers
+   - Monitor during peak hours
+
+</Steps>
+
+### VPN Considerations
+
+**VPN Performance:**
+- **Server Location**: Choose nearby servers
+- **Protocol**: WireGuard over OpenVPN
+- **Kill Switch**: Ensure no leaks
+- **Split Tunneling**: Exclude local traffic
+
+<Callout type="info">
+VPN can reduce streaming performance. Test with and without VPN to compare speeds.
+</Callout>
+
+## Device-Specific Fixes
+
+### NVIDIA Shield TV
+
+**Shield-Specific Optimizations:**
+- **Game Mode**: Enable for better performance
+- **Shield Experience**: Keep updated
+- **Storage**: Use microSD for extra space
+- **Cooling**: Ensure proper ventilation
+
+### Fire TV (4K)
+
+**Fire TV Optimizations:**
+- **Developer Options**: Enable via special code
+- **Data Monitoring**: Disable background apps
+- **App Updates**: Keep Amazon apps updated
+- **Side Loading**: Use Downloader app carefully
+
+### Generic Android TV
+
+**Universal Fixes:**
+- **System Updates**: Keep Android TV updated
+- **App Updates**: Update all apps regularly
+- **Factory Reset**: Backup first, then reset
+- **Warranty**: Check device warranty status
+
+## Advanced Troubleshooting
+
+### Log Analysis
+
+<Steps>
+
+1. **Enable Logging**
+   - Developer Options → Enable USB Debugging
+   - Connect to computer with ADB
+   - Capture logs during issue
+
+2. **Log Locations**
+   - `/sdcard/Android/data/com.stremio.stremio/logs`
+   - System logs via ADB
+   - Crash reports in Play Store
+
+3. **Common Log Errors**
+   - Memory allocation failures
+   - Network timeout errors
+   - Codec compatibility issues
+
+</Steps>
+
+### Codec Support
+
+**Video Codecs:**
+- **H.264**: Universally supported
+- **H.265/HEVC**: Check device support
+- **VP9**: YouTube/WebM content
+- **AV1**: Newer devices only
+
+**Audio Codecs:**
+- **AAC**: Standard support
+- **AC3/Dolby Digital**: Most devices
+- **DTS**: Limited support
+- **E-AC3**: Atmos support varies
+
+## Maintenance Schedule
+
+### Daily Maintenance
+
+- **Restart Device**: Weekly power cycle
+- **Clear Cache**: After heavy usage
+- **Check Updates**: Apps and system
+
+### Weekly Maintenance
+
+- **Storage Cleanup**: Remove unnecessary files
+- **Add-on Updates**: Update all add-ons
+- **Network Test**: Verify connection speed
+
+### Monthly Maintenance
+
+- **Full Cache Clear**: Complete reset
+- **System Updates**: Major Android updates
+- **Backup Settings**: Save configurations
+
+## Performance Monitoring
+
+### Built-in Tools
+
+**Android TV Tools:**
+- **Developer Options**: Performance monitoring
+- **Battery Usage**: Check power consumption
+- **Network Usage**: Monitor data usage
+- **Storage Analyzer**: Built-in cleanup tools
+
+### Third-Party Apps
+
+**Useful Apps:**
+- **CPU Monitor**: Real-time performance
+- **Network Speed Test**: Connection monitoring
+- **Storage Analyzer**: Detailed storage breakdown
+- **System Info**: Hardware specifications
+
+## When to Seek Help
+
+### Community Support
+
+**Help Resources:**
+- **Reddit r/Stremio**: Community troubleshooting
+- **Discord Servers**: Real-time help
+- **GitHub Issues**: Report bugs
+- **Forum Posts**: Search existing solutions
+
+### Professional Help
+
+**When to Contact:**
+- Hardware failure symptoms
+- Persistent crashes after resets
+- Performance issues on new devices
+- Warranty-covered problems
+
+## Best Practices
+
+✅ **Do:**
+- Keep device firmware updated
+- Use wired connection when possible
+- Regularly clear cache and storage
+- Monitor device temperature
+- Use recommended hardware
+- Test performance regularly
+- Backup important data
+
+❌ **Don't:**
+- Overload with too many add-ons
+- Use unofficial app versions
+- Ignore system updates
+- Run other heavy apps simultaneously
+- Use damaged storage devices
+- Skip regular maintenance
+- Ignore warning signs
+
+## Related Resources
+
+- [Troubleshooting Overview](/troubleshooting/overview/) - General troubleshooting guide
+- [Network Checklist](/troubleshooting/network-checklist/) - Network-related issues
+- [Playback Buffering](/troubleshooting/playback-buffering/) - Streaming problems
+- [App Crashes](/troubleshooting/app-crashes-and-freezes/) - Crash resolution
+
+---
+
+*Sources:*
+- [Android TV Help Center](https://support.google.com/androidtv)
+- [NVIDIA Shield Support](https://shield.nvidia.com/support)
+- [Amazon Fire TV Support](https://www.amazon.com/gp/help/customer/display.html)
+- [Stremio Community Forums](https://forum.stremio.com/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

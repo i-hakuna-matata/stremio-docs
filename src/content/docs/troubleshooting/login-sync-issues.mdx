@@ -4,17 +4,460 @@ description: Resolve login and synchronization problems
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Troubleshooting Overview](/troubleshooting/overview/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Login and sync issues can prevent you from accessing your Stremio account and data across devices. This guide covers the most common login problems and sync failures with step-by-step solutions.
+
+## Login Problems
+
+### Can't Log In
+
+**Common Login Issues:**
+- **Wrong Credentials**: Incorrect email or password
+- **Account Not Verified**: Email not confirmed
+- **Account Suspended**: Violation of terms of service
+- **Server Issues**: Stremio servers down
+- **Network Problems**: Connection blocking login
+
+<Steps>
+
+1. **Check Credentials**
+   - Verify email address spelling
+   - Try password reset if forgotten
+   - Check for caps lock or auto-correct errors
+   - Try logging in from web.stremio.com first
+
+2. **Verify Account Status**
+   - Check email for verification link
+   - Resend verification email if needed
+   - Contact support if account suspended
+
+3. **Network Troubleshooting**
+   - Try different internet connection
+   - Disable VPN temporarily
+   - Check firewall/antivirus settings
+   - Clear browser cache and cookies
+
+</Steps>
+
+### Password Reset Issues
+
+<Steps>
+
+1. **Request Password Reset**
+   - Click "Forgot Password" on login screen
+   - Enter your account email address
+   - Check spam/junk folder for reset email
+   - Use the reset link within 24 hours
+
+2. **Reset Email Not Received**
+   - Check spam/junk folders thoroughly
+   - Add stremio.com to email whitelist
+   - Try different email address if multiple
+   - Contact support with account details
+
+3. **Reset Link Problems**
+   - Copy full URL from email
+   - Try different browser or device
+   - Disable browser extensions temporarily
+   - Check if link has expired
+
+</Steps>
+
+<Callout type="warning">
+Never share your password reset link with anyone. Legitimate Stremio support will never ask for your password.
 </Callout>
 
-## Overview
+### Account Verification Issues
 
-This guide will cover:
-- Login troubleshooting
-- Password reset
-- Sync not working
-- Account recovery
+**Email Verification Problems:**
+- **Email Bounced**: Invalid email address
+- **Spam Filtered**: Verification email blocked
+- **Expired Link**: Verification link timed out
+- **Already Verified**: Account already active
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+**Solutions:**
+- Use a valid, accessible email address
+- Check all email folders including spam
+- Request new verification email
+- Contact support if issues persist
+
+## Sync Problems
+
+### Sync Not Working
+
+**Sync Failure Causes:**
+- **No Account**: Not logged into Stremio account
+- **Network Issues**: Poor or blocked internet connection
+- **Server Problems**: Stremio sync servers down
+- **Large Data**: Too much data to sync
+- **Device Limits**: Exceeded device limit
+
+<Steps>
+
+1. **Verify Login Status**
+   - Check if logged in (profile icon shows account)
+   - Re-login if session expired
+   - Verify account is active and in good standing
+
+2. **Check Network Connection**
+   - Test internet connectivity
+   - Try different network (Wi-Fi vs. mobile data)
+   - Disable VPN or proxy
+   - Check firewall settings
+
+3. **Force Sync**
+   - Settings → Account → Force Sync
+   - Or logout and login again
+   - Wait 5-10 minutes for sync to complete
+   - Check other devices for data
+
+</Steps>
+
+### Data Not Syncing
+
+**What Should Sync:**
+- Library and watchlist
+- Viewing progress and history
+- Add-on installations
+- User preferences and settings
+
+**Common Issues:**
+- **Partial Sync**: Some data syncs, other doesn't
+- **Old Data**: Changes not appearing on other devices
+- **Missing Items**: Content added on one device missing elsewhere
+- **Progress Lost**: Viewing progress not saved
+
+<Steps>
+
+1. **Check Sync Status**
+   - Look for sync indicator in app
+   - Check "Last synced" time in settings
+   - Verify all devices show same account
+
+2. **Manual Sync Trigger**
+   - Make a small change (add item to library)
+   - Wait for automatic sync
+   - Check if change appears on other devices
+   - Force sync if needed
+
+3. **Data Verification**
+   - Compare data across devices
+   - Check for conflicting changes
+   - Resolve duplicates or conflicts
+   - Restore from backup if available
+
+</Steps>
+
+## Account Recovery
+
+### Forgotten Email Address
+
+<Steps>
+
+1. **Check Associated Emails**
+   - Try all email addresses you own
+   - Check social media for Stremio mentions
+   - Look for Stremio emails in inbox
+   - Check payment receipts if applicable
+
+2. **Contact Support**
+   - Email support@stremio.com
+   - Provide as much account information as possible
+   - Include device information and approximate signup date
+   - Be patient for response (may take days)
+
+</Steps>
+
+### Account Locked or Suspended
+
+**Lock Reasons:**
+- **Security**: Suspicious activity detected
+- **Terms Violation**: Breach of service terms
+- **Payment Issues**: Failed payment or fraud
+- **Too Many Attempts**: Multiple failed login attempts
+
+<Steps>
+
+1. **Check Lock Reason**
+   - Look for email from Stremio about lock
+   - Check account status on web.stremio.com
+   - Review terms of service violations
+
+2. **Unlock Account**
+   - Follow instructions in lock notification email
+   - Complete security verification
+   - Contact support if no email received
+   - Provide identification if requested
+
+</Steps>
+
+## Device Management Issues
+
+### Too Many Devices
+
+**Device Limits:**
+- **Free Accounts**: Unlimited devices
+- **Premium Accounts**: Unlimited devices
+- **Shared Accounts**: May have restrictions
+
+<Steps>
+
+1. **Check Device List**
+   - Settings → Account → Manage Devices
+   - See all devices linked to account
+   - Identify unknown or unused devices
+
+2. **Remove Old Devices**
+   - Select device to remove
+   - Click "Remove" or "Logout"
+   - Confirm removal
+   - Device loses access immediately
+
+3. **Device Recognition**
+   - Each device has unique identifier
+   - Name devices for easy identification
+   - Remove devices you no longer own
+
+</Steps>
+
+### Device Not Syncing
+
+**Device-Specific Issues:**
+- **Offline Device**: Device not connected to internet
+- **App Version**: Outdated Stremio version
+- **Platform Issues**: Device platform problems
+- **Storage Full**: No space for sync data
+
+<Steps>
+
+1. **Check Device Status**
+   - Verify device is online
+   - Check Stremio app version
+   - Ensure sufficient storage space
+   - Test other apps' internet connectivity
+
+2. **Reconnect Device**
+   - Logout and login again
+   - Restart Stremio app
+   - Restart device completely
+   - Check for app updates
+
+</Steps>
+
+## Network and Connectivity Issues
+
+### VPN and Proxy Problems
+
+**VPN Sync Issues:**
+- **Blocked Servers**: VPN blocking Stremio servers
+- **IP Changes**: Dynamic IP causing authentication issues
+- **Slow Connection**: VPN latency affecting sync
+- **Geographic Restrictions**: Regional blocking
+
+<Steps>
+
+1. **Test Without VPN**
+   - Temporarily disable VPN
+   - Try login and sync
+   - Identify if VPN is the cause
+
+2. **VPN Configuration**
+   - Add Stremio domains to VPN whitelist
+   - Use different VPN server
+   - Change VPN protocol
+   - Contact VPN provider for Stremio support
+
+</Steps>
+
+### Firewall and Security Software
+
+**Blocking Issues:**
+- **Antivirus**: Security software blocking connection
+- **Firewall**: Network firewall rules
+- **Browser Extensions**: Extensions interfering
+- **Corporate Networks**: Workplace restrictions
+
+<Steps>
+
+1. **Check Security Software**
+   - Temporarily disable antivirus
+   - Add Stremio to antivirus exceptions
+   - Check firewall rules
+   - Whitelist Stremio domains
+
+2. **Network Administrator**
+   - Contact IT department for corporate networks
+   - Request Stremio access
+   - Use personal hotspot if allowed
+
+</Steps>
+
+## Advanced Troubleshooting
+
+### Cache and Data Reset
+
+<Steps>
+
+1. **Clear App Cache**
+   - Settings → Storage → Clear Cache
+   - Don't clear all data (preserves login)
+   - Restart app after clearing
+
+2. **Selective Data Reset**
+   - Clear sync cache only
+   - Keep user data intact
+   - Re-sync from server
+
+3. **Complete Reset (Last Resort)**
+   - ⚠️ Backup important data first
+   - Clear all app data
+   - Reinstall app
+   - Login and restore data
+
+</Steps>
+
+<Callout type="warning">
+Clearing all data will remove local content. Backup your library and settings before resetting.
+</Callout>
+
+### Server Status Checking
+
+**Check Service Status:**
+- **Stremio Status Page**: Check for outages
+- **Community Forums**: User reports of issues
+- **Social Media**: Official Stremio updates
+- **Downdetector**: User-reported problems
+
+### Log Analysis
+
+<Steps>
+
+1. **Enable Debug Logging**
+   - Settings → Advanced → Debug Logs
+   - Reproduce login/sync issue
+   - Check log files for error messages
+
+2. **Common Error Codes**
+   - **401**: Authentication failed
+   - **403**: Access forbidden
+   - **500**: Server error
+   - **Network Timeout**: Connection issues
+
+</Steps>
+
+## Account Security
+
+### Suspicious Activity
+
+**Security Signs:**
+- **Unknown Devices**: Devices you don't recognize
+- **Failed Attempts**: Multiple login failures
+- **Password Changes**: Unauthorized changes
+- **Unusual Locations**: Logins from unexpected places
+
+<Steps>
+
+1. **Secure Account**
+   - Change password immediately
+   - Enable two-factor authentication
+   - Review and remove unknown devices
+   - Check recent account activity
+
+2. **Report Suspicious Activity**
+   - Contact Stremio support
+   - Provide details of suspicious activity
+   - Change password from trusted device
+   - Monitor account for further issues
+
+</Steps>
+
+### Two-Factor Authentication
+
+<Steps>
+
+1. **Enable 2FA**
+   - Settings → Account → Security
+   - Choose authentication method (app or SMS)
+   - Set up backup codes
+   - Test 2FA login
+
+2. **2FA Troubleshooting**
+   - Check time sync on device
+   - Ensure auth app is updated
+   - Use backup codes if needed
+   - Contact support for locked accounts
+
+</Steps>
+
+## Getting Help
+
+### Self-Service Options
+
+**Help Resources:**
+- **Stremio Help Center**: Search for specific issues
+- **Community Forums**: User solutions and workarounds
+- **FAQ Pages**: Common problem solutions
+- **Video Tutorials**: Visual troubleshooting guides
+
+### Contacting Support
+
+**When to Contact Support:**
+- Account completely inaccessible
+- Security concerns or suspicious activity
+- Issues affecting all your devices
+- Problems persisting after all troubleshooting
+
+**Support Information:**
+- **Email**: support@stremio.com
+- **Response Time**: 24-48 hours typically
+- **Required Info**: Account email, device details, error messages
+- **Language**: English primary, some multilingual support
+
+## Prevention Strategies
+
+### Account Maintenance
+
+✅ **Do:**
+- Use strong, unique passwords
+- Enable two-factor authentication
+- Regularly review connected devices
+- Keep recovery email accessible
+- Monitor account activity
+- Use trusted networks for login
+- Backup important data
+
+❌ **Don't:**
+- Share account credentials
+- Use public computers for login
+- Ignore security notifications
+- Use easily guessable passwords
+- Leave accounts logged in on shared devices
+- Ignore password change notifications
+- Use untrusted Wi-Fi for account changes
+
+### Sync Best Practices
+
+**Maintain Sync Health:**
+- Keep app updated on all devices
+- Use stable internet connections
+- Don't make conflicting changes simultaneously
+- Regularly check sync status
+- Clean up old/unused devices
+- Monitor storage space
+- Test sync periodically
+
+## Related Resources
+
+- [Sync & Multiple Devices](/using-stremio/sync-and-multiple-devices/) - Normal sync setup
+- [Account Security](/privacy-security/account-security/) - Account protection
+- [Network Checklist](/troubleshooting/network-checklist/) - Connection issues
+- [App Crashes](/troubleshooting/app-crashes-and-freezes/) - App stability problems
+
+---
+
+*Sources:*
+- [Stremio Help Center](https://www.stremio.com/help)
+- [Stremio Account Support](https://www.stremio.com/account)
+- [Stremio Community Forums](https://forum.stremio.com/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

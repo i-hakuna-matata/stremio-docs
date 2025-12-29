@@ -4,17 +4,608 @@ description: Interactive decision tree to help diagnose Stremio issues
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Troubleshooting Overview](/troubleshooting/overview/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+This interactive troubleshooting guide helps you systematically diagnose and fix Stremio issues. Follow the decision tree based on your specific problem to find the most effective solution.
+
+## Quick Problem Identification
+
+### What type of problem are you experiencing?
+
+**🎬 Playback Issues**
+- Videos won't play or buffer constantly
+- Audio/video sync problems
+- Quality switching issues
+- Player crashes during playback
+
+**🔍 Content Discovery Issues**
+- Can't find specific movies/shows
+- Add-ons not loading content
+- Search not working
+- Catalogs not updating
+
+**📱 App Performance Issues**
+- App crashes or freezes
+- Slow loading times
+- High battery/memory usage
+- Interface lag or unresponsiveness
+
+**🔒 Account & Sync Issues**
+- Can't login to account
+- Data not syncing across devices
+- Library not updating
+- Password/account problems
+
+**📝 Subtitle Issues**
+- Subtitles not appearing
+- Wrong language subtitles
+- Subtitle sync problems
+- Subtitle add-on issues
+
+**🌐 Network & Connection Issues**
+- Buffering on good internet
+- Can't connect to streaming sources
+- VPN/proxy problems
+- Firewall blocking issues
+
+**⚙️ Device-Specific Issues**
+- Android TV performance problems
+- Mobile app issues
+- Desktop app problems
+- Browser/web version issues
+
+## Playback Issues Decision Tree
+
+### Videos Won't Play
+
+<Steps>
+
+1. **Check Basic Requirements**
+   - ✅ Internet connection working?
+   - ✅ Stremio app updated?
+   - ✅ Device meets minimum requirements?
+   - ✅ Add-ons installed and enabled?
+
+2. **If basic checks pass → Test Content Source**
+   - Try different video from same add-on
+   - Try same video from different add-on
+   - Try completely different add-on
+
+3. **Content Source Test Results:**
+   - **Same add-on works** → Problem is specific content
+     - Try different quality/stream
+     - Check content availability
+     - Contact add-on developer
+   - **Different add-on works** → Problem is specific add-on
+     - Update or reinstall add-on
+     - Check add-on configuration
+     - Try alternative add-on
+   - **No add-ons work** → Problem is Stremio/app
+     - Clear app cache and data
+     - Reinstall Stremio
+     - Check device compatibility
+
+</Steps>
+
+### Constant Buffering
+
+<Steps>
+
+1. **Check Network Speed**
+   - Run speed test (fast.com or speedtest.net)
+   - Is speed 3x minimum requirement?
+   - Test during different times
+
+2. **Network Speed Results:**
+   - **Speed adequate** → Check device/network setup
+     - Try wired Ethernet connection
+     - Close bandwidth-heavy apps
+     - Restart router and device
+     - Lower video quality
+   - **Speed inadequate** → Network problem
+     - Contact ISP about speeds
+     - Check for data caps/throttling
+     - Use VPN to test (may bypass throttling)
+     - Schedule viewing during off-peak hours
+
+3. **If network is fine → Check Device Performance**
+   - Close unnecessary background apps
+   - Clear app cache
+   - Check device temperature/ventilation
+   - Test on different device
+
+</Steps>
+
+### Audio/Video Sync Problems
+
+<Steps>
+
+1. **Check Content Type**
+   - Is this live streaming or recorded content?
+   - Is this a specific video or all content?
+
+2. **Content Type Analysis:**
+   - **Live streaming** → Normal, some sync delay expected
+     - Try different streaming source
+     - Accept as limitation of live content
+   - **Specific video** → Content-specific issue
+     - Try different quality/stream
+     - Use different add-on for same content
+   - **All content** → Player/app issue
+     - Check player settings for sync options
+     - Update audio/video drivers
+     - Test on different device
+
+3. **Manual Sync Adjustment**
+   - Use J/K keys for timing adjustment
+   - Check if issue persists across devices
+   - Test with local video files
+
+</Steps>
+
+## Content Discovery Issues
+
+### Can't Find Specific Content
+
+<Steps>
+
+1. **Verify Search Terms**
+   - Check spelling of title/actor/director
+   - Try different search variations
+   - Include year for specific versions
+
+2. **Search Results:**
+   - **No results found** → Content availability issue
+     - Try different add-ons
+     - Check regional availability
+     - Search community forums
+   - **Wrong results** → Search/add-on issue
+     - Clear search cache
+     - Update add-ons
+     - Try different search terms
+
+3. **Content Found But Won't Play**
+   - Follow "Videos Won't Play" tree above
+   - Check if content is region-locked
+   - Verify account/subscription status
+
+</Steps>
+
+### Add-ons Not Loading
+
+<Steps>
+
+1. **Check Add-on Status**
+   - Is add-on installed and enabled?
+   - Any error messages in add-on section?
+   - Is add-on updated to latest version?
+
+2. **Add-on Status Results:**
+   - **Add-on enabled and updated** → Network/connectivity issue
+     - Check internet connection
+     - Disable VPN temporarily
+     - Clear app cache
+   - **Add-on disabled** → Enable and test
+   - **Add-on outdated** → Update and test
+   - **Error message** → Specific add-on problem
+     - Reinstall add-on
+     - Check add-on documentation
+     - Contact add-on developer
+
+3. **Multiple Add-ons Affected**
+   - Clear all app cache
+   - Restart Stremio
+   - Check network connectivity
+   - Test on different device
+
+</Steps>
+
+## App Performance Issues
+
+### App Crashes or Freezes
+
+<Steps>
+
+1. **When does it crash?**
+   - On startup? During playback? When browsing?
+   - With specific content? With specific add-ons?
+
+2. **Crash Timing Analysis:**
+   - **On startup** → Installation or compatibility issue
+     - Reinstall Stremio
+     - Check device compatibility
+     - Update device OS
+   - **During playback** → Content or player issue
+     - Try different content
+     - Update player components
+     - Check device resources
+   - **When browsing** → Add-on or memory issue
+     - Reduce number of add-ons
+     - Clear cache
+     - Free up device memory
+
+3. **Freeze vs Crash:**
+   - **Freeze** → Temporary hang
+     - Wait 30+ seconds
+     - Force close and restart
+     - Check device resources
+   - **Crash** → App closes completely
+     - Check crash logs
+     - Update app and system
+     - Test on different device
+
+</Steps>
+
+### Slow Loading Times
+
+<Steps>
+
+1. **What loads slowly?**
+   - App startup? Content browsing? Video playback?
+
+2. **Loading Component:**
+   - **App startup** → Device performance issue
+     - Close background apps
+     - Clear app cache
+     - Restart device
+   - **Content browsing** → Network or add-on issue
+     - Check internet speed
+     - Reduce active add-ons
+     - Clear browsing cache
+   - **Video playback** → Follow buffering tree above
+
+3. **Performance Optimization**
+   - Update Stremio to latest version
+   - Clear all caches
+   - Restart device
+   - Test with minimal add-ons
+
+</Steps>
+
+## Account & Sync Issues
+
+### Can't Login
+
+<Steps>
+
+1. **Login Method**
+   - Email/password? Social login? Guest access?
+
+2. **Login Type Analysis:**
+   - **Email/password** → Credential issue
+     - Check email and password
+     - Try password reset
+     - Check account status
+   - **Social login** → Third-party issue
+     - Check social account access
+     - Try different login method
+     - Clear browser cookies
+   - **Guest access** → Network or app issue
+     - Check internet connection
+     - Clear app cache
+     - Try different device
+
+3. **Error Messages:**
+   - **Invalid credentials** → Check email/password
+   - **Account locked** → Follow unlock procedure
+   - **Network error** → Check connection
+   - **Server error** → Wait and retry
+
+</Steps>
+
+### Sync Not Working
+
+<Steps>
+
+1. **What isn't syncing?**
+   - Library? Watchlist? History? All data?
+
+2. **Sync Scope Analysis:**
+   - **All data** → Account/network issue
+     - Check login status
+     - Verify internet connection
+     - Force manual sync
+   - **Specific data** → Content-specific issue
+     - Check if content is syncable
+     - Verify account permissions
+     - Test on different device
+
+3. **Device Sync Status:**
+   - Check connected devices list
+   - Remove old/unused devices
+   - Test sync on primary device
+   - Wait 5-10 minutes for sync completion
+
+</Steps>
+
+## Subtitle Issues
+
+### Subtitles Not Appearing
+
+<Steps>
+
+1. **Subtitle Type**
+   - Built-in subtitles? Add-on subtitles? Manual files?
+
+2. **Subtitle Type Analysis:**
+   - **Built-in** → Stream issue
+     - Check if content has subtitles
+     - Try different quality/stream
+     - Verify language selection
+   - **Add-on** → Add-on issue
+     - Check add-on installation
+     - Update subtitle add-on
+     - Try different subtitle add-on
+   - **Manual files** → File issue
+     - Check file format and encoding
+     - Verify file location/path
+     - Test with different subtitle file
+
+3. **Visibility Check:**
+   - Press 'S' to toggle subtitles
+   - Check subtitle menu for active tracks
+   - Adjust subtitle appearance settings
+   - Test on different content
+
+</Steps>
+
+### Subtitle Sync Problems
+
+<Steps>
+
+1. **Sync Pattern**
+   - Consistently early/late? Drifting over time?
+
+2. **Sync Pattern Analysis:**
+   - **Consistent offset** → Timing adjustment needed
+     - Use J/K keys for manual sync
+     - Check frame rate settings
+     - Adjust in player settings
+   - **Drifting sync** → Content or player issue
+     - Try different streaming source
+     - Check video frame rate
+     - Test on different device
+
+3. **Advanced Sync:**
+   - Use subtitle editing software
+   - Check original content frame rate
+   - Adjust player sync settings
+   - Create custom sync offset
+
+</Steps>
+
+## Network Issues
+
+### Connection Problems
+
+<Steps>
+
+1. **Connection Type**
+   - Wi-Fi? Ethernet? Mobile data? VPN?
+
+2. **Connection Type Analysis:**
+   - **Wi-Fi** → Wireless issue
+     - Check signal strength
+     - Try different Wi-Fi network
+     - Move closer to router
+   - **Ethernet** → Wired issue
+     - Check cable connections
+     - Test different Ethernet port
+     - Try different cable
+   - **Mobile data** → Cellular issue
+     - Check data signal
+     - Verify data plan limits
+     - Try Wi-Fi hotspot
+   - **VPN** → VPN configuration issue
+     - Test without VPN
+     - Change VPN server
+     - Check VPN settings
+
+3. **General Network Test:**
+   - Test internet speed
+   - Ping common websites
+   - Check DNS resolution
+   - Test on different device
+
+</Steps>
+
+### Firewall/Security Blocking
+
+<Steps>
+
+1. **Security Software**
+   - Antivirus? Firewall? VPN? Ad blocker?
+
+2. **Security Software Analysis:**
+   - **Antivirus** → Add Stremio exception
+   - **Firewall** → Allow Stremio network access
+   - **VPN** → Configure for Stremio
+   - **Ad blocker** → Whitelist Stremio domains
+
+3. **Corporate/Network Restrictions:**
+   - Check with IT department
+   - Use personal hotspot
+   - Request Stremio access
+   - Use VPN if allowed
+
+</Steps>
+
+## Device-Specific Issues
+
+### Android TV Problems
+
+<Steps>
+
+1. **Performance Issue Type**
+   - Crashing? Buffering? Interface lag?
+
+2. **Android TV Issue Analysis:**
+   - **Crashing** → Memory or compatibility issue
+     - Clear cache and data
+     - Check Android TV version
+     - Free up storage space
+   - **Buffering** → Network or performance issue
+     - Check network speed
+     - Lower video quality
+     - Close background apps
+   - **Interface lag** → Performance issue
+     - Restart Android TV
+     - Clear app cache
+     - Check device temperature
+
+3. **Android TV Specific:**
+   - Update system software
+   - Check developer options
+   - Test with wired connection
+   - Verify app compatibility
+
+</Steps>
+
+### Mobile App Issues
+
+<Steps>
+
+1. **Platform**
+   - iOS? Android? Specific version?
+
+2. **Mobile Platform Analysis:**
+   - **iOS** → Apple-specific issue
+     - Check iOS version compatibility
+     - Test background app refresh
+     - Verify app permissions
+   - **Android** → Android-specific issue
+     - Check Android version
+     - Verify app permissions
+     - Test different Android device
+
+3. **Common Mobile Issues:**
+   - Background playback problems
+   - Battery optimization interference
+   - Storage permission issues
+   - Network switching problems
+
+</Steps>
+
+### Desktop App Issues
+
+<Steps>
+
+1. **Operating System**
+   - Windows? macOS? Linux? Version?
+
+2. **OS Analysis:**
+   - **Windows** → Windows-specific issue
+     - Check Windows version
+     - Run as administrator
+     - Update graphics drivers
+   - **macOS** → Apple-specific issue
+     - Check macOS version
+     - Verify app permissions
+     - Test in different user account
+   - **Linux** → Distribution-specific issue
+     - Check dependencies
+     - Verify graphics drivers
+     - Test different desktop environment
+
+3. **Desktop Common Issues:**
+   - Graphics driver problems
+   - Permission issues
+   - Conflicting software
+   - System resource limitations
+
+</Steps>
+
+## Emergency Solutions
+
+### Complete Reset
+
+<Steps>
+
+1. **Backup Important Data**
+   - Export library if possible
+   - Note installed add-ons
+   - Save custom settings
+   - Document working configurations
+
+2. **Complete Reset Process**
+   - Uninstall Stremio
+   - Delete all app data folders
+   - Restart device
+   - Reinstall Stremio fresh
+
+3. **Gradual Restoration**
+   - Install minimal add-ons first
+   - Test basic functionality
+   - Add features gradually
+   - Restore settings one by one
+
+</Steps>
+
+### Getting Professional Help
+
+**When to Contact Support:**
+- All troubleshooting steps exhausted
+- Issue affects multiple devices
+- Account security concerns
+- Hardware failure symptoms
+- Persistent problems after resets
+
+**Support Information:**
+- **Stremio Support**: support@stremio.com
+- **Response Time**: 24-48 hours typically
+- **Required Info**: Device details, error messages, troubleshooting steps tried
+- **Community Help**: Forums and Reddit communities
+
+## Prevention Checklist
+
+### Regular Maintenance
+
+- [ ] Update Stremio weekly
+- [ ] Update add-ons regularly
+- [ ] Clear cache monthly
+- [ ] Test on different devices
+- [ ] Monitor network speeds
+- [ ] Check account security
+- [ ] Backup configurations
+- [ ] Review device permissions
+
+### Problem Prevention
+
+- [ ] Use stable internet connection
+- [ ] Keep devices updated
+- [ ] Monitor storage space
+- [ ] Use reputable add-ons
+- [ ] Regular security scans
+- [ ] Test new features carefully
+- [ ] Maintain device performance
+- [ ] Use strong passwords
+
+<Callout type="tip">
+Most Stremio issues can be resolved by following this decision tree systematically. Start with basic checks and work through the branches based on your specific symptoms.
 </Callout>
 
-## Overview
+## Quick Reference
 
-This guide will cover:
-- Interactive problem diagnosis
-- Step-by-step solutions
-- Common issue flowcharts
-- Quick fix reference
+### Most Common Fixes
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+1. **Restart everything** (device, router, Stremio)
+2. **Clear cache** (app and browser)
+3. **Check internet speed** (minimum requirements)
+4. **Update everything** (app, add-ons, system)
+5. **Try different content/add-on** (isolate the problem)
+6. **Test on different device** (device-specific issue?)
+7. **Reinstall app** (last resort for app issues)
+
+### Emergency Contacts
+
+- **Stremio Support**: support@stremio.com
+- **Community Forums**: forum.stremio.com
+- **Reddit**: r/Stremio
+- **GitHub Issues**: github.com/Stremio/stremio
+
+---
+
+*Sources:*
+- [Stremio Help Center](https://www.stremio.com/help)
+- [Stremio Community Forums](https://forum.stremio.com/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

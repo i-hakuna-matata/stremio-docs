@@ -4,17 +4,495 @@ description: Network troubleshooting checklist for Stremio
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Troubleshooting Overview](/troubleshooting/overview/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Network issues are one of the most common causes of Stremio problems. This comprehensive checklist covers all aspects of network troubleshooting to ensure smooth streaming and functionality.
+
+## Speed Requirements
+
+### Minimum Speeds
+
+**Basic Functionality:**
+- **Download**: 3 Mbps minimum
+- **Upload**: 1 Mbps minimum
+- **Latency**: < 100ms (ping)
+- **Jitter**: < 30ms variation
+
+**Smooth Streaming:**
+- **SD (480p)**: 3-5 Mbps
+- **HD (720p)**: 5-10 Mbps
+- **Full HD (1080p)**: 10-20 Mbps
+- **4K**: 25+ Mbps
+
+<Callout type="info">
+These are minimum speeds. For best experience, use speeds 2-3x the minimum requirements.
 </Callout>
 
-## Overview
+### Speed Testing
 
-This guide will cover:
-- Internet speed requirements
-- Router configuration
-- DNS settings
-- VPN considerations
+<Steps>
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+1. **Use Reliable Speed Tests**
+   - fast.com (Netflix speed test)
+   - speedtest.net (Ookla)
+   - speedof.me (HTML5 based)
+   - Test multiple times throughout day
+
+2. **Test Different Servers**
+   - Choose servers in your region
+   - Test to multiple locations
+   - Note speed variations
+   - Check both wired and wireless
+
+3. **Document Results**
+   - Record download/upload speeds
+   - Note ping and jitter values
+   - Test during different times
+   - Compare with ISP advertised speeds
+
+</Steps>
+
+## Connection Stability
+
+### Network Diagnostics
+
+<Steps>
+
+1. **Check Connection Status**
+   - Ping test to google.com
+   - Traceroute to streaming servers
+   - Check for packet loss
+   - Monitor connection drops
+
+2. **Device Connection Test**
+   - Test on multiple devices
+   - Compare Wi-Fi vs. Ethernet
+   - Check signal strength (Wi-Fi)
+   - Test different network adapters
+
+3. **ISP Tools**
+   - Check ISP status page
+   - Test modem/router health
+   - Run ISP-provided diagnostics
+   - Contact ISP for line issues
+
+</Steps>
+
+### Common Stability Issues
+
+**Connection Problems:**
+- **Intermittent Drops**: Unstable connection
+- **High Latency**: Slow response times
+- **Packet Loss**: Data packets not reaching destination
+- **Jitter**: Inconsistent timing
+
+**Environmental Factors:**
+- **Distance from Router**: Wi-Fi signal weakness
+- **Interference**: Other devices causing interference
+- **Network Congestion**: Too many devices on network
+- **Old Equipment**: Outdated router/modem
+
+## Router Configuration
+
+### Basic Router Setup
+
+<Steps>
+
+1. **Access Router Admin**
+   - Find router IP (usually 192.168.1.1 or 192.168.0.1)
+   - Use default username/password (admin/admin or admin/password)
+   - Change default password immediately
+
+2. **Check Firmware**
+   - Look for firmware update section
+   - Download latest firmware
+   - Update firmware carefully
+   - Reboot router after update
+
+3. **Wi-Fi Settings**
+   - Use WPA3 security (or WPA2 if not available)
+   - Change default Wi-Fi password
+   - Use 5GHz band for faster speeds
+   - Set appropriate channel (avoid interference)
+
+</Steps>
+
+### Advanced Router Settings
+
+**Quality of Service (QoS):**
+- Prioritize streaming traffic
+- Set bandwidth limits for other devices
+- Enable traffic shaping
+- Configure port forwarding if needed
+
+**Port Forwarding:**
+- Forward ports for better connectivity
+- Common ports: 11470, 12470 (Stremio)
+- Configure UPnP if available
+- Test port accessibility
+
+<Callout type="warning">
+Only change advanced router settings if you know what you're doing. Incorrect changes can break your network.
+</Callout>
+
+## DNS Configuration
+
+### DNS Troubleshooting
+
+<Steps>
+
+1. **Test Current DNS**
+   - Use command: `nslookup stremio.com`
+   - Check response time
+   - Verify IP resolution
+   - Test multiple domains
+
+2. **Change DNS Servers**
+   - Use public DNS: 8.8.8.8 (Google) or 1.1.1.1 (Cloudflare)
+   - Router level or device level
+   - Test speed improvement
+   - Revert if issues occur
+
+3. **DNS Cache Clearing**
+   - Windows: `ipconfig /flushdns`
+   - macOS: `sudo dscacheutil -flushcache`
+   - Linux: `sudo systemd-resolve --flush-caches`
+   - Router: Reboot or clear cache in admin panel
+
+</Steps>
+
+### DNS Issues
+
+**Common DNS Problems:**
+- **Slow Resolution**: DNS server responding slowly
+- **Blocked Domains**: ISP or government blocking
+- **Incorrect Resolution**: Wrong IP returned
+- **Cache Poisoning**: Corrupted DNS cache
+
+**DNS Selection:**
+- **Google DNS**: 8.8.8.8, 8.8.4.4
+- **Cloudflare**: 1.1.1.1, 1.0.0.1
+- **Quad9**: 9.9.9.9, 149.112.112.112
+- **Local ISP**: May be faster but less private
+
+## VPN and Proxy Issues
+
+### VPN Troubleshooting
+
+<Steps>
+
+1. **VPN Speed Test**
+   - Test speed without VPN
+   - Test with VPN connected
+   - Try different VPN servers
+   - Check for IP leaks
+
+2. **VPN Configuration**
+   - Use UDP instead of TCP
+   - Enable split tunneling
+   - Choose nearby servers
+   - Test different protocols
+
+3. **Stremio-Specific VPN**
+   - Add Stremio to VPN exceptions
+   - Whitelist Stremio domains
+   - Test with VPN off for comparison
+   - Contact VPN provider for Stremio support
+
+</Steps>
+
+### Proxy Settings
+
+**Proxy Configuration:**
+- **HTTP Proxy**: May interfere with HTTPS
+- **SOCKS5 Proxy**: Better for streaming
+- **System Proxy**: Check OS proxy settings
+- **App-Specific Proxy**: Configure in Stremio settings
+
+<Steps>
+
+1. **Check Proxy Settings**
+   - System Preferences → Network → Proxy
+   - Browser proxy settings
+   - App-specific proxy configuration
+   - VPN proxy settings
+
+2. **Proxy Testing**
+   - Test without proxy
+   - Test with different proxy servers
+   - Check proxy speed and reliability
+   - Verify proxy allows streaming
+
+</Steps>
+
+## Firewall and Security
+
+### Firewall Configuration
+
+<Steps>
+
+1. **Check Firewall Rules**
+   - Windows Firewall: Allow Stremio
+   - macOS Firewall: Add exception
+   - Third-party firewall: Configure rules
+   - Router firewall: Check settings
+
+2. **Port Blocking**
+   - Test if ports are open
+   - Use online port checkers
+   - Configure port forwarding
+   - Check ISP port blocking
+
+3. **Antivirus Interference**
+   - Add Stremio to antivirus exceptions
+   - Disable real-time scanning temporarily
+   - Check for VPN/antivirus conflicts
+   - Update security software
+
+</Steps>
+
+### ISP Throttling
+
+**Throttling Detection:**
+- **Speed Tests**: Compare speeds at different times
+- **Different Protocols**: Test HTTP vs. HTTPS vs. UDP
+- **VPN Bypass**: Test with VPN to bypass throttling
+- **Contact ISP**: Ask about traffic management policies
+
+**Throttling Solutions:**
+- Use VPN to encrypt traffic
+- Change DNS to bypass ISP DNS
+- Use different ports/protocols
+- Contact ISP about throttling policies
+
+## Device Network Settings
+
+### Wi-Fi Optimization
+
+<Steps>
+
+1. **Wi-Fi Signal Strength**
+   - Check signal strength (-50 dBm or better)
+   - Move closer to router
+   - Reduce interference sources
+   - Use Wi-Fi analyzer app
+
+2. **Wi-Fi Channel Selection**
+   - Use 5GHz for less interference
+   - Choose least crowded channel
+   - Avoid channels 1, 6, 11 on 2.4GHz
+   - Test different channels
+
+3. **Wi-Fi Settings**
+   - Enable QoS if available
+   - Set appropriate transmit power
+   - Configure guest network for testing
+   - Update router firmware
+
+</Steps>
+
+### Ethernet Connection
+
+**Wired Connection Benefits:**
+- **Stability**: No wireless interference
+- **Speed**: Full bandwidth available
+- **Latency**: Lower and more consistent
+- **Security**: Not susceptible to wireless attacks
+
+<Steps>
+
+1. **Ethernet Setup**
+   - Use Cat5e or better cable
+   - Connect directly to router
+   - Check cable quality
+   - Test different Ethernet ports
+
+2. **Network Adapter Settings**
+   - Update network drivers
+   - Configure adapter settings
+   - Check power management
+   - Test different cables
+
+</Steps>
+
+## Stremio Network Settings
+
+### App Network Configuration
+
+<Steps>
+
+1. **Stremio Network Settings**
+   - Settings → Network
+   - Adjust buffer sizes
+   - Configure timeout settings
+   - Set proxy if needed
+
+2. **Streaming Optimization**
+   - Enable hardware acceleration
+   - Adjust quality settings
+   - Configure cache settings
+   - Test different streaming sources
+
+</Steps>
+
+### Add-on Network Issues
+
+**Add-on Connectivity:**
+- **API Limits**: Add-on hitting rate limits
+- **Server Issues**: Add-on servers down
+- **Geographic Blocking**: Content not available in region
+- **Authentication Problems**: Add-on login issues
+
+<Steps>
+
+1. **Test Add-ons Individually**
+   - Disable all add-ons
+   - Enable one at a time
+   - Test connectivity for each
+   - Identify problematic add-ons
+
+2. **Add-on Configuration**
+   - Check add-on settings
+   - Update add-on credentials
+   - Test different regions/servers
+   - Contact add-on developer
+
+</Steps>
+
+## Advanced Diagnostics
+
+### Network Tools
+
+**Essential Tools:**
+- **Ping**: Test basic connectivity
+- **Traceroute**: Trace network path
+- **Wireshark**: Packet analysis (advanced)
+- **Netstat**: Check active connections
+
+<Steps>
+
+1. **Ping Test**
+   - `ping stremio.com`
+   - Check response time and packet loss
+   - Test during streaming issues
+   - Compare with other sites
+
+2. **Traceroute Analysis**
+   - `tracert stremio.com` (Windows)
+   - `traceroute stremio.com` (macOS/Linux)
+   - Identify slow hops
+   - Check for routing issues
+
+</Steps>
+
+### ISP-Specific Issues
+
+**Common ISP Problems:**
+- **CGNAT**: Carrier-grade NAT issues
+- **Double NAT**: Router behind ISP router
+- **IPv6 Issues**: IPv6 configuration problems
+- **Traffic Shaping**: ISP prioritizing certain traffic
+
+**ISP Solutions:**
+- Request public IP from ISP
+- Configure bridge mode on router
+- Enable IPv6 if supported
+- Use VPN to bypass ISP restrictions
+
+## Monitoring and Maintenance
+
+### Network Monitoring
+
+**Regular Checks:**
+- **Speed Tests**: Weekly speed monitoring
+- **Connection Logs**: Monitor for drops
+- **Device Usage**: Track bandwidth usage
+- **Router Logs**: Check for errors
+
+**Monitoring Tools:**
+- **Router Admin**: Built-in monitoring
+- **Network Apps**: GlassWire, NetWorx
+- **System Tools**: Task Manager/Resource Monitor
+- **ISP Tools**: Provider-specific monitoring
+
+### Preventive Maintenance
+
+**Network Health:**
+- **Router Reboots**: Monthly router restart
+- **Firmware Updates**: Keep router updated
+- **Cable Checks**: Inspect Ethernet cables
+- **Device Updates**: Update network adapters
+
+**Security Maintenance:**
+- **Password Changes**: Regular password updates
+- **Firewall Rules**: Review and update rules
+- **Access Logs**: Monitor for suspicious activity
+- **Backup Configurations**: Save router settings
+
+## Getting Help
+
+### ISP Support
+
+**Contacting ISP:**
+- **Service Issues**: Report connection problems
+- **Speed Issues**: Request speed tests
+- **Configuration Help**: Ask for network setup assistance
+- **Throttling Questions**: Inquire about traffic management
+
+### Community Support
+
+**Help Resources:**
+- **Stremio Forums**: Network-specific discussions
+- **Reddit Communities**: r/Stremio, r/networking
+- **Speed Test Forums**: User experiences
+- **Router Manufacturer**: Device-specific support
+
+### Professional Help
+
+**When to Seek Help:**
+- Persistent speed issues
+- Complex network configuration
+- Hardware failure symptoms
+- Security concerns
+
+## Best Practices
+
+✅ **Do:**
+- Test network speed regularly
+- Use wired connection when possible
+- Keep router firmware updated
+- Use strong Wi-Fi passwords
+- Monitor network usage
+- Update device drivers
+- Use reputable DNS servers
+- Test with VPN off first
+- Document network changes
+- Backup router configurations
+
+❌ **Don't:**
+- Use default router passwords
+- Ignore firmware updates
+- Overload network with too many devices
+- Use unsecure Wi-Fi networks
+- Chain multiple routers unnecessarily
+- Ignore ISP maintenance notifications
+- Use consumer-grade equipment for heavy use
+- Skip network security updates
+- Make changes without testing
+- Ignore speed test results
+
+## Related Resources
+
+- [Playback Buffering](/troubleshooting/playback-buffering/) - Streaming performance issues
+- [Android TV Performance](/troubleshooting/android-tv-performance/) - Device-specific network issues
+- [Login & Sync Issues](/troubleshooting/login-sync-issues/) - Account connectivity problems
+- [App Crashes](/troubleshooting/app-crashes-and-freezes/) - Network-related crashes
+
+---
+
+*Sources:*
+- [Stremio Help Center](https://www.stremio.com/help)
+- [Netflix ISP Speed Index](https://ispspeedindex.netflix.com/)
+- [Ookla Speed Test](https://www.speedtest.net/)
+- [Cloudflare Network Tools](https://www.cloudflare.com/network/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)

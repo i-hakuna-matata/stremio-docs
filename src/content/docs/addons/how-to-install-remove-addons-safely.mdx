@@ -4,17 +4,405 @@ description: Step-by-step guide to safely installing and removing Stremio add-on
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Add-ons Explained](/addons/addons-explained/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Installing and managing add-ons safely is crucial for a good Stremio experience. This guide provides step-by-step instructions for safe add-on management.
+
+## Understanding Add-on Installation
+
+### What Add-ons Do
+
+Add-ons extend Stremio's functionality by providing:
+- **Catalogs**: Content sources and libraries
+- **Metadata**: Posters, descriptions, ratings
+- **Streaming**: Direct playback sources
+- **Subtitles**: Caption and subtitle sources
+- **Tools**: Additional features and utilities
+
+<Callout type="info">
+Add-ons are installed per account and sync across all your devices. Changes on one device appear on all devices.
 </Callout>
 
-## Overview
+### Safety First
 
-This guide will cover:
-- How to install add-ons from the catalog
-- Installing community add-ons
-- Safely removing add-ons
-- Best practices for add-on management
+Before installing any add-on:
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+✅ **Check:**
+- Developer reputation
+- User reviews and ratings
+- Recent updates
+- Community discussions
+- Required permissions
+
+❌ **Avoid:**
+- Add-ons with no reviews
+- Unknown developers
+- Add-ons requesting excessive permissions
+- Outdated add-ons (no recent updates)
+
+## Installing Add-ons from Official Catalog
+
+### Method 1: From Stremio Interface
+
+<Steps>
+
+1. **Open Add-ons Page**
+   - Click the puzzle piece icon in the top navigation
+   - Or go to Settings → Add-ons
+
+2. **Browse Available Add-ons**
+   - Scroll through the catalog
+   - Use search to find specific add-ons
+   - Check ratings and user counts
+
+3. **Select Add-on**
+   - Click on the add-on you want to install
+   - Review the description and features
+   - Check the developer's information
+
+4. **Install**
+   - Click the "Install" button
+   - Add-on will be added to your account
+   - May require restart for full activation
+
+5. **Verify Installation**
+   - Check "My Add-ons" section
+   - Test the add-on with sample content
+   - Ensure it works as expected
+
+</Steps>
+
+### Method 2: Using Add-on URL
+
+<Steps>
+
+1. **Get Add-on URL**
+   - Find the add-on's manifest URL
+   - Usually ends with `/manifest.json`
+   - From developer documentation or community
+
+2. **Install via URL**
+   - In Stremio, go to Add-ons page
+   - Click "Install Add-on" or "Add from URL"
+   - Paste the manifest URL
+   - Click Install
+
+3. **Configure if Needed**
+   - Some add-ons require API keys
+   - Follow setup instructions
+   - Test functionality
+
+</Steps>
+
+## Installing Community Add-ons
+
+### Finding Community Add-ons
+
+**Trusted Sources:**
+- **Reddit**: [r/StremioAddons](https://www.reddit.com/r/StremioAddons/)
+- **GitHub**: Search for "stremio addon"
+- **Viren's Guide**: [guides.viren070.me/stremio](https://guides.viren070.me/stremio)
+- **Stremio Discord**: Community server
+
+### Installing from Community Sources
+
+<Steps>
+
+1. **Verify Source**
+   - Check if the source is reputable
+   - Look for community verification
+   - Read reviews and warnings
+
+2. **Get Installation URL**
+   - Copy the manifest URL from the source
+   - Ensure URL is HTTPS (secure)
+   - Verify the domain is legitimate
+
+3. **Install in Stremio**
+   - Go to Add-ons → Install Add-on
+   - Paste the URL
+   - Install and test
+
+4. **Monitor Behavior**
+   - Watch for unusual activity
+   - Check for ads or redirects
+   - Report issues to community
+
+</Steps>
+
+<Callout type="warning">
+Community add-ons carry more risk than official ones. Always verify the source and read community feedback before installing.
+</Callout>
+
+## Configuring Add-ons After Installation
+
+### Basic Configuration
+
+<Steps>
+
+1. **Access Add-on Settings**
+   - Go to Settings → Add-ons
+   - Find your installed add-on
+   - Click "Configure" or "Settings"
+
+2. **Set Preferences**
+   - Language preferences
+   - Quality settings
+   - Region settings
+   - API keys (if required)
+
+3. **Test Configuration**
+   - Search for content
+   - Verify settings work
+   - Adjust as needed
+
+</Steps>
+
+### Advanced Configuration
+
+Some add-ons require additional setup:
+
+**API Keys:**
+- Trakt: Get from [trakt.tv](https://trakt.tv/)
+- RPDB: Get from [ratingposterdb.com](https://ratingposterdb.com/)
+- TMDb: Usually built-in, no key needed
+
+**Server Setup:**
+- Jackett: Requires local server
+- Prowlarr: Similar to Jackett
+- Custom add-ons: May need hosting
+
+## Safely Removing Add-ons
+
+### Standard Removal
+
+<Steps>
+
+1. **Open Add-ons Page**
+   - Go to Settings → Add-ons
+   - Find "My Add-ons" section
+
+2. **Select Add-on to Remove**
+   - Click on the add-on
+   - Look for remove/uninstall option
+
+3. **Confirm Removal**
+   - Click "Uninstall" or "Remove"
+   - Confirm the action
+   - Add-on will be removed from your account
+
+4. **Clear Cache (Optional)**
+   - Settings → Advanced → Clear Cache
+   - Helps remove any residual data
+
+</Steps>
+
+### Bulk Removal
+
+<Steps>
+
+1. **Review All Add-ons**
+   - Go to Settings → Add-ons → My Add-ons
+   - Check which ones you use
+
+2. **Remove Unused Add-ons**
+   - Select each unused add-on
+   - Click Remove
+   - Confirm removal
+
+3. **Organize Remaining**
+   - Keep only essential add-ons
+   - Prioritize by usage frequency
+
+</Steps>
+
+## Troubleshooting Installation Issues
+
+### Add-on Won't Install
+
+**Solutions:**
+- Check internet connection
+- Verify the URL is correct
+- Try restarting Stremio
+- Check if add-on is compatible with your platform
+- Contact developer for support
+
+### Add-on Not Working After Install
+
+**Solutions:**
+- Restart Stremio completely
+- Check add-on configuration
+- Verify API keys are correct
+- Clear cache and try again
+- Check community forums for known issues
+
+### Add-on Shows Error
+
+**Solutions:**
+- Check error message details
+- Verify add-on is still maintained
+- Try alternative add-ons
+- Report issue to developer
+- Check community support
+
+## Managing Add-on Permissions
+
+### Understanding Permissions
+
+Add-ons may request access to:
+- **Content Search**: Find movies/TV shows
+- **Metadata Access**: Get posters and descriptions
+- **Streaming Links**: Provide playback sources
+- **User Data**: Account information (rare)
+
+### Safe Permission Practices
+
+<Steps>
+
+1. **Review Permissions**
+   - Read what access the add-on requests
+   - Question why each permission is needed
+
+2. **Grant Only Necessary**
+   - Only install if permissions make sense
+   - Avoid add-ons requesting excessive access
+
+3. **Monitor Usage**
+   - Watch for unexpected behavior
+   - Check what data is accessed
+
+4. **Revoke if Suspicious**
+   - Uninstall immediately if concerned
+   - Report to community
+
+</Steps>
+
+## Best Practices for Add-on Management
+
+### Regular Maintenance
+
+<Steps>
+
+1. **Weekly Review**
+   - Check for add-on updates
+   - Remove unused add-ons
+   - Verify all add-ons still work
+
+2. **Monthly Cleanup**
+   - Uninstall add-ons you don't use
+   - Update all remaining add-ons
+   - Clear cache if needed
+
+3. **Security Check**
+   - Review permissions of all add-ons
+   - Check for security warnings
+   - Verify developer status
+
+</Steps>
+
+### Performance Optimization
+
+<Steps>
+
+1. **Limit Add-on Count**
+   - Keep to 5-10 essential add-ons
+   - Too many can slow down Stremio
+
+2. **Prioritize Quality**
+   - Choose well-maintained add-ons
+   - Prefer official or community-verified
+
+3. **Regular Updates**
+   - Keep add-ons updated
+   - Updates often include bug fixes and security improvements
+
+</Steps>
+
+## Security Considerations
+
+### Safe Installation Checklist
+
+Before installing any add-on:
+
+☑️ **Developer Check:**
+- Is the developer known in the community?
+- Do they have active GitHub presence?
+- Are they responsive to issues?
+
+☑️ **Community Feedback:**
+- What do users say on Reddit?
+- Any security warnings?
+- Recent reviews positive?
+
+☑️ **Technical Review:**
+- Is the manifest URL HTTPS?
+- Does it request reasonable permissions?
+- Is it actively maintained?
+
+☑️ **Legal Check:**
+- Does it comply with local laws?
+- Is the content source legitimate?
+
+### Red Flags to Avoid
+
+🚩 **Danger Signs:**
+- Add-on promises "free premium content"
+- Requires payment or subscription
+- Asks for personal information
+- No source code or documentation
+- Developer has bad reputation
+- Excessive ads or pop-ups
+
+## Backup and Recovery
+
+### Backing Up Add-on List
+
+<Steps>
+
+1. **Document Your Setup**
+   - List all installed add-ons
+   - Note configuration settings
+   - Save API keys securely
+
+2. **Export Settings**
+   - Some add-ons allow configuration export
+   - Save important preferences
+
+3. **Regular Backups**
+   - Keep your add-on list updated
+   - Note working combinations
+
+</Steps>
+
+### Restoring After Issues
+
+<Steps>
+
+1. **Start Fresh**
+   - Uninstall problematic add-ons
+   - Clear cache completely
+
+2. **Reinstall Selectively**
+   - Install add-ons one at a time
+   - Test each before adding more
+
+3. **Restore Configuration**
+   - Re-enter API keys
+   - Restore saved settings
+
+</Steps>
+
+## Related Resources
+
+- [Add-ons Explained](/addons/addons-explained/) - Understanding add-ons
+- [How to Evaluate Add-on Trust](/addons/how-to-evaluate-addon-trust/) - Safety guide
+- [Catalogs & Metadata Add-ons](/addons/catalogs-and-metadata-addons/) - Types of add-ons
+- [Avoiding Suspicious Add-ons](/privacy-security/avoiding-suspicious-addons/) - Security guide
+
+---
+
+*Sources:*
+- [Stremio Add-on SDK Documentation](https://github.com/Stremio/stremio-addon-sdk)
+- [r/StremioAddons Community](https://www.reddit.com/r/StremioAddons/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)
+- [Stremio Help Center](https://www.stremio.com/help)

@@ -4,17 +4,439 @@ description: Fix audio and video synchronization problems
 ---
 
 import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
 
-<Callout type="note">
-**Content Coming Soon:** This page is currently under development. In the meantime, check out [Troubleshooting Overview](/troubleshooting/overview/) or visit [Viren's GOAT Guide](https://guides.viren070.me/stremio) for comprehensive Stremio documentation.
+Audio/video sync issues (commonly called "lip sync" problems) occur when the audio and video tracks don't play in perfect synchronization. This guide covers how to identify and fix these synchronization problems.
+
+## Understanding Sync Issues
+
+### What Causes Sync Problems
+
+**Common Causes:**
+- **Encoding Issues**: Poorly encoded source files
+- **Network Problems**: Buffering causing delays
+- **Device Performance**: Hardware struggling to decode
+- **Codec Mismatches**: Audio/video codecs out of sync
+- **Frame Rate Issues**: Incorrect frame rate detection
+
+**Types of Sync Issues:**
+- **Audio Leads Video**: Audio plays before video (most common)
+- **Video Leads Audio**: Video plays before audio
+- **Intermittent Sync**: Sync drifts over time
+- **Complete Desync**: Audio and video completely separated
+
+### Identifying the Problem
+
+<Steps>
+
+1. **Watch a Test Video**
+   - Play content with clear dialogue
+   - Watch character's mouth movements
+   - Listen for timing of speech sounds
+
+2. **Measure the Delay**
+   - Count milliseconds of delay
+   - Use stopwatch or frame counting
+   - Note if delay is consistent or variable
+
+3. **Test Different Content**
+   - Try multiple videos from different sources
+   - Check if issue is content-specific
+   - Test with local files vs. streaming
+
+</Steps>
+
+## Immediate Fixes
+
+### Built-in Sync Controls
+
+<Steps>
+
+1. **Access Audio Sync**
+   - During playback, right-click or press menu button
+   - Look for "Audio Delay" or "Sync" options
+   - Use keyboard shortcuts if available
+
+2. **Adjust Audio Delay**
+   - Increase delay if audio leads video (+ values)
+   - Decrease delay if video leads audio (- values)
+   - Adjust in small increments (50-100ms)
+   - Test and readjust as needed
+
+3. **Keyboard Shortcuts**
+   - **J Key**: Decrease audio delay
+   - **K Key**: Reset to default
+   - **L Key**: Increase audio delay
+   - Check player help for platform-specific shortcuts
+
+</Steps>
+
+### Subtitle-Based Sync
+
+<Steps>
+
+1. **Use Subtitles as Reference**
+   - Enable subtitles for content
+   - Watch timing between speech and subtitle appearance
+   - Adjust audio delay to match subtitle timing
+
+2. **Subtitle Delay Adjustment**
+   - If subtitles appear too early: increase audio delay
+   - If subtitles appear too late: decrease audio delay
+   - Fine-tune until speech matches subtitle timing
+
+</Steps>
+
+<Callout type="tip">
+Subtitles are often perfectly synced, making them an excellent reference for audio timing adjustments.
 </Callout>
 
-## Overview
+## Player Settings Adjustments
 
-This guide will cover:
-- Identifying sync issues
-- Audio delay adjustment
-- Video player settings
-- Source quality problems
+### Video Player Configuration
 
-*This page is being developed. Please check back soon or refer to the official Stremio documentation.*
+<Steps>
+
+1. **Access Player Settings**
+   - Click gear icon (⚙️) during playback
+   - Navigate to Audio/Video settings
+   - Look for sync and timing options
+
+2. **Audio Settings**
+   - **Audio Delay**: Manual offset adjustment
+   - **Audio Buffer**: Increase for stability
+   - **Sample Rate**: Match source rate
+   - **Channels**: Stereo vs. surround settings
+
+3. **Video Settings**
+   - **Frame Rate**: Force specific FPS
+   - **Deinterlacing**: For interlaced content
+   - **Aspect Ratio**: Correct display ratio
+   - **Hardware Acceleration**: Enable/disable GPU decoding
+
+</Steps>
+
+### Advanced Player Options
+
+**Codec-Specific Settings:**
+- **H.264/AVC**: Most compatible codec
+- **H.265/HEVC**: May cause sync issues on older devices
+- **VP9**: Web-optimized, usually good sync
+- **AV1**: Newest codec, potential compatibility issues
+
+**Buffer Settings:**
+- **Initial Buffer**: Pre-load amount
+- **Max Buffer**: Maximum buffer size
+- **Buffer Ahead**: Look-ahead buffering
+- **Network Timeout**: Connection timeout settings
+
+## Source Quality Solutions
+
+### Content Source Issues
+
+**Streaming Quality:**
+- **Bitrate Mismatches**: Audio/video encoded at different bitrates
+- **Variable Quality**: Adaptive streaming causing sync drift
+- **Server Issues**: Source server problems
+- **CDN Problems**: Content delivery network issues
+
+**Local File Issues:**
+- **Corrupt Files**: Damaged video files
+- **Improper Encoding**: Poorly muxed audio/video
+- **Container Format**: MKV vs. MP4 vs. AVI issues
+- **Codec Compatibility**: Device can't handle codecs
+
+### Quality Adjustments
+
+<Steps>
+
+1. **Lower Playback Quality**
+   - Switch to lower resolution (720p → 480p)
+   - Reduce bitrate if option available
+   - Disable high-quality audio
+   - Test sync at different qualities
+
+2. **Change Streaming Source**
+   - Try different add-on for same content
+   - Switch to alternative stream quality
+   - Use different server/location
+   - Test with local file if available
+
+</Steps>
+
+## Device-Specific Fixes
+
+### Android Devices
+
+<Steps>
+
+1. **Audio Settings**
+   - Settings → Sound → Audio Effects → Disable
+   - Developer Options → Disable HW overlays
+   - Audio → Sample rate → Match video
+
+2. **Performance Mode**
+   - Enable "Performance Mode" if available
+   - Disable battery optimization for Stremio
+   - Force GPU rendering in developer options
+
+3. **App-Specific**
+   - Clear Stremio cache
+   - Update Android System WebView
+   - Test with different video player
+
+</Steps>
+
+### iOS Devices
+
+<Steps>
+
+1. **Audio Configuration**
+   - Settings → Stremio → Background App Refresh → Enable
+   - Reset audio settings if needed
+   - Check Bluetooth audio devices
+
+2. **Performance Settings**
+   - Close background apps
+   - Restart device
+   - Update iOS to latest version
+
+3. **Alternative Player**
+   - Try different video formats
+   - Test with built-in player
+   - Check codec support
+
+</Steps>
+
+### Desktop Computers
+
+<Steps>
+
+1. **Audio Drivers**
+   - Update sound card drivers
+   - Check sample rate settings
+   - Test different audio devices
+   - Disable audio enhancements
+
+2. **GPU Settings**
+   - Update graphics drivers
+   - Enable hardware acceleration
+   - Check GPU control panel settings
+   - Test different decoding methods
+
+3. **System Settings**
+   - Disable exclusive mode audio
+   - Check power management settings
+   - Test with different browsers (web version)
+
+</Steps>
+
+### TV/Stick Devices
+
+<Steps>
+
+1. **Display Settings**
+   - Match TV refresh rate to content
+   - Check HDMI audio settings
+   - Test different resolution outputs
+   - Disable post-processing effects
+
+2. **Device Optimization**
+   - Clear device cache
+   - Close background apps
+   - Update device firmware
+   - Test wired vs. wireless connection
+
+</Steps>
+
+## Network and Buffering Solutions
+
+### Network Optimization
+
+<Steps>
+
+1. **Stable Connection**
+   - Use wired Ethernet when possible
+   - Ensure stable Wi-Fi signal
+   - Test internet speed and stability
+   - Avoid peak usage times
+
+2. **Buffer Settings**
+   - Increase initial buffer size
+   - Enable preload settings
+   - Adjust network timeout values
+   - Test with different buffer configurations
+
+</Steps>
+
+### VPN Considerations
+
+**VPN Sync Issues:**
+- **Latency**: VPN can add delay causing sync issues
+- **Server Location**: Distant servers increase latency
+- **Protocol**: Some VPN protocols add more delay
+- **Kill Switch**: Can interrupt streams
+
+**VPN Solutions:**
+- Choose nearby VPN servers
+- Test without VPN to compare
+- Use split tunneling for local content
+- Switch VPN protocols
+
+## Advanced Troubleshooting
+
+### Codec Analysis
+
+<Steps>
+
+1. **Check File Properties**
+   - Use media info tools (MediaInfo, FFprobe)
+   - Check audio/video codec details
+   - Verify bitrate and sample rates
+   - Look for encoding errors
+
+2. **Codec Compatibility**
+   - Test with different codecs
+   - Check device codec support
+   - Update codec packs if needed
+   - Try software decoding
+
+</Steps>
+
+### Frame Rate Analysis
+
+**Frame Rate Issues:**
+- **Variable FPS**: Content with changing frame rates
+- **Incorrect Detection**: Player misdetecting frame rate
+- **Display Mismatch**: Device display rate different from content
+- **Telecine Content**: 24fps content converted to 30fps
+
+**Frame Rate Fixes:**
+- Force specific frame rate in player
+- Enable frame rate conversion
+- Match display refresh rate
+- Use frame interpolation if available
+
+## Third-Party Tools
+
+### Sync Correction Tools
+
+**External Tools:**
+- **VLC Media Player**: Advanced sync controls
+- **MPC-HC**: Precise timing adjustments
+- **PotPlayer**: Multiple sync options
+- **FFmpeg**: Command-line sync correction
+
+### Audio Extraction Tools
+
+<Steps>
+
+1. **Extract Audio Track**
+   - Use tools like FFmpeg or MKVToolNix
+   - Save audio as separate file
+   - Analyze audio timing independently
+
+2. **Remux with Sync**
+   - Correct timing in extracted audio
+   - Remux with corrected audio
+   - Test new file for sync
+
+</Steps>
+
+## Prevention Strategies
+
+### Content Selection
+
+**Choose Better Sources:**
+- Prefer high-quality, reputable add-ons
+- Check user reviews for sync issues
+- Test short clips before watching full content
+- Use verified, popular streaming sources
+
+### Device Maintenance
+
+**Regular Maintenance:**
+- Keep device firmware updated
+- Update audio/video drivers
+- Clear cache regularly
+- Monitor device performance
+
+### Settings Optimization
+
+**Optimal Configuration:**
+- Set appropriate buffer sizes
+- Enable hardware acceleration when possible
+- Use recommended quality settings
+- Configure audio settings properly
+
+## When to Accept Limitations
+
+### Unfixable Issues
+
+**Acceptable Limitations:**
+- Very old or low-quality content
+- Live streams (always have some delay)
+- Experimental codecs on older devices
+- Network conditions beyond control
+
+### Alternative Solutions
+
+**Workarounds:**
+- Use subtitles to follow dialogue
+- Adjust personal tolerance for minor sync
+- Switch to different content source
+- Accept as limitation of free streaming
+
+## Getting Help
+
+### Community Resources
+
+**Help Sources:**
+- **Stremio Forums**: Sync-specific discussions
+- **Reddit r/Stremio**: User experiences
+- **Video Player Forums**: VLC, MPC-HC communities
+- **Codec Forums**: FFmpeg and codec discussions
+
+### Professional Help
+
+**When to Seek Help:**
+- Sync issues on all content
+- Hardware-specific problems
+- Issues after system updates
+- Problems affecting multiple devices
+
+## Best Practices
+
+✅ **Do:**
+- Test sync on short clips first
+- Use built-in player controls for adjustments
+- Check network stability
+- Update device drivers regularly
+- Try different content sources
+- Use subtitles as timing reference
+- Keep devices and apps updated
+
+❌ **Don't:**
+- Ignore minor sync issues that can be fixed
+- Use very old or outdated devices
+- Expect perfect sync on low-quality streams
+- Skip testing different player settings
+- Use unstable internet connections
+- Disable hardware acceleration unnecessarily
+- Use cracked or modified video players
+
+## Related Resources
+
+- [Player Settings](/using-stremio/player-settings-subtitles-audio/) - Video player configuration
+- [Playback Buffering](/troubleshooting/playback-buffering/) - Streaming performance issues
+- [Network Checklist](/troubleshooting/network-checklist/) - Connection troubleshooting
+- [Subtitles Not Working](/troubleshooting/subtitles-not-working/) - Subtitle-related issues
+
+---
+
+*Sources:*
+- [VLC Media Player Documentation](https://www.videolan.org/vlc/)
+- [FFmpeg Documentation](https://ffmpeg.org/documentation.html)
+- [MediaInfo Tool](https://mediaarea.net/en/MediaInfo)
+- [Stremio Community Forums](https://forum.stremio.com/)
+- [Viren's Stremio Guide](https://guides.viren070.me/stremio)
