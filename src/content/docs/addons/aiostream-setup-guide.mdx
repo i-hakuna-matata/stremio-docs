@@ -1,6 +1,11 @@
 ---
 title: "AIOStream: Your Complete Streaming Setup Guide"
 description: Step-by-step guide to setting up and optimizing AIOStream for the best Stremio streaming experience with all scrapers, quality settings, and performance tips
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: AIOStream setup, AIOStream guide, AIOStream configuration, Stremio AIOStream, AIOStream scrapers, AIOStream optimization, streaming add-on setup
 ---
 
 import Callout from '../../../components/Callout.astro';
@@ -13,6 +18,32 @@ import Steps from '../../../components/Steps.astro';
 
 <Callout type="info">
 **Latest Update**: This guide covers AIOStream v3+ with the latest configuration options and private instances as of December 2025.
+</Callout>
+
+## What You'll Learn
+
+- Complete step-by-step AIOStream setup from installation to optimization
+- How to configure scrapers, quality settings, and performance options
+- API key setup for TMDB and debrid services
+- Troubleshooting common issues and advanced optimization tips
+- Safe usage practices and community resources
+
+---
+
+## Quick Actions
+
+**Ready to get started?** Here are the key actions you'll take:
+
+<Steps>
+1. **[Install AIOStream](#installation)** - Choose the right instance for your needs
+2. **[Configure API Keys](#step-2-api-keys--authentication)** - Set up TMDB and debrid services
+3. **[Select Scrapers](#step-3-choosing-your-scrapers)** - Choose which sources to search
+4. **[Set Quality Preferences](#step-4-quality-preferences)** - Define what quality you want
+5. **[Test Your Setup](#step-9-testing-your-setup)** - Verify everything works
+</Steps>
+
+<Callout type="tip">
+**Time Estimate:** 15 minutes for basic setup, plus testing time. Most users are streaming within 30 minutes.
 </Callout>
 
 ## What is AIOStream?
@@ -66,7 +97,13 @@ The most reliable way to install AIOStream is through the **ElfHosted instance**
 
 #### GitHub Repository
 - **Developer**: [https://github.com/Viren070/AIOStreams](https://github.com/Viren070/AIOStreams)
-- **Install URL**: `https://aiostreams.github.io/manifest.json`
+- **Install URL**: *(not provided via GitHub Pages)*
+
+#### Viren070 (configure link)
+
+If you specifically want **Viren070's** AIOStream setup page, use:
+
+- **Configure URL**: `https://aiostreams.viren070.me/stremio/configure`
 
 #### Popular Private Instances
 
@@ -77,7 +114,7 @@ Based on community feedback, here are the most popular and reliable AIOStream in
 | **ElfHosted** | `https://aiostreams.elfhosted.com/` | Most popular, actively maintained |
 | **Midnight Ignite** | `https://aiostreamsfortheweebs.midnightignite.me/` | Feature-rich with templates |
 | **Nhyira** | `https://aiostreamsfortheweak.nhyira.dev/` | Optimized for TV viewing |
-| **Viren070** | `https://aiostreams.github.io/manifest.json` | Original developer instance |
+| **Self-hosted** | `https://your-instance.com/` | Most reliable (you control uptime) |
 
 <Callout type="tip">
 **Recommendation**: Start with the **ElfHosted instance** (`https://aiostreams.elfhosted.com/`) as it's the most popular and actively maintained.

@@ -152,6 +152,24 @@ export default defineConfig({
             },
           }),
         },
+        // External Links Script - Open external links in new tabs
+        {
+          tag: 'script',
+          content: `
+            document.addEventListener('DOMContentLoaded', function() {
+              const links = document.querySelectorAll('a[href]');
+              const currentHost = window.location.hostname;
+
+              links.forEach(link => {
+                const linkHost = new URL(link.href, window.location.origin).hostname;
+                if (linkHost !== currentHost && !link.hasAttribute('target')) {
+                  link.setAttribute('target', '_blank');
+                  link.setAttribute('rel', 'noopener noreferrer');
+                }
+              });
+            });
+          `,
+        },
       ],
       social: {
         github: 'https://github.com/i-hakuna-matata/stremio-docs',
@@ -206,7 +224,7 @@ export default defineConfig({
             { label: 'Evaluate Add-on Trust', link: '/addons/how-to-evaluate-addon-trust/' },
             { label: 'Catalogs & Metadata Add-ons', link: '/addons/catalogs-and-metadata-addons/' },
             { label: 'Subtitle Add-ons', link: '/addons/subtitles-addons-legal-notes/' },
-            { label: 'AIOStream: Safety Note', link: '/addons/aiostream-safety-note/' },
+            { label: 'AIOStream: Your Complete Streaming Setup Guide', link: '/addons/aiostream-setup-guide/' },
           ],
         },
         {
