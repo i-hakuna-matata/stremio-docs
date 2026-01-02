@@ -219,6 +219,7 @@ export default defineConfig({
           label: 'Add-ons',
           items: [
             { label: 'Add-ons Explained', link: '/addons/addons-explained/' },
+            { label: 'Add-on Showcase - Complete Directory', link: '/addons/addon-showcase/' },
             { label: 'Famous Stremio Add-ons', link: '/addons/famous-stremio-addons/' },
             { label: 'Install & Remove Add-ons Safely', link: '/addons/how-to-install-remove-addons-safely/' },
             { label: 'Evaluate Add-on Trust', link: '/addons/how-to-evaluate-addon-trust/' },
