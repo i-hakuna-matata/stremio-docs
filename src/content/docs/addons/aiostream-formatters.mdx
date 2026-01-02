@@ -1,0 +1,264 @@
+---
+title: "AIOStream Formatters - Custom Title & Description Codes"
+description: Complete guide to AIOStream formatters with title and description codes for customizing stream appearance in Stremio
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: AIOStream formatters, AIOStream title format, AIOStream description format, Stremio formatters, custom stream titles, stream formatting codes
+---
+
+import Callout from '../../../components/Callout.astro';
+import Steps from '../../../components/Steps.astro';
+
+<div class="page-meta">
+  <span class="badge badge-time">10 min read</span>
+  <span class="badge badge-difficulty">Intermediate</span>
+</div>
+
+<Callout type="info">
+**Community-Powered**: This guide includes popular formatter codes shared by the r/StremioAddons community. Formatters help customize how streams appear in your search results.
+</Callout>
+
+# AIOStream Formatters - Custom Title & Description Codes
+
+AIOStream formatters allow you to customize how stream titles and descriptions appear in your search results. These custom codes help you organize streams by quality, source, size, and other metadata to make finding the perfect stream easier.
+
+<Callout type="warning">
+**Important**: Always test formatters after applying them. Some codes may not work with all AIOStream versions or configurations.
+</Callout>
+
+## What Are Formatters?
+
+Formatters are custom code snippets that modify how AIOStream displays stream information. They use variables and formatting logic to create clean, organized stream titles and descriptions.
+
+### Title Formatters
+Control what appears in the main stream title line.
+
+### Description Formatters
+Control what appears in the stream description/details area.
+
+---
+
+## Popular Title Formatters
+
+### Basic Quality + Size Format
+```
+📺 {title} [{quality}] {size}
+```
+**Example Output:** 📺 The Matrix [1080p] 8.5GB
+
+### Source + Quality Priority
+```
+{quality} • {source} • {size} • {seeds} seeds
+```
+**Example Output:** 1080p • BluRay • 8.5GB • 150 seeds
+
+### Color-Coded Quality Tiers
+```
+{quality} {source} {size} {seeds}S
+```
+**Example Output:** 1080p BluRay 8.5GB 150S
+
+### Minimal Clean Format
+```
+{title} ({year}) [{quality}]
+```
+**Example Output:** The Matrix (1999) [1080p]
+
+### Advanced Multi-Line Format
+```
+{title}
+{quality} • {source} • {size} • {seeds} seeds • {language}
+```
+**Example Output:**
+```
+The Matrix
+1080p • BluRay • 8.5GB • 150 seeds • English
+```
+
+### Debrid-Optimized Format
+```
+🟢 {quality} {source} {size} [{seeds}]
+```
+**Example Output:** 🟢 1080p BluRay 8.5GB [150]
+
+### Size-Focused Format
+```
+{size} - {quality} {source} ({seeds} seeds)
+```
+**Example Output:** 8.5GB - 1080p BluRay (150 seeds)
+
+---
+
+## Popular Description Formatters
+
+### Detailed Stream Info
+```
+Quality: {quality}
+Source: {source}
+Size: {size}
+Seeders: {seeds}
+Language: {language}
+Uploader: {uploader}
+```
+**Example Output:**
+```
+Quality: 1080p
+Source: BluRay
+Size: 8.5GB
+Seeders: 150
+Language: English
+Uploader: Anonymous
+```
+
+### Compact Description
+```
+{quality} {source} • {size} • {seeds} seeds • Uploaded by {uploader}
+```
+**Example Output:** 1080p BluRay • 8.5GB • 150 seeds • Uploaded by Anonymous
+
+### Technical Details Focus
+```
+File: {filename}
+Size: {size} | Seeds: {seeds} | Language: {language}
+Source: {source} | Quality: {quality}
+```
+**Example Output:**
+```
+File: The.Matrix.1999.1080p.BluRay.x264.mkv
+Size: 8.5GB | Seeds: 150 | Language: English
+Source: BluRay | Quality: 1080p
+```
+
+### Health Status Format
+```
+Stream Health: {seeds} seeds
+File Size: {size}
+Quality Tier: {quality}
+Source Type: {source}
+```
+**Example Output:**
+```
+Stream Health: 150 seeds
+File Size: 8.5GB
+Quality Tier: 1080p
+Source Type: BluRay
+```
+
+---
+
+## Advanced Formatter Examples
+
+### Conditional Formatting (Quality-Based)
+```
+{quality === '1080p' ? '🟢 ' : quality === '720p' ? '🟡 ' : '🔴 '}{title} [{quality}] {size}
+```
+**Example Output:** 🟢 The Matrix [1080p] 8.5GB
+
+### Size Category Formatter
+```
+{size > 8000 ? '📁 Large' : size > 4000 ? '📦 Medium' : '📄 Small'} • {quality} {source}
+```
+**Example Output:** 📁 Large • 1080p BluRay
+
+### Language Priority Format
+```
+{language === 'English' ? '🇺🇸 ' : language === 'Spanish' ? '🇪🇸 ' : '🌍 '}{title} ({quality})
+```
+**Example Output:** 🇺🇸 The Matrix (1080p)
+
+---
+
+## Formatter Variables Reference
+
+### Common Variables
+- `{title}` - Movie/TV show title
+- `{year}` - Release year
+- `{quality}` - Video quality (1080p, 720p, etc.)
+- `{source}` - Source type (BluRay, WEBRip, etc.)
+- `{size}` - File size
+- `{seeds}` - Number of seeders
+- `{language}` - Audio language
+- `{uploader}` - Upload username
+
+### Advanced Variables
+- `{filename}` - Original filename
+- `{codec}` - Video codec (x264, x265, etc.)
+- `{audio}` - Audio format
+- `{resolution}` - Resolution details
+- `{bitrate}` - Video bitrate
+
+---
+
+## How to Apply Formatters
+
+<Steps>
+1. **Open AIOStream Settings** in your Stremio add-ons
+2. **Navigate to Formatter Section** (usually under "Display" or "Advanced")
+3. **Copy-Paste the Code** into the appropriate field
+4. **Save and Test** by searching for content
+5. **Adjust as Needed** based on your preferences
+</Steps>
+
+<Callout type="tip">
+**Testing Tip**: Always test formatters with multiple types of content (movies, TV shows, different qualities) to ensure they work correctly.
+</Callout>
+
+---
+
+## Sample Screenshots
+
+![AIOStream Formatter Example](https://via.placeholder.com/800x600/4a90e2/ffffff?text=AIOStream+Formatter+Example)
+
+*Replace this placeholder image with actual screenshots of your formatter in action*
+
+---
+
+## Community Shared Formatters
+
+### Reddit User Favorites
+
+**From u/StremioMaster:**
+```
+🎬 {title} ({year}) | {quality} {source} | {size} | ⭐ {seeds}
+```
+
+**From u/StreamingPro:**
+```
+{quality} • {source} • {size} • {seeds}S • {language}
+```
+
+**From u/AddonWizard:**
+```
+📱 {title}
+🔍 {quality} | {source} | {size} | Seeds: {seeds}
+```
+
+---
+
+## Troubleshooting Formatters
+
+### Common Issues
+- **Variables not working**: Check AIOStream version compatibility
+- **Formatting not applying**: Restart Stremio after saving
+- **Display errors**: Some special characters may not render properly
+
+### Best Practices
+- Start with simple formatters before trying complex ones
+- Test on different content types
+- Keep formatters readable and not too cluttered
+- Use emojis sparingly for better compatibility
+
+---
+
+## Contributing Your Formatters
+
+Found a great formatter? Share it with the community!
+
+**Share Location:** r/StremioAddons, r/Stremio, or GitHub issues
+**Include:** The code, what it does, and example output
+
+<Callout type="success">
+**Pro Tip**: The best formatters balance information density with readability. Too much info can be overwhelming!
+</Callout>

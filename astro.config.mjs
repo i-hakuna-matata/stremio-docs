@@ -226,6 +226,7 @@ export default defineConfig({
             { label: 'Catalogs & Metadata Add-ons', link: '/addons/catalogs-and-metadata-addons/' },
             { label: 'Subtitle Add-ons', link: '/addons/subtitles-addons-legal-notes/' },
             { label: 'Debrid Media Manager (DMM) - Stremio Add-on Guide', link: '/addons/debrid-media-manager/' },
+            { label: 'AIOStream Formatters - Custom Title & Description Codes', link: '/addons/aiostream-formatters/' },
             { label: 'AIOStream: Your Complete Streaming Setup Guide', link: '/addons/aiostream-setup-guide/' },
           ],
         },
