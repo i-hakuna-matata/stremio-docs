@@ -185,7 +185,7 @@ export default defineConfig({
         {
           label: 'Start Here',
           items: [
-            { label: 'What is Stremio?', link: '/start-here/what-is-stremio/' },
+            { label: 'What is Stremio? Complete Guide to the Media Center App (2025)', link: '/start-here/what-is-stremio/' },
             { label: 'Safety & Legality', link: '/start-here/safety-and-legality/' },
             { label: 'First 10 Minutes Setup', link: '/start-here/first-10-minutes-setup/' },
             { label: 'Glossary for Beginners', link: '/start-here/glossary-for-beginners/' },
@@ -195,13 +195,13 @@ export default defineConfig({
         {
           label: 'Installation',
           items: [
-            { label: 'Overview', link: '/install/overview/' },
-            { label: 'Windows', link: '/install/windows/' },
-            { label: 'macOS', link: '/install/macos/' },
-            { label: 'Linux', link: '/install/linux/' },
-            { label: 'Android Phone/Tablet', link: '/install/android-phone-tablet/' },
-            { label: 'Android TV', link: '/install/android-tv/' },
-            { label: 'Web Browser', link: '/install/web/' },
+            { label: 'Installation Overview', link: '/install/overview/' },
+            { label: 'How to Install Stremio on Windows (10/11) - Step by Step Guide 2025', link: '/install/windows/' },
+            { label: 'Install Stremio on macOS', link: '/install/macos/' },
+            { label: 'Install Stremio on Linux', link: '/install/linux/' },
+            { label: 'Install Stremio on Android Phone/Tablet', link: '/install/android-phone-tablet/' },
+            { label: 'Install Stremio on Android TV, Fire TV & FireStick (2025 Guide)', link: '/install/android-tv/' },
+            { label: 'Use Stremio in Web Browser', link: '/install/web/' },
           ],
         },
         {
@@ -218,13 +218,14 @@ export default defineConfig({
         {
           label: 'Add-ons',
           items: [
-            { label: 'Add-ons Explained', link: '/addons/addons-explained/' },
-            { label: 'Add-on Showcase - Complete Directory', link: '/addons/addon-showcase/' },
-            { label: 'Famous Stremio Add-ons', link: '/addons/famous-stremio-addons/' },
+            { label: 'Stremio Add-ons Explained - Complete Guide to Extensions (2025)', link: '/addons/addons-explained/' },
+            { label: 'Stremio Add-ons Showcase - Complete Directory', link: '/addons/addon-showcase/' },
+            { label: 'Famous Stremio Add-ons - Quick Reference', link: '/addons/famous-stremio-addons/' },
             { label: 'Install & Remove Add-ons Safely', link: '/addons/how-to-install-remove-addons-safely/' },
             { label: 'Evaluate Add-on Trust', link: '/addons/how-to-evaluate-addon-trust/' },
             { label: 'Catalogs & Metadata Add-ons', link: '/addons/catalogs-and-metadata-addons/' },
             { label: 'Subtitle Add-ons', link: '/addons/subtitles-addons-legal-notes/' },
+            { label: 'Debrid Media Manager (DMM) - Stremio Add-on Guide', link: '/addons/debrid-media-manager/' },
             { label: 'AIOStream: Your Complete Streaming Setup Guide', link: '/addons/aiostream-setup-guide/' },
           ],
         },
@@ -232,7 +233,7 @@ export default defineConfig({
           label: 'Metadata Management',
           items: [
             { label: 'Metadata Explained', link: '/metadata/metadata-explained/' },
-            { label: 'Metadata Add-on Setup', link: '/metadata/aiometadata-setup/' },
+            { label: 'AIOMetadata - Complete Setup Guide', link: '/metadata/aiometadata-setup/' },
             { label: 'Fix Wrong Posters/Titles', link: '/metadata/fix-wrong-posters-titles/' },
             { label: 'Language & Regional Settings', link: '/metadata/language-and-regional-settings/' },
             { label: 'Clean Library Best Practices', link: '/metadata/best-practices-for-clean-library/' },
@@ -241,10 +242,10 @@ export default defineConfig({
         {
           label: 'Troubleshooting',
           items: [
-            { label: 'Overview', link: '/troubleshooting/overview/' },
-            { label: 'Playback & Buffering', link: '/troubleshooting/playback-buffering/' },
+            { label: 'Stremio Troubleshooting Guide - Fix Common Problems (2025)', link: '/troubleshooting/overview/' },
+            { label: 'Playback & Buffering Issues', link: '/troubleshooting/playback-buffering/' },
             { label: 'Subtitles Not Working', link: '/troubleshooting/subtitles-not-working/' },
-            { label: 'Audio/Video Sync', link: '/troubleshooting/audio-video-sync/' },
+            { label: 'Audio/Video Sync Issues', link: '/troubleshooting/audio-video-sync/' },
             { label: 'App Crashes & Freezes', link: '/troubleshooting/app-crashes-and-freezes/' },
             { label: 'Login & Sync Issues', link: '/troubleshooting/login-sync-issues/' },
             { label: 'Android TV Performance', link: '/troubleshooting/android-tv-performance/' },
@@ -263,15 +264,15 @@ export default defineConfig({
           ],
         },
         {
-          label: 'FAQ',
+          label: 'Stremio FAQ - 40+ Frequently Asked Questions & Answers (2025)',
           link: '/faq/faq/',
         },
         {
-          label: 'Glossary',
+          label: 'Complete Glossary',
           link: '/glossary/',
         },
         {
-          label: 'Sitemap',
+          label: 'Complete Site Map - All Stremio Documentation Pages',
           link: '/sitemap/',
         },
         {
